@@ -1,0 +1,58 @@
+// default styling for html elements
+
+@use "variables" as v;
+@use "mixins" as m;
+
+:root {
+  --font: #{v.$font-primary};
+  --light: #{v.$light};
+  --dark: #{v.$dark};
+  --primary: #{v.$primary};
+  --secondary: #{v.$secondary};
+  --text-hero: #{v.$text-hero};
+  --text-case-lg: #{v.$text-case-lg};
+  --text-case-sm: #{v.$text-case-sm};
+  --text-icon: #{v.$text-icon};
+  --text-reg: #{v.$text-reg};
+  --rad-sm: #{v.$radius-sm};
+  --rad-lg: #{v.$radius-lg};
+  --xs: #{v.$xs};
+  --sm: #{v.$sm};
+  --md: #{v.$md};
+  --lg: #{v.$lg};
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  //font-family: "Titillium Web", sans-serif;
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+
+body.overflow {
+  overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+p, div, span {
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+

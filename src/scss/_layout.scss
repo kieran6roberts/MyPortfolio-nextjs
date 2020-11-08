@@ -1,0 +1,232 @@
+// styling for the page
+
+@use "variables" as v;
+@use "mixins" as m;
+
+.scroll-div {
+    height: 0.2rem;
+    background: linear-gradient(to right, var(--primary) 30%, var(--secondary));
+}
+
+.nav {
+    @include m.flex($jus: space-between);
+    padding: var(--sm);
+    background-color: var(--dark);
+
+    @include m.media(tablet) {
+        padding: var(--md);
+    }
+
+    &__logo {
+        height: 2rem;
+        width: 2rem;
+        background-color: var(--primary);
+        padding: var(--xs);
+        transform: scale(1);
+        transition: transform 100ms ease;
+    }
+    
+    &__logo:hover {
+        transform: scale(1.01);
+    }
+
+    &__burger {
+        @include m.flex($dir: column, $jus: center);
+        background-color: rgba(v.$primary, 0.2);
+        width: 3rem;
+        height: 2rem;
+        padding: var(--xs);
+        border-radius: var(--rad-sm);
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: rgba(v.$primary, 0.5);
+        }
+
+        &--span {
+            position: relative;
+        }
+        
+        &--span,
+        &--span:after,
+        &--span:before{
+            height: 0.15rem;
+            width: 80%;
+            background-color: var(--dark);
+            border-radius: var(--rad-sm);
+            pointer-events: none;
+        }
+
+        &--span:after,
+        &--span:before {
+            @include m.pseudo($content: "",);
+        }
+
+        &--span:before {
+            top: -0.4rem;
+        }
+
+        &--span:after {
+            top: 0.4rem;
+        }
+
+   
+
+        @include m.media(tablet) {
+            display: none;
+        }
+    }
+
+    &__items {
+        display: none;
+        @include m.media(tablet) {
+            @include m.flex($jus: space-between);
+        }
+    }
+
+    &__item-link {
+        background-color: rgba(v.$primary, 0.7);
+        color: var(--dark);
+        padding: var(--xs) var(--md);
+        text-transform: capitalize;
+        border-radius: var(--rad-lg);
+        transition: all 150ms ease-in-out;
+    }
+
+    &__item-link:hover {
+        background-color: rgba(v.$primary, 0.9);
+    }
+
+    &__item:nth-of-type(2) {
+        margin-left: var(--sm);
+    }
+}
+
+.sidebar {
+    @include m.absolute();
+    @include m.flex($dir: column);
+    top: 0.2rem;
+    width: 0;
+    height: calc(100vh - 0.2rem);
+    opacity: 0;
+    visibility: none;
+    background-color: var(--primary);
+    transition: all 200ms ease-in-out;
+
+    &.open {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__burger {
+        @include m.flex($dir: column, $jus: center);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: rgba(v.$dark, 0.2);
+        width: 3rem;
+        height: 2rem;
+        padding: var(--xs);
+        border-radius: var(--rad-sm);
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+    }
+
+    &__burger--span {
+
+    }
+
+    .social__items {
+        @include m.flex();
+    }
+
+
+}
+
+.hero {
+    height: 80vh;
+    width: 100%;
+    color: var(--light);
+    padding: var(--sm) var(--md);
+    background-color: var(--dark);
+
+    &__wrapper {
+        @include m.flex($dir: column, $align: flex-start, $jus: flex-end);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__header {
+        font-size: var(--text-hero);
+        text-transform: uppercase;
+
+        &--clr {
+            font-size: 1.3em;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        &--sm {
+            font-size: 0.7em;
+        }
+    }
+
+    &__btn--icon {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+    }
+
+    &__btn:hover .hero__btn--icon {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0.5rem);
+    }
+}
+
+.cases {
+    padding: var(--sm) 0;
+    margin: 0 var(--md);
+    border-left: 1px solid rgba(v.$dark, 0.1);
+
+    @include m.media(tablet) {
+        padding: var(--lg);
+    }
+
+    &__header {
+        font-size: var(--text-hero);
+        text-transform: uppercase;
+    }
+}
+
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: var(--sm);
+
+    &__info {
+        font-size: var(--text-reg);
+        text-transform: capitalize;
+    }
+
+    .social__items {
+        @include m.flex($dir: column, $jus: space-evenly);
+
+        .social__link {
+            color: var(--light);
+            font-size: var(--text-icon);
+        }
+        
+        .social__icon {
+            transform: scale(1);
+            transition: transform 100ms ease;
+        }
+        
+        .social__icon:hover {
+            transform: scale(1.1);
+        }
+    }
+}

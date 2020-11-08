@@ -1,0 +1,49 @@
+// reusable components
+
+@use "variables" as v;
+@use "mixins" as m;
+//btn
+.btn {
+    color: var(--dark);
+    font-weight: 700;
+    background-color: rgba(v.$primary, 0.7);
+    text-transform: uppercase;
+    padding: var(--xs) var(--md);
+    margin: var(--sm) 0 0;
+    border-radius: var(--rad-lg);
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgba(v.$primary, 0.9);
+}
+
+//case studies 
+.case {
+    height: 60vh;
+    padding: var(--sm);
+
+    @include m.media(tablet) {
+        padding: var(--md);
+    }
+
+    &-header {
+        position: relative;
+        font-size: var(--text-case-sm);
+        height: 30vh;
+        text-transform: capitalize;
+    }
+
+    &-header__background {
+        @include m.absolute();
+        font-size: var(--text-case-lg);
+        color: rgba(v.$dark, 0.1);
+        text-transform: capitalize;
+        width: 150vw;
+        transform: translateX(15%);
+    }
+
+    &-header__primary {
+        @include m.absolute();
+    }
+}

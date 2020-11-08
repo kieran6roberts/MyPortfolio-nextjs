@@ -1,0 +1,28 @@
+// global variables
+
+@use "typography" as *;
+
+$font-primary: "Titillium Web", sans-serif;
+$dark: rgb(32, 30, 30);
+$light: rgb(233, 226, 226);
+$primary: rgb(6, 224, 141);
+$secondary: rgb(4, 155, 201);
+$text-hero: clamp(2.3rem, 5vw, 4rem);
+$text-case-lg: clamp(6rem, 10vw, 8rem);
+$text-case-sm: clamp(1.6rem, 3vw, 2.5rem);
+$text-icon: clamp(1.5rem, 2vw, 2.2rem);
+$text-reg: clamp(1rem, 1.6vw, 1.8rem);
+$radius-sm: 1rem;
+$radius-lg: 2rem;
+$xs: 0.5rem;
+$sm: 1rem;
+$md: 2rem;
+$lg: 4rem;
+$breakpoints: (
+    "mobile": 400px,
+    "mobile-wide": 500px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px,
+);

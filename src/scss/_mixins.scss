@@ -1,0 +1,61 @@
+// mixins
+@use "variables" as v;
+
+@mixin center-div {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin absolute() {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin pseudo($content: "", $disp: block, $pos: absolute) {
+    content: $content;
+    display: $disp;
+    position: $pos;
+}
+
+@mixin media($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (min-width: 400px) {
+            @content;
+          }
+    }
+    @if $breakpoint == mobile-wide {
+        @media only screen and (min-width: 500px) {
+            @content;
+          }
+    }
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 768px) {
+            @content;
+          }
+    }
+    @if $breakpoint == tablet-wide {
+        @media only screen and (min-width: 900px) {
+            @content;
+          }
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 1024px) {
+            @content;
+          }
+    }
+    @if $breakpoint == desktop-wide {
+        @media only screen and (min-width: 1440px) {
+            @content;
+          }
+    }
+}
+
+@mixin flex($dir: row, $jus: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $align;
+}
