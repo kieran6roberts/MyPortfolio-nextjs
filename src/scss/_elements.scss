@@ -62,6 +62,13 @@ p, div, span {
   line-height: 1.7;
 }
 
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 a {
   text-decoration: none;
 }

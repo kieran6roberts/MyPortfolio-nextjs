@@ -193,26 +193,49 @@
 /* contact form */
 .contact,
 .about {
-    height: calc(50vh - 0.1rem);
     width: 0%;
     opacity: 0;
     visibility: hidden;
     z-index: 1;
+    padding: var(--sm);
     transition: all 200ms ease-in-out;
+
+    @include m.media(tablet) {
+        padding: var(--md);
+    }
 
     &.open {
         width: 100%;
         opacity: 1;
         visibility: visible;
     }
+
+    &__header {
+        text-transform: uppercase;
+        font-size: var(--text-links);
+    }
 }
 
 /* about section */
+.wrapper {
+
+    &.open {
+        height: 150vh;
+        overflow-y: scroll;
+    }
+}
+
 .about {
+    height: calc(50vh - 0.1rem);
     position: absolute;
     top: 0.2rem;
     left: 0;
     background: var(--primary);
+
+    &__header {
+        padding-left: var(--sm);
+        border-left: 3px solid var(--dark);
+    }
 
     &__toggle {
         @include m.flex();
@@ -234,7 +257,55 @@
     top: calc(50vh - 0.2rem);
     right: 0;
     background-color: var(--dark);
+    color: var(--light);
+    
+    &__header {
+        padding-right: var(--sm);
+        border-right: 3px solid var(--secondary);
+        text-align: end;
     }
+    
+    &__info {
+        display: block;
+        text-align: end;
+    }
+
+    .form {
+        &__label {
+            margin: var(--xs) 0;
+            display: block;
+            text-transform: capitalize;
+        }
+
+        &__input {
+            @include m.flex($dir: column);
+            background-color: rgba(v.$light, 0.9);
+            border: 1px solid var(--light);
+            border-radius: var(--rad-lg);
+            width: 100%;
+            padding: var(--xs) var(--sm);
+            outline: none;
+            transition: all 100ms ease-in-out;
+        }
+
+        &__input:focus {
+            background-color: rgba(v.$light, 0.8);
+        }
+
+        &__input:valid {
+            border: 1px solid var(--primary);
+        }
+
+        .input--pad {
+            padding: var(--sm);
+        }
+
+        &__submit {
+            width: 40%;
+            border: none;
+        }
+    }
+}
 
 /* footer */
 .footer {
