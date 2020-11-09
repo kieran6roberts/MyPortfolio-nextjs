@@ -9,10 +9,12 @@
   --dark: #{v.$dark};
   --primary: #{v.$primary};
   --secondary: #{v.$secondary};
+  --tertiary: #{v.$tertiary};
   --text-hero: #{v.$text-hero};
   --text-case-lg: #{v.$text-case-lg};
   --text-case-sm: #{v.$text-case-sm};
   --text-icon: #{v.$text-icon};
+  --text-links: #{v.$text-links};
   --text-reg: #{v.$text-reg};
   --rad-sm: #{v.$radius-sm};
   --rad-lg: #{v.$radius-lg};
@@ -30,14 +32,22 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   //font-family: "Titillium Web", sans-serif;
   font-family: var(--font);
+  position: static;
   overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 body.overflow {
-  overflow-y: hidden;
+  overflow-y: scroll;
+  position: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {

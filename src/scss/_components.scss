@@ -18,13 +18,57 @@
     background-color: rgba(v.$primary, 0.9);
 }
 
+//burger nav
+
+.nav__burger {
+    @include m.flex($dir: column, $jus: center);
+    background-color: rgba(v.$primary, 0.3);
+    width: 3rem;
+    height: 2rem;
+    padding: var(--xs);
+    border-radius: var(--rad-sm);
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &--span {
+        position: relative;
+    }
+    
+    &--span,
+    &--span:after,
+    &--span:before{
+        height: 0.15rem;
+        width: 80%;
+        background-color: var(--dark);
+        border-radius: var(--rad-sm);
+        pointer-events: none;
+    }
+
+    &--span:after,
+    &--span:before {
+        @include m.pseudo($content: "",);
+    }
+
+    &--span:before {
+        top: -0.4rem;
+    }
+
+    &--span:after {
+        top: 0.4rem;
+    }
+
+    @include m.media(tablet) {
+        display: none;
+    }
+}
+
 //case studies 
 .case {
     height: 60vh;
-    padding: var(--sm);
+    padding: var(--lg) var(--sm);
 
     @include m.media(tablet) {
-        padding: var(--md);
+        padding: var(--lg) var(--md);
     }
 
     &-header {
@@ -45,5 +89,25 @@
 
     &-header__primary {
         @include m.absolute();
+        border-left: 6px solid var(--primary);
+        padding-left: var(--sm);
+    }
+}
+
+//social links
+.social__items {
+    @include m.flex($dir: column, $jus: space-evenly);
+
+    .social__link {
+        font-size: var(--text-icon);
+    }
+    
+    .social__icon {
+        transform: scale(1);
+        transition: transform 100ms ease;
+    }
+    
+    .social__icon:hover {
+        transform: scale(1.1);
     }
 }

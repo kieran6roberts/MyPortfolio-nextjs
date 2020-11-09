@@ -46,9 +46,22 @@
 
     <!---Mobile Nav--->
     <sidebar class="sidebar">
-      <div class="sidebar__burger">
-        <span class="sidebar__burger--span"></span>
+      <div class="nav__burger sidebar__burger">
+        <span class="nav__burger--span sidebar__burger--span"></span>
       </div>
+
+      <ul class="social__items">
+        <li class="social__item">
+          <a href="" class="social__link">
+            <i class="fa fa-github social__icon" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="" class="social__link">
+            <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
 
       <ul class="sidebar__items">
         <li class="sidebar__item">
@@ -57,26 +70,13 @@
           </a>
         </li>
         <li class="sidebar__item">
-          <a href="#case-studies" class="sidebar__link">
+          <a href="#case-studies" class="sidebar__link" id="link--case">
             case studies
           </a>
         </li>
         <li class="sidebar__item">
-          <a href="contact" class="sidebar__link">
+          <a href="#" class="sidebar__link" id="link--contact">
             contact
-          </a>
-        </li>
-      </ul>
-
-      <ul class="social__items">
-        <li class="social__item">
-          <a href="" class="social__link">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
@@ -84,17 +84,18 @@
 
   <main>
     <!---About Me/ Contact me Sidebar--->
-    <div class="wrapper">
-      <section class="contact" id="contact">
-        <form action="" class="form">
+    <section class="about" id="about">
+      <div class="about__toggle">
+        <i class="fa fa-long-arrow-right about__btn--icon" aria-hidden="true"></i>
+      </div>
+    </section>
 
-        </form>
-      </section>
+    <section class="contact" id="contact">
+      <form action="" class="form">
 
-      <section class="about" id="about">
-  
-      </section>
-    </div>
+      </form>
+    </section>
+
     <!---Hero--->
     <section class="hero">
       <div class="hero__wrapper">
@@ -103,7 +104,7 @@
           <span class="hero__header--sm">front end developer</span>
         </h1>
 
-        <a href="" class="btn hero__btn">
+        <a href="#" class="btn hero__btn">
           about me <i class="fa fa-long-arrow-right hero__btn--icon" aria-hidden="true"></i>
         </a>
 
@@ -114,7 +115,7 @@
     </section>
 
     <!---Case Studies--->
-    <section class="cases">
+    <section class="cases" id="case-studies">
       <h2 class="cases__header">
         case studies
       </h2>
