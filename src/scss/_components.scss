@@ -19,8 +19,34 @@
     background-color: rgba(v.$primary, 0.9);
 }
 
-//burger nav
+.btn--icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+}
 
+.btn:hover .btn--icon {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0.5rem);
+}
+
+//modal toggle 
+.page__toggle {
+    @include m.flex();
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(v.$dark, 0.3);
+    width: 3rem;
+    height: 2rem;
+    padding: var(--xs);
+    border-radius: var(--rad-sm);
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+//burger nav
 .nav__burger {
     @include m.flex($dir: column, $jus: center);
     background-color: rgba(v.$primary, 0.3);
@@ -65,8 +91,8 @@
 
 //case studies 
 .case {
-    height: 60vh;
     padding: var(--lg) var(--sm);
+    border-bottom: 1px solid rgba(v.$dark, 0.1);
 
     @include m.media(tablet) {
         padding: var(--lg) var(--md);
@@ -75,12 +101,11 @@
     &-header {
         position: relative;
         font-size: var(--text-case-sm);
-        height: 30vh;
+        height: 20vh;
         text-transform: capitalize;
     }
 
     &-header__background {
-        @include m.absolute();
         font-size: var(--text-case-lg);
         color: rgba(v.$dark, 0.1);
         text-transform: capitalize;
@@ -89,10 +114,86 @@
     }
 
     &-header__primary {
-        @include m.absolute();
+        @include m.absolute;
         border-left: 6px solid var(--primary);
         padding-left: var(--sm);
     }
+
+    &__info {
+        background-color: rgba(v.$dark, 0.1);
+        padding: var(--md);
+        border-radius: var(--rad-lg);
+        font-size: var(text-reg);
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: var(--rad-sm);
+    }
+
+    &__description {
+        font-size: 1.2em;
+        text-transform: none;;
+    }
+
+    &__sub-header {
+        display: block;
+        font-size: 1.6em;
+        text-transform: uppercase;
+        color: var(--tertiary);
+        padding-left: var(--sm);
+        margin: var(--sm) 0;
+        border-left: 2px solid var(--tertiary);
+    }
+
+    &__stack-items {
+        padding-left: var(--sm);
+        font-size: 1.2em;
+        list-style: circle;
+        text-transform: capitalize;
+    }
+
+    &__stack-logo {
+        height: 1rem;
+        width: 1rem;
+
+
+    }
+}
+
+// each in depth case study of projects
+.case-studies {
+    &.open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: var(--primary);
+    }
+    .case-study {
+        width: 0;
+        height: 50vh;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        padding: var(--sm);
+        transition: all 200ms ease-in-out;
+
+        @include m.media(tablet) {
+            padding: var(--md);
+        }
+
+        &.open {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
 }
 
 //social links

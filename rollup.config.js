@@ -7,7 +7,6 @@ import { terser } from "rollup-plugin-terser";
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 
-
 export default {
     input: "src/main.js",
     output: {
@@ -17,7 +16,8 @@ export default {
     },
     plugins: [
         babel({
-            exclude: "node_modules/**"
+            exclude: "node_modules/**",
+            runtimeHelpers: true
         }),
         postcss({
             plugins: [

@@ -1,14 +1,14 @@
 // mixins
 @use "variables" as v;
 
-@mixin center-div {
+@mixin center {
     margin: {
         left: auto;
         right: auto;
     }
 }
 
-@mixin absolute() {
+@mixin absolute {
     position: absolute;
     top: 0;
     left: 0;

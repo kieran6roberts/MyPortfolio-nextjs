@@ -21,8 +21,8 @@
     &__logo {
         height: 2rem;
         width: 2rem;
-        background-color: var(--primary);
         padding: var(--xs);
+        background-color: var(--primary);
         transform: scale(1);
         transition: transform 100ms ease;
     }
@@ -161,18 +161,6 @@
             font-size: 0.7em;
         }
     }
-
-    &__btn--icon {
-        visibility: hidden;
-        opacity: 0;
-        transition: all 150ms ease-in-out;
-    }
-
-    &__btn:hover .hero__btn--icon {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0.5rem);
-    }
 }
 
 .cases {
@@ -187,6 +175,19 @@
     &__header {
         font-size: var(--text-hero);
         text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+/* about section */
+.wrapper {
+    &.open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
     }
 }
 
@@ -216,15 +217,6 @@
     }
 }
 
-/* about section */
-.wrapper {
-
-    &.open {
-        height: 150vh;
-        overflow-y: scroll;
-    }
-}
-
 .about {
     height: calc(50vh - 0.1rem);
     position: absolute;
@@ -235,20 +227,6 @@
     &__header {
         padding-left: var(--sm);
         border-left: 3px solid var(--dark);
-    }
-
-    &__toggle {
-        @include m.flex();
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background-color: rgba(v.$dark, 0.3);
-        width: 3rem;
-        height: 2rem;
-        padding: var(--xs);
-        border-radius: var(--rad-sm);
-        cursor: pointer;
-        transition: all 150ms ease-in-out;
     }
 }
   
