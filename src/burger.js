@@ -1,3 +1,5 @@
+import { toggleClassHandler } from "./toggleClassHandler.js";
+
 const homeBurger = document.querySelector(".nav__burger");
 const sidebarNav = document.querySelector(".sidebar");
 const sidebarBurger = document.querySelector(".sidebar__burger");

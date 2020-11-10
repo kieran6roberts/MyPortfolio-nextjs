@@ -215,6 +215,11 @@
         text-transform: uppercase;
         font-size: var(--text-links);
     }
+
+    &__image {
+        height: 5rem;
+        width: 5rem;
+    }
 }
 
 .about {
