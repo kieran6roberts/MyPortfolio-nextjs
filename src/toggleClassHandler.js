@@ -1,3 +1,8 @@
 export const toggleClassHandler = (className, ...elements) => {
-    [...elements].forEach( el => el.classList.toggle(`${className}`));
+    if (typeof className !== "string" || [...elements].length === 0) {
+        throw new Error("missing args in class toggle");
+    } else {
+        [...elements].forEach( el => el.classList.toggle(`${className}`));
+    }
+    
 };

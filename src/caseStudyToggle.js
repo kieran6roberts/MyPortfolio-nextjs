@@ -1,3 +1,4 @@
+//toggle case studies
 const caseBtns = [...document.querySelectorAll(".case__btn")];
 const studyWrapper = document.querySelector(".case-studies");
 const studyBtns = [...studyWrapper.querySelectorAll(".case-toggle")];

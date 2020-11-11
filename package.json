@@ -9,7 +9,7 @@
     "verbose": true
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --watch",
     "build": "rollup --config --watch"
   },
   "license": "MIT",
@@ -29,5 +29,8 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.29.0"
+  },
+  "dependencies": {
+    "tsparticles": "^1.18.11"
   }
 }

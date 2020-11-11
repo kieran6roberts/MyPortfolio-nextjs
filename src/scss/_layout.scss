@@ -8,10 +8,19 @@
     background: linear-gradient(to right, var(--primary) 30%, var(--secondary));
 }
 
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
 .nav {
     @include m.flex($jus: space-between, $align: flex-start);
     padding: var(--sm);
-    background-color: var(--dark);
+    z-index: 1;
 
     @include m.media(tablet) {
         padding: var(--md);
@@ -135,7 +144,6 @@
     width: 100%;
     color: var(--light);
     padding: var(--sm) var(--md);
-    background-color: var(--dark);
 
     @include m.media(tablet) {
         height: calc(100vh - 0.2rem - 100.333px);
