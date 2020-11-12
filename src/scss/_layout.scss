@@ -34,6 +34,11 @@
         background-color: var(--primary);
         transform: scale(1);
         transition: transform 100ms ease;
+
+        @include m.media(desktop-wide) {
+            height: 6rem;
+            width: 6rem;
+        }
     }
     
     &__logo:hover {
@@ -62,6 +67,7 @@
         background-color: rgba(v.$primary, 0.8);
         color: var(--light);
         padding: var(--xs) var(--md);
+        font-size: var(--text-reg);
         font-weight: 700;
         text-transform: capitalize;
         border-radius: var(--rad-lg);
@@ -97,6 +103,7 @@
     height: calc(100vh - 0.2rem);
     opacity: 0;
     visibility: none;
+    z-index: 1;
     background: linear-gradient(to bottom, var(--primary) 30%, var(--secondary) 100%);
     transition: opacity 100ms ease-in-out,
                 width 200ms ease-out;
@@ -174,6 +181,10 @@
         @include m.media(tablet) {
             @include m.flex($dir: column, $align: flex-start, $jus: flex-end);
         }
+
+        @include m.media(desktop-wide) {
+            padding-bottom: 8rem;
+        }
     }
 
     &__header {
@@ -189,10 +200,28 @@
         &--sm {
             font-size: 0.7em;
         }
+
+        &--xs {
+            display: block;
+            padding-left: var(--sm);
+            font-size: 0.4em;
+            text-transform: lowercase;
+
+            @include m.media(desktop-wide) {
+                padding-left: var(--lg);
+                margin-bottom: var(--md);
+            }
+        }
     }
 
     &__btn {
+        margin-left: var(--md);
         margin-bottom: var(--md);
+        font-size: var(--text-reg);
+
+        @include m.media(desktop-wide) {
+            margin-left: 8rem;
+        }
     }
 
     &__pointer {
@@ -231,6 +260,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
+        z-index: 1;
         overflow-y: scroll;
         transition: all 200ms ease-in-out;
     }
@@ -244,6 +274,7 @@
     visibility: hidden;
     z-index: 1;
     padding: var(--sm);
+    border: 1px solid var(--light);
     transition: all 200ms ease-in-out;
 
     @include m.media(tablet) {
@@ -254,6 +285,10 @@
         width: 100%;
         opacity: 1;
         visibility: visible;
+
+        @include m.media(tablet-wide) {
+            width: 45vw;
+        }
     }
 
     &__header {
@@ -273,10 +308,26 @@
     top: 0.2rem;
     left: 0;
     background: var(--light);
+    overflow-x: hidden;
+
+    @include m.media(tablet-wide) {
+        height: 90vh;
+        top: 5vh;
+        left: 5vw;
+        border-top-left-radius: var(--sm);
+        border-bottom-left-radius: var(--sm);
+    }
 
     &__header {
         padding-left: var(--sm);
         border-left: 3px solid var(--dark);
+        font-size: var(--text-reg);
+        color: rgba(v.$dark, 0.6);
+    }
+
+    &__info {
+        padding: var(--sm) var(--md) 0;
+        font-size: var(--text-reg);
     }
 }
   
@@ -286,23 +337,71 @@
     right: 0;
     background-color: var(--dark);
     color: var(--light);
+
+    @include m.media(tablet-wide) {
+        height: 90vh;
+        top: 5vh;
+        right: 5vw;
+        border-top-right-radius: var(--sm);
+        border-bottom-right-radius: var(--sm);
+    }
     
     &__header {
         padding-right: var(--sm);
         border-right: 3px solid var(--secondary);
+        font-size: var(--text-reg);
+        color: rgba(v.$light, 0.9);
         text-align: end;
     }
     
     &__info {
+        padding: var(--sm) var(--md) 0 0;
+        font-size: var(--text-reg);
         display: block;
         text-align: end;
+        position: relative;
+    }
+
+    &__info--copy {
+        color: var(--primary);
+        cursor: pointer;
+
+        &:before {
+            @include m.pseudo($content: "Copy to clipboard", $disp: none);
+            top: -0.5rem;
+            right: 7.5rem;
+            width: 6rem;
+            color: var(--dark);
+            padding: 0.2rem;
+            border-radius: var(--rad-sm);
+            background-color: var(--light);
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        &:hover:before {
+            display: block;
+        }
+
+        &:active,
+        &:focus {
+            &:before {
+                content: "Copied!";
+            }
+        }
+    }
+
+    &__wrapper {
+        @include m.flex($dir: column);
+        
+        @include m.media(tablet) {
+            @include m.flex($dir: row, $jus: space-evenly);
+        }
     }
 
     .form {
-        @include m.media(desktop) {
-            width: 50%;
-            margin: 0 auto;
-        }
+        width: 100%;
+        font-size: var(--text-reg);
 
         &__label {
             margin: var(--xs) 0;
@@ -312,17 +411,18 @@
 
         &__input {
             @include m.flex($dir: column);
-            background-color: rgba(v.$light, 0.9);
-            border: 1px solid var(--light);
-            border-radius: var(--rad-lg);
+            background-color: transparent;
+            border-bottom: 1px solid var(--light);
+            color: var(--light);
             width: 100%;
-            padding: var(--xs) var(--sm);
+            padding: var(--xs);
             outline: none;
             transition: all 100ms ease-in-out;
         }
 
         &__input:focus {
-            background-color: rgba(v.$light, 0.8);
+            background-color: rgba(v.$dark, 0.5);
+            border-bottom: 1px solid var(--secondary);
         }
 
         &__input:valid {
@@ -337,6 +437,13 @@
             width: 40%;
             border: none;
         }
+    }
+
+    .social__items {
+        display: none;
+        visibility: hidden;
+        justify-content: space-between;
+        height: 100%;
     }
 }
 
@@ -359,11 +466,8 @@
     .social__link {
         color: var(--light);
     }
-}
 
-.test-img {
-    height: 300px;
-    width: 500px;
-    display: block;
-    margin: 0 auto;
+    .social__icon {
+        font-size: var(--text-icon);
+    }
 }

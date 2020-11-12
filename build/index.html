@@ -98,8 +98,8 @@
           about me
         </h3>
         <p class="about__info">
-          I'm a front-end developer with a passion for problem solving, bringing interactive and
-          responsive designs to life. My primary skills include javascript/reactjs, CSS/SCSS, HTML
+          I'm a front-end developer with a passion for problem solving, bringing 
+          interactive/responsive designs to life. My primary skills include javascript/reactjs, CSS/SCSS, HTML
           and several other front-end focused tools. When my head is not in the screen it's usually
           out hiking, biking or something alike.
         </p>
@@ -108,55 +108,81 @@
         <h3 class="contact__header">
           contact me
         </h3>
-        <span class="contact__info">Have any questions or inquiries, get in touch.</span>
+        <span class="contact__info">
+          If you prefer you can copy my
+        <span 
+          class="contact__info--copy" 
+          data-clipboard-target="#hero__email">
+          email 
+        </span>
+          to the clipboard.
+        </span>
+        <div class="contact__wrapper">
+          <form action="https://formspree.io/f/mleonqvj" method="POST" class="form">
+            <label 
+            for="name" 
+            class="form__label" >
+              name *
+            </label>
+            <input 
+            id="name" 
+            type="text" 
+            class="form__input"
+            name="name"
+            minlength="2"
+            required>
   
-        <form action="https://formspree.io/f/mleonqvj" method="POST" class="form">
-          <label 
-          for="name" 
-          class="form__label" >
-            name *
-          </label>
-          <input 
-          id="name" 
-          type="text" 
-          class="form__input"
-          name="name"
-          minlength="2"
-          required>
-          
-          <label 
-          for="email"
-           class="form__label">
-            email *
-          </label>
-          <input 
-          id="email" 
-          type="email" 
-          class="form__input"
-          name="email"
-          required>
-  
-          <label 
-          for="message" 
-          class="form__label">
-            message *
-          </label>
-          <textarea 
-          name="message" 
-          id="message" 
-          cols="15" 
-          rows="10" 
-          class="form__input input--pad"
-          name="message"
-          required
-          minlength="15"></textarea>
-  
-          <input 
-          type="submit" 
-          class="form__submit btn" 
-          value="submit"
-          name="submit">
-        </form>
+            <label 
+            for="email"
+             class="form__label">
+              email *
+            </label>
+            <input 
+            id="email" 
+            type="email" 
+            class="form__input"
+            name="email"
+            required>
+    
+            <label 
+            for="message" 
+            class="form__label">
+              message *
+            </label>
+            <textarea 
+            name="message" 
+            id="message" 
+            cols="15" 
+            rows="3" 
+            class="form__input input--pad"
+            name="message"
+            required
+            minlength="15"></textarea>
+    
+            <input 
+            type="submit" 
+            class="form__submit btn" 
+            value="submit"
+            name="submit">
+          </form>
+            <ul class="social__items">
+              <li class="social__item">
+                <a href="https://github.com/kieran6roberts" class="social__link">
+                  <i class="fa fa-github social__icon" aria-hidden="true"></i> github.com/kieran6roberts
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://twitter.com/Kieran6dev" class="social__link">
+                  <i class="fa fa-twitter social__icon" aria-hidden="true"></i> twitter.com/Kieran6dev
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link">
+                  <i class="fa fa-linkedin social__icon" aria-hidden="true"></i> www.linkedin.com/in/kieran-roberts-00517b178/
+                </a>
+              </li>
+            </ul>
+        </div>
       </section>
     </div>
 
@@ -167,6 +193,10 @@
         <h1 class="hero__header">
           hi there! i'm <span class="hero__header--clr">kieran</span><br>
           <span class="hero__header--sm">front end developer</span>
+          <span 
+          id="hero__email" 
+          value="kieranroberts6dev@gmail.com"
+          class="hero__header--xs">kieranroberts6dev@gmail.com</span>
         </h1>
 
         <a href="#" class="btn hero__btn">
@@ -200,7 +230,7 @@
                   ./public/images/brewery-desktop/full-screen-brewery900x476.jpg 900w,
                   ./public/images/brewery-desktop/full-screen-brewery1200x635.jpg 1200w,
                   ./public/images/brewery-desktop/full-screen-brewery1800x952.jpg 1800w"
-          sizes="(min-width: 1px) and (max-width: 500px) 350px, 75vw"
+          sizes="(min-width: 1px) and (max-width: 500px) 350px, 60vw"
           src="./public/images/brewery-desktop/full-screen-brewery900x476.jpg"
           class="case__image" 
           loading="lazy"
@@ -273,7 +303,7 @@
                   ./public/images/recipe-desktop/full-screen-recipe900x480.jpg 900w,
                   ./public/images/recipe-desktop/full-screen-recipe1200x639.jpg 1200w,
                   ./public/images/recipe-desktop/full-screen-recipe1800x959.jpg 1800w"
-          sizes="(min-width: 1px) and (max-width: 500px) 350px, 75vw"
+          sizes="(min-width: 1px) and (max-width: 500px) 350px, 60vw"
           src="./public/images/recipe-desktop/full-screen-recipe900x480.jpg"
           class="case__image"
           loading="lazy"

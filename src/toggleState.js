@@ -17,22 +17,26 @@ const contactLink = document.querySelector("#link--contact");
 const caseLink = document.querySelector("#link--case");
 const desktopContactLink = document.querySelector("#nav-contact");
 
+//modal
+const modal = document.querySelector(".modal");
+
 contactLink.addEventListener("click", () => {
     toggleClassHandler("open", sidebarNav,
                                document.body,
                                contactSection,
                                aboutSection,
-                               wrapper
+                               wrapper,
+                               modal
     );
     document.body.classList.toggle("hidden");
 });
 
 desktopContactLink.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav,
-                               document.body,
+    toggleClassHandler("open", document.body,
                                contactSection,
                                aboutSection,
-                               wrapper
+                               wrapper,
+                               modal
     );
     document.body.classList.toggle("hidden");
 });
@@ -59,7 +63,8 @@ sidebarBurger.addEventListener("click", () => {
 heroBtn.addEventListener("click", () => {
     toggleClassHandler("open", contactSection,
                                aboutSection,
-                               wrapper
+                               wrapper,
+                               modal
     );
     document.body.classList.toggle("hidden");
 });
@@ -67,7 +72,8 @@ heroBtn.addEventListener("click", () => {
 aboutBtn.addEventListener("click", () => {
     toggleClassHandler("open", contactSection,
                                aboutSection,
-                               wrapper
+                               wrapper,
+                               modal
     );
     document.body.classList.toggle("hidden");
 });

@@ -7,7 +7,7 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    background-color: rgba(v.$dark, 0.3);
+    background-color: rgba(v.$dark, 0.6);
     z-index: 1;
     visibility: hidden;
     display: none;
@@ -66,7 +66,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: rgba(v.$dark, 0.3);
+    background-color: rgba(v.$primary, 0.3);
     width: 3rem;
     height: 2rem;
     padding: var(--xs);
@@ -74,9 +74,13 @@
     cursor: pointer;
     transition: all 150ms ease-in-out;
 
+    &:hover {
+        background-color: rgba(v.$primary, 0.6);
+    }
+
     @include m.media(tablet) {
-        top: 3rem;
-        right: 3rem;
+        top: 2rem;
+        right: 2rem;
     }
 }
 
@@ -151,6 +155,7 @@
         @include m.absolute;
         border-left: 6px solid var(--primary);
         padding-left: var(--sm);
+        font-size: var(--text-case-sm);
         font-weight: 700;
     }
 
@@ -158,7 +163,11 @@
         background-color: rgba(v.$dark, 0.1);
         padding: var(--md);
         border-radius: var(--rad-lg);
-        font-size: 1em;
+        font-size: var(--text-reg);
+
+        @include m.media(desktop-wide) {
+            padding: 15rem;
+        }
     }
 
     &__image {
@@ -168,11 +177,6 @@
         object-fit: cover;
         border-radius: var(--rad-sm);
         box-shadow: 0 0 5px rgba(v.$dark, 0.5);
-
-        @include m.media(tablet) {
-            width: 75%;
-            margin: 0 auto;
-        }
     }
 
     &__image-caption {
@@ -195,6 +199,10 @@
         padding-left: var(--sm);
         margin: var(--sm) 0;
         border-left: 2px solid var(--tertiary);
+
+        @include m.media(desktop-wide) {
+            padding-left: var(--lg);
+        }
     }
 
     &__stack-items {
@@ -211,7 +219,14 @@
             height: 2rem;
             width: 2rem;
         }
+    }
 
+    &__btn {
+        margin-top: var(--xs);
+
+        @include m.media(desktop-wide) {
+            margin-top: var(--lg);
+        }
     }
 }
 
@@ -250,7 +265,7 @@
         overflow-y: scroll;
 
         @include m.media(tablet) {
-            padding: var(--md);
+            padding: var(--md) var(--lg) var(--lg);
         }
 
         .case-toggle {
@@ -261,7 +276,7 @@
         }
         
         &.open {
-            height: 100vh;
+            height: 90vh;
             opacity: 1;
             visibility: visible;
         }
@@ -306,6 +321,10 @@
             margin: 0 var(--xs);
             border-radius: var(--rad-sm);
             cursor: pointer;
+
+            @include m.media(tablet-wide) {
+                width: 20vw;
+            }
 
             &:hover {
                 background-color: rgba(v.$primary, 0.6);

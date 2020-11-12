@@ -12,8 +12,7 @@ export const particlesConfig = {
         value: "#06e08d",
         animation: {
           enable: true,
-          speed: 20,
-          sync: true
+          speed: 12,
         }
       },
       shape: {
@@ -23,10 +22,10 @@ export const particlesConfig = {
         value: 0.5
       },
       size: {
-        value: 20,
+        value: 30,
         random: {
           enable: true,
-          minimumValue: 15
+          minimumValue: 5
         }
       },
       move: {
@@ -34,29 +33,6 @@ export const particlesConfig = {
         speed: 1,
         direction: "none",
         out_mode: "out"
-      }
-    },
-    interactivity: {
-      detectsOn: "canvas",
-      events: {
-        onHover: {
-          enable: true,
-          mode: "light"
-        },
-        resize: true
-      },
-      modes: {
-        light: {
-          area: {
-            gradient: {
-              start: "#06e08d",
-              stop: "#ff0eeb"
-            }
-          },
-          shadow: {
-            color: "#17163e"
-          }
-        }
       }
     },
     detectRetina: true,
