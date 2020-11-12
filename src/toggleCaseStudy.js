@@ -3,8 +3,10 @@ const caseBtns = [...document.querySelectorAll(".case__btn")];
 const studyWrapper = document.querySelector(".case-studies");
 const studyBtns = [...studyWrapper.querySelectorAll(".case-toggle")];
 const studyEls = [...studyWrapper.querySelectorAll(".case-study")];
+const modal = document.querySelector(".modal");
 
 export const addStudyHandler = ({ currentTarget }) => {
+    modal.classList.toggle("open");
     studyWrapper.classList.toggle("open");
     document.body.classList.toggle("hidden");
     const parentElId = currentTarget.parentElement.id;
@@ -13,6 +15,7 @@ export const addStudyHandler = ({ currentTarget }) => {
 };
 
 export const removeStudyHandler = () => {
+    modal.classList.toggle("open");
     studyWrapper.classList.toggle("open");
     document.body.classList.toggle("hidden");
     studyEls.forEach( el => el.classList.remove("open"));

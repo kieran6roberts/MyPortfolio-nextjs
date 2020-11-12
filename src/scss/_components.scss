@@ -2,6 +2,35 @@
 
 @use "variables" as v;
 @use "mixins" as m;
+
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(v.$dark, 0.3);
+    z-index: 1;
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 200ms ease;
+
+    &.open {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+//pointer
+.pointer {
+    width: 2px;
+    height: 10vh;
+    position: absolute;
+    left: 50%;
+    margin-left: 1px;
+}
+
 //btn
 .btn {
     color: var(--dark);
@@ -44,6 +73,11 @@
     border-radius: var(--rad-sm);
     cursor: pointer;
     transition: all 150ms ease-in-out;
+
+    @include m.media(tablet) {
+        top: 3rem;
+        right: 3rem;
+    }
 }
 
 //burger nav
@@ -66,7 +100,7 @@
     &--span:before{
         height: 0.15rem;
         width: 80%;
-        background-color: var(--dark);
+        background-color: var(--light);
         border-radius: var(--rad-sm);
         pointer-events: none;
     }
@@ -109,7 +143,7 @@
         font-size: var(--text-case-lg);
         color: rgba(v.$dark, 0.1);
         text-transform: capitalize;
-        width: 150vw;
+        width: 200vw;
         transform: translateX(15%);
     }
 
@@ -117,20 +151,35 @@
         @include m.absolute;
         border-left: 6px solid var(--primary);
         padding-left: var(--sm);
+        font-weight: 700;
     }
 
     &__info {
         background-color: rgba(v.$dark, 0.1);
         padding: var(--md);
         border-radius: var(--rad-lg);
-        font-size: var(text-reg);
+        font-size: 1em;
     }
 
     &__image {
+        display: block;
         width: 100%;
         height: auto;
         object-fit: cover;
         border-radius: var(--rad-sm);
+        box-shadow: 0 0 5px rgba(v.$dark, 0.5);
+
+        @include m.media(tablet) {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+
+    &__image-caption {
+        text-align: center;
+        font-size: 0.9em;
+        margin: var(--sm) 0;
+        font-style: italic;
     }
 
     &__description {
@@ -158,42 +207,183 @@
     &__stack-logo {
         height: 1rem;
         width: 1rem;
-
+        @include m.media(desktop-wide) {
+            height: 2rem;
+            width: 2rem;
+        }
 
     }
 }
 
 // each in depth case study of projects
 .case-studies {
+    height: 90vh;
+    width: 0%;
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -45vh;
+    border-top-left-radius: var(--rad-sm);
+    border-bottom-left-radius: var(--rad-sm);
+    z-index: 1;
+    background-color: var(--light);
+    
     &.open {
-        position: fixed;
+        width: 90%;
+        visibility: visible;
+    }
+    
+    .case-study {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
-        overflow-y: scroll;
-        background-color: var(--primary);
-    }
-    .case-study {
-        width: 0;
-        height: 50vh;
+        height: 0;
         opacity: 0;
         visibility: hidden;
-        z-index: 1;
-        padding: var(--sm);
+        padding: var(--xs) var(--sm) var(--lg);
+        background-color: rgba(v.$light, 1);
+        border-top-left-radius: var(--rad-sm);
+        border-bottom-left-radius: var(--rad-sm);
         transition: all 200ms ease-in-out;
+        overflow-y: scroll;
 
         @include m.media(tablet) {
             padding: var(--md);
         }
 
+        .case-toggle {
+            background-color: rgba(v.$primary, 0.6);
+        }
+        .case-toggle:hover {
+            background-color: rgba(v.$primary, 0.9);
+        }
+        
         &.open {
-            width: 100%;
+            height: 100vh;
             opacity: 1;
             visibility: visible;
         }
-    }
 
+        &__header {
+            font-size: var(--text-links);
+            text-transform: capitalize;
+            border-bottom: 1px solid rgba(v.$dark, 0.1);
+        }
+
+        &__content {
+            margin-top: var(--md);
+            @include m.flex($dir: column, $jus: flex-start, $align: flex-start);
+
+            @include m.media(tablet-wide) {
+                @include m.flex($dir: row, $jus: space-between, $align: flex-start);
+            }
+        }
+
+        &__items {
+            display: flex;
+            flex: 0 1 auto;
+
+            @include m.media(tablet-wide) {
+                flex-direction: column;
+            }
+        }
+
+        &__item {
+            margin-bottom: var(--md);
+        }
+
+        &__btn {
+            display: block;
+            height: 100%;
+            background-color: rgba(v.$primary, 0.3);
+            color: var(--dark);
+            font-size: var(--text-reg);
+            text-align: center;
+            text-transform: capitalize;
+            padding: var(--xs) var(--sm);
+            margin: 0 var(--xs);
+            border-radius: var(--rad-sm);
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(v.$primary, 0.6);
+            }
+        }
+
+        &__info-wrapper {
+            flex: 1 1 auto;
+            padding-top: var(--sm);
+            width: 100%;
+
+            @include m.media(tablet-wide) {
+                padding-left: var(--md);
+                padding-top: 0;
+            }
+        }
+
+        .case__stack-items {
+            list-style: none;
+            margin-bottom: var(--md);
+            @include m.flex($jus: space-evenly);
+
+            .case__stack-logo {
+                    height: 2rem;
+                    width: 2rem;
+            }
+        }
+
+        &__stack,
+        &__outcome,
+        &__objectives {
+            display: none;
+            visibility: hidden;
+            background-color: rgba(v.$light, 1);
+            opacity: 0;
+            font-size: var(--text-reg);
+
+            &.show{
+                display: block;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &__tab-header {
+            text-transform: capitalize;
+            font-size: 1.2em;
+            padding-left: var(--sm);
+            margin: var(--md) 0;
+            border-left: 5px solid rgba(v.$primary, 0.6);
+        }
+
+        &__outcome-items {
+            list-style: circle;
+            padding-left: var(--sm);
+            padding-bottom: var(--md);
+        }
+
+        &__images-wrapper {
+            @include m.flex($jus: space-evenly, $align: center);
+            margin-top: var(--md);
+            padding-bottom: var(--sm);
+        }
+
+        &__images {
+            border-radius: var(--rad-sm);
+            box-shadow: 0 0 5px rgba(v.$dark, 0.5);
+        }
+
+        &__images-caption {
+            display: block;
+            font-size: var(0.8em);
+            font-style: italic;
+            text-align: center;
+        }
+
+        
+    }
 }
 
 //social links

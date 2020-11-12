@@ -1,4 +1,5 @@
-import { addStudyHandler, removeStudyHandler } from "./caseStudyToggle.js";
+import { addStudyHandler, removeStudyHandler } from "./toggleCaseStudy.js";
+import { toggleCaseStudyLinksHandler } from "./toggleCaseStudyLinks.js";
 import "./toggleState.js";
 import { tsParticles } from "tsparticles";
 import { particlesConfig } from "./particlesConfig.js";

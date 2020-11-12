@@ -4,15 +4,16 @@
 
 $font-primary: "Titillium Web", sans-serif;
 $dark: rgb(0, 15, 44);
-$light: rgb(233, 226, 226);
+$light: rgb(245, 236, 236);
 $primary: rgb(6, 224, 141);
 $secondary: rgb(255, 14, 235);
 $tertiary: rgb(4, 155, 201);
 $text-hero: clamp(2.3rem, 5vw, 4rem);
-$text-case-lg: clamp(6rem, 10vw, 8rem);
+$text-case-lg: clamp(7rem, 10vw, 9rem);
 $text-case-sm: clamp(1.6rem, 3vw, 2.5rem);
 $text-icon: clamp(1.5rem, 2vw, 2.2rem);
 $text-links: clamp(1.7rem, 5vw, 2.2rem);
+$text-nav-icon: clamp(2rem, 4vw, 2.5rem);
 $text-reg: clamp(1rem, 1.6vw, 1.8rem);
 $radius-sm: 1.25rem;
 $radius-lg: 2.5rem;
@@ -22,7 +23,7 @@ $md: 2rem;
 $lg: 4rem;
 $breakpoints: (
     "mobile": 400px,
-    "mobile-wide": 500px,
+    "mobile-wide": 550px,
     "tablet": 768px,
     "tablet-wide": 1024px,
     "desktop": 1248px,

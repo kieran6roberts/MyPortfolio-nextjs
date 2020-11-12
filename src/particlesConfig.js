@@ -2,10 +2,10 @@ export const particlesConfig = {
     fpsLimit: 30,
     particles: {
       number: {
-        value: 10,
+        value: 5,
         density: {
           enable: true,
-          value_area: 500
+          value_area: 200
         }
       },
       color: {
@@ -31,7 +31,7 @@ export const particlesConfig = {
       },
       move: {
         enable: true,
-        speed: 3,
+        speed: 1,
         direction: "none",
         out_mode: "out"
       }

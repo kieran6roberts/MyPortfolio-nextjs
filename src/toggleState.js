@@ -57,9 +57,7 @@ sidebarBurger.addEventListener("click", () => {
 });
 
 heroBtn.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav,
-                               document.body,
-                               contactSection,
+    toggleClassHandler("open", contactSection,
                                aboutSection,
                                wrapper
     );
@@ -67,9 +65,7 @@ heroBtn.addEventListener("click", () => {
 });
 
 aboutBtn.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav,
-                               document.body,
-                               contactSection,
+    toggleClassHandler("open", contactSection,
                                aboutSection,
                                wrapper
     );

@@ -4,5 +4,4 @@ export const toggleClassHandler = (className, ...elements) => {
     } else {
         [...elements].forEach( el => el.classList.toggle(`${className}`));
     }
-    
 };
