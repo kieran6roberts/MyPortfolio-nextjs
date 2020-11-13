@@ -1,13 +1,14 @@
+import { toggleClassHandler } from "./toggleClassHandler.js";
+
 //toggle case studies
 const caseBtns = [...document.querySelectorAll(".case__btn")];
 const studyWrapper = document.querySelector(".case-studies");
-const studyBtns = [...studyWrapper.querySelectorAll(".case-toggle")];
-const studyEls = [...studyWrapper.querySelectorAll(".case-study")];
+const studyBtns = [...document.querySelectorAll(".case-toggle")];
+const studyEls = [...document.querySelectorAll(".case-study")];
 const modal = document.querySelector(".modal");
 
 export const addStudyHandler = ({ currentTarget }) => {
-    modal.classList.toggle("open");
-    studyWrapper.classList.toggle("open");
+    toggleClassHandler("open", modal, studyWrapper);
     document.body.classList.toggle("hidden");
     const parentElId = currentTarget.parentElement.id;
     const studyEl = document.querySelector(`.${parentElId}`);

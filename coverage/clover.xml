@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1605087634872" clover="3.2.0">
-  <project timestamp="1605087634872" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1605268146843" clover="3.2.0">
+  <project timestamp="1605268146843" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3" elements="14" coveredelements="14" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="toggleClassHandler.js" path="C:\Users\Kieran\Desktop\Dev\projects\my-portfolio\src\toggleClassHandler.js">
+      <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="cond" truecount="5" falsecount="0"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="10" count="5" type="stmt"/>
+    </file>
   </project>
 </coverage>
