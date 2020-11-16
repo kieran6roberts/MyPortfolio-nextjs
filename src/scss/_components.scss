@@ -28,14 +28,13 @@
     height: 10vh;
     position: absolute;
     left: 50%;
-    margin-left: 1px;
 }
 
 //btn
 .btn {
-    color: var(--dark);
+    color: var(--light);
     font-weight: 700;
-    background-color: rgba(v.$primary, 0.7);
+    background-color: rgba(v.$primary, 0.8);
     text-transform: uppercase;
     padding: var(--xs) var(--md);
     margin: var(--sm) 0 0;
@@ -87,7 +86,7 @@
 //burger nav
 .nav__burger {
     @include m.flex($dir: column, $jus: center);
-    background-color: rgba(v.$primary, 0.3);
+    background-color: rgba(v.$primary, 0.8);
     width: 3rem;
     height: 2rem;
     padding: var(--xs);
@@ -160,7 +159,7 @@
     }
 
     &__info {
-        background-color: rgba(v.$dark, 0.1);
+        background-color: var(--light);
         padding: var(--md);
         border-radius: var(--rad-lg);
         font-size: var(--text-reg);

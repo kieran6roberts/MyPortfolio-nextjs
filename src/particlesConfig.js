@@ -2,27 +2,23 @@ export const particlesConfig = {
     fpsLimit: 30,
     particles: {
       number: {
-        value: 5,
+        value: 3,
         density: {
           enable: true,
           value_area: 200
         }
       },
       color: {
-        value: "#06e08d",
-        animation: {
-          enable: true,
-          speed: 12,
-        }
+        value: "#ff0feb",
       },
       shape: {
         type: ["circle"]
       },
       opacity: {
-        value: 0.5
+        value: 0.1
       },
       size: {
-        value: 30,
+        value: 50,
         random: {
           enable: true,
           minimumValue: 5

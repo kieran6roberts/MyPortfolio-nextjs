@@ -5,16 +5,7 @@
 
 .scroll-div {
     height: 0.2rem;
-    background: linear-gradient(to right, var(--primary) 30%, var(--secondary));
-}
-
-.particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
+    background: linear-gradient(to right, var(--primary) 15%, var(--secondary));
 }
 
 .nav {
@@ -64,7 +55,7 @@
         position: relative;
         display: block;
         overflow: hidden;
-        background-color: rgba(v.$primary, 0.8);
+        background-color: rgba(v.$primary, 0.9);
         color: var(--light);
         padding: var(--xs) var(--md);
         font-size: var(--text-reg);
@@ -78,16 +69,16 @@
         font-size: var(--text-nav-icon);
         position: absolute;
         left: 10%;
-        color: rgba(v.$primary, 0.6);
+        color: rgba(v.$dark, 0.3);
         transition: all 150ms ease-in-out;
     }
 
     &__item-link:hover {
-        background-color: rgba(v.$primary, 0.9);
+        background-color: rgba(v.$primary, 1);
     }
 
     &__item-link:hover .nav__icon {
-        color: rgba(v.$dark, 0.3);
+        color: rgba(v.$dark, 0.6);
     }
 
     &__item:nth-of-type(2) {
@@ -165,8 +156,16 @@
 .hero {
     height: calc(100vh - 0.2rem - 70.333px);
     width: 100%;
-    color: var(--light);
     padding: var(--sm) var(--md) 0;
+
+    &__particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
 
     @include m.media(tablet) {
         height: calc(100vh - 0.2rem - 104.333px);
@@ -177,10 +176,6 @@
         position: relative;
         width: 100%;
         height: 100%;
-        
-        @include m.media(tablet) {
-            @include m.flex($dir: column, $align: flex-start, $jus: flex-end);
-        }
 
         @include m.media(desktop-wide) {
             padding-bottom: 8rem;
@@ -190,6 +185,7 @@
     &__header {
         font-size: var(--text-hero);
         text-transform: uppercase;
+        color: var(--light);
 
         &--clr {
             font-size: 1.3em;
@@ -202,26 +198,31 @@
         }
 
         &--xs {
-            display: block;
-            padding-left: var(--sm);
-            font-size: 0.4em;
+            font-size: var(--text-sm);
             text-transform: lowercase;
+            font-family: "Consolas", sans-serif;
+            color: var(--white);
+            opacity: 0.5;
 
             @include m.media(desktop-wide) {
                 padding-left: var(--lg);
                 margin-bottom: var(--md);
             }
         }
+
+        &--purple {color: rgb(174, 9, 189);}
+        &--blue {color: rgb(29, 29, 202);}
+        &--yellow {
+            color: rgb(225, 235, 98);
+            text-transform: uppercase;
+        }
+        &--white {color: rgb(255, 255, 255);}
+        &--bright-blue {color: rgb(112, 182, 240);}
     }
 
     &__btn {
-        margin-left: var(--md);
         margin-bottom: var(--md);
         font-size: var(--text-reg);
-
-        @include m.media(desktop-wide) {
-            margin-left: 8rem;
-        }
     }
 
     &__pointer {
@@ -234,8 +235,9 @@
 .cases {
     position: relative;
     padding: var(--md) 0;
-    margin: 0 var(--md);
+    margin: var(--sm) var(--md);
     border-left: 1px solid rgba(v.$dark, 0.1);
+    background-color: var(--light);
 
     @include m.media(tablet) {
         padding: var(--lg);
@@ -243,12 +245,13 @@
 
     &__pointer {
         top: 0;
-        background-color: rgba(v.$dark, 0.5);
+        background-color: var(--dark);
     }
 
     &__header {
         font-size: var(--text-hero);
         text-transform: uppercase;
+        padding-left: var(--sm)
     }
 }
 
