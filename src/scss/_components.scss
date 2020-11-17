@@ -32,13 +32,14 @@
 
 //btn
 .btn {
-    color: var(--light);
+    color: var(--white);
     font-weight: 700;
     background-color: rgba(v.$primary, 0.8);
     text-transform: uppercase;
-    padding: var(--xs) var(--md);
+    padding: var(--xs) var(--sm);
     margin: var(--sm) 0 0;
     border-radius: var(--rad-lg);
+    border: 1px solid rgba(v.$dark, 0.2);
     transition: all 150ms ease-in-out;
     cursor: pointer;
 }
@@ -110,7 +111,7 @@
 
     &--span:after,
     &--span:before {
-        @include m.pseudo($content: "",);
+        @include m.pseudo($content: "");
     }
 
     &--span:before {
@@ -128,7 +129,7 @@
 
 //case studies 
 .case {
-    padding: var(--lg) var(--sm);
+    padding: var(--md) var(--sm);
     border-bottom: 1px solid rgba(v.$dark, 0.1);
 
     @include m.media(tablet) {
@@ -143,37 +144,56 @@
     }
 
     &-header__background {
+        visibility: hidden;
+        opacity: 0;
         font-size: var(--text-case-lg);
         color: rgba(v.$dark, 0.1);
         text-transform: capitalize;
         width: 200vw;
         transform: translateX(15%);
+        transition: all 800ms ease 750ms;
     }
 
     &-header__primary {
+        visibility: hidden;
+        opacity: 0;
         @include m.absolute;
         border-left: 6px solid var(--primary);
         padding-left: var(--sm);
         font-size: var(--text-case-sm);
         font-weight: 700;
+        transition: all 500ms ease 200ms;
     }
 
     &__info {
+        visibility: hidden;
+        opacity: 0;
         background-color: var(--light);
         padding: var(--md);
         border-radius: var(--rad-lg);
         font-size: var(--text-reg);
+        transition: all 500ms ease 400ms;
 
         @include m.media(desktop-wide) {
             padding: 15rem;
         }
     }
 
+    &__info.show,
+    &-header__primary.show,
+    &-header__background.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
     &__image {
         display: block;
+        max-height: 75vh;
+        max-width: 75vw;
         width: 100%;
         height: auto;
         object-fit: cover;
+        margin: 0 auto;
         border-radius: var(--rad-sm);
         box-shadow: 0 0 5px rgba(v.$dark, 0.5);
     }
@@ -221,10 +241,10 @@
     }
 
     &__btn {
-        margin-top: var(--xs);
+        margin: var(--sm) 0;
 
         @include m.media(desktop-wide) {
-            margin-top: var(--lg);
+            margin: var(--lg) 0;
         }
     }
 }

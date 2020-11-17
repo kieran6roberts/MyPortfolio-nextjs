@@ -23,8 +23,8 @@ const modal = document.querySelector(".modal");
 contactLink.addEventListener("click", () => {
     toggleClassHandler("open", sidebarNav,
                                document.body,
-                               contactSection,
                                aboutSection,
+                               contactSection,
                                wrapper,
                                modal
     );
@@ -33,8 +33,8 @@ contactLink.addEventListener("click", () => {
 
 desktopContactLink.addEventListener("click", () => {
     toggleClassHandler("open", document.body,
-                               contactSection,
                                aboutSection,
+                               contactSection,
                                wrapper,
                                modal
     );
@@ -61,8 +61,8 @@ sidebarBurger.addEventListener("click", () => {
 });
 
 heroBtn.addEventListener("click", () => {
-    toggleClassHandler("open", contactSection,
-                               aboutSection,
+    toggleClassHandler("open", aboutSection,
+                               contactSection,
                                wrapper,
                                modal
     );
@@ -70,8 +70,8 @@ heroBtn.addEventListener("click", () => {
 });
 
 aboutBtn.addEventListener("click", () => {
-    toggleClassHandler("open", contactSection,
-                               aboutSection,
+    toggleClassHandler("open", aboutSection,
+                               contactSection,
                                wrapper,
                                modal
     );

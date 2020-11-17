@@ -9,13 +9,13 @@ export const particlesConfig = {
         }
       },
       color: {
-        value: "#ff0feb",
+        value: ["#ff0feb", "#06e08c", "#049ac8"]
       },
       shape: {
         type: ["circle"]
       },
       opacity: {
-        value: 0.1
+        value: 0.3
       },
       size: {
         value: 50,
@@ -25,7 +25,7 @@ export const particlesConfig = {
         }
       },
       move: {
-        enable: true,
+        enable: false,
         speed: 1,
         direction: "none",
         out_mode: "out"
@@ -34,5 +34,5 @@ export const particlesConfig = {
     detectRetina: true,
     background: {
       color: "#000f2c"
-    }
+    },
   };

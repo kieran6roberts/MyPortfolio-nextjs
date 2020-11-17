@@ -97,9 +97,38 @@
         <h3 class="about__header">
           about me
         </h3>
+        <ul class="case__stack-items">
+          <li class="case__stack-item">
+            <img 
+            src="./public/images/icons/html-5.svg" 
+            alt="html emblem" 
+            loading="lazy" 
+            class="case__stack-logo">
+          </li>
+          <li class="case__stack-item">
+            <img 
+            src="./public/images/icons/css-3.svg" 
+            alt="css emblem" 
+            loading="lazy" 
+            class="case__stack-logo">
+          </li>
+          <li class="case__stack-item">
+            <img 
+            src="./public/images/icons/javascript.svg" 
+            alt="javascript emblem" 
+            loading="lazy" 
+            class="case__stack-logo">
+          </li>
+          <li class="case__stack-item">
+            <img src="./public/images/icons/react.svg" 
+            alt="reactJS emblem" 
+            loading="lazy" 
+            class="case__stack-logo">
+          </li>
+        </ul>
         <p class="about__info">
-          I'm a front-end developer with a passion for problem solving, bringing 
-          interactive/responsive designs to life. My primary skills include javascript/reactjs, CSS/SCSS, HTML
+          I'm a front-end developer with a passion for problem solving where I bring 
+          interactive and responsive designs to life. My primary skills include js/reactjs, CSS/SCSS, HTML
           and several other front-end focused tools. When my head is not in the screen it's usually
           out hiking, biking or something alike.
         </p>
@@ -192,51 +221,22 @@
       <div class="hero__wrapper">
         <h1 class="hero__header">
           hi there! i'm <span class="hero__header--clr">kieran</span><br>
-          <span class="hero__header--sm">front end developer</span>
         </h1>
-        
+        <h2 class="hero__header--sm">
+          front end developer
+        </h2>
         <a href="#" class="btn hero__btn">
           about me <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
         </a>
-        <div
-        value="kieranroberts6dev@gmail.com"
-        class="hero__header--xs">
-          <span class="hero__header--purple">export</span>
-          <span class="hero__header--blue"> const</span>
-          <span class="hero__header--yellow"> EMAIL</span> =
-          <span class="hero__header--yellow"> ()</span>
-          <span class="hero__header--blue"> => </span>
-          <span class="hero__header--bright-blue"> kieranroberts6dev@gmail.com</span>;
-        </div>
-        <div
-        value="kieranroberts6dev@gmail.com"
-        class="hero__header--xs">
-          <span class="hero__header--purple">export</span>
-          <span class="hero__header--blue"> const</span>
-          <span class="hero__header--yellow"> GITHUB</span> =
-          <span class="hero__header--yellow"> ()</span>
-          <span class="hero__header--blue"> => </span>
-          <span class="hero__header--bright-blue"> kieran6roberts@gmail.com</span>;
-        </div>
-        <div
-        value="kieranroberts6dev@gmail.com"
-        class="hero__header--xs">
-          <span class="hero__header--purple">export</span>
-          <span class="hero__header--blue"> const</span>
-          <span class="hero__header--yellow"> LINKED_IN</span> =
-          <span class="hero__header--yellow"> ()</span>
-          <span class="hero__header--blue"> => </span>
-          <span class="hero__header--bright-blue"> kieran6roberts@gmail.com</span>;
-        </div>
         <div class="hero__pointer pointer"></div>
       </div>
     </section>
 
     <!---Case Studies--->
-    <section class="cases" id="case-studies">
+    <section class="cases">
       <div class="cases__pointer pointer"></div>
       <h2 class="cases__header">
-        my work
+        take a look at my work
       </h2>
       <!---Study 1--->
       <div class="case">
@@ -256,9 +256,10 @@
                   ./public/images/brewery-desktop/full-screen-brewery900x476.jpg 900w,
                   ./public/images/brewery-desktop/full-screen-brewery1200x635.jpg 1200w,
                   ./public/images/brewery-desktop/full-screen-brewery1800x952.jpg 1800w"
-          sizes="(min-width: 1px) and (max-width: 500px) 350px, 60vw"
+          sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
           src="./public/images/brewery-desktop/full-screen-brewery900x476.jpg"
           class="case__image" 
+          id="case-studies"
           loading="lazy"
           alt="fullscreen image of my brewery site home page">
 
@@ -329,7 +330,7 @@
                   ./public/images/recipe-desktop/full-screen-recipe900x480.jpg 900w,
                   ./public/images/recipe-desktop/full-screen-recipe1200x639.jpg 1200w,
                   ./public/images/recipe-desktop/full-screen-recipe1800x959.jpg 1800w"
-          sizes="(min-width: 1px) and (max-width: 500px) 350px, 60vw"
+          sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
           src="./public/images/recipe-desktop/full-screen-recipe900x480.jpg"
           class="case__image"
           loading="lazy"
@@ -446,7 +447,7 @@
               </ul>
               <p class="case-study__description">
                 The main feature of the site would be the store which 
-                would function with javascript so that I could practice my skills with this language.
+                would function with js so that I could practice my skills with this language.
                 Having only just began to learn Node.js I wanted to write a simple server using express and 
                 connect it to a database that could store my own custom products without having to 
                 reach for a large CMS. I also wanted to practice with another templating language 
@@ -467,7 +468,7 @@
                         ./public/images/brewery-mobile/home-mobile-brewery200x275.JPG 400w,
                         ./public/images/brewery-mobile/home-mobile-brewery400x549.JPG 400w,
                         ./public/images/brewery-mobile/home-mobile-brewery500x686.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 30vw"
+                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
                 src="./public/images/brewery-mobile/home-mobile-brewery400x549.JPG" 
                 loading="lazy"
                 alt="brewery home page on mobile devices" 
@@ -477,7 +478,7 @@
                         ./public/images/brewery-mobile/contact-mobile-brewery200x274.JPG 400w,
                         ./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG 400w,
                         ./public/images/brewery-mobile/contact-mobile-brewery500x685.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 30vw"
+                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
                 src="./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG" 
                 loading="lazy"
                 alt="brewery home page on mobile devices" 
@@ -546,14 +547,14 @@
                   <img src="./public/images/icons/react.svg" 
                   alt="reactJS emblem" 
                   loading="lazy" 
-                  class="case__stack-logo"> reactjs
+                  class="case__stack-logo">
                 </li>
                 <li class="case__stack-item">
                   <img 
                   src="./public/images/icons/css-3.svg" 
                   alt="css emblem" 
                   loading="lazy" 
-                  class="case__stack-logo"> CSS modules
+                  class="case__stack-logo">
                 </li>
               </ul>
               <p class="case-study__description">

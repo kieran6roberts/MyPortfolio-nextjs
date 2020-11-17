@@ -37,10 +37,10 @@
     }
 
     &__burger {
-        background-color: rgba(v.$primary, 0.3);
+        background-color: rgba(v.$primary, 0.6);
 
         &:hover {
-            background-color: rgba(v.$primary, 0.6);
+            background-color: rgba(v.$primary, 0.9);
         }
     }
 
@@ -154,9 +154,13 @@
 }
 
 .hero {
-    height: calc(100vh - 0.2rem - 70.333px);
-    width: 100%;
     padding: var(--sm) var(--md) 0;
+    font-size: var(--text-hero);
+    text-transform: uppercase;
+    color: var(--light);
+    @include m.media(tablet-wide) {
+        height: 65vh;
+    }
 
     &__particles {
         position: absolute;
@@ -167,89 +171,68 @@
         z-index: -1;
     }
 
-    @include m.media(tablet) {
-        height: calc(100vh - 0.2rem - 104.333px);
-    }
-
     &__wrapper {
         @include m.flex($dir: column, $align: flex-start);
-        position: relative;
-        width: 100%;
-        height: 100%;
 
-        @include m.media(desktop-wide) {
-            padding-bottom: 8rem;
+        @include m.media(tablet-wide) {
+            padding: 0 var(--lg);
         }
     }
 
     &__header {
-        font-size: var(--text-hero);
-        text-transform: uppercase;
-        color: var(--light);
+        font-size: 0.9em;
 
         &--clr {
             font-size: 1.3em;
-            color: var(--secondary);
+            color: var(--primary);
             font-weight: 700;
         }
-
-        &--sm {
-            font-size: 0.7em;
-        }
-
-        &--xs {
-            font-size: var(--text-sm);
-            text-transform: lowercase;
-            font-family: "Consolas", sans-serif;
-            color: var(--white);
-            opacity: 0.5;
-
-            @include m.media(desktop-wide) {
-                padding-left: var(--lg);
-                margin-bottom: var(--md);
-            }
-        }
-
-        &--purple {color: rgb(174, 9, 189);}
-        &--blue {color: rgb(29, 29, 202);}
-        &--yellow {
-            color: rgb(225, 235, 98);
-            text-transform: uppercase;
-        }
-        &--white {color: rgb(255, 255, 255);}
-        &--bright-blue {color: rgb(112, 182, 240);}
     }
 
+    &__header--sm {
+        font-size: 0.7em;
+    }
+
+    &__header--sm,
+    &__header {
+        width: 100%;
+        @include m.media(tablet-wide) {
+            text-align: center;
+        }
+    }
+    
     &__btn {
         margin-bottom: var(--md);
         font-size: var(--text-reg);
+
+        @include m.media(tablet-wide) {
+            margin: var(--sm) auto var(--md);
+        }
     }
 
     &__pointer {
         bottom: 0;
-        background-color: rgba(v.$light, 1);
-        
+        background-color: rgba(v.$dark, 1);
     }
 }
 
 .cases {
     position: relative;
     padding: var(--md) 0;
-    margin: var(--sm) var(--md);
+    margin: 0 var(--sm);
     border-left: 1px solid rgba(v.$dark, 0.1);
-    background-color: var(--light);
-
-    @include m.media(tablet) {
-        padding: var(--lg);
-    }
+    border-right: 1px solid rgba(v.$dark, 0.1);
+    border-top-left-radius: var(--rad-sm);
+    border-top-right-radius: var(--rad-sm);
+    background-color: var(--white);
 
     &__pointer {
         top: 0;
-        background-color: var(--dark);
+        background-color: rgba(v.$light, 0.8);
     }
 
     &__header {
-        font-size: var(--text-hero);
+        font-size: var(--text-case-sm);
         text-transform: uppercase;
         padding-left: var(--sm)
     }
@@ -265,33 +248,39 @@
         height: 100vh;
         z-index: 1;
         overflow-y: scroll;
-        transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out ;
+        background-color: transparent;
+
+        @include m.media(tablet-wide) {
+            transition: all 0ms ease-in-out 300ms;
+        }
     }
+        
 }
 
 /* contact form */
 .contact,
 .about {
-    width: 0%;
-    opacity: 0;
+    width: 100%;
     visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     z-index: 1;
     padding: var(--sm);
     border: 1px solid var(--light);
-    transition: all 200ms ease-in-out;
 
     @include m.media(tablet) {
         padding: var(--md);
     }
 
+    @include m.media(tablet-wide) {
+        width: 45vw;
+    }
+
     &.open {
-        width: 100%;
         opacity: 1;
         visibility: visible;
-
-        @include m.media(tablet-wide) {
-            width: 45vw;
-        }
+        pointer-events: visible;
     }
 
     &__header {
@@ -326,6 +315,11 @@
         border-left: 3px solid var(--dark);
         font-size: var(--text-reg);
         color: rgba(v.$dark, 0.6);
+    }
+
+    .case__stack-items {
+        list-style: none;
+        @include m.flex($jus:space-evenly);
     }
 
     &__info {
