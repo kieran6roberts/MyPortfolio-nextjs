@@ -228,7 +228,7 @@
             turncoat brewery
           </h2>
           <h3 class="case-header__primary">
-            turncoat brewery
+            turncoat brewery 
           </h3>
         </div>
         <div class="case__info" id="case-brewery">
@@ -247,7 +247,13 @@
           alt="fullscreen image of my brewery site home page">
 
           <div class="case__image-caption">Turncoat brewery home page</div>
-          <span class="case__sub-header">project description</span>
+          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn">
+            visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/kieran6roberts/brewery" class="case__repo btn">
+            github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
+          </a>
+          <h4 class="case__sub-header">project description</h4>
           <p class="case__description">
             This is a site built for a mock brewery and includes a home, 
             products and contact pages as well as a small e-commerce store.
@@ -301,9 +307,11 @@
           <h2 class="case-header__background">
             find a recipe
           </h2>
+          <div class="case-header__wrapper">
           <h3 class="case-header__primary">
             find a recipe
           </h3>
+          </div>
         </div>
         <div class="case__info" id="case-recipe">
           <img 
@@ -319,7 +327,13 @@
           loading="lazy"
           alt="fullscreen image of my recipe app browse page">
           <div class="case__image-caption">Find a recipe browse page with instructions</div>
-          <span class="case__sub-header">description</span>
+          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn">
+            visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/kieran6roberts/recipe-finder" class="case__repo btn">
+            github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
+          </a>
+          <h4 class="case__sub-header">description</h4>
           <p class="case__description">
             Find a recipe allows users who have trouble thinking up meal ideas to easily search through many different
             recipes using keywords. Users are also able to save recipes for later and delete them when they
@@ -382,8 +396,9 @@
               </h5>
               <p class="case-study__description">
                 The aim of this project was to build a full and responsive site for a ficticious 
-                brewing company that included a small e-commerce store as the main feature.  <br><br> 
-                
+                brewing company that included a small e-commerce store as the main feature.
+              </p>
+              <p class="case-study__description">
                 It should highlight the products on offer, give the users a contact option and the store 
                 should allow users to add and remove products from a cart while keeping a running total.
                 The items in the cart should also be preserved if the the user navigates to a different page.
@@ -434,7 +449,9 @@
                 The main feature of the site is the store which 
                 functions using js so that I could practice my skills with this language using many of its core features
                 such as DOM manipulation, iteration and interacting with local storage using the API's provided by
-                the browser. <br><br>
+                the browser.
+              </p>
+              <p class="case-study__description">
                 I wanted to learn how to create my own server and store my products in a database for this project hence I opted 
                 for express/mongoose using nodejs to continue my learing of js on both the client-side and server-side.
                 In order to keep my code as dry as possible, I opted to use ejs templating language to reuse partials that 
@@ -448,7 +465,9 @@
               <p class="case-study__decription">
                 Overall this was a successful project as I believe the final product fits the brief of being 
                 responsive/modern and allows all of the necessary features requested in the brief to allow the site to function
-                for this ficticious company. <br><br>
+                for this ficticious company.
+              </p>
+              <p class="case-study__decription">
                 I was personally able to learn a considerable amount relating to js best practices such as trying not 
                 to repeat myself and code splitting. One thing I will take into future projects is limiting functions
                 to perform one task so that testing and code maintainablity is much easier.
@@ -549,10 +568,14 @@
                 </li>
               </ul>
               <p class="case-study__description">
-                I decided to use reactjs for this task because I wanted practice using react including 
-                concepts such as react-routing, using state and custom hooks. For the styling I went with
-                css modules to keep the css scoped to each component and so I could focus on react
-                fundamentals.
+                I decided to use reactjs for this task because I wanted practice using the library including 
+                concepts such as react-routing, using state and custom hooks and I recognized
+                that managing state within the app would be easier by using react. The project is 
+                bootstrapped using create-react-app to ensure a fast setup and easy workflow.
+              </p>
+              <p class="case-study__description">
+                For the styling I went with css modules to keep the css scoped to each component and as css was not the focus
+                of this projects I, could focus on react improving my react fundamentals.
               </p>
             </div>
             <div class="case-study__outcome case-info">
@@ -562,6 +585,10 @@
               <p class="case-study__description">
                 Although I am happy with the outcome of the project and the things I learned I recognize
                 that I could have implemented an easier solution paticularly with the routing of the app.
+              </p>
+              <p class="case-study__description">
+                The app could be built using two routes for search and save and remove unecessary clicks for the user although 
+                I wanted to use sub-routing in the app , after all it is a practice project.
               </p>
               <div class="case-study__images-wrapper">
                 <img 
@@ -593,6 +620,9 @@
                 <li class="case-study__outcome-item">
                   remove pages such as browse that provide extra clicks for the user to get to the recipe
                   searching
+                </li>
+                <li class="case-study__outcome-item">
+                  refactor some larger components (e.g RecipeCard) into collection of smaller reusable components
                 </li>
                 <li class="case-study__outcome-item">
                   add feature for users to save their own recipes

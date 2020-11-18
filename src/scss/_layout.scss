@@ -246,7 +246,7 @@
     border-top-left-radius: var(--rad-sm);
     border-top-right-radius: var(--rad-sm);
     background-color: var(--white);
-    transition: background-color 500ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
     
     @include m.media (tablet-wide) {
         background-color: var(--dark);
