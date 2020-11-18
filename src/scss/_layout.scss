@@ -19,8 +19,8 @@
     }
 
     &__logo {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         padding: var(--xs);
         background-color: var(--primary);
         transform: scale(1);
@@ -46,7 +46,7 @@
 
     &__items {
         display: none;
-        @include m.media(tablet) {
+        @include m.media(tablet-wide) {
             @include m.flex($jus: space-between);
         }
     }
@@ -55,8 +55,8 @@
         position: relative;
         display: block;
         overflow: hidden;
-        background-color: rgba(v.$primary, 0.9);
-        color: var(--light);
+        background-color: rgba(v.$primary, 1);
+        color: var(--white);
         padding: var(--xs) var(--md);
         font-size: var(--text-reg);
         font-weight: 700;
@@ -68,8 +68,8 @@
     .nav__icon {
         font-size: var(--text-nav-icon);
         position: absolute;
-        left: 10%;
-        color: rgba(v.$dark, 0.3);
+        left: 7%;
+        color: rgba(v.$dark, 0.1);
         transition: all 150ms ease-in-out;
     }
 
@@ -158,8 +158,10 @@
     font-size: var(--text-hero);
     text-transform: uppercase;
     color: var(--light);
+
     @include m.media(tablet-wide) {
-        height: 65vh;
+        height: 70vh;
+        @include m.flex;
     }
 
     &__particles {
@@ -190,7 +192,7 @@
     }
 
     &__header--sm {
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 
     &__header--sm,
@@ -204,12 +206,31 @@
     &__btn {
         margin-bottom: var(--md);
         font-size: var(--text-reg);
+        animation: gradient 4s ease infinite;
+        background-image: linear-gradient(180deg, var(--primary), var(--secondary));
+        background-size: 250% 250%;
+
+        @media (prefers-reduced-motion) {
+            animation-name: dissolve;
+        }
 
         @include m.media(tablet-wide) {
             margin: var(--sm) auto var(--md);
         }
     }
-
+    
+    @keyframes gradient {
+        0% {
+            background-position: 51% 0%; 
+        }
+        50% {
+            background-position: 50% 100%; 
+        }
+        100% {
+            background-position: 51% 0%; 
+        }
+    }
+    
     &__pointer {
         bottom: 0;
         background-color: rgba(v.$dark, 1);
@@ -218,13 +239,22 @@
 
 .cases {
     position: relative;
-    padding: var(--md) 0;
+    padding: var(--lg) 0;
     margin: 0 var(--sm);
     border-left: 1px solid rgba(v.$dark, 0.1);
     border-right: 1px solid rgba(v.$dark, 0.1);
     border-top-left-radius: var(--rad-sm);
     border-top-right-radius: var(--rad-sm);
     background-color: var(--white);
+    transition: background-color 500ms ease-in-out;
+    
+    @include m.media (tablet-wide) {
+        background-color: var(--dark);
+
+        &.show {
+            background-color: var(--white);
+        }
+    }
 
     &__pointer {
         top: 0;
@@ -236,6 +266,7 @@
         text-transform: uppercase;
         padding-left: var(--sm)
     }
+
 }
 
 /* about section */
@@ -360,13 +391,14 @@
     }
 
     &__info--copy {
-        color: var(--primary);
+        color: rgba(v.$primary, 0.7);
+        background-color: transparent;
         cursor: pointer;
 
         &:before {
             @include m.pseudo($content: "Copy to clipboard", $disp: none);
             top: -0.5rem;
-            right: 7.5rem;
+            right: 8.1rem;
             width: 6rem;
             color: var(--dark);
             padding: 0.2rem;
@@ -374,6 +406,11 @@
             background-color: var(--light);
             font-size: 0.7rem;
             text-align: center;
+            transition: font-size 150ms ease-in-out;
+        }
+
+        &:hover {
+            color: rgba(v.$primary, 0.9);
         }
 
         &:hover:before {
@@ -433,14 +470,13 @@
         &__submit {
             width: 40%;
             border: none;
+            background-color: rgba(v.$primary, 0.8);
+            transition: background-color 150ms ease;
+            
+            &:hover {
+                background-color: rgba(v.$primary, 1);
+            }
         }
-    }
-
-    .social__items {
-        display: none;
-        visibility: hidden;
-        justify-content: space-between;
-        height: 100%;
     }
 }
 
@@ -450,11 +486,7 @@
     color: var(--light);
     text-align: center;
     padding: var(--sm);
-
-    &__info {
-        font-size: var(--text-reg);
-        text-transform: capitalize;
-    }
+    font-size: var(--text-reg);
 
     .social__items {
         @include m.flex($dir: column, $jus: space-evenly);
@@ -462,9 +494,31 @@
 
     .social__link {
         color: var(--light);
+        display: block;
+        width: 50vw;
+        position: relative;
+    }
+
+    .social__item {
+        margin-bottom: var(--xs);
     }
 
     .social__icon {
         font-size: var(--text-icon);
+        display: block;
+        width: 5rem;
+        margin: auto;
+    }
+    
+    &__info {
+        font-size: 1.1em;
+        color: var(--primary);
+        text-transform: capitalize;
+    }
+
+    &__email {
+        display: block;
+        font-size: 0.8em;
+        color: rgba(v.$light, 0.6);
     }
 }

@@ -32,12 +32,12 @@
       
       <ul class="nav__items">
         <li class="nav__item">
-          <a href="#case-studies" class="nav__item-link">
+          <a role="button" href="#case-studies" class="nav__item-link">
             case studies <i class="fa fa-desktop nav__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__item-link" id="nav-contact">
+          <a role="button" href="#" class="nav__item-link" id="nav-contact">
             contact me <i class="fa fa-phone nav__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -139,11 +139,11 @@
         </h3>
         <span class="contact__info">
           If you prefer you can copy my
-        <span 
+        <button 
           class="contact__info--copy" 
-          data-clipboard-target="#hero__email">
+          data-clipboard-target="#copy-email">
           email 
-        </span>
+        </button>
           to the clipboard.
         </span>
         <div class="contact__wrapper">
@@ -194,23 +194,6 @@
             value="submit"
             name="submit">
           </form>
-            <ul class="social__items">
-              <li class="social__item">
-                <a href="https://github.com/kieran6roberts" class="social__link">
-                  <i class="fa fa-github social__icon" aria-hidden="true"></i> github.com/kieran6roberts
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="https://twitter.com/Kieran6dev" class="social__link">
-                  <i class="fa fa-twitter social__icon" aria-hidden="true"></i> twitter.com/Kieran6dev
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link">
-                  <i class="fa fa-linkedin social__icon" aria-hidden="true"></i> www.linkedin.com/in/kieran-roberts-00517b178/
-                </a>
-              </li>
-            </ul>
         </div>
       </section>
     </div>
@@ -225,7 +208,7 @@
         <h2 class="hero__header--sm">
           front end developer
         </h2>
-        <a href="#" class="btn hero__btn">
+        <a role="button" href="#" class="btn hero__btn">
           about me <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
         </a>
         <div class="hero__pointer pointer"></div>
@@ -290,7 +273,7 @@
               src="./public/images/icons/javascript.svg" 
               alt="javascript emblem" 
               loading="lazy" 
-              class="case__stack-logo"> javascript
+              class="case__stack-logo"> js
             </li>
             <li class="case__stack-item">
               <img 
@@ -338,8 +321,8 @@
           <div class="case__image-caption">Find a recipe browse page with instructions</div>
           <span class="case__sub-header">description</span>
           <p class="case__description">
-            Find a recipe allows users who have trouble thinking up meal ideas to easily search through thousands 
-            of recipes using keywords. Users are also able to save recipes for later and delete them when they
+            Find a recipe allows users who have trouble thinking up meal ideas to easily search through many different
+            recipes using keywords. Users are also able to save recipes for later and delete them when they
             are no longer needed.
           </p>
           <span class="case__sub-header">tech stack</span>
@@ -398,10 +381,12 @@
                 objectives
               </h5>
               <p class="case-study__description">
-                The aim of this project was to build a full, responsive and fluid site for a ficticious 
-                brewing company that included an e-commerce store as the main feature and so I could 
-                include the project in my portfolio. It should highlight the products on offer, give the users
-                a contact option and have an easy to use store housing the products.
+                The aim of this project was to build a full and responsive site for a ficticious 
+                brewing company that included a small e-commerce store as the main feature.  <br><br> 
+                
+                It should highlight the products on offer, give the users a contact option and the store 
+                should allow users to add and remove products from a cart while keeping a running total.
+                The items in the cart should also be preserved if the the user navigates to a different page.
               </p>
             </div>
             <div class="case-study__stack case-info">
@@ -446,12 +431,14 @@
                 </li>
               </ul>
               <p class="case-study__description">
-                The main feature of the site would be the store which 
-                would function with js so that I could practice my skills with this language.
-                Having only just began to learn Node.js I wanted to write a simple server using express and 
-                connect it to a database that could store my own custom products without having to 
-                reach for a large CMS. I also wanted to practice with another templating language 
-                after trying Handlebars so for this project I decided to use EJS.
+                The main feature of the site is the store which 
+                functions using js so that I could practice my skills with this language using many of its core features
+                such as DOM manipulation, iteration and interacting with local storage using the API's provided by
+                the browser. <br><br>
+                I wanted to learn how to create my own server and store my products in a database for this project hence I opted 
+                for express/mongoose using nodejs to continue my learing of js on both the client-side and server-side.
+                In order to keep my code as dry as possible, I opted to use ejs templating language to reuse partials that 
+                were required on several routes.
               </p>
             </div>
             <div class="case-study__outcome case-info">
@@ -459,8 +446,12 @@
                 outcome
               </h5>
               <p class="case-study__decription">
-                Overall this was a successful project as it allowed me to improve my javascript skills by coding
-                the shop and also gain experience in larger applications using tech such as webpack as my build tool.
+                Overall this was a successful project as I believe the final product fits the brief of being 
+                responsive/modern and allows all of the necessary features requested in the brief to allow the site to function
+                for this ficticious company. <br><br>
+                I was personally able to learn a considerable amount relating to js best practices such as trying not 
+                to repeat myself and code splitting. One thing I will take into future projects is limiting functions
+                to perform one task so that testing and code maintainablity is much easier.
               </p>
               <div class="case-study__images-wrapper">
                 <img 
@@ -634,6 +625,12 @@
         </li>
       </ul>
       <span class="footer__info">created and designed by kieran roberts.</span>
+      <span 
+      class="footer__email"
+      id="copy-email" 
+      value="kieran6roberts@gmail.com">
+      kieran6roberts@gmail.com
+      </span>
     </footer>
   </main>
 </body>

@@ -12,7 +12,7 @@ const intersectionHandler = (entries, observer) => {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.25
+  threshold: 0.1
 };
 
 export const observerInfo = new IntersectionObserver(intersectionHandler, {});
