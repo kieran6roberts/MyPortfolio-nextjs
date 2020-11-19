@@ -19,9 +19,9 @@ const toggleElementTabIndex = (arr, value = "0") => {
 };
   
 const findModalTabs = arr => {
-  toggleElementTabIndex(arr, "-1");
   const openModal = arr.find(element => element.classList.contains("open"));
   console.log(openModal);
+  toggleElementTabIndex(arr, "-1");
   openModal.querySelectorAll(".fg-el").forEach( element => {
     element.setAttribute("tabindex", "1");
   })
