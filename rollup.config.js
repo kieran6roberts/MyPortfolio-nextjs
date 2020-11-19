@@ -89,6 +89,13 @@ export default {
                     verbose: true
                 }
             },
+            {
+                files: ["public/images/hero.png"],
+                dest: "build/public/images/hero",
+                options: {
+                    verbose: true
+                }
+            },
         ]
         ),
         resolve(),
