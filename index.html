@@ -22,22 +22,22 @@
 
     <!---Navbar--->
     <nav class="nav">
-      <a href="/" class="nav__link">
+      <a href="/" class="nav__link bg-el">
         <img src="./public/images/icons/k.svg" class="nav__logo" alt="logo of the letter k">
       </a>
 
-      <div class="nav__burger">
+      <div role="button" class="nav__burger bg-el">
         <span class="nav__burger--span"></span>
       </div>
       
       <ul class="nav__items">
         <li class="nav__item">
-          <a role="button" href="#case-studies" class="nav__item-link">
+          <a role="button" href="#case-studies" class="nav__item-link bg-el">
             case studies <i class="fa fa-desktop nav__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="nav__item">
-          <a role="button" href="#" class="nav__item-link" id="nav-contact">
+          <a role="button" href="#" class="nav__item-link bg-el" id="nav-contact">
             contact me <i class="fa fa-phone nav__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -46,23 +46,23 @@
 
     <!---Mobile Nav--->
     <sidebar class="sidebar">
-      <div class="nav__burger sidebar__burger">
+      <div role="button" data-tab="sidebar" class="nav__burger sidebar__burger fg-el">
         <span class="nav__burger--span sidebar__burger--span"></span>
       </div>
 
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" class="social__link">
+          <a href="https://github.com/kieran6roberts" data-tab="sidebar" class="social__link fg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" class="social__link">
+          <a href="https://twitter.com/Kieran6dev" data-tab="sidebar" class="social__link fg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link">
+          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" data-tab="sidebar" class="social__link fg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -70,17 +70,17 @@
 
       <ul class="sidebar__items">
         <li class="sidebar__item">
-          <a href="/" class="sidebar__link">
+          <a href="/" data-tab="sidebar" class="sidebar__link fg-el">
             home
           </a>
         </li>
         <li class="sidebar__item">
-          <a href="#case-studies" class="sidebar__link" id="link--case">
+          <a role="button" href="#case-studies" data-tab="sidebar" class="sidebar__link fg-el" id="link--case">
             my work
           </a>
         </li>
         <li class="sidebar__item">
-          <a href="#" class="sidebar__link" id="link--contact">
+          <a role="button" href="#" data-tab="sidebar" class="sidebar__link fg-el" id="link--contact">
             contact
           </a>
         </li>
@@ -91,9 +91,9 @@
     <div class="wrapper">
       <!---About Me/ Contact me Sidebar--->
       <section class="about" id="about">
-        <div class="page__toggle" id="about-toggle">
+        <button class="page__toggle fg-el" data-tab="contact" id="about-toggle">
           <i class="fa fa-long-arrow-right case-btn--icon" aria-hidden="true"></i>
-        </div>
+        </button>
         <h3 class="about__header">
           about me
         </h3>
@@ -140,7 +140,8 @@
         <span class="contact__info">
           If you prefer you can copy my
         <button 
-          class="contact__info--copy" 
+          class="contact__info--copy fg-el" 
+          data-tab="contact" 
           data-clipboard-target="#copy-email">
           email 
         </button>
@@ -156,7 +157,8 @@
             <input 
             id="name" 
             type="text" 
-            class="form__input"
+            class="form__input fg-el"
+            data-tab="contact" 
             name="name"
             minlength="2"
             required>
@@ -169,7 +171,8 @@
             <input 
             id="email" 
             type="email" 
-            class="form__input"
+            class="form__input fg-el"
+            data-tab="contact" 
             name="email"
             required>
     
@@ -183,14 +186,16 @@
             id="message" 
             cols="15" 
             rows="3" 
-            class="form__input input--pad"
+            class="form__input input--pad fg-el"
+            data-tab="contact" 
             name="message"
             required
             minlength="15"></textarea>
     
             <input 
             type="submit" 
-            class="form__submit btn" 
+            class="form__submit btn fg-el" 
+            data-tab="contact" 
             value="submit"
             name="submit">
           </form>
@@ -208,7 +213,7 @@
         <h2 class="hero__header--sm">
           front end developer
         </h2>
-        <a role="button" href="#" class="btn hero__btn">
+        <a role="button" href="#" class="btn hero__btn bg-el">
           about me <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
         </a>
         <div class="hero__pointer pointer"></div>
@@ -247,10 +252,10 @@
           alt="fullscreen image of my brewery site home page">
 
           <div class="case__image-caption">Turncoat brewery home page</div>
-          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn">
+          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn bg-el">
             visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/kieran6roberts/brewery" class="case__repo btn">
+          <a href="https://github.com/kieran6roberts/brewery" class="case__repo btn bg-el">
             github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
           <h4 class="case__sub-header">project description</h4>
@@ -296,7 +301,7 @@
               class="case__stack-logo"> mongodb/ mongoose
             </li>
           </ul>
-          <button class="case__btn btn">
+          <button class="case__btn btn bg-el">
             case study <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </button>
         </div>
@@ -327,10 +332,10 @@
           loading="lazy"
           alt="fullscreen image of my recipe app browse page">
           <div class="case__image-caption">Find a recipe browse page with instructions</div>
-          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn">
+          <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn bg-el">
             visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/kieran6roberts/recipe-finder" class="case__repo btn">
+          <a href="https://github.com/kieran6roberts/recipe-finder" class="case__repo btn bg-el">
             github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
           <h4 class="case__sub-header">description</h4>
@@ -355,7 +360,7 @@
               class="case__stack-logo"> CSS modules
             </li>
           </ul>
-          <button class="case__btn btn">
+          <button class="case__btn btn bg-el">
             case study <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </button>
         </div>
@@ -365,26 +370,37 @@
     <!----in depth case study of projects-->
     <section class="case-studies">
       <div class="case-study case-brewery">
-        <div class="page__toggle case-toggle">
+        <button
+        data-tab="study1" 
+        class="page__toggle case-toggle fg-el">
           <i class="fa fa-long-arrow-right case-btn--icon" aria-hidden="true"></i>
-        </div>
+      </button>
         <h3 class="case-study__header">
           turncoat brewery
         </h3>
         <div class="case-study__content">
           <ul class="case-study__items">
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__objectives">
+              <button 
+              class="case-study__btn fg-el" 
+              data-tab="study1" 
+              id="case-study__objectives">
                 objectives
               </button>
             </li>
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__stack">
+              <button
+               class="case-study__btn fg-el" 
+               data-tab="study1" 
+               id="case-study__stack">
                 stack choice
               </button>
             </li>
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__outcome">
+              <button 
+              class="case-study__btn fg-el" 
+              data-tab="study1" 
+              id="case-study__outcome">
                 outcome
               </button>
             </li>
@@ -513,26 +529,37 @@
       </div>
 
       <div class="case-study case-recipe" >
-        <div class="page__toggle case-toggle">
+          <button
+          data-tab="study2"
+          class="page__toggle case-toggle fg-el">
           <i class="fa fa-long-arrow-right case-btn--icon" aria-hidden="true"></i>
-        </div>
+        </button>
         <h3 class="case-study__header">
           find a recipe
         </h3>
         <div class="case-study__content">
           <ul class="case-study__items">
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__objectives">
+              <button 
+              class="case-study__btn fg-el" 
+              data-tab="study2"
+              id="case-study__objectives">
                 objectives
               </button>
             </li>
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__stack">
+              <button 
+              class="case-study__btn fg-el" 
+              data-tab="study2"
+              id="case-study__stack">
                 stack choice
               </button>
             </li>
             <li class="case-study__item">
-              <button class="case-study__btn" id="case-study__outcome">
+              <button 
+              class="case-study__btn fg-el" 
+              data-tab="study2"
+              id="case-study__outcome">
                 outcome
               </button>
             </li>
@@ -639,17 +666,17 @@
     <footer class="footer">
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" class="social__link">
+          <a href="https://github.com/kieran6roberts" class="social__link bg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" class="social__link">
+          <a href="https://twitter.com/Kieran6dev" class="social__link bg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link">
+          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link bg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>

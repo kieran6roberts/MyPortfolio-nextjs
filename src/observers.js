@@ -10,7 +10,7 @@ const observeArr = [...headerLrgEls, ...headerSmEls, casesEl];
 const intersectionHandler = (entries, observer) => {
   entries.forEach( entry => {
     if (entry.isIntersecting) {
-      toggleClassHandler("show", entry.target);
+      toggleClassHandler("show", [entry.target]);
       observer.unobserve(entry.target);
     }
   });
@@ -42,6 +42,4 @@ export {
   observeArr,
   caseInfoEls
 };
-
-const errorHandler = () => {};
 

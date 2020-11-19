@@ -1,8 +1,7 @@
-export const toggleClassHandler = (className = "", ...elements) => {
-    const isArgHtmlEl = [...elements].every(isArgDomElement);
-    
-    if ([...elements].length === 0 || !isArgHtmlEl) return;
-    else [...elements].forEach( el => el.classList.toggle(`${className}`));
+export const toggleClassHandler = (className = "", elementArr) => {
+   const isArgHtmlEl = elementArr.every(isArgDomElement);
+   if (elementArr.length === 0 || !isArgHtmlEl) return;
+   else elementArr.forEach( el => el.classList.toggle(`${className}`));
 };
 
 const isArgDomElement = arg => arg instanceof HTMLElement;

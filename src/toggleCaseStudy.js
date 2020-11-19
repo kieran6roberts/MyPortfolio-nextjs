@@ -1,9 +1,10 @@
 import { toggleClassHandler } from "./toggleClassHandler.js";
+import { focusTrapHandler } from "./focusTrap.js";
 
 const caseBtns = [...document.querySelectorAll(".case__btn")];
 const studyWrapper = document.querySelector(".case-studies");
 const studyBtns = [...document.querySelectorAll(".case-toggle")];
-const studyEls = [...document.querySelectorAll(".case-study")];
+export const studyEls = [...document.querySelectorAll(".case-study")];
 const modal = document.querySelector(".modal");
 
 const queryParent = targetEl => {
@@ -14,13 +15,15 @@ const queryParent = targetEl => {
 export const addStudyHandler = ({ currentTarget }) => {
     document.body.classList.toggle("hidden");
     const studyEl = queryParent(currentTarget);
-    toggleClassHandler("open", modal, studyWrapper, studyEl);
+    toggleClassHandler("open", [modal, studyWrapper, studyEl]);
+    focusTrapHandler(studyEls);
 };
 
-export const removeStudyHandler = () => {
+export const removeStudyHandler = ({ currentTarget }) => {
+    const studyEl = currentTarget.parentElement;
     document.body.classList.toggle("hidden");
-    toggleClassHandler("open", modal, studyWrapper);
-    studyEls.forEach( el => el.classList.remove("open"));
+    toggleClassHandler("open", [modal, studyWrapper, studyEl]);
+    focusTrapHandler();
 };
 
 caseBtns.forEach(btn => btn.addEventListener("click", addStudyHandler));

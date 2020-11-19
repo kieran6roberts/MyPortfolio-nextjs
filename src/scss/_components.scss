@@ -161,7 +161,6 @@
     }
 
     &__info {
-        visibility: hidden;
         opacity: 0;
         padding: var(--md);
         border-left: 2px solid rgba(v.$light, 0.5);
@@ -177,7 +176,6 @@
     &__info.show,
     &-header__primary.show,
     &-header__background.show {
-        visibility: visible;
         opacity: 1;
     }
 

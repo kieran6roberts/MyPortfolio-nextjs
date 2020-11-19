@@ -1,4 +1,6 @@
 import { toggleClassHandler } from "./toggleClassHandler.js";
+import { focusTrapHandler } from "./focusTrap.js";
+import { studyEls } from "./toggleCaseStudy.js";
 
 //burger nav toggle
 const homeBurger = document.querySelector(".nav__burger");
@@ -19,61 +21,62 @@ const desktopContactLink = document.querySelector("#nav-contact");
 
 //modal
 const modal = document.querySelector(".modal");
+const tabIndexCheckArr = [sidebarNav, wrapper, ...studyEls];
 
 contactLink.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav,
-                               document.body,
-                               aboutSection,
-                               contactSection,
-                               wrapper,
-                               modal
-    );
+    const toggleClassArr = [sidebarNav, aboutSection, contactSection, wrapper, modal];
+    toggleClassHandler("open", toggleClassArr);
     document.body.classList.toggle("hidden");
+    focusTrapHandler(tabIndexCheckArr);
 });
 
 desktopContactLink.addEventListener("click", () => {
-    toggleClassHandler("open", document.body,
-                               aboutSection,
-                               contactSection,
-                               wrapper,
-                               modal
-    );
+    const toggleClassArr = [document.body, aboutSection, contactSection, wrapper, modal];
+    toggleClassHandler("open", toggleClassArr);
     document.body.classList.toggle("hidden");
+    focusTrapHandler(tabIndexCheckArr);
 });
 
 caseLink.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav,
-                               document.body
-    );
+    toggleClassHandler("open", [document.body, sidebarNav]);
+    focusTrapHandler(tabIndexCheckArr);
 });
 
 
 homeBurger.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav, 
-                               document.body
-    );
+    toggleClassHandler("open", [sidebarNav, document.body]);
+    focusTrapHandler(tabIndexCheckArr);
+});
+
+homeBurger.addEventListener("keyup", event => {
+    if (event.keyCode === 13) {
+        toggleClassHandler("open", [sidebarNav, document.body]);
+        focusTrapHandler(tabIndexCheckArr);
+    }
 });
 
 sidebarBurger.addEventListener("click", () => {
-    toggleClassHandler("open", sidebarNav, 
-                               document.body
-    );
+    toggleClassHandler("open", [sidebarNav, document.body]);
+    focusTrapHandler(tabIndexCheckArr);
+});
+
+sidebarBurger.addEventListener("keyup", event => {
+    if (event.keyCode === 13) {
+        toggleClassHandler("open", [sidebarNav, document.body]);
+        focusTrapHandler(tabIndexCheckArr);
+    }
 });
 
 heroBtn.addEventListener("click", () => {
-    toggleClassHandler("open", aboutSection,
-                               contactSection,
-                               wrapper,
-                               modal
-    );
+    const toggleClassArr = [document.body, aboutSection, contactSection, wrapper, modal];
+    toggleClassHandler("open", toggleClassArr);
     document.body.classList.toggle("hidden");
+    focusTrapHandler(tabIndexCheckArr);
 });
 
 aboutBtn.addEventListener("click", () => {
-    toggleClassHandler("open", aboutSection,
-                               contactSection,
-                               wrapper,
-                               modal
-    );
+    const toggleClassArr = [document.body, aboutSection, contactSection, wrapper, modal];
+    toggleClassHandler("open", toggleClassArr);
     document.body.classList.toggle("hidden");
+    focusTrapHandler(tabIndexCheckArr);
 });

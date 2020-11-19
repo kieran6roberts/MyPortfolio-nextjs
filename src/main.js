@@ -1,5 +1,6 @@
 import { addStudyHandler, removeStudyHandler }from "./toggleCaseStudy.js";
 import { toggleCaseStudyLinksHandler } from "./toggleCaseStudyLinks.js";
+import { focusTrapHandler } from "./focusTrap.js";
 import { showObserver, 
   delayObserver, 
   caseInfoEls as showEl,
@@ -11,6 +12,7 @@ import ClipboardJS from "clipboard";
 import "./scss/index.scss";
 
 const init = () => {
+  focusTrapHandler();
   showObserver(showEl);
   delayObserver(delayEl);
   tsParticles.load("tsparticles", particlesConfig);
