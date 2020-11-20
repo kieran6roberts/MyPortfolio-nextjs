@@ -9,16 +9,14 @@ $light: rgb(244, 235, 235);
 $primary: rgb(6, 224, 140);
 $secondary: rgb(255, 15, 235);
 $tertiary: rgb(4, 154, 200);
-$text-hero: clamp(2rem, 4.8vw, 13rem);
+$text-hero: clamp(1.8rem, 4.6vw, 13rem);
 $text-case-lg: clamp(7rem, 14vw, 30rem);
-$text-case-sm: clamp(1.6rem, 3.5vw, 7rem);
-$text-icon: clamp(1.8rem, 3vw, 3.8rem);
-$text-links: clamp(1.6rem, 1.4vw, 3rem);
-$text-nav-icon: clamp(2rem, 3vw, 4.5rem);
+$text-case-sm: clamp(1.4rem, 3.5vw, 7rem);
+$text-icon: clamp(1.7rem, 3vw, 3.8rem);
+$text-links: clamp(1.5rem, 1.4vw, 3rem);
+$text-nav-icon: clamp(1.9rem, 3vw, 4.5rem);
 $text-reg: clamp(1rem, 1.4vw, 4rem);
 $text-sm: clamp(0.8rem, 1.2vw, 2rem);
-$radius-sm: 1.25rem;
-$radius-lg: 2.5rem;
 $xs: 0.5rem;
 $sm: 1rem;
 $md: 2rem;
@@ -26,6 +24,7 @@ $lg: 4rem;
 $breakpoints: (
     "mobile": 400px,
     "mobile-wide": 550px,
+    "mobile-landscape": 600px,
     "tablet": 768px,
     "tablet-wide": 1024px,
     "desktop": 1248px,

@@ -6,6 +6,7 @@ import { studyEls } from "./toggleCaseStudy.js";
 const homeBurger = document.querySelector(".nav__burger");
 const sidebarNav = document.querySelector(".sidebar");
 const sidebarBurger = sidebarNav.querySelector(".sidebar__burger");
+const sidebarItems = sidebarNav.querySelector(".sidebar__items");
 
 //hero cta toggle
 const heroBtn = document.querySelector(".hero__btn");
@@ -31,17 +32,18 @@ const clickHandler = classElements => {
     focusTrapHandler(tabElements);
 };
 
-const toggleSidebarElements = [sidebarNav, document.body];
+const toggleSidebarElements = [sidebarNav, sidebarItems, document.body];
 const toggleContactElements = [document.body, aboutSection, contactSection, wrapper, modal];
 const toggleAboutElements = [sidebarNav, aboutSection, contactSection, wrapper, modal];
 
 contactLink.addEventListener("click", () => clickHandler(toggleAboutElements));
 desktopContactLink.addEventListener("click", () => clickHandler(toggleContactElements));
 caseLink.addEventListener("click", () => clickHandler(toggleSidebarElements));
-homeBurger.addEventListener("click", () => clickHandler(toggleSidebarElements));
-homeBurger.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleSidebarElements));
-sidebarBurger.addEventListener("click", () => clickHandler(toggleSidebarElements));
-sidebarBurger.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleSidebarElements));
 heroBtn.addEventListener("click", () => clickHandler(toggleContactElements));
 aboutBtn.addEventListener("click", () => clickHandler(toggleContactElements));
+sidebarBurger.addEventListener("click", () => clickHandler(toggleSidebarElements));
+homeBurger.addEventListener("click", () => clickHandler(toggleSidebarElements));
+homeBurger.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleSidebarElements));
+sidebarBurger.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleSidebarElements));
+aboutBtn.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleContactElements));
 aboutBtn.addEventListener("keyup", event => event.keyCode === 13 && clickHandler(toggleContactElements));

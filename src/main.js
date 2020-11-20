@@ -6,8 +6,6 @@ import { showObserver,
   caseInfoEls as showEl,
   observeArr as delayEl  } from "./observers.js";
 import "./toggleState.js";
-import { tsParticles } from "tsparticles";
-import { particlesConfig } from "./particlesConfig.js";
 import ClipboardJS from "clipboard";
 import "./scss/index.scss";
 
@@ -15,7 +13,6 @@ const init = () => {
   focusTrapHandler();
   showObserver(showEl);
   delayObserver(delayEl);
-  tsParticles.load("tsparticles", particlesConfig);
   new ClipboardJS(".contact__info--copy");
 };
 

@@ -22,14 +22,6 @@
     }
 }
 
-//pointer
-.pointer {
-    width: 2px;
-    height: 10vh;
-    position: absolute;
-    left: 50%;
-}
-
 //btn
 .btn {
     color: var(--white);
@@ -58,15 +50,16 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: rgba(v.$primary, 0.6);
+    background-color: var(--white);
+    border: 2px solid var(--primary);
     width: 3rem;
     height: 2rem;
     padding: var(--xs);
     cursor: pointer;
-    transition: all 150ms ease-in-out;
+    transition: all 150ms ease;
 
     &:hover {
-        background-color: rgba(v.$primary, 0.9);
+        background-color: var(--light);
     }
 
     @include m.media(tablet) {
@@ -78,13 +71,11 @@
 //burger nav
 .nav__burger {
     @include m.flex($dir: column, $jus: center);
-    background-color: rgba(v.$primary, 0.8);
     width: 3rem;
     height: 2rem;
     padding: var(--xs);
-    border-radius: var(--rad-sm);
+    border: 2px solid var(--primary);
     cursor: pointer;
-    transition: all 150ms ease-in-out;
 
     &--span {
         position: relative;
@@ -95,7 +86,7 @@
     &--span:before{
         height: 0.15rem;
         width: 80%;
-        background-color: var(--light);
+        background-color: var(--primary);
         border-radius: var(--rad-sm);
         pointer-events: none;
     }
@@ -148,7 +139,6 @@
 
     &-header__primary {
         font-weight: 700;
-        margin-right: var(--lg);
         @include m.absolute;
         opacity: 0;
         border-left: 6px solid var(--primary);
@@ -183,7 +173,6 @@
         height: auto;
         object-fit: cover;
         margin: 0 auto;
-        border-radius: var(--rad-sm);
         box-shadow: 0 0 5px rgba(v.$dark, 0.5);
     }
 
@@ -201,10 +190,14 @@
         width: max-content;
         font-size: 0.8em;
         text-transform: uppercase;
+        margin: var(--xs) 0;
         font-weight: 700;
-        margin: var(--md) 0;
         transition: all 150ms ease;
         border: 2px solid var(--primary);
+        @include m.media(mobile-wide) {
+            margin: var(--md) 0;
+            
+        }
 
         &:hover {
             background-color: rgba(v.$primary, 1);
@@ -214,7 +207,9 @@
     &__link {
         background-color: rgba(v.$white, 1);
         color: rgba(v.$dark, 1);
-        margin-right: var(--md)
+        @include m.media(mobile-wide) {
+            margin-right: var(--md);
+        }
     }
 
     &__repo {
@@ -276,10 +271,8 @@
     right: 0;
     top: 50%;
     margin-top: -45vh;
-    border-top-left-radius: var(--rad-sm);
-    border-bottom-left-radius: var(--rad-sm);
     z-index: 1;
-    background-color: var(--light);
+    background-color: var(--white);
     
     &.open {
         width: 90%;
@@ -295,10 +288,6 @@
         opacity: 0;
         visibility: hidden;
         padding: var(--xs) var(--sm) var(--lg);
-        background-color: rgba(v.$light, 0.5);
-        border-top-left-radius: var(--rad-sm);
-        border-bottom-left-radius: var(--rad-sm);
-
         transition: all 200ms ease-in-out;
         overflow-y: scroll;
 
@@ -307,11 +296,12 @@
         }
 
         .case-toggle {
-            background-color: rgba(v.$primary, 0.6);
+            background-color: var(--white);
+            transition: all 150ms ease;
         }
 
         .case-toggle:hover {
-            background-color: rgba(v.$primary, 0.9);
+            background-color: var(--light);
         }
         
         &.open {
@@ -351,14 +341,14 @@
         &__btn {
             display: block;
             height: 100%;
-            background-color: rgba(v.$primary, 0.3);
-            color: var(--dark);
+            background-color: var(--white);
+            color: var(--primary);
             font-size: var(--text-reg);
             text-align: center;
             text-transform: capitalize;
             padding: var(--xs) var(--sm);
+            border: 2px solid var(--primary);
             margin: 0 var(--xs);
-            border-radius: var(--rad-sm);
             transition: background-color 150ms ease;
             cursor: pointer;
 
@@ -367,7 +357,7 @@
             }
 
             &:hover {
-                background-color: rgba(v.$primary, 0.6);
+                background-color: var(--light);
             }
         }
 
@@ -402,7 +392,6 @@
         &__objectives {
             display: none;
             visibility: hidden;
-            background-color: rgba(v.$light, 1);
             opacity: 0;
             font-size: var(--text-reg);
 
@@ -434,7 +423,6 @@
         }
 
         &__images {
-            border-radius: var(--rad-sm);
             box-shadow: 0 0 5px rgba(v.$dark, 0.5);
         }
 

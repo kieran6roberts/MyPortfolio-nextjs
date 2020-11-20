@@ -9,11 +9,12 @@
 }
 
 .nav {
-    @include m.flex($jus: flex-start, $align: center);
+    @include m.flex($jus: space-between, $align: center);
     padding: var(--sm);
     z-index: 1;
 
     @include m.media(tablet-wide) {
+        justify-content: flex-start;
         padding: var(--sm) var(--lg);
     }
 
@@ -34,8 +35,18 @@
     }
 
     &__welcome {
+        display: none;
+        visibility: hidden;
         margin-right: auto;
         font-size: var(--text-reg);
+        letter-spacing: 1.5px;
+        color: var(--primary);
+        font-weight: 700;
+
+        @include m.media(tablet-wide) {
+            display: block;
+            visibility: visible;
+        }
     }
     
     &__logo:hover {
@@ -43,10 +54,11 @@
     }
 
     &__burger {
-        background-color: rgba(v.$primary, 0.6);
+        background-color: var(--white);
+        transition: all 150ms ease;
 
         &:hover {
-            background-color: rgba(v.$primary, 0.9);
+            background-color: var(--light);
         }
     }
 
@@ -61,8 +73,9 @@
         position: relative;
         display: block;
         overflow: hidden;
-        background-color: rgba(v.$primary, 1);
-        color: var(--white);
+        background-color: rgba(v.$white, 1);
+        border: 2px solid var(--primary);
+        color: var(--primary);
         padding: var(--xs) var(--md);
         font-size: var(--text-reg);
         font-weight: 700;
@@ -80,6 +93,7 @@
 
     &__item-link:hover {
         background-color: rgba(v.$primary, 1);
+        color: var(--white);
     }
 
     &__item-link:hover .nav__icon {
@@ -100,7 +114,7 @@
     opacity: 0;
     visibility: none;
     z-index: 1;
-    background: linear-gradient(to bottom, var(--primary) 30%, var(--secondary) 100%);
+    background: linear-gradient(180deg, var(--primary), var(--light));
     transition: opacity 100ms ease-in-out,
                 width 200ms ease-out;
       
@@ -115,37 +129,60 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background-color: rgba(v.$dark, 0.3);
+        background-color: var(--primary);
+        border: 2px solid var(--white);
+        transition: all 150ms ease;
 
         &:hover {
             background-color: rgba(v.$dark, 0.6);
+        }
+
+        &--span,
+        &--span:before,
+        &--span:after {
+            background-color: var(--white);
         }
     }
     
     &__items {
       margin-top: var(--md);
+      display: none;
+      @include m.media(mobile-landscape) {
+        @include m.flex($jus: space-evenly);
+        margin-top: var(--sm)
+        }
+
+        &.open {
+            display: flex;
+        }
     }
 
     &__item {
-        background-color: rgba(v.$dark, 0.6);
+        background-color: var(--primary);
         text-align: center;
         text-transform: capitalize;
         margin-top: var(--md);
-        border-radius: var(--rad-lg);
         transition: all 150ms ease;
-    }
+        @include m.media(mobile-landscape) {
+            margin-top: var(--sm);
+            }
 
-    &__item:hover {
-        background-color: rgba(v.$dark, 0.5);
+        &:hover {
+            background-color: rgba(v.$dark, 0.5);
+        }
     }
 
     &__link {
         font-size: var(--text-links);
         color: var(--light);
         padding: var(--sm) var(--md);
+        font-weight: 700;
         display: block;
         width: 100%;
         height: 100%;
+        @include m.media(mobile-landscape) {
+            padding: var(--xs) var(--sm);
+            }
     }
 
     .social__items {
@@ -154,7 +191,7 @@
     }
 
     .social__icon {
-        color: var(--dark);
+        color: var(--white);
     }
 }
 
@@ -211,31 +248,21 @@
     &__btn {
         margin-bottom: var(--md);
         font-size: var(--text-reg);
-        animation: gradient 8s ease infinite;
-        color: var(--light);
-        background-image: linear-gradient(180deg, var(--secondary), var(--tertiary));
+        color: var(--white);
         background-size: 250% 250%;
-
-        @media (prefers-reduced-motion) {
-            animation-name: dissolve;
-        }
-
+        background-color: var(--primary);
+        border: 2px solid var(--primary);
+        transition: all 150ms ease;
         @include m.media(tablet-wide) {
             margin: var(--sm) 0;
         }
-    }
-    
-    @keyframes gradient {
-        0% {
-            background-position: 51% 0%; 
-        }
-        50% {
-            background-position: 50% 100%; 
-        }
-        100% {
-            background-position: 51% 0%; 
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--primary);
         }
     }
+
 }
 
 .cases {
@@ -247,15 +274,11 @@
     background-color: var(--white);
     transition: background-color 300ms ease-in-out;
 
-    &__pointer {
-        top: 0;
-        background-color: rgba(v.$dark, 0.5);
-    }
-
     &__header {
         font-size: var(--text-case-sm);
         text-transform: uppercase;
-        padding-left: var(--sm)
+        padding-left: var(--sm);
+        color: var(--primary);
     }
 
 }
@@ -317,19 +340,21 @@
 }
 
 .about {
-    height: calc(50vh - 0.1rem);
     position: absolute;
     top: 0.2rem;
     left: 0;
-    background: var(--light);
+    height: 60vh;
+    min-height: max-content;
+    background: var(--white);
     overflow-x: hidden;
+    @include m.media(mobile-landscape) {
+        height: 100vh;
+        }
 
     @include m.media(tablet-wide) {
         height: 90vh;
         top: 5vh;
         left: 5vw;
-        border-top-left-radius: var(--sm);
-        border-bottom-left-radius: var(--sm);
     }
 
     &__header {
@@ -352,17 +377,20 @@
   
 .contact {
     position: absolute;
-    top: calc(50vh - 0.2rem);
+    top: calc(60vh + 0.2rem);
     right: 0;
+    height: max-content;
     background-color: var(--dark);
     color: var(--light);
 
+    @include m.media(mobile-landscape) {
+        top: calc(100vh + 0.2rem);
+        }
+    
     @include m.media(tablet-wide) {
         height: 90vh;
         top: 5vh;
         right: 5vw;
-        border-top-right-radius: var(--sm);
-        border-bottom-right-radius: var(--sm);
     }
     
     &__header {
@@ -400,7 +428,8 @@
             transition: font-size 150ms ease-in-out;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: rgba(v.$primary, 0.9);
         }
 
