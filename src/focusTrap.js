@@ -1,5 +1,3 @@
-import { toggleClassHandler } from "./toggleClassHandler";
-
 const backgroundEls = document.querySelectorAll(".bg-el");
 const foregroundEls = document.querySelectorAll(".fg-el");
 const AllTabEls = [...backgroundEls, ...foregroundEls];
@@ -20,7 +18,6 @@ const toggleElementTabIndex = (arr, value = "0") => {
   
 const findModalTabs = arr => {
   const openModal = arr.find(element => element.classList.contains("open"));
-  console.log(openModal);
   toggleElementTabIndex(arr, "-1");
   openModal.querySelectorAll(".fg-el").forEach( element => {
     element.setAttribute("tabindex", "1");

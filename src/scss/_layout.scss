@@ -1,56 +1,51 @@
-// styling for the page
-
 @use "variables" as v;
 @use "mixins" as m;
 
-.scroll-div {
-    height: 0.2rem;
+.color-div {
     background: linear-gradient(to right, var(--primary) 15%, var(--secondary));
+    height: 0.2rem;
 }
 
 .nav {
-    @include m.flex($jus: space-between, $align: center);
     padding: var(--sm);
     z-index: 1;
-
+    @include m.flex($jus: space-between, $align: center);
     @include m.media(tablet-wide) {
         justify-content: flex-start;
         padding: var(--sm) var(--lg);
     }
 
     &__logo {
+        background-color: var(--primary);
         display: block;
         height: 2rem;
-        width: 2rem;
         padding: var(--xs);
-        background-color: var(--primary);
         transform: scale(1);
         transition: transform 100ms ease;
-        margin-right: var(--sm);
-
+        width: 2rem;
         @include m.media(desktop) {
             height: 3rem;
             width: 3rem;
         }
+
+        &:hover {
+            transform: scale(1.01);
+        }
     }
 
     &__welcome {
-        display: none;
-        visibility: hidden;
-        margin-right: auto;
-        font-size: var(--text-reg);
-        letter-spacing: 1.5px;
         color: var(--primary);
+        display: none;
+        font-size: var(--text-reg);
         font-weight: 700;
-
+        letter-spacing: 1.5px;
+        margin-left: var(--sm);
+        margin-right: auto;
+        visibility: hidden;
         @include m.media(tablet-wide) {
             display: block;
             visibility: visible;
         }
-    }
-    
-    &__logo:hover {
-        transform: scale(1.01);
     }
 
     &__burger {
@@ -70,24 +65,24 @@
     }
 
     &__item-link {
-        position: relative;
-        display: block;
-        overflow: hidden;
         background-color: rgba(v.$white, 1);
         border: 2px solid var(--primary);
         color: var(--primary);
-        padding: var(--xs) var(--md);
+        display: block;
         font-size: var(--text-reg);
         font-weight: 700;
+        overflow: hidden;
+        padding: var(--xs) var(--md);
+        position: relative;
         text-transform: capitalize;
         transition: all 150ms ease-in-out;
     }
 
     .nav__icon {
-        font-size: var(--text-nav-icon);
-        position: absolute;
-        left: 7%;
         color: rgba(v.$dark, 0.1);
+        font-size: var(--text-nav-icon);
+        left: 7%;
+        position: absolute;
         transition: all 150ms ease-in-out;
     }
 
@@ -106,31 +101,31 @@
 }
 
 .sidebar {
-    @include m.absolute();
-    @include m.flex($dir: column);
-    top: 0.2rem;
-    width: 0;
+    background: linear-gradient(180deg, var(--primary), var(--light));
     height: calc(100vh - 0.2rem);
     opacity: 0;
-    visibility: none;
-    z-index: 1;
-    background: linear-gradient(180deg, var(--primary), var(--light));
+    top: 0.2rem;
     transition: opacity 100ms ease-in-out,
                 width 200ms ease-out;
+    width: 0;
+    visibility: none;
+    z-index: 1;
+    @include m.absolute();
+    @include m.flex($dir: column);
       
 
     &.open {
-        width: 100%;
         opacity: 1;
         visibility: visible;
+        width: 100%;
     }
 
     &__burger {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
         background-color: var(--primary);
         border: 2px solid var(--white);
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
         transition: all 150ms ease;
 
         &:hover {
@@ -145,49 +140,53 @@
     }
     
     &__items {
-      margin-top: var(--md);
       display: none;
+      margin-top: var(--md);
       @include m.media(mobile-landscape) {
         @include m.flex($jus: space-evenly);
         margin-top: var(--sm)
-        }
-
-        &.open {
-            display: flex;
+    }
+    
+    &.open {
+            display: block;
         }
     }
 
     &__item {
-        background-color: var(--primary);
+        background-color: rgba(v.$dark, 0.4);
+        margin-top: var(--md);
         text-align: center;
         text-transform: capitalize;
-        margin-top: var(--md);
         transition: all 150ms ease;
         @include m.media(mobile-landscape) {
             margin-top: var(--sm);
             }
 
         &:hover {
-            background-color: rgba(v.$dark, 0.5);
+            background-color: rgba(v.$dark, 0.7);
         }
     }
 
     &__link {
-        font-size: var(--text-links);
         color: var(--light);
-        padding: var(--sm) var(--md);
-        font-weight: 700;
         display: block;
-        width: 100%;
+        font-size: var(--text-links);
+        font-weight: 700;
         height: 100%;
+        padding: var(--sm) var(--md);
+        width: 100%;
         @include m.media(mobile-landscape) {
             padding: var(--xs) var(--sm);
             }
     }
 
     .social__items {
-        @include m.flex($jus: space-evenly);
+        display: none;
         width: 30%;
+        
+        &.open {
+            @include m.flex($jus: space-evenly);
+        }
     }
 
     .social__icon {
@@ -196,34 +195,32 @@
 }
 
 .hero {
-    font-size: var(--text-hero);
-    text-transform: uppercase;
     color: var(--dark);
-    @include m.flex($dir: column, $align: flex-start, $jus: center);
-    padding: 0 var(--sm);
+    font-size: var(--text-hero);
     height: 85vh;
-    
+    padding: 0 var(--sm);
+    text-transform: uppercase;
+    @include m.flex($dir: column, $align: flex-start, $jus: center);
     @include m.media(tablet-wide) {
         @include m.flex($dir: column, $align: flex-end, $jus: center);
     }
 
     &__wrapper {
-        @include m.absolute;
-        background-image: url("../public/images/hero/hero.png");
+        background-image: url("../public/images/hero/hero.webp");
+        background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        width: 90%;
-        margin-left: -45%;
-        left: 50%;
         height: 100vh;
+        left: 50%;
+        margin-left: -45%;
+        position: absolute;
+        width: 90%;
         z-index: -1;
-        
         @include m.media(tablet-wide) {
             background-position: top 20% center;
             left: 34%;
         }
     }
-
         @include m.media(tablet-wide) {
             padding: 0 var(--lg);
         }
@@ -233,25 +230,25 @@
         text-shadow: 1px 1px 1px rgba(v.$dark, 0.3);
         
         &--clr {
-            font-size: 1.4em;
             color: var(--primary);
+            font-size: 1.4em;
             font-weight: 700;
         }
     }
     
     &__header--sm {
+        text-shadow: 1px 1px 1px rgba(v.$light, 1);
         font-size: 0.7em;
         font-weight: 700;
-        text-shadow: 1px 1px 1px rgba(v.$light, 1);
     }
     
     &__btn {
-        margin-bottom: var(--md);
-        font-size: var(--text-reg);
-        color: var(--white);
-        background-size: 250% 250%;
         background-color: var(--primary);
+        background-size: 250% 250%;
         border: 2px solid var(--primary);
+        color: var(--white);
+        font-size: var(--text-reg);
+        margin-bottom: var(--md);
         transition: all 150ms ease;
         @include m.media(tablet-wide) {
             margin: var(--sm) 0;
@@ -266,19 +263,19 @@
 }
 
 .cases {
-    position: relative;
-    padding: var(--lg) 0;
-    margin: 0 var(--sm);
+    background-color: var(--white);
     border-left: 1px solid rgba(v.$dark, 0.1);
     border-right: 1px solid rgba(v.$dark, 0.1);
-    background-color: var(--white);
+    margin: 0 var(--sm);
+    padding: var(--lg) 0;
+    position: relative;
     transition: background-color 300ms ease-in-out;
 
     &__header {
-        font-size: var(--text-case-sm);
-        text-transform: uppercase;
-        padding-left: var(--sm);
         color: var(--primary);
+        font-size: var(--text-case-sm);
+        padding-left: var(--sm);
+        text-transform: uppercase;
     }
 
 }
@@ -286,16 +283,15 @@
 /* about section */
 .wrapper {
     &.open {
+        background-color: transparent;
+        height: 100vh;
+        left: 0;
+        overflow-y: scroll;
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 1;
-        overflow-y: scroll;
         transition: all 200ms ease-in-out ;
-        background-color: transparent;
-
+        width: 100%;
+        z-index: 1;
         @include m.media(tablet-wide) {
             transition: all 0ms ease-in-out 300ms;
         }
@@ -306,31 +302,29 @@
 /* contact form */
 .contact,
 .about {
-    width: 100%;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 1;
-    padding: var(--sm);
     border: 1px solid var(--light);
-
+    opacity: 0;
+    padding: var(--sm);
+    pointer-events: none;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
     @include m.media(tablet) {
         padding: var(--md);
     }
-
     @include m.media(tablet-wide) {
         width: 45vw;
     }
 
     &.open {
         opacity: 1;
-        visibility: visible;
         pointer-events: visible;
+        visibility: visible;
     }
 
     &__header {
-        text-transform: uppercase;
         font-size: var(--text-links);
+        text-transform: uppercase;
     }
 
     &__image {
@@ -340,28 +334,27 @@
 }
 
 .about {
+    background: var(--white);
+    height: 60vh;
+    left: 0;
+    min-height: max-content;
+    overflow-x: hidden;
     position: absolute;
     top: 0.2rem;
-    left: 0;
-    height: 60vh;
-    min-height: max-content;
-    background: var(--white);
-    overflow-x: hidden;
     @include m.media(mobile-landscape) {
         height: 100vh;
         }
-
     @include m.media(tablet-wide) {
         height: 90vh;
-        top: 5vh;
         left: 5vw;
+        top: 5vh;
     }
 
     &__header {
-        padding-left: var(--sm);
         border-left: 3px solid var(--dark);
-        font-size: var(--text-reg);
         color: rgba(v.$dark, 0.6);
+        font-size: var(--text-reg);
+        padding-left: var(--sm);
     }
 
     .case__stack-items {
@@ -370,62 +363,60 @@
     }
 
     &__info {
-        padding: var(--sm) var(--md) 0;
         font-size: var(--text-reg);
+        padding: var(--sm) var(--md) 0;
     }
 }
   
 .contact {
-    position: absolute;
-    top: calc(60vh + 0.2rem);
-    right: 0;
-    height: max-content;
     background-color: var(--dark);
     color: var(--light);
-
+    height: max-content;
+    right: 0;
+    position: absolute;
+    top: calc(60vh + 0.2rem);
     @include m.media(mobile-landscape) {
         top: calc(100vh + 0.2rem);
         }
-    
     @include m.media(tablet-wide) {
         height: 90vh;
-        top: 5vh;
         right: 5vw;
+        top: 5vh;
     }
     
     &__header {
-        padding-right: var(--sm);
         border-right: 3px solid var(--secondary);
-        font-size: var(--text-reg);
         color: rgba(v.$light, 0.9);
+        font-size: var(--text-reg);
+        padding-right: var(--sm);
         text-align: end;
     }
     
     &__info {
-        padding: var(--sm) var(--md) 0 0;
-        font-size: var(--text-reg);
         display: block;
-        text-align: end;
+        font-size: var(--text-reg);
+        padding: var(--sm) var(--md) 0 0;
         position: relative;
+        text-align: end;
     }
 
     &__info--copy {
-        color: rgba(v.$primary, 0.7);
         background-color: transparent;
+        color: rgba(v.$primary, 0.7);
         cursor: pointer;
 
         &:before {
-            @include m.pseudo($content: "Copy to clipboard", $disp: none);
-            top: -0.5rem;
-            right: 8.1rem;
-            width: 6rem;
-            color: var(--dark);
-            padding: 0.2rem;
-            border-radius: var(--rad-sm);
             background-color: var(--light);
+            border-radius: var(--rad-sm);
+            color: var(--dark);
             font-size: 0.7rem;
+            padding: 0.2rem;
+            right: 8.1rem;
             text-align: center;
+            top: -0.5rem;
             transition: font-size 150ms ease-in-out;
+            width: 6rem;
+            @include m.pseudo($content: "Copy to clipboard", $disp: none);
         }
 
         &:hover,
@@ -447,31 +438,30 @@
 
     &__wrapper {
         @include m.flex($dir: column);
-        
         @include m.media(tablet) {
             @include m.flex($dir: row, $jus: space-evenly);
         }
     }
 
     .form {
-        width: 100%;
         font-size: var(--text-reg);
+        width: 100%;
 
         &__label {
-            margin: var(--xs) 0;
             display: block;
+            margin: var(--xs) 0;
             text-transform: capitalize;
         }
 
         &__input {
-            @include m.flex($dir: column);
             background-color: transparent;
             border-bottom: 1px solid var(--light);
             color: var(--light);
-            width: 100%;
-            padding: var(--xs);
             outline: none;
+            padding: var(--xs);
             transition: all 100ms ease-in-out;
+            width: 100%;
+            @include m.flex($dir: column);
         }
 
         &__input:focus {
@@ -488,10 +478,10 @@
         }
 
         &__submit {
-            width: 40%;
-            border: none;
             background-color: rgba(v.$primary, 0.8);
+            border: none;
             transition: background-color 150ms ease;
+            width: 40%;
             
             &:hover {
                 background-color: rgba(v.$primary, 1);
@@ -504,9 +494,9 @@
 .footer {
     background-color: var(--dark);
     color: var(--light);
-    text-align: center;
-    padding: var(--sm);
     font-size: var(--text-reg);
+    padding: var(--sm);
+    text-align: center;
 
     .social__items {
         @include m.flex($dir: column, $jus: space-evenly);
@@ -515,8 +505,8 @@
     .social__link {
         color: var(--light);
         display: block;
-        width: 50vw;
         position: relative;
+        width: 50vw;
     }
 
     .social__item {
@@ -524,21 +514,21 @@
     }
 
     .social__icon {
-        font-size: var(--text-icon);
         display: block;
-        width: 5rem;
+        font-size: var(--text-icon);
         margin: auto;
+        width: 5rem;
     }
     
     &__info {
-        font-size: 1.1em;
         color: var(--primary);
+        font-size: 1.1em;
         text-transform: capitalize;
     }
 
     &__email {
+        color: rgba(v.$light, 0.6);
         display: block;
         font-size: 0.8em;
-        color: rgba(v.$light, 0.6);
     }
 }

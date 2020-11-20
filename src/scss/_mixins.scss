@@ -9,9 +9,9 @@
 }
 
 @mixin absolute {
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
 }
 
 @mixin pseudo($content: "", $disp: block, $pos: absolute) {
@@ -59,8 +59,8 @@
 }
 
 @mixin flex($dir: row, $jus: center, $align: center) {
+    align-items: $align;
     display: flex;
     flex-direction: $dir;
     justify-content: $jus;
-    align-items: $align;
 }

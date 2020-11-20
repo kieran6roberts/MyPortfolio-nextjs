@@ -1,11 +1,11 @@
-import { addStudyHandler, removeStudyHandler }from "./toggleCaseStudy.js";
-import { toggleCaseStudyLinksHandler } from "./toggleCaseStudyLinks.js";
+import "./toggleCaseStudy.js";
+import "./toggleCaseStudyLinks.js";
+import "./toggleState.js";
 import { focusTrapHandler } from "./focusTrap.js";
 import { showObserver, 
   delayObserver, 
   caseInfoEls as showEl,
   observeArr as delayEl  } from "./observers.js";
-import "./toggleState.js";
 import ClipboardJS from "clipboard";
 import "./scss/index.scss";
 

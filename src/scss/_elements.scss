@@ -29,8 +29,8 @@
 *:before,
 *:after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -40,9 +40,9 @@ html {
 body {
   //font-family: "Titillium Web", sans-serif;
   font-family: var(--font);
-  position: static;
   overflow-x: hidden;
   overflow-y: auto;
+  position: static;
   width: 100%;
 }
 
@@ -70,9 +70,9 @@ p, div, span {
 input,
 textarea,
 button {
+  border: none;
   font-family: inherit;
   font-size: inherit;
-  border: none;
 }
 
 a {

@@ -12,14 +12,21 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="./public/head/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/bundle.min.css">
+    <meta name="Description" content="Kieran Roberts front-end developer portfolio. Let's work together.">
+    <link rel="preload" as="style" href="./src/bundle.min.css">
+    <link rel="preload" as="image" href="./public/images/hero/hero.webp">
+    <link rel="preload" as="style" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./public/fonts/titillium-web-v9-latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" href="./public/fonts/titillium-web-v9-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="image" href="./public/images/brewery-desktop/full-screen-brewery1200x635.webp">
+    <link rel="preload" as="image" href="./public/images/recipe-desktop/full-screen-recipe1200x639.webp">
+    <link rel="stylesheet" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet"  href="./src/bundle.min.css">
     <title>Kieran Dev</title>
 </head>
 <body>
-    <div class="scroll-div"></div>
+    <div class="color-div"></div>
     <div class="modal"></div>
-
     <!---Navbar--->
     <nav class="nav">
       <a href="/" class="nav__link bg-el">
@@ -30,7 +37,7 @@
         kieran6roberts@gmail.com
       </div>
 
-      <div role="button" class="nav__burger bg-el">
+      <div role="button" aria-label="toggle sidebar active" class="nav__burger bg-el">
         <span class="nav__burger--span"></span>
       </div>
 
@@ -51,23 +58,23 @@
 
     <!---Mobile Nav--->
     <sidebar class="sidebar">
-      <div role="button" data-tab="sidebar" class="nav__burger sidebar__burger fg-el">
+      <div role="button" aria-label="toggle sidebar back to home" data-tab="sidebar" class="nav__burger sidebar__burger fg-el">
         <span class="nav__burger--span sidebar__burger--span"></span>
       </div>
 
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" data-tab="sidebar" class="social__link fg-el">
+          <a href="https://github.com/kieran6roberts" aria-label="my github profile" class="social__link fg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" data-tab="sidebar" class="social__link fg-el">
+          <a href="https://twitter.com/Kieran6dev" aria-label="my twitter profile" class="social__link fg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" data-tab="sidebar" class="social__link fg-el">
+          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" aria-label="my linkedin profile" class="social__link fg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -80,12 +87,12 @@
           </a>
         </li>
         <li class="sidebar__item">
-          <a role="button" href="#case-studies" data-tab="sidebar" class="sidebar__link fg-el" id="link--case">
+          <a role="button" name="my work" href="#case-studies" data-tab="sidebar" class="sidebar__link fg-el" id="link--case">
             my work
           </a>
         </li>
         <li class="sidebar__item">
-          <a role="button" href="#" data-tab="sidebar" class="sidebar__link fg-el" id="link--contact">
+          <a role="button" name="contact me" href="#" data-tab="sidebar" class="sidebar__link fg-el" id="link--contact">
             contact
           </a>
         </li>
@@ -96,7 +103,7 @@
     <div class="wrapper">
       <!---About Me/ Contact me Sidebar--->
       <section class="about" id="about">
-        <button class="page__toggle fg-el" data-tab="contact" id="about-toggle">
+        <button class="page__toggle fg-el" name="modal toggle" data-tab="contact" id="about-toggle">
           <i class="fa fa-long-arrow-right case-btn--icon" aria-hidden="true"></i>
         </button>
         <h3 class="about__header">
@@ -243,10 +250,10 @@
                   ./public/images/brewery-desktop/full-screen-brewery500x264.jpg 500w,
                   ./public/images/brewery-desktop/full-screen-brewery768x406.jpg 768w,
                   ./public/images/brewery-desktop/full-screen-brewery900x476.jpg 900w,
-                  ./public/images/brewery-desktop/full-screen-brewery1200x635.jpg 1200w,
-                  ./public/images/brewery-desktop/full-screen-brewery1800x952.jpg 1800w"
+                  ./public/images/brewery-desktop/full-screen-brewery1200x635.webp 1200w,
+                  ./public/images/brewery-desktop/full-screen-brewery1800x952.webp 1800w"
           sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
-          src="./public/images/brewery-desktop/full-screen-brewery900x476.jpg"
+          src="./public/images/brewery-desktop/full-screen-brewery1200x635.jpg"
           class="case__image" 
           id="case-studies"
           loading="lazy"
@@ -325,7 +332,7 @@
                   ./public/images/recipe-desktop/full-screen-recipe500x266.jpg 500w,
                   ./public/images/recipe-desktop/full-screen-recipe768x409.jpg 768w,
                   ./public/images/recipe-desktop/full-screen-recipe900x480.jpg 900w,
-                  ./public/images/recipe-desktop/full-screen-recipe1200x639.jpg 1200w,
+                  ./public/images/recipe-desktop/full-screen-recipe1200x639.webp 1200w,
                   ./public/images/recipe-desktop/full-screen-recipe1800x959.jpg 1800w"
           sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
           src="./public/images/recipe-desktop/full-screen-recipe900x480.jpg"
@@ -667,17 +674,17 @@
     <footer class="footer">
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" class="social__link bg-el">
+          <a href="https://github.com/kieran6roberts" aria-label="my github profile" class="social__link bg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" class="social__link bg-el">
+          <a href="https://twitter.com/Kieran6dev" aria-label="my twitter profile" class="social__link bg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" class="social__link bg-el">
+          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" aria-label="my linkedin profile" class="social__link bg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -692,12 +699,6 @@
     </footer>
   </main>
 </body>
-<script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js" 
-    integrity="sha512-SrYSABdk01dnXiEz2YOFvpgWn/vePlQwbr/Od+rs6x8/hjfLfR6YfZuU+qW4QaQYnl8mL1a4DgjMMdiXShNzjg==" 
-    crossorigin="anonymous" 
-    defer>
-</script>
 <script 
     src="./src/bundle.min.js" 
     defer>

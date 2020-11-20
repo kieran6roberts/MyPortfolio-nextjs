@@ -7,6 +7,7 @@ const homeBurger = document.querySelector(".nav__burger");
 const sidebarNav = document.querySelector(".sidebar");
 const sidebarBurger = sidebarNav.querySelector(".sidebar__burger");
 const sidebarItems = sidebarNav.querySelector(".sidebar__items");
+const socialItems = sidebarNav.querySelector(".social__items");
 
 //hero cta toggle
 const heroBtn = document.querySelector(".hero__btn");
@@ -32,7 +33,7 @@ const clickHandler = classElements => {
     focusTrapHandler(tabElements);
 };
 
-const toggleSidebarElements = [sidebarNav, sidebarItems, document.body];
+const toggleSidebarElements = [sidebarNav, sidebarItems, document.body, socialItems];
 const toggleContactElements = [document.body, aboutSection, contactSection, wrapper, modal];
 const toggleAboutElements = [sidebarNav, aboutSection, contactSection, wrapper, modal];
 

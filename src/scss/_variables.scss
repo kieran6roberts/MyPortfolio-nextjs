@@ -9,6 +9,7 @@ $light: rgb(244, 235, 235);
 $primary: rgb(6, 224, 140);
 $secondary: rgb(255, 15, 235);
 $tertiary: rgb(4, 154, 200);
+
 $text-hero: clamp(1.8rem, 4.6vw, 13rem);
 $text-case-lg: clamp(7rem, 14vw, 30rem);
 $text-case-sm: clamp(1.4rem, 3.5vw, 7rem);
@@ -17,10 +18,12 @@ $text-links: clamp(1.5rem, 1.4vw, 3rem);
 $text-nav-icon: clamp(1.9rem, 3vw, 4.5rem);
 $text-reg: clamp(1rem, 1.4vw, 4rem);
 $text-sm: clamp(0.8rem, 1.2vw, 2rem);
+
 $xs: 0.5rem;
 $sm: 1rem;
 $md: 2rem;
 $lg: 4rem;
+
 $breakpoints: (
     "mobile": 400px,
     "mobile-wide": 550px,

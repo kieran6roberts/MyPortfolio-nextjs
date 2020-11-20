@@ -4,78 +4,78 @@
 @use "mixins" as m;
 
 .modal {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
     background-color: rgba(v.$dark, 0.6);
-    z-index: 1;
-    visibility: hidden;
     display: none;
+    height: 100vh;
     opacity: 0;
     pointer-events: none;
+    position: fixed;
     transition: all 200ms ease;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
 
     &.open {
         display: block;
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
     }
 }
 
 //btn
 .btn {
     color: var(--white);
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: var(--xs) var(--sm);
-    margin: var(--sm) 0 0;
     cursor: pointer;
+    font-weight: 700;
+    margin: var(--sm) 0 0;
+    padding: var(--xs) var(--sm);
+    text-transform: uppercase;
 }
 
 .btn--icon {
-    visibility: hidden;
     opacity: 0;
     transition: all 150ms ease-in-out;
+    visibility: hidden;
 }
 
 .btn:hover .btn--icon {
-    visibility: visible;
     opacity: 1;
     transform: translateX(0.5rem);
+    visibility: visible;
 }
 
 //modal toggle 
 .page__toggle {
-    @include m.flex();
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     background-color: var(--white);
     border: 2px solid var(--primary);
-    width: 3rem;
-    height: 2rem;
-    padding: var(--xs);
     cursor: pointer;
+    height: 2rem;
+    right: 1rem;
+    position: absolute;
+    padding: var(--xs);
+    top: 1rem;
     transition: all 150ms ease;
+    width: 3rem;
+    @include m.flex();
 
     &:hover {
         background-color: var(--light);
     }
 
     @include m.media(tablet) {
-        top: 2rem;
         right: 2rem;
+        top: 2rem;
     }
 }
 
 //burger nav
 .nav__burger {
-    @include m.flex($dir: column, $jus: center);
-    width: 3rem;
-    height: 2rem;
-    padding: var(--xs);
     border: 2px solid var(--primary);
     cursor: pointer;
+    height: 2rem;
+    padding: var(--xs);
+    width: 3rem;
+    @include m.flex($dir: column, $jus: center);
 
     &--span {
         position: relative;
@@ -84,11 +84,11 @@
     &--span,
     &--span:after,
     &--span:before{
-        height: 0.15rem;
-        width: 80%;
         background-color: var(--primary);
         border-radius: var(--rad-sm);
+        height: 0.15rem;
         pointer-events: none;
+        width: 80%;
     }
 
     &--span:after,
@@ -111,9 +111,9 @@
 
 //case studies 
 .case {
-    padding: var(--md) var(--sm);
     border-bottom: 1px solid rgba(v.$dark, 0.1);
     margin: 0 auto;
+    padding: var(--md) var(--sm);
     
     @include m.media(tablet) {
         padding: var(--lg) var(--md);
@@ -121,37 +121,36 @@
     }
 
     &-header {
-        position: relative;
         font-size: var(--text-case-sm);
         height: 20vh;
+        position: relative;
         text-transform: capitalize;
     }
 
     &-header__background {
-        opacity: 0;
-        font-size: var(--text-case-lg);
         color: rgba(v.$dark, 0.1);
+        font-size: var(--text-case-lg);
+        opacity: 0;
         text-transform: capitalize;
-        width: 200vw;
-        transform: translateX(15%);
         transition: all 800ms ease 900ms;
+        width: 200vw;
     }
 
     &-header__primary {
-        font-weight: 700;
-        @include m.absolute;
-        opacity: 0;
         border-left: 6px solid var(--primary);
+        font-weight: 700;
+        opacity: 0;
         padding-left: var(--sm);
         transition: all 500ms ease 200ms;
+        @include m.absolute;
     }
 
     &__info {
-        opacity: 0;
-        padding: var(--md);
         border-left: 2px solid rgba(v.$light, 0.5);
         border-right: 2px solid rgba(v.$light, 0.5);
         font-size: var(--text-reg);
+        opacity: 0;
+        padding: var(--md);
         transition: all 500ms ease 400ms;
 
         @include m.media(desktop-wide) {
@@ -166,34 +165,34 @@
     }
 
     &__image {
+        box-shadow: 0 0 5px rgba(v.$dark, 0.5);
         display: block;
+        height: auto;
+        margin: 0 auto;
         max-height: 75vh;
         max-width: 75vw;
-        width: 100%;
-        height: auto;
         object-fit: cover;
-        margin: 0 auto;
-        box-shadow: 0 0 5px rgba(v.$dark, 0.5);
+        width: 100%;
     }
 
     &__image-caption {
-        text-align: center;
         font-size: 0.9em;
-        margin: var(--sm) 0;
         font-style: italic;
+        margin: var(--sm) 0;
+        text-align: center;
     }
 
     
     &__link,
     &__repo {
-        display: inline-block;
-        width: max-content;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        margin: var(--xs) 0;
-        font-weight: 700;
-        transition: all 150ms ease;
         border: 2px solid var(--primary);
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: 700;
+        margin: var(--xs) 0;
+        text-transform: uppercase;
+        transition: all 150ms ease;
+        width: max-content;
         @include m.media(mobile-wide) {
             margin: var(--md) 0;
             
@@ -223,13 +222,13 @@
     }
 
     &__sub-header {
+        border-left: 2px solid var(--tertiary);
+        color: var(--tertiary);
         display: block;
         font-size: 1.6em;
-        text-transform: uppercase;
-        color: var(--tertiary);
-        padding-left: var(--sm);
         margin: var(--sm) 0;
-        border-left: 2px solid var(--tertiary);
+        padding-left: var(--sm);
+        text-transform: uppercase;
 
         @include m.media(desktop-wide) {
             padding-left: var(--lg);
@@ -237,9 +236,9 @@
     }
 
     &__stack-items {
-        padding-left: var(--sm);
         font-size: 1.2em;
         list-style: circle;
+        padding-left: var(--sm);
         text-transform: capitalize;
     }
 
@@ -253,8 +252,8 @@
     }
 
     &__btn {
-        margin: var(--sm) 0;
         background-color: rgba(v.$primary, 1);
+        margin: var(--sm) 0;
 
         @include m.media(desktop-wide) {
             margin: var(--lg) 0;
@@ -264,32 +263,32 @@
 
 // each in depth case study of projects
 .case-studies {
+    background-color: var(--white);
     height: 90vh;
-    width: 0%;
-    visibility: hidden;
+    margin-top: -45vh;
     position: fixed;
     right: 0;
     top: 50%;
-    margin-top: -45vh;
+    visibility: hidden;
+    width: 0%;
     z-index: 1;
-    background-color: var(--white);
     
     &.open {
-        width: 90%;
         visibility: visible;
+        width: 90%;
     }
     
     .case-study {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 0;
+        left: 0;
         opacity: 0;
-        visibility: hidden;
-        padding: var(--xs) var(--sm) var(--lg);
-        transition: all 200ms ease-in-out;
         overflow-y: scroll;
+        position: absolute;
+        padding: var(--xs) var(--sm) var(--lg);
+        top: 0;
+        transition: all 200ms ease-in-out;
+        visibility: hidden;
+        width: 100%;
 
         @include m.media(tablet) {
             padding: var(--md) var(--lg) var(--lg);
@@ -311,15 +310,14 @@
         }
 
         &__header {
+            border-bottom: 1px solid rgba(v.$dark, 0.1);
             font-size: var(--text-links);
             text-transform: capitalize;
-            border-bottom: 1px solid rgba(v.$dark, 0.1);
         }
 
         &__content {
             margin-top: var(--md);
             @include m.flex($dir: column, $jus: flex-start, $align: flex-start);
-
             @include m.media(tablet-wide) {
                 @include m.flex($dir: row, $jus: space-between, $align: flex-start);
             }
@@ -328,7 +326,6 @@
         &__items {
             display: flex;
             flex: 0 1 auto;
-
             @include m.media(tablet-wide) {
                 flex-direction: column;
             }
@@ -339,18 +336,19 @@
         }
 
         &__btn {
-            display: block;
-            height: 100%;
             background-color: var(--white);
+            border: 2px solid var(--primary);
             color: var(--primary);
+            cursor: pointer;
+            display: block;
             font-size: var(--text-reg);
+            font-weight: 700;
+            height: 100%;
+            margin: 0 var(--xs);
+            padding: var(--xs) var(--sm);
             text-align: center;
             text-transform: capitalize;
-            padding: var(--xs) var(--sm);
-            border: 2px solid var(--primary);
-            margin: 0 var(--xs);
             transition: background-color 150ms ease;
-            cursor: pointer;
 
             @include m.media(tablet-wide) {
                 width: 20vw;
@@ -391,35 +389,35 @@
         &__outcome,
         &__objectives {
             display: none;
-            visibility: hidden;
-            opacity: 0;
             font-size: var(--text-reg);
+            opacity: 0;
+            visibility: hidden;
 
             &.show{
                 display: block;
-                visibility: visible;
                 opacity: 1;
+                visibility: visible;
             }
         }
 
         &__tab-header {
-            text-transform: capitalize;
-            font-size: 1.2em;
-            padding-left: var(--sm);
-            margin: var(--md) 0;
             border-left: 5px solid rgba(v.$primary, 0.6);
+            font-size: 1.2em;
+            margin: var(--md) 0;
+            padding-left: var(--sm);
+            text-transform: capitalize;
         }
 
         &__outcome-items {
             list-style: circle;
-            padding-left: var(--sm);
             padding-bottom: var(--md);
+            padding-left: var(--sm);
         }
 
         &__images-wrapper {
-            @include m.flex($jus: space-evenly, $align: center);
             margin-top: var(--md);
             padding-bottom: var(--sm);
+            @include m.flex($jus: space-evenly, $align: center);
         }
 
         &__images {

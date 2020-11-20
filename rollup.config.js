@@ -90,8 +90,15 @@ export default {
                 }
             },
             {
-                files: ["public/images/hero.png"],
+                files: ["public/images/hero.webp"],
                 dest: "build/public/images/hero",
+                options: {
+                    verbose: true
+                }
+            },
+            {
+                files: [".htaccess"],
+                dest: "build/",
                 options: {
                     verbose: true
                 }

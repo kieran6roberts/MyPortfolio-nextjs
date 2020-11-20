@@ -9,7 +9,7 @@
     "verbose": true
   },
   "scripts": {
-    "test": "jest --coverage --watch",
+    "test": "jest --watchAll --coverage",
     "build": "rollup --config --watch"
   },
   "license": "MIT",
