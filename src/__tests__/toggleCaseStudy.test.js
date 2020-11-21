@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 
 jest
-  .mock("../focusTrap.js")
+  .mock("../focusTrap/focusTrap.js")
   .mock("../toggleCaseStudy.js");
 
 afterEach( () => {
@@ -37,7 +37,7 @@ describe("toggle case study open and close states", () => {
     </button>
   `;
   require("../toggleCaseStudy.js");
-  require("../focusTrap.js");
+  require("../focusTrap/focusTrap.js");
 
   const openCaseBtns = screen.queryAllByText("case btn");
   const modalEl = screen.queryByTestId("modal");

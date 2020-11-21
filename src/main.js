@@ -1,7 +1,7 @@
 import "./toggleCaseStudy.js";
 import "./toggleCaseStudyLinks.js";
 import "./toggleState.js";
-import { focusTrapHandler } from "./focusTrap.js";
+import focusTrapHandler from "./focusTrap/focusTrap.js";
 import { showObserver, 
   delayObserver, 
   caseInfoEls as showEl,

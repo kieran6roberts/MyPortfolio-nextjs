@@ -1,5 +1,5 @@
 import { toggleClassHandler } from "./toggleClassHandler.js";
-import { focusTrapHandler } from "./focusTrap.js";
+import focusTrapHandler from "./focusTrap/focusTrap.js";
 import { studyEls } from "./toggleCaseStudy.js";
 
 //burger nav toggle
@@ -35,7 +35,7 @@ const clickHandler = classElements => {
 
 const toggleSidebarElements = [sidebarNav, sidebarItems, document.body, socialItems];
 const toggleContactElements = [document.body, aboutSection, contactSection, wrapper, modal];
-const toggleAboutElements = [sidebarNav, aboutSection, contactSection, wrapper, modal];
+const toggleAboutElements = [sidebarNav, aboutSection, contactSection, wrapper, modal, socialItems, sidebarItems];
 
 contactLink.addEventListener("click", () => clickHandler(toggleAboutElements));
 desktopContactLink.addEventListener("click", () => clickHandler(toggleContactElements));

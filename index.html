@@ -27,54 +27,77 @@
 <body>
     <div class="color-div"></div>
     <div class="modal"></div>
-    <!---Navbar--->
     <nav class="nav">
       <a href="/" class="nav__link bg-el">
-        <img src="./public/images/icons/k.svg" class="nav__logo" alt="logo of the letter k">
+        <img 
+        src="./public/images/icons/k.svg" 
+        class="nav__logo" 
+        alt="logo of the letter k">
       </a>
 
       <div class="nav__welcome">
         kieran6roberts@gmail.com
       </div>
 
-      <div role="button" aria-label="toggle sidebar active" class="nav__burger bg-el">
+      <div 
+      role="button" 
+      aria-label="toggle sidebar active" 
+      class="nav__burger bg-el">
         <span class="nav__burger--span"></span>
       </div>
 
       
       <ul class="nav__items">
         <li class="nav__item">
-          <a role="button" href="#case-studies" class="nav__item-link bg-el">
+          <a 
+          role="button" 
+          href="#case-studies" 
+          class="nav__item-link bg-el">
             case studies <i class="fa fa-desktop nav__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="nav__item">
-          <a role="button" href="#" class="nav__item-link bg-el" id="nav-contact">
+          <a 
+          role="button" 
+          href="#" 
+          class="nav__item-link bg-el" id="nav-contact">
             contact me <i class="fa fa-phone nav__icon" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
     </nav>
 
-    <!---Mobile Nav--->
     <sidebar class="sidebar">
-      <div role="button" aria-label="toggle sidebar back to home" data-tab="sidebar" class="nav__burger sidebar__burger fg-el">
+      <div 
+      role="button" 
+      aria-label="toggle sidebar back to home" 
+      data-tab="sidebar" 
+      class="nav__burger sidebar__burger fg-el">
         <span class="nav__burger--span sidebar__burger--span"></span>
       </div>
 
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" aria-label="my github profile" class="social__link fg-el">
+          <a 
+          href="https://github.com/kieran6roberts" 
+          aria-label="my github profile" 
+          class="social__link fg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" aria-label="my twitter profile" class="social__link fg-el">
+          <a 
+          href="https://twitter.com/Kieran6dev" 
+          aria-label="my twitter profile" 
+          class="social__link fg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" aria-label="my linkedin profile" class="social__link fg-el">
+          <a 
+          href="https://www.linkedin.com/in/kieran-roberts-00517b178/" 
+          aria-label="my linkedin profile" 
+          class="social__link fg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>
@@ -82,17 +105,31 @@
 
       <ul class="sidebar__items">
         <li class="sidebar__item">
-          <a href="/" data-tab="sidebar" class="sidebar__link fg-el">
+          <a 
+          role="button" 
+          name="home" 
+          href="/" 
+          class="sidebar__link fg-el">
             home
           </a>
         </li>
         <li class="sidebar__item">
-          <a role="button" name="my work" href="#case-studies" data-tab="sidebar" class="sidebar__link fg-el" id="link--case">
+          <a 
+          role="button" 
+          name="my work" 
+          href="#case-studies" 
+          class="sidebar__link fg-el" 
+          id="link--case">
             my work
           </a>
         </li>
         <li class="sidebar__item">
-          <a role="button" name="contact me" href="#" data-tab="sidebar" class="sidebar__link fg-el" id="link--contact">
+          <a 
+          role="button" 
+          name="contact me" 
+          href="#" 
+          class="sidebar__link fg-el" 
+          id="link--contact">
             contact
           </a>
         </li>
@@ -101,9 +138,11 @@
 
   <main>
     <div class="wrapper">
-      <!---About Me/ Contact me Sidebar--->
       <section class="about" id="about">
-        <button class="page__toggle fg-el" name="modal toggle" data-tab="contact" id="about-toggle">
+        <button 
+        class="page__toggle fg-el" 
+        name="modal toggle" 
+        id="about-toggle">
           <i class="fa fa-long-arrow-right case-btn--icon" aria-hidden="true"></i>
         </button>
         <h3 class="about__header">
@@ -127,13 +166,13 @@
           <li class="case__stack-item">
             <img 
             src="./public/images/icons/javascript.svg" 
-            alt="javascript emblem" 
+            alt="javaScript emblem" 
             loading="lazy" 
             class="case__stack-logo">
           </li>
           <li class="case__stack-item">
             <img src="./public/images/icons/react.svg" 
-            alt="reactJS emblem" 
+            alt="reactjs emblem" 
             loading="lazy" 
             class="case__stack-logo">
           </li>
@@ -160,7 +199,10 @@
           to the clipboard.
         </span>
         <div class="contact__wrapper">
-          <form action="https://formspree.io/f/mleonqvj" method="POST" class="form">
+          <form 
+          action="https://formspree.io/f/mleonqvj" 
+          method="POST" 
+          class="form">
             <label 
             for="name" 
             class="form__label" >
@@ -214,8 +256,6 @@
         </div>
       </section>
     </div>
-
-    <!---Hero--->
     <section class="hero">
         <div class="hero__wrapper"></div>
           <h2 class="hero__header">
@@ -228,19 +268,16 @@
             about me <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
     </section>
-
-    <!---Case Studies--->
     <section class="cases">
       <h2 class="cases__header">
         take a look at my work
       </h2>
-      <!---Study 1--->
       <div class="case">
         <div class="case-header">
           <h2 class="case-header__background">
             turncoat brewery
           </h2>
-          <h3 class="case-header__primary">
+          <h3 class="case-header__primary" id="case-studies">
             turncoat brewery 
           </h3>
         </div>
@@ -255,18 +292,21 @@
           sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
           src="./public/images/brewery-desktop/full-screen-brewery1200x635.jpg"
           class="case__image" 
-          id="case-studies"
           loading="lazy"
           alt="fullscreen image of my brewery site home page">
 
-          <div class="case__image-caption">Turncoat brewery home page</div>
+          <div class="case__image-caption">
+            Turncoat brewery home page
+          </div>
           <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn bg-el">
             visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
           <a href="https://github.com/kieran6roberts/brewery" class="case__repo btn bg-el">
             github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
-          <h4 class="case__sub-header">project description</h4>
+          <h4 class="case__sub-header">
+            project description
+          </h4>
           <p class="case__description">
             This is a site built for a mock brewery and includes a home, 
             products and contact pages as well as a small e-commerce store.
@@ -285,7 +325,7 @@
               src="./public/images/icons/css-3.svg" 
               alt="css emblem" 
               loading="lazy" 
-              class="case__stack-logo"> cSS3
+              class="case__stack-logo"> css3
             </li>
             <li class="case__stack-item">
               <img 
@@ -299,7 +339,7 @@
               src="./public/images/icons/nodejs.svg" 
               alt="nodeJS emblem" 
               loading="lazy" 
-              class="case__stack-logo"> nodeJS/ ejs templating
+              class="case__stack-logo"> nodejs/ ejs templating
             </li>
             <li class="case__stack-item">
               <img 
@@ -335,24 +375,30 @@
                   ./public/images/recipe-desktop/full-screen-recipe1200x639.webp 1200w,
                   ./public/images/recipe-desktop/full-screen-recipe1800x959.jpg 1800w"
           sizes="(min-width: 1px) and (max-width: 500px) 350px, 50vw"
-          src="./public/images/recipe-desktop/full-screen-recipe900x480.jpg"
+          src="./public/images/recipe-desktop/full-screen-recipe1200x639.jpg"
           class="case__image"
           loading="lazy"
           alt="fullscreen image of my recipe app browse page">
-          <div class="case__image-caption">Find a recipe browse page with instructions</div>
+          <div class="case__image-caption">
+            Find a recipe browse page with instructions
+          </div>
           <a href="https://recipe-finder-steel.vercel.app/" class="case__link btn bg-el">
             visit website <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
           <a href="https://github.com/kieran6roberts/recipe-finder" class="case__repo btn bg-el">
             github repo <i class="fa fa-long-arrow-right btn--icon" aria-hidden="true"></i>
           </a>
-          <h4 class="case__sub-header">description</h4>
+          <h4 class="case__sub-header">
+            description
+          </h4>
           <p class="case__description">
             Find a recipe allows users who have trouble thinking up meal ideas to easily search through many different
             recipes using keywords. Users are also able to save recipes for later and delete them when they
             are no longer needed.
           </p>
-          <span class="case__sub-header">tech stack</span>
+          <span class="case__sub-header">
+            tech stack
+          </span>
           <ul class="case__stack-items">
             <li class="case__stack-item">
               <img src="./public/images/icons/react.svg" 
@@ -365,7 +411,7 @@
               src="./public/images/icons/css-3.svg" 
               alt="css emblem" 
               loading="lazy" 
-              class="case__stack-logo"> CSS modules
+              class="case__stack-logo"> css modules
             </li>
           </ul>
           <button class="case__btn btn bg-el">
@@ -503,7 +549,7 @@
                         ./public/images/brewery-mobile/home-mobile-brewery400x549.JPG 400w,
                         ./public/images/brewery-mobile/home-mobile-brewery500x686.JPG 500w"
                 sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/brewery-mobile/home-mobile-brewery400x549.JPG" 
+                src="./public/images/brewery-mobile/home-mobile-brewery500x686.JPG" 
                 loading="lazy"
                 alt="brewery home page on mobile devices" 
                 class="case-study__images">
@@ -513,12 +559,14 @@
                         ./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG 400w,
                         ./public/images/brewery-mobile/contact-mobile-brewery500x685.JPG 500w"
                 sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG" 
+                src="./public/images/brewery-mobile/contact-mobile-brewery500x686.JPG" 
                 loading="lazy"
                 alt="brewery home page on mobile devices" 
                 class="case-study__images">
               </div>
-              <span class="case-study__images-caption">home and contact pages at mobile device sizes</span>
+              <span class="case-study__images-caption">
+                home and contact pages at mobile device sizes
+              </span>
               <h5 class="case-study__tab-header">
                 improvements
               </h5>
@@ -632,7 +680,7 @@
                         ./public/images/recipe-mobile/results-mobile-recipe400x549.JPG 400w,
                         ./public/images/recipe-mobile/results-mobile-recipe500x686.JPG 500w"
                 sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/recipe-mobile/results-mobile-recipe400x549.JPG" 
+                src="./public/images/recipe-mobile/results-mobile-recipe500x679.JPG" 
                 loading="lazy"
                 alt="recipe app results page on mobile devices" 
                 class="case-study__images">
@@ -642,12 +690,14 @@
                         ./public/images/recipe-mobile/search-mobile-recipe400x543.JPG 400w,
                         ./public/images/recipe-mobile/search-mobile-recipe500x679.JPG 500w"
                 sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/recipe-mobile/search-mobile-recipe400x543.JPG" 
+                src="./public/images/recipe-mobile/search-mobile-recipe500x679.JPG" 
                 loading="lazy"
                 alt="recipe search page on mobile devices" 
                 class="case-study__images">
               </div>
-              <span class="case-study__images-caption">search and results pages at mobile device sizes</span>
+              <span class="case-study__images-caption">
+                search and results pages at mobile device sizes
+              </span>
               <h5 class="case-study__tab-header">
                 improvements
               </h5>
@@ -670,26 +720,36 @@
       </div>
     </section>
 
-    <!---Footer--->
     <footer class="footer">
       <ul class="social__items">
         <li class="social__item">
-          <a href="https://github.com/kieran6roberts" aria-label="my github profile" class="social__link bg-el">
+          <a 
+          href="https://github.com/kieran6roberts" 
+          aria-label="my github profile" 
+          class="social__link bg-el">
             <i class="fa fa-github social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://twitter.com/Kieran6dev" aria-label="my twitter profile" class="social__link bg-el">
+          <a 
+          href="https://twitter.com/Kieran6dev" 
+          aria-label="my twitter profile" 
+          class="social__link bg-el">
             <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" aria-label="my linkedin profile" class="social__link bg-el">
+          <a 
+          href="https://www.linkedin.com/in/kieran-roberts-00517b178/" 
+          aria-label="my linkedin profile" 
+          class="social__link bg-el">
             <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
-      <span class="footer__info">created and designed by kieran roberts.</span>
+      <span class="footer__info">
+        created and designed by kieran roberts.
+      </span>
       <span 
       class="footer__email"
       id="copy-email" 

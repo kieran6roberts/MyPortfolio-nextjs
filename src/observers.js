@@ -1,9 +1,9 @@
 import { toggleClassHandler } from "./toggleClassHandler.js";
 
 const casesEl = document.querySelector(".cases");
-const headerLrgEls = casesEl.querySelectorAll(".case-header__background");
-const headerSmEls = casesEl.querySelectorAll(".case-header__primary");
-const caseInfoEls = [...casesEl.querySelectorAll(".case__info")];
+const headerLrgEls = document.querySelectorAll(".case-header__background");
+const headerSmEls = document.querySelectorAll(".case-header__primary");
+const caseInfoEls = [...document.querySelectorAll(".case__info")];
 
 const observeArr = [...headerLrgEls, ...headerSmEls, casesEl];
 

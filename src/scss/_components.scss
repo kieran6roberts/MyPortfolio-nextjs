@@ -354,7 +354,9 @@
                 width: 20vw;
             }
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
                 background-color: var(--light);
             }
         }

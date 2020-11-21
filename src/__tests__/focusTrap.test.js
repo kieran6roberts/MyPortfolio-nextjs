@@ -1,5 +1,21 @@
-import { getAllByText, screen } from "@testing-library/dom";
+import { screen } from "@testing-library/dom";
 import "@testing-library/jest-dom";
+import focusTrapHandler from "../focusTrap/focusTrap";
+
+jest.mock("../focusTrap/toggleElementTabIndex")
+    .mock("../focusTrap/findModalTabs");
+
+import findModalTabs from "../focusTrap/findModalTabs.js";
+import toggleElementTabIndex from "../focusTrap/toggleElementTabIndex";
+
+beforeEach(() => {
+  findModalTabs.mockImplementation(() => jest.fn());
+  toggleElementTabIndex.mockImplementation(() => jest.fn());
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
 
   describe("handle which elements are tabable based on active modal", () => {
     document.body.innerHTML = `
@@ -11,23 +27,19 @@ import "@testing-library/jest-dom";
     const foregroundEls = screen.getAllByText("fore");
     const backgroundEls = screen.getAllByText("back");
 
-    test("page load focus init", () => {
-      const tab = require("../focusTrap.js");
-
+    test("focus trap handler function", () => {
       expect(foregroundEls[0]).toBeInTheDocument();
       expect(foregroundEls[1]).toBeInTheDocument();
       expect(backgroundEls[1]).toBeInTheDocument();
       expect(backgroundEls[1]).toBeInTheDocument();
 
-      tab.focusTrapHandler();
-      expect(foregroundEls[0]).toHaveAttribute("tabindex", "-1");
-      expect(backgroundEls[0]).toHaveAttribute("tabindex", "1");
-    });
-    test("toggles tab index for given modal", () => {
-      const tab = require("../focusTrap.js");
-      const elementArr = [...foregroundEls, ...backgroundEls];
 
-      document.body.classList.toggle("open");
-      tab.focusTrapHandler(elementArr);
+      focusTrapHandler();
+      expect(toggleElementTabIndex).toHaveBeenCalledTimes(2);
+      
+      document.body.classList.add("open");
+      focusTrapHandler();
+      expect(findModalTabs).toHaveBeenCalledTimes(1);
+      expect(toggleElementTabIndex).toHaveBeenCalledTimes(3);
     });
   });

@@ -1,5 +1,5 @@
 import { toggleClassHandler } from "./toggleClassHandler.js";
-import { focusTrapHandler } from "./focusTrap.js";
+import focusTrapHandler from "./focusTrap/focusTrap.js";
 
 const caseBtns = [...document.querySelectorAll(".case__btn")];
 const studyWrapper = document.querySelector(".case-studies");
