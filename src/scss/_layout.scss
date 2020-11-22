@@ -35,17 +35,11 @@
 
     &__welcome {
         color: var(--primary);
-        display: none;
         font-size: var(--text-reg);
         font-weight: 700;
         letter-spacing: 1.5px;
         margin-left: var(--sm);
         margin-right: auto;
-        visibility: hidden;
-        @include m.media(tablet-wide) {
-            display: block;
-            visibility: visible;
-        }
     }
 
     &__burger {
@@ -198,8 +192,8 @@
     color: var(--dark);
     font-size: var(--text-hero);
     height: 85vh;
-    padding: 0 var(--sm);
-    text-transform: uppercase;
+    padding: 0 5%;
+    width: 100%;
     @include m.flex($dir: column, $align: flex-start, $jus: center);
     @include m.media(tablet-wide) {
         @include m.flex($dir: column, $align: flex-end, $jus: center);
@@ -210,23 +204,34 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        animation: hero-fade 500ms ease-in-out 200ms 1 forwards;
         height: 100vh;
         left: 50%;
         margin-left: -45%;
+        opacity: 0;
         position: absolute;
         width: 90%;
+        top: 0;
         z-index: -1;
+        @keyframes hero-fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         @include m.media(tablet-wide) {
-            background-position: top 20% center;
-            left: 34%;
+            background-position: top 30% center;
+            left: 32%;
+            transform: scale(0.95);
         }
     }
-        @include m.media(tablet-wide) {
-            padding: 0 var(--lg);
-        }
 
     &__header {
-        font-size: 0.8em;
+        font-size: 0.9em;
+        font-weight: 700;
+        text-transform: capitalize;
         text-shadow: 1px 1px 1px rgba(v.$dark, 0.3);
         
         &--clr {
@@ -237,9 +242,21 @@
     }
     
     &__header--sm {
-        text-shadow: 1px 1px 1px rgba(v.$light, 1);
-        font-size: 0.7em;
+        background-color: rgba(v.$white, 1);
+        color: var(--primary);
+        font-size: 0.5em;
         font-weight: 700;
+        padding: var(--xs) var(--xs) var(--xs) 0;
+        width: 45%;
+        @include m.media(tablet-wide) {
+            text-align: right;
+            width: 34%;
+        }
+    }
+
+    &__header--clr {
+        color: var(--secondary);
+        font-size: 1em;
     }
     
     &__btn {
