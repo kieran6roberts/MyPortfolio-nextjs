@@ -221,6 +221,14 @@
         text-transform: none;;
     }
 
+    &__description-link {
+        color: rgba(v.$secondary, 0.8);
+
+        &:hover {
+            color: rgba(v.$secondary, 1);
+        }
+    }
+
     &__sub-header {
         border-left: 2px solid var(--tertiary);
         color: var(--tertiary);
