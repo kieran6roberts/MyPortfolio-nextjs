@@ -11,7 +11,6 @@ import livereload from "rollup-plugin-livereload";
 export default {
     input: "src/main.js",
     output: {
-        file: "./build",
         file: "./build/src/bundle.min.js",
         format: "iife",
         name: "bundle"

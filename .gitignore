@@ -3,3 +3,4 @@ build
 coverage
 debug.log
 yarn-error.log
+.github
