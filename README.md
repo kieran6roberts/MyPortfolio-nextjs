@@ -13,11 +13,10 @@ The primary objective of this project was to create a responsive and stylish sin
 ## Technologies
 
  
-* HTML
-* SCSS/sass 1.29.0
+* html
+* scss/sass 1.29.0
 * js
 * rollup 2.33.1
 * jest 26.6.0
 * postcss 8.1.6
 * clipboard 2.0.6
-* tsparticles 1.18.11
