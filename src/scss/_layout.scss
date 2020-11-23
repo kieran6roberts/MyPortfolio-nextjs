@@ -299,26 +299,30 @@
 
 /* about section */
 .wrapper {
-    &.open {
-        background-color: var(--white);
-        height: 100vh;
-        left: 0;
-        overflow-y: scroll;
-        position: fixed;
-        top: 0;
-        transition: all 200ms ease-in-out ;
-        width: 100%;
-        z-index: 1;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        @include m.media(tablet-wide) {
-            background-color: transparent;
-            transition: all 0ms ease-in-out 300ms;
+    background-color: var(--white);
+    display: none;
+    height: 100vh;
+    left: 0;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0.2rem;
+    transition: all 200ms ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    @include m.media(tablet-wide) {
+        background-color: transparent;
+        transition: all 0ms ease-in-out 300ms;
 
-        }
+    }
+    &.open {
+        display: block;
+        visibility: visible;
     }
         
 }
@@ -361,15 +365,12 @@
     flex-direction: column;
     justify-content: space-between;
     background: var(--white);
-    height: 50vh;
-    left: 0;
     min-height: max-content;
-    position: absolute;
-    top: 0.2rem;
     @include m.media(mobile-landscape) {
         height: 100vh;
         }
     @include m.media(tablet-wide) {
+        position: absolute;
         height: 90vh;
         left: 5vw;
         top: 5vh;
@@ -403,7 +404,7 @@
 
     &__info {
         font-size: var(--text-reg);
-        padding: var(--sm) var(--sm) 0;
+        padding: var(--sm) 0;
     }
 }
   
@@ -411,13 +412,11 @@
     background-color: var(--dark);
     color: var(--light);
     height: max-content;
-    right: 0;
-    position: absolute;
-    top: calc(60vh + 0.2rem);
     @include m.media(mobile-landscape) {
         top: calc(100vh + 0.2rem);
         }
     @include m.media(tablet-wide) {
+        position: absolute;
         height: 90vh;
         right: 5vw;
         top: 5vh;

@@ -122,10 +122,13 @@
 
     &-header {
         font-size: var(--text-case-sm);
-        height: 25vh;
+        height: 18vh;
         overflow: hidden;
         position: relative;
         text-transform: capitalize;
+        @include m.media(tablet) {
+            height: 22vh;
+        }
     }
 
     &-header__background {
@@ -294,7 +297,7 @@
     }
     
     .case-study {
-        height: 0;
+        height: 100vh;
         left: 0;
         opacity: 0;
         overflow-y: scroll;
@@ -365,8 +368,8 @@
             text-transform: capitalize;
             transition: background-color 150ms ease;
             width: 90vw;
-            @include m.media(mobile) {
-                width: 30vw;
+            @include m.media(mobile-wide) {
+                width: 27vw;
             }
 
             &:hover,
@@ -446,7 +449,7 @@
             box-shadow: 0 0 5px rgba(v.$dark, 0.5);
             margin-bottom: var(--sm);
             max-width: 700px;
-            width: 50vw;
+            width: 80vw;
             @include m.media(tablet) {
                 width: 35vw;
             }
