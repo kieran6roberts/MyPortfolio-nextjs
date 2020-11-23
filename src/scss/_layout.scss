@@ -300,7 +300,7 @@
 /* about section */
 .wrapper {
     &.open {
-        background-color: transparent;
+        background-color: var(--white);
         height: 100vh;
         left: 0;
         overflow-y: scroll;
@@ -315,7 +315,9 @@
             display: none;
         }
         @include m.media(tablet-wide) {
+            background-color: transparent;
             transition: all 0ms ease-in-out 300ms;
+
         }
     }
         
@@ -324,7 +326,6 @@
 /* contact form */
 .contact,
 .about {
-    border: 1px solid var(--light);
     opacity: 0;
     padding: var(--sm) var(--md) var(--sm);
     pointer-events: none;
@@ -356,8 +357,11 @@
 }
 
 .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--white);
-    height: 60vh;
+    height: 50vh;
     left: 0;
     min-height: max-content;
     position: absolute;
@@ -384,12 +388,22 @@
 
     .case__stack-items {
         list-style: none;
+        margin-bottom: var(--xs);
+        padding-top:  var(--md);
         @include m.flex($jus:space-evenly);
+        @include m.media(tablet-wide) {
+            margin-bottom: var(--sm);
+        }
+    }
+    
+    .case__stack-logo {
+        height: 1.5rem;
+        width: 1.5rem;
     }
 
     &__info {
         font-size: var(--text-reg);
-        padding: var(--sm) var(--md) 0;
+        padding: var(--sm) var(--sm) 0;
     }
 }
   

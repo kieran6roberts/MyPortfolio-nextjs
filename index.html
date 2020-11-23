@@ -131,6 +131,10 @@
         <h3 class="about__header">
           about me
         </h3>
+        <p class="about__info">
+          I'm a front-end developer building responsive and interactive sites, with a passion for problem solving coming from a background of engineering.
+          I was hooked immediately form my first line of html and now enjoy learning more about the technologies I use and would like to learn.
+        </p>
         <ul class="case__stack-items">
           <li class="case__stack-item">
             <img 
@@ -160,12 +164,6 @@
             class="case__stack-logo">
           </li>
         </ul>
-        <p class="about__info">
-          I'm a front-end developer with a passion for problem solving where I bring 
-          interactive and responsive designs to life. My primary skills include js/reactjs, CSS/SCSS, HTML
-          and several other front-end focused tools. When my head is not in the screen it's usually
-          out hiking, biking or something alike.
-        </p>
       </section>
       <section class="contact" id="contact">
         <h3 class="contact__header">
@@ -531,26 +529,24 @@
                 development and deploying a small full stack application.
               </p>
               <div class="case-study__images-wrapper">
-                <img 
-                srcset="./public/images/brewery-mobile/home-mobile-brewery141x193.JPG 141w,
-                        ./public/images/brewery-mobile/home-mobile-brewery200x275.JPG 400w,
-                        ./public/images/brewery-mobile/home-mobile-brewery400x549.JPG 400w,
-                        ./public/images/brewery-mobile/home-mobile-brewery500x686.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/brewery-mobile/home-mobile-brewery500x686.JPG" 
-                loading="lazy"
-                alt="brewery home page on mobile devices" 
-                class="case-study__images">
-                <img 
-                srcset="./public/images/brewery-mobile/contact-mobile-brewery141x193.JPG 141w,
-                        ./public/images/brewery-mobile/contact-mobile-brewery200x274.JPG 400w,
-                        ./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG 400w,
-                        ./public/images/brewery-mobile/contact-mobile-brewery500x685.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/brewery-mobile/contact-mobile-brewery500x686.JPG" 
-                loading="lazy"
-                alt="brewery home page on mobile devices" 
-                class="case-study__images">
+                  <img 
+                  srcset="./public/images/brewery-mobile/home-mobile-brewery200x275.JPG 200w,
+                          ./public/images/brewery-mobile/home-mobile-brewery400x549.JPG 400w,
+                          ./public/images/brewery-mobile/home-mobile-brewery500x686.JPG 500w"
+                  sizes="(min-width: 1px) and (max-width: 300px) 200px, 40vw"
+                  src="./public/images/brewery-mobile/home-mobile-brewery500x686.JPG" 
+                  loading="lazy"
+                  alt="brewery home page on mobile devices" 
+                  class="case-study__images">
+                  <img 
+                  srcset="./public/images/brewery-mobile/contact-mobile-brewery200x274.JPG 200w,
+                          ./public/images/brewery-mobile/contact-mobile-brewery400x548.JPG 400w,
+                          ./public/images/brewery-mobile/contact-mobile-brewery500x685.JPG 500w"
+                  sizes="(min-width: 1px) and (max-width: 300px) 200px, 40vw"
+                  src="./public/images/brewery-mobile/contact-mobile-brewery500x686.JPG" 
+                  loading="lazy"
+                  alt="brewery home page on mobile devices" 
+                  class="case-study__images">
               </div>
               <span class="case-study__images-caption">
                 home and contact pages at mobile device sizes
@@ -671,26 +667,28 @@
                 although it is still able to provide sufficient results to its users.
               </p>
               <div class="case-study__images-wrapper">
-                <img 
-                srcset="./public/images/recipe-mobile/results-mobile-recipe141x193.JPG 141w,
-                        ./public/images/recipe-mobile/results-mobile-recipe200x274.JPG 400w,
-                        ./public/images/recipe-mobile/results-mobile-recipe400x549.JPG 400w,
-                        ./public/images/recipe-mobile/results-mobile-recipe500x686.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/recipe-mobile/results-mobile-recipe500x679.JPG" 
-                loading="lazy"
-                alt="recipe app results page on mobile devices" 
-                class="case-study__images">
-                <img 
-                srcset="./public/images/recipe-mobile/search-mobile-recipe141x191.JPG 141w,
-                        ./public/images/recipe-mobile/search-mobile-recipe200x272.JPG 400w,
-                        ./public/images/recipe-mobile/search-mobile-recipe400x543.JPG 400w,
-                        ./public/images/recipe-mobile/search-mobile-recipe500x679.JPG 500w"
-                sizes="(min-width: 1px) and (max-width: 320px) 141px, 25vw"
-                src="./public/images/recipe-mobile/search-mobile-recipe500x679.JPG" 
-                loading="lazy"
-                alt="recipe search page on mobile devices" 
-                class="case-study__images">
+                <div class="case-study__image-wrapper">
+                  <img 
+                  srcset="./public/images/recipe-mobile/results-mobile-recipe200x274.JPG 200w,
+                          ./public/images/recipe-mobile/results-mobile-recipe400x549.JPG 400w,
+                          ./public/images/recipe-mobile/results-mobile-recipe500x686.JPG 500w"
+                  sizes="(min-width: 1px) and (max-width: 300px) 200px, 25vw"
+                  src="./public/images/recipe-mobile/results-mobile-recipe500x679.JPG" 
+                  loading="lazy"
+                  alt="recipe app results page on mobile devices" 
+                  class="case-study__images">
+                </div>
+                <div class="case-study__image-wrapper">
+                  <img 
+                  srcset="./public/images/recipe-mobile/search-mobile-recipe200x272.JPG 200w,
+                          ./public/images/recipe-mobile/search-mobile-recipe400x543.JPG 400w,
+                          ./public/images/recipe-mobile/search-mobile-recipe500x679.JPG 500w"
+                  sizes="(min-width: 1px) and (max-width: 300px) 200px, 25vw"
+                  src="./public/images/recipe-mobile/search-mobile-recipe500x679.JPG" 
+                  loading="lazy"
+                  alt="recipe search page on mobile devices" 
+                  class="case-study__images">
+                </div>
               </div>
               <span class="case-study__images-caption">
                 search and results pages at mobile device sizes
