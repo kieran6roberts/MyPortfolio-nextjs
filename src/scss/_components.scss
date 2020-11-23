@@ -300,9 +300,11 @@
         height: 100vh;
         left: 0;
         opacity: 0;
+        outline: none;
         overflow-y: scroll;
-        position: absolute;
         padding: var(--xs) var(--sm) var(--lg);
+        pointer-events: none;
+        position: absolute;
         top: 0;
         transition: all 200ms ease-in-out;
         visibility: hidden;
@@ -324,6 +326,7 @@
         &.open {
             height: 100vh;
             opacity: 1;
+            pointer-events: visible;
             visibility: visible;
         }
 
@@ -343,7 +346,7 @@
         &__items {
             width: 100%;
             @include m.flex($jus: center, $align: center, $dir:column);
-            @include m.media(mobile) {
+            @include m.media(tablet) {
                 flex: 0 1 auto;
                 flex-direction: row;
             }
@@ -368,7 +371,7 @@
             text-transform: capitalize;
             transition: background-color 150ms ease;
             width: 90vw;
-            @include m.media(mobile-wide) {
+            @include m.media(tablet) {
                 width: 27vw;
             }
 
@@ -449,7 +452,7 @@
             box-shadow: 0 0 5px rgba(v.$dark, 0.5);
             margin-bottom: var(--sm);
             max-width: 700px;
-            width: 80vw;
+            width: 60vw;
             @include m.media(tablet) {
                 width: 35vw;
             }

@@ -265,7 +265,7 @@
         border: 2px solid var(--primary);
         color: var(--white);
         font-size: var(--text-reg);
-        margin-bottom: var(--md);
+        margin-bottom: var(--lg);
         transition: all 150ms ease;
         @include m.media(tablet-wide) {
             margin: var(--sm) 0;
@@ -306,7 +306,6 @@
     overflow-y: scroll;
     position: absolute;
     top: 0.2rem;
-    transition: all 200ms ease-in-out;
     visibility: hidden;
     width: 100%;
     z-index: 1;
@@ -410,6 +409,7 @@
   
 .contact {
     background-color: var(--dark);
+    border: 1px solid var(--dark);
     color: var(--light);
     height: max-content;
     @include m.media(mobile-landscape) {
@@ -449,12 +449,15 @@
             color: var(--dark);
             font-size: 0.7rem;
             padding: 0.2rem;
-            right: 8.1rem;
+            right: 7rem;
             text-align: center;
             top: -0.5rem;
             transition: font-size 150ms ease-in-out;
             width: 6rem;
             @include m.pseudo($content: "Copy to clipboard", $disp: none);
+            @include m.media(tablet-wide) {
+                right: 8.1rem;
+            }
         }
 
         &:hover,
@@ -518,8 +521,12 @@
         &__submit {
             background-color: rgba(v.$primary, 0.8);
             border: none;
+            margin: var(--md) 0;
             transition: background-color 150ms ease;
             width: 40%;
+            @include m.media(tablet-wide) {
+                margin: var(--xs) 0;
+            }
             
             &:hover {
                 background-color: rgba(v.$primary, 1);
