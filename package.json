@@ -5,11 +5,39 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "prestart": "postcss src/styles/app.css -o src/App.css",
+    "start": "npm run prestart && next start",
+    "test": "jest"
   },
   "dependencies": {
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.3.4",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@testing-library/dom": "^7.28.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "@types/jest": "^26.0.16",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "autoprefixer": "^10.0.4",
+    "babel-jest": "^26.6.3",
+    "graphql": "^15.4.0",
+    "jest": "^26.6.3",
+    "jest-dom": "^4.0.0",
+    "jest-watch-typeahead": "^0.6.1",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "react-icons": "^4.1.0",
+    "tailwindcss": "^2.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
   }
 }

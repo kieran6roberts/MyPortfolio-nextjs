@@ -1,0 +1,38 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@layer base {
+
+:root {
+  --font: Tahoma, sans-serif;
+  --color-light: rgba(255, 255, 255);
+  --color-off-light: rgb(244, 235, 235);
+  --color-dark: rgb(0, 15, 44);
+  --color-pri:  rgb(6, 224, 140);
+  --color-sec: rgb(255, 15, 235);
+  --color-acc:  rgb(4, 154, 200);
+
+  --text-2xs: clamp(0.8rem, 1vw, 2rem);
+  --text-xs: clamp(1rem, 1.2vw, 4rem);
+  --text-sm: clamp(1.1rem, 1.3vw, 7rem);
+  --text-md: clamp(1.4rem, 2vw, 3rem);
+  --text-lg: clamp(1.7rem, 3vw, 3.8rem);
+  --text-xl: clamp(1.9rem, 3vw, 4.5rem);
+  --text-2xl: clamp(1.8rem, 4.6vw, 13rem);
+  --text-3xl: clamp(7rem, 14vw, 30rem);
+}
+
+  html {
+    font-family: var(--font);
+  }
+
+  body {
+    background-color: var(--color-light);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+@import "tailwindcss/components";
+/* purgecss end ignore */
+@import "tailwindcss/utilities";
