@@ -6,12 +6,14 @@ import { ApolloClient,
 
 import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
+import SubHeader from "../src/components/SubHeader/SubHeader";
 
 export type Projects = {
     projects: {
       projects: {     
-        name: string,
-        description: string
+        title: string,
+        description: string,
+        __typename?: string
     }[]
   }
 };
@@ -21,8 +23,14 @@ export default function Home({ projects: { projects } }: Projects): React.ReactE
 
   return (
     <Layout>
-      <h1>home</h1>
-      <Hero />
+        <Hero />
+        <section className="mx-3 md:ms-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+          <h2 className="text-md text-pri uppercase py-20 pl-4">
+            take a look at my work
+          </h2>
+          <SubHeader title={projects[0].title}/>
+          <SubHeader title={projects[1].title}/>
+      </section>
     </Layout>
   )
 };

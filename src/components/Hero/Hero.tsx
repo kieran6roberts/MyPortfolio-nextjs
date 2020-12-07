@@ -9,7 +9,7 @@ export default function Hero(): React.ReactElement {
                 layout="fill"
                 objectFit="cover" />
             </div>
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-300 to-transparent bg-opacity-70 text-center">
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-200 to-transparent bg-opacity-70 text-center">
                 <ul className="flex items-end w-full justify-evenly py-4">
                     <li className="">
                         <Image src="/images/icons/react.svg" 
@@ -17,7 +17,7 @@ export default function Hero(): React.ReactElement {
                         height={32}
                         width={32}/>
                     </li>
-                    <li className="">
+                    <li className="animate-bounce">
                         <Image src="/images/icons/javascript.svg" 
                             alt="stack logo"
                             height={48}

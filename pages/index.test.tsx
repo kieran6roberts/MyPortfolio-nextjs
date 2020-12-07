@@ -7,12 +7,18 @@ let documentBody: RenderResult;
 describe("<Home />", () => {
     beforeEach(() => {
         const mockProp = {
-                name: "mock",
-                description: "mock desc"
+            projects: {
+                projects: [
+                    {
+                        name: "mock",
+                        description: "mock desc"
+                    }
+                ]
+            }
         }
         documentBody = render(<Home projects={mockProp} />);
     })
     test("renders", () => {
-        expect(documentBody.getByText("home")).toBeInTheDocument();
+        expect(documentBody.getByText("take a look at my work")).toBeInTheDocument();
     });
 });
