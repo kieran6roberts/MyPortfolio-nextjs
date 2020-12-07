@@ -6,8 +6,8 @@ import { ApolloClient,
 
 import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
-import SubHeader from "../src/components/SubHeader/SubHeader";
 import Project from "../src/components/Project/Project";
+import PageHead from "../src/components/PageHead/PageHead";
 
 export type Projects = {
     projects: {
@@ -27,22 +27,26 @@ export default function Home({ projects: { projects } }: Projects): React.ReactE
   console.log(projects);
 
   return (
+    <>
+    <PageHead title="home" />
     <Layout>
         <Hero />
         <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <h2 className="text-md text-pri uppercase py-20">
+          <h2 className="text-xl text-pri uppercase py-20">
             take a look at my work
           </h2>
           {projects && projects.map(project => 
             <Project
             title={project.title} 
+            image={project.images[0].fileName}
+            caption={project.captions[0]}
             description={project.description}
-            bg="offLight"
             liveLink={project.liveLink}
             githubLink={project.githubLink} />
             )}
       </section>
     </Layout>
+    </>
   )
 };
 

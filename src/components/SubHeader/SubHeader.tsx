@@ -1,4 +1,8 @@
-export default function SubHeader({ title }: any): React.ReactElement {
+export type SubHeaderProps = {
+    title: string
+};
+
+export default function SubHeader({ title }: SubHeaderProps): React.ReactElement {
     return (
         <div className="relative w-screen text-left">
             <h2 className="text-xxxl text-gray-200 w-offScreen whitespace-nowrap">
