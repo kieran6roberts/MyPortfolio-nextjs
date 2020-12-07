@@ -11,7 +11,8 @@
   --color-sec: rgb(255, 15, 235);
   --color-acc:  rgb(4, 154, 200);
 
-  --text-2xs: clamp(0.8rem, 1vw, 2rem);
+  --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
+  --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
   --text-xs: clamp(1rem, 1.2vw, 4rem);
   --text-sm: clamp(1.1rem, 1.3vw, 7rem);
   --text-md: clamp(1.4rem, 2vw, 3rem);
@@ -19,10 +20,13 @@
   --text-xl: clamp(1.9rem, 3vw, 4.5rem);
   --text-2xl: clamp(1.8rem, 4.6vw, 13rem);
   --text-3xl: clamp(7rem, 14vw, 30rem);
+
+  --off-screen: 250vw;
 }
 
   html {
     font-family: var(--font);
+    line-height: 1.8;
   }
 
   body {

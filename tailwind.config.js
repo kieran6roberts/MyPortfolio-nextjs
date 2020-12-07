@@ -2,6 +2,7 @@ module.exports = {
     purge: [],
     theme: {
       fontSize:{
+        xxxs: "var(--text-3xs)",
         xxs: "var(--text-2xs)",
         xs: "var(--text-xs)",
         sm: "var(--text-sm)",
@@ -28,7 +29,11 @@ module.exports = {
           offLight: "var(--color-off-light)"
         },
         borderColor: {
-          pri: "var(--color-pri)"
+          pri: "var(--color-pri)",
+          acc: "var(--color-acc)"
+        },
+        width: {
+          offScreen: "var(--off-screen)"
         }
       },
     },

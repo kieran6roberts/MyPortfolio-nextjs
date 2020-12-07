@@ -16,14 +16,14 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 <nav className="absolute top-0 left-0 z-10 w-full">
                     <div className="h-1 w-full bg-gradient-to-r from-green-400 via-blue-400 to-pink-400"/>
                     <div className="flex items-center py-6 px-3 md:px-16">
-                        <div className="flex items-center p-2 bg-pri mr-4 cursor-pointer">
+                        <div className="flex p-2 bg-pri mr-4 cursor-pointer">
                             <Link href="/" passHref>
-                                <a>
+                                <a className="flex align-center">
                                     <Image
                                     src="/images/k.svg"
                                     alt="logo of the letter k"
-                                    height={28}
-                                    width={28} />
+                                    height={24}
+                                    width={24} />
                                 </a>
                             </Link>
                         </div>
