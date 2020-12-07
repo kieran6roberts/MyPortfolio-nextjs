@@ -5,20 +5,24 @@ import { ApolloClient,
   gql } from "@apollo/client";
 
 import Layout from "../src/components/Layout/Layout";
+import Hero from "../src/components/Hero/Hero";
 
 export type Projects = {
-  projects: {
-    name: string,
-    description: string,
+    projects: {
+      projects: {     
+        name: string,
+        description: string
+    }[]
   }
 };
 
-export default function Home({ projects }: Projects): React.ReactElement {
+export default function Home({ projects: { projects } }: Projects): React.ReactElement {
   console.log(projects);
 
   return (
     <Layout>
       <h1>home</h1>
+      <Hero />
     </Layout>
   )
 };
