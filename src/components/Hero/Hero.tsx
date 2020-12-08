@@ -7,7 +7,8 @@ export default function Hero(): React.ReactElement {
                 <Image src="/images/hero.png"
                 alt="stylized selfie"
                 layout="fill"
-                objectFit="cover" />
+                objectFit="cover"
+                priority />
             </div>
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-200 to-transparent bg-opacity-70 text-center">
                 <ul className="flex items-end w-full justify-evenly py-4">

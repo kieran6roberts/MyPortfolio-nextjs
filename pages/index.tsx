@@ -18,7 +18,11 @@ export type Projects = {
         githubLink?: string,
         captions: string,
         images: string[],
-        __typename?: string
+        stackImages: {
+          __typename: string,
+          fileName: string}[],
+        __typename?: string,
+        stackNames: string[]
     }[]
   }
 };
@@ -32,18 +36,24 @@ export default function Home({ projects: { projects } }: Projects): React.ReactE
     <Layout>
         <Hero />
         <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <h2 className="text-xl text-pri uppercase py-20">
+          <h2 className="text-xl text-pri uppercase pt-20 pb-8">
             take a look at my work
           </h2>
-          {projects && projects.map(project => 
-            <Project
-            title={project.title} 
-            image={project.images[0].fileName}
-            caption={project.captions[0]}
-            description={project.description}
-            liveLink={project.liveLink}
-            githubLink={project.githubLink} />
+          <ul className="list-none">
+            {projects && projects.map(project => 
+            <li key={`${project.__typename}${project.title}`} >
+              <Project
+              title={project.title} 
+              image={project.images[0].fileName}
+              captions={project.captions[0]}
+              description={project.description}
+              siteLink={project.siteLink}
+              githubLink={project.githubLink}
+              stackImages={project.stackImages}
+              stackNames={project.stackNames} />
+            </li>
             )}
+          </ul>
       </section>
     </Layout>
     </>
@@ -69,6 +79,10 @@ export const getStaticProps: GetStaticProps = async () => {
           captions,
           siteLink,
           githubLink
+          stackImages {
+            fileName
+          }
+          stackNames
         }
       }
     `

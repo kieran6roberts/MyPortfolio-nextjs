@@ -1,7 +1,7 @@
 import { BsArrowUpRight } from "react-icons/bs";
 
 export type ButtonProps = {
-    link: string,
+    link: string | undefined,
     children: React.ReactNode,
     color?: string
 }
