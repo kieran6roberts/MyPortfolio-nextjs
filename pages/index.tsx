@@ -1,9 +1,8 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
-import { ApolloClient, 
-  InMemoryCache,  
-  gql } from "@apollo/client";
+import { gql } from "@apollo/client";
 
+import { initApolloClient } from "../src/lib/apolloClient";
 import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
 import Project from "../src/components/Project/Project";
@@ -28,15 +27,13 @@ export type Projects = {
 };
 
 export default function Home({ projects: { projects } }: Projects): React.ReactElement {
-  console.log(projects);
-
   return (
     <>
     <PageHead title="home" />
     <Layout>
         <Hero />
         <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <h2 className="text-xl text-pri uppercase pt-20 pb-8">
+          <h2 className="text-xl text-pri uppercase pt-4 pb-8">
             take a look at my work
           </h2>
           <ul className="list-none">
@@ -61,13 +58,9 @@ export default function Home({ projects: { projects } }: Projects): React.ReactE
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const client = new ApolloClient({
-    ssrMode: typeof window === "undefined",
-    uri: process.env.CMS_API,
-    cache: new InMemoryCache()
-  });
+  const apolloClient = initApolloClient();
 
-  const { data: projects } = await client.query({
+  const { data: projects } = await apolloClient.query({
     query: gql`
       query GetProjects {
         projects {
@@ -88,9 +81,16 @@ export const getStaticProps: GetStaticProps = async () => {
     `
   });
 
+  if (!projects) {
+    return {
+      notFound: true
+    }
+  }
+
   return {
     props: {
-      projects: projects
-    }
+      projects
+    },
+    revalidate: 30
   }
 };

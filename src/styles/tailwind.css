@@ -27,8 +27,10 @@
   html {
     font-family: var(--font);
     line-height: 1.8;
+    scroll-behavior: smooth;
+    
   }
-
+  
   body {
     background-color: var(--color-light);
   }
