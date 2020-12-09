@@ -39,8 +39,8 @@ export default function Home({ projects }: Projects): React.ReactElement {
     <PageHead title="home" />
     <Layout>
         <Hero />
-        <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <div className="px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+        <section className="mx-3 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+          <div className="px-4 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <div className="flex justify-center">
               <Image src="/images/tech.svg"
               alt="mobile phone and laptop illustration"
@@ -54,7 +54,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
             <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
-            <div className="md:flex">
+            <div className="lg:flex">
               <div className="group flex flex-col md:flex-1 border-t-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
                 <p className="text-sm text-pri font-bold uppercase text-center py-8 md:group-hover:text-light">
                   My primary skills:

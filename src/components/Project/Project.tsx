@@ -32,7 +32,7 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="relative px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+        <div className="relative px-4 md:px-8 md:mx-4 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <SubHeader title={title}/>
             <Link href={`projects/${title}`}>
                 <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer">
@@ -41,7 +41,8 @@ export default function Project({
                     <Image src={`/images/${image}`}
                     alt={captions}
                     width={775}
-                    height={350}/>
+                    height={350}
+                    objectFit="cover"/>
                 </div>
             </Link>
             <p className="text-xs italic text-gray-400 text-center mb-8">
