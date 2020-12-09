@@ -44,7 +44,6 @@ export default function Hero(): React.ReactElement {
                     </p>
                 </div>
             </div>
-
         </section>
     )
 };

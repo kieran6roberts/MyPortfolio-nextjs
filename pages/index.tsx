@@ -1,5 +1,8 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
+import Image from "next/image";
+import { IoCodeWorkingOutline, IoIosCodeWorking } from "react-icons/io";
+import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { request } from "graphql-request";
 
 import { GET_HOME_PROJECTS } from "./queries/queries";
@@ -26,7 +29,7 @@ export type Projects = {
 
 export default function Home({ projects }: Projects): React.ReactElement {
 
-  React.useEffect(() => {
+  React.useEffect((): void => {
     const hero: Element | null = document.querySelector("#hero");
     hero?.classList.add("opacity-100");
   }, []);
@@ -37,9 +40,86 @@ export default function Home({ projects }: Projects): React.ReactElement {
     <Layout>
         <Hero />
         <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <h2 className="text-xl text-pri uppercase pt-4 pb-8">
-            take a look at my work
-          </h2>
+          <div className="px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+            <div className="flex justify-center">
+              <Image src="/images/tech.svg"
+              alt="mobile phone and laptop illustration"
+              height={350}
+              width={350} />
+            </div>
+            <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-8">
+              Hi there, my name is <span className="text-pri">Kieran </span>and I develop performant and scalable websites. 
+            </h2>
+            <p className="text-sm text-gray-400 text-center w-2/4 m-auto">
+              I enjoy solving problems, seeing the results instantly in the browser.
+            </p>
+            <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
+            <div className="md:flex">
+              <div className="flex flex-col md:flex-1 border-t-2 border-pri mx-2">
+                <p className="text-sm text-pri font-bold uppercase text-center py-8">
+                  My primary skills:
+                </p>
+                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8">
+                  <li>
+                    javaScript
+                  </li>
+                  <li>
+                    reactjs
+                  </li>
+                  <li>
+                    css
+                  </li>
+                  <li>
+                    html
+                  </li>
+                </ul>
+              </div>
+              <div className="md:flex-1 bg-pri mx-2">
+                <p className="text-sm text-light font-bold uppercase text-center py-8">
+                  as well as:
+                </p>
+                <ul className="flex flex-col items-center text-xs text-light pb-8">
+                  <li>
+                    nextjs
+                  </li>
+                  <li>
+                    tailwind
+                  </li>
+                  <li>
+                    sass
+                  </li>
+                  <li>
+                    webpack
+                  </li>
+                  <li>
+                    github
+                  </li>
+                </ul>
+              </div>
+              <div className="md:flex-1 border-b-2 border-pri mx-2">
+                <p className="text-sm text-pri font-bold uppercase text-center py-8">
+                  currently learning:
+                </p>
+                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8">
+                  <li>
+                    typescript
+                  </li>
+                  <li>
+                    graphql
+                  </li>
+                  <li>
+                    redux
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <IoIosCodeWorking className="text-xxl text-pri m-auto mt-8"/>
+            <p className="text-md text-dark uppercase py-8 text-center py-8">
+              Check out my work below
+            </p>
+          </div>
+        </section>
+        <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
           <ul className="list-none">
             {projects && projects.map(project => 
             <li key={`${project.__typename}${project.title}`} >

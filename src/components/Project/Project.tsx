@@ -33,7 +33,7 @@ export default function Project({
     return (
         <div className="px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <SubHeader title={title}/>
-            <div className="flex justify-center border-4 border-pri rounded w-max-40 lg:w-max m-auto p-1 mb-8">
+            <div className="flex justify-center border-2 border-pri bg-gray-400 w-max-40 lg:w-max m-auto p-1 mb-8">
                 <Image src={`/images/${image}`}
                 alt={captions}
                 width={775}
