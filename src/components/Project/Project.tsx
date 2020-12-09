@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
+import { BiMouse } from "react-icons/bi";
 import Button, { ButtonProps }from "../Button/Button";
 import SubHeader from "../SubHeader/SubHeader";
 import List from "../List/List";
@@ -31,15 +32,19 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+        <div className="relative px-8 md:px-24 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <SubHeader title={title}/>
-            <div className="flex justify-center border-2 border-pri bg-gray-400 w-max-40 lg:w-max m-auto p-1 mb-8">
-                <Image src={`/images/${image}`}
-                alt={captions}
-                width={775}
-                height={350}/>
-            </div>
-            <p className="text-xs italic text-dark text-center mb-8">
+            <Link href={`projects/${title}`}>
+                <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer">
+                    <div className="absolute top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 z-10 transition duration-300 ease-in group-hover:bg-opacity-0"/>
+                    <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light animate-pulse" />
+                    <Image src={`/images/${image}`}
+                    alt={captions}
+                    width={775}
+                    height={350}/>
+                </div>
+            </Link>
+            <p className="text-xs italic text-gray-400 text-center mb-8">
                 {captions}
             </p>
             <div className="flex">
@@ -55,7 +60,7 @@ export default function Project({
             <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 pl-4">
                 project description
             </h4>
-            <p className="text-sm py-2">
+            <p className="text-xs text-gray-500 py-2">
                 {description}
             </p>
             <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 pl-4">
@@ -71,6 +76,12 @@ export default function Project({
                         <BsArrowUpRight className="text-xs transition duration-50 ease-in opacity-0 group-hover:opacity-100"/>
                     </a>
                 </Link>
+            </div>
+            <div className="hidden lg:flex bg-white items-end justify-end absolute bottom-0 right-0 transform translate-x-24">
+                <Image src={`/images/lg-screen.svg`}
+                        alt="man thinking next to laptop"
+                        width={450}
+                        height={225}/>
             </div>
         </div>
     )

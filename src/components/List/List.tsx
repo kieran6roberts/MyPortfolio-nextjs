@@ -25,7 +25,7 @@ export default function List({ names, images }: ListProps): React.ReactElement {
                     alt={`${item[0]} logo`}
                     height={16}
                     width={16} />
-                    <span className="inline-block ml-2 text-sm text-txt">
+                    <span className="inline-block ml-2 text-xs text-gray-500">
                         {item[0]}
                     </span>
                 </li>

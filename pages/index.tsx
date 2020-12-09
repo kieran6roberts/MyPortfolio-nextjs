@@ -55,11 +55,11 @@ export default function Home({ projects }: Projects): React.ReactElement {
             </p>
             <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
             <div className="md:flex">
-              <div className="flex flex-col md:flex-1 border-t-2 border-pri mx-2">
-                <p className="text-sm text-pri font-bold uppercase text-center py-8">
+              <div className="group flex flex-col md:flex-1 border-t-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
+                <p className="text-sm text-pri font-bold uppercase text-center py-8 md:group-hover:text-light">
                   My primary skills:
                 </p>
-                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8">
+                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8 md:group-hover:text-light">
                   <li>
                     javaScript
                   </li>
@@ -74,11 +74,11 @@ export default function Home({ projects }: Projects): React.ReactElement {
                   </li>
                 </ul>
               </div>
-              <div className="md:flex-1 bg-pri mx-2">
-                <p className="text-sm text-light font-bold uppercase text-center py-8">
+              <div className="group md:flex-1 bg-pri mx-2 my-8 md:my-0 transition duration-300 ease-in-out md:hover:bg-light">
+                <p className="text-sm text-light font-bold uppercase text-center py-8 md:group-hover:text-pri">
                   as well as:
                 </p>
-                <ul className="flex flex-col items-center text-xs text-light pb-8">
+                <ul className="flex flex-col items-center text-xs text-light pb-8 md:group-hover:text-gray-400">
                   <li>
                     nextjs
                   </li>
@@ -96,11 +96,11 @@ export default function Home({ projects }: Projects): React.ReactElement {
                   </li>
                 </ul>
               </div>
-              <div className="md:flex-1 border-b-2 border-pri mx-2">
-                <p className="text-sm text-pri font-bold uppercase text-center py-8">
+              <div className="group md:flex-1 border-b-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
+                <p className="text-sm text-pri font-bold uppercase text-center py-8 md:group-hover:text-light">
                   currently learning:
                 </p>
-                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8">
+                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8 md:group-hover:text-light">
                   <li>
                     typescript
                   </li>
