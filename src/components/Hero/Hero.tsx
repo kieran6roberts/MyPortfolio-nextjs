@@ -4,7 +4,8 @@ export default function Hero(): React.ReactElement {
     return(
         <section className="h-screen z-0">
             <div className="absolute top-0 left-0 h-screen w-full z-0">
-                <div className="">
+                <div id="hero"
+                className="transition-all duration-1000 ease-in-out opacity-0">
                     <Image src="/images/hero.png"
                     alt="stylized selfie"
                     layout="fill"

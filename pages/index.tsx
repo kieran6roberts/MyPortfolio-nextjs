@@ -1,32 +1,36 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
-import { gql } from "@apollo/client";
+import { request } from "graphql-request";
 
-import { initApolloClient } from "../src/lib/apolloClient";
+import { GET_HOME_PROJECTS } from "./queries/queries";
 import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
 import Project from "../src/components/Project/Project";
 import PageHead from "../src/components/PageHead/PageHead";
 
 export type Projects = {
-    projects: {
       projects: {     
         title: string,
         description: string,
         siteLink?: string,
         githubLink?: string,
         captions: string,
-        images: string[],
+        images: {fileName: string}[],
         stackImages: {
           __typename: string,
           fileName: string}[],
         __typename?: string,
         stackNames: string[]
     }[]
-  }
 };
 
-export default function Home({ projects: { projects } }: Projects): React.ReactElement {
+export default function Home({ projects }: Projects): React.ReactElement {
+
+  React.useEffect(() => {
+    const hero: Element | null = document.querySelector("#hero");
+    hero?.classList.add("opacity-100");
+  }, []);
+
   return (
     <>
     <PageHead title="home" />
@@ -58,28 +62,10 @@ export default function Home({ projects: { projects } }: Projects): React.ReactE
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const apolloClient = initApolloClient();
-
-  const { data: projects } = await apolloClient.query({
-    query: gql`
-      query GetProjects {
-        projects {
-          title
-          description
-          images {
-            fileName
-          }
-          captions,
-          siteLink,
-          githubLink
-          stackImages {
-            fileName
-          }
-          stackNames
-        }
-      }
-    `
-  });
+  const { projects }: Projects = await request(
+    process.env.CMS_API, 
+    GET_HOME_PROJECTS
+    );
 
   if (!projects) {
     return {
@@ -91,6 +77,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       projects
     },
-    revalidate: 30
   }
 };

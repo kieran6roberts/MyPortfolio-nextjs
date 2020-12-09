@@ -39,6 +39,7 @@
     text-decoration: none;
   }
 }
+
 @import "tailwindcss/components";
 /* purgecss end ignore */
 @import "tailwindcss/utilities";

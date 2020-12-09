@@ -1,10 +1,19 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { gql } from "@apollo/client";
+import { request } from "graphql-request";
 
-import { initApolloClient } from "../../src/lib/apolloClient";
+import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../queries/queries";
 import Layout from "../../src/components/Layout/Layout";
+import { Projects } from "../index";
 
-export default function project() {
+interface FullProjects extends Projects {
+  overview: string,
+  stackDecision: string,
+  outcome: string
+}
+
+
+export default function Project({ data }) {
+  console.log(data);
     return (
         <Layout>
             <section className="px-8 md:px-16 lg:px-32 py-8">
@@ -16,40 +25,37 @@ export default function project() {
     )
 };
 
+
 export const getStaticPaths: GetStaticPaths = async () => {
+  const { projects } = await request(
+    process.env.CMS_API,
+    GET_ALL_PROJECT_TITLES
+  );
+
+  const paths = projects.map((project) => ({
+    params: { id: encodeURIComponent(project.title)}
+  }));
+
     return {
-      paths: [
-       { params: { id: ""} },
-       { params: { id: ""} },
-      ],
+      paths,
       fallback: false
     }
   };
 
-  export const getStaticProps: GetStaticProps = async () => {
-    const apolloClient = initApolloClient();
+  export const getStaticProps: GetStaticProps = async ({ params }) => {
+      const VARIABLE = {
+        title: `${params.id}`
+      };
 
-    const { data: projects } = await apolloClient.query({
-      query: gql`
-        query GetProjects {
-          projects {
-            title
-            description
-            images {
-              fileName
-            }
-            captions,
-            siteLink,
-            githubLink
-            stackImages {
-              fileName
-            }
-            stackNames
-          }
-        }
-      `
-    });
+      const data = await request(
+        process.env.CMS_API,
+        GET_SINGLE_PROJECT,
+        VARIABLE
+      );
+
       return {
-          props: {}
+          props: {
+            data
+          }
       }
   };
