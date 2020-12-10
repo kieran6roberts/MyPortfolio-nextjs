@@ -50,7 +50,7 @@ export default function Project({
             </p>
             <div className="flex">
                 <Button link={siteLink}
-                color="bg-light text-dark">
+                color="bg-light text-dark mr-4">
                     visit website
                 </Button>
                 <Button link={githubLink}
