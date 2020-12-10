@@ -34,6 +34,9 @@ module.exports = {
         },
         width: {
           offScreen: "var(--off-screen)"
+        },
+        height: {
+          600: "600px"
         }
       },
     },

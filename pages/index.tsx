@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
-import { IoCodeWorkingOutline, IoIosCodeWorking } from "react-icons/io";
+import { IoIosCodeWorking } from "react-icons/io";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { request } from "graphql-request";
 
@@ -10,6 +10,7 @@ import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
 import Project from "../src/components/Project/Project";
 import PageHead from "../src/components/PageHead/PageHead";
+import Card from "../src/components/Card/Card";
 
 export type Projects = {
       projects: {     
@@ -48,70 +49,23 @@ export default function Home({ projects }: Projects): React.ReactElement {
               width={350} />
             </div>
             <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-8">
-              Hi there, my name is <span className="text-pri">Kieran </span>and I develop performant and scalable websites. 
+              Hi there, my name is 
+              <span className="text-pri">
+                Kieran 
+                </span>
+                and I develop performant and scalable websites. 
             </h2>
             <p className="text-sm text-gray-400 text-center w-2/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
             <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
             <div className="lg:flex">
-              <div className="group flex flex-col md:flex-1 border-t-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
-                <p className="text-sm text-pri font-bold uppercase text-center py-8 md:group-hover:text-light">
-                  My primary skills:
-                </p>
-                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8 md:group-hover:text-light">
-                  <li>
-                    javaScript
-                  </li>
-                  <li>
-                    reactjs
-                  </li>
-                  <li>
-                    css
-                  </li>
-                  <li>
-                    html
-                  </li>
-                </ul>
-              </div>
-              <div className="group md:flex-1 bg-pri mx-2 my-8 md:my-0 transition duration-300 ease-in-out md:hover:bg-light">
-                <p className="text-sm text-light font-bold uppercase text-center py-8 md:group-hover:text-pri">
-                  as well as:
-                </p>
-                <ul className="flex flex-col items-center text-xs text-light pb-8 md:group-hover:text-gray-400">
-                  <li>
-                    nextjs
-                  </li>
-                  <li>
-                    tailwind
-                  </li>
-                  <li>
-                    sass
-                  </li>
-                  <li>
-                    webpack
-                  </li>
-                  <li>
-                    github
-                  </li>
-                </ul>
-              </div>
-              <div className="group md:flex-1 border-b-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
-                <p className="text-sm text-pri font-bold uppercase text-center py-8 md:group-hover:text-light">
-                  currently learning:
-                </p>
-                <ul className="flex flex-col items-center text-xs text-gray-400 pb-8 md:group-hover:text-light">
-                  <li>
-                    typescript
-                  </li>
-                  <li>
-                    graphql
-                  </li>
-                  <li>
-                    redux
-                  </li>
-                </ul>
-              </div>
+              <Card items={["JavaScript", "reactjs", "css", "html"]}
+              header="My primary skills:" />
+              <Card items={["nextjs", "tailwindcss", "sass", "webpack", "github"]}
+              header="as well as:" />
+              <Card items={["TypeScript", "redux", "graphql"]}
+              header="currently learning:" />
             </div>
             <IoIosCodeWorking className="text-xxl text-pri m-auto mt-8"/>
             <p className="text-md text-dark uppercase py-8 text-center py-8">
