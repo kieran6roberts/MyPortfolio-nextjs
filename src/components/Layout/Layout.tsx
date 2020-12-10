@@ -3,15 +3,14 @@ import Link from "next/link";
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePhone, AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
 
 export type LayoutProps = {
-    children: JSX.Element
+    children: React.ReactElement;
 }
 
 export default function Layout({ children }: LayoutProps): React.ReactElement {
     return (
-        <main className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between">
             <section className="">
                 <nav className="relative z-10">
                     <div className="h-1 w-full bg-gradient-to-r from-green-400 via-blue-400 to-pink-400"
@@ -52,7 +51,9 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     </div>
                 </nav>
             </section>
+            <main className="mx-3 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
             {children}
+            </main>
             <footer className="text-center bg-dark text-light p-4">
                 <ul className="flex flex-col items-center">
                     <li className="mb-4">
@@ -75,6 +76,6 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     kieran6roberts@gmail.com
                 </span>
             </footer>
-        </main>
+        </div>
     )
 };

@@ -44,25 +44,26 @@ export default function Home({ projects }: Projects): React.ReactElement {
     description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"/>
     <Layout>
         <Hero />
-        <section className="mx-3 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
-          <div className="px-4 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+        <section className="relative z-10">
+        <div className="hidden md:block absolute h-screen z-0 bottom-1/4 md:top-72 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-acc transform -rotate-12" />
+          <div className="relative bg-light px-4 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <div className="flex justify-center">
               <Image src="/images/tech.svg"
               alt="mobile phone and laptop illustration"
               height={350}
               width={350} />
             </div>
-            <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-8">
+            <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-16">
               Hi there, my name is 
-              <span className="text-pri mx-2">
+              <span className="text-sec mx-2">
                 Kieran 
                 </span>
                 and I develop performant and scalable websites. 
             </h2>
-            <p className="text-sm text-gray-400 text-center w-3/4 m-auto">
+            <p className="text-sm text-gray-500 text-center w-3/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
-            <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
+            <HiOutlineDesktopComputer className="text-xxl text-acc m-auto my-16"/>
             <div className="lg:flex">
               <Card items={["JavaScript", "reactjs", "css", "html"]}
               header="My primary skills:" />
@@ -71,13 +72,13 @@ export default function Home({ projects }: Projects): React.ReactElement {
               <Card items={["TypeScript", "redux", "graphql"]}
               header="currently learning:" />
             </div>
-            <IoIosCodeWorking className="text-xxl text-pri m-auto mt-8"/>
-            <p className="text-md text-dark uppercase py-16 text-center">
+            <IoIosCodeWorking className="text-xxl text-dark m-auto my-16"/>
+            <p className="text-md text-dark uppercase mb-16 text-center">
               Check out my work below
             </p>
           </div>
         </section>
-        <section className="mx-3 md:ms-16 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+        <section className="mx-4 px-3 md:px-8 border-l-2 border-r-2 border-gray-100 overflow-hidden">
           <ul className="list-none">
             {projects && projects.map(project => 
             <li key={`${project.__typename}${project.title}`} >
