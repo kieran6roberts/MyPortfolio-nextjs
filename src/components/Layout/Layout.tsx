@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
 export type LayoutProps = {
-    children: React.ReactNode
+    children: JSX.Element
 }
 
 export default function Layout({ children }: LayoutProps): React.ReactElement {

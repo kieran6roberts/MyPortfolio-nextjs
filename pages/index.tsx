@@ -40,7 +40,8 @@ export default function Home({ projects }: Projects): React.ReactElement {
 
   return (
     <>
-    <PageHead title="home" />
+    <PageHead title="Kierandev | Home" 
+    description="Kieran Roberts front-end web developer portfolio showcasing my personal projects, skills and contact information. Let's work together!"/>
     <Layout>
         <Hero />
         <section className="mx-3 px-3 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">

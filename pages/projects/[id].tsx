@@ -7,11 +7,13 @@ import Layout from "../../src/components/Layout/Layout";
 import { Projects } from "../index";
 import Button, { ButtonProps }from "../../src/components/Button/Button";
 import { generateKey } from "../../src/components/Card/Card";
-
+import PageHead from "src/components/PageHead/PageHead";
 
 export default function Project({ projects: project }: Projects) {
-  console.log(project);
     return (
+      <>
+      <PageHead title="Kierandev | Projects" 
+      description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
         <Layout>
             <section className="relative px-4 md:px-12 mx-4 border-l-2 border-r-2 border-gray-200 overflow-hidden">
                 <h1 className="text-lg text-center font-bold text-dark capitalize">
@@ -103,6 +105,7 @@ export default function Project({ projects: project }: Projects) {
               </div>
             </section>
         </Layout>
+        </>
     )
 };
 

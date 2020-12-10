@@ -32,7 +32,7 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="relative px-4 md:px-8 md:mx-4 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+        <div className="relative px-4 mb-32 md:px-8 md:mx-4 lg:px-40 border-l-2 border-r-2 border-t-2 border-gray-200 overflow-hidden">
             <SubHeader title={title}/>
             <Link href={`projects/${title}`}>
                 <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer transform transition duration-300 ease-in-out hover:scale-105">
