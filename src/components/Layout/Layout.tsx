@@ -41,7 +41,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                                 </Link>
                             </li>
                             <li className="flex-auto bg-light ml-4 ml:mx-8">
-                                <Link href="/" passHref>
+                                <Link href="/contact" passHref>
                                     <a className="group block relative text-xxs text-sec py-2 px-4 md:py-3 md:px-6 border-2 border-pri overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-pri hover:text-light">
                                         contact me
                                         <AiOutlinePhone className="absolute top-0 left-0 text-xl text-gray-400 text-opacity-30 transition duration-150 ease-in  group-hover:text-white group-hover:text-opacity-20" />

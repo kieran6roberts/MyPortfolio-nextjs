@@ -12,7 +12,7 @@ import PageHead from "src/components/PageHead/PageHead";
 export default function Project({ projects: project }: Projects) {
     return (
       <>
-      <PageHead title="Kierandev | Projects" 
+      <PageHead title={`kierandev | ${project[0].title}`}
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
         <Layout>
             <section className="relative px-4 md:px-12 mx-4 border-l-2 border-r-2 border-gray-200 overflow-hidden">
