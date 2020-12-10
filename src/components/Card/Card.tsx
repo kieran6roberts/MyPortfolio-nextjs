@@ -11,13 +11,14 @@ export function generateKey(item: string): string {
 export default function Card({ items, header }: CardProps): React.ReactElement {
     
     return (
-        <div className="group flex flex-col md:flex-1 border-t-2 border-pri mx-2 transition duration-300 ease-in-out md:hover:bg-pri">
-        <p className="text-sm text-dark font-bold uppercase text-center py-8 md:group-hover:text-light">
+        <div className="flex flex-col bg-pri md:flex-1 border-l-2 border-r-2 border-t-2 border-gray-200 mx-2">
+        <p className="text-sm font-bold bg-pri text-dark text-center py-2">
               {header}
         </p>
-            <ul className="flex flex-col items-center text-xs text-gray-400 pb-8 md:group-hover:text-light">
+            <ul className="flex bg-light flex-col justify-start h-full items-center text-xs text-gray-500 pt-4">
                 {items && items.map(item =>
-                    <li key={generateKey(item)}>
+                    <li key={generateKey(item)}
+                    className="my-2">
                         {item}
                     </li>                    
                 )}

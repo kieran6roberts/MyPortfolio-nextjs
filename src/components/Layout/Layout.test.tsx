@@ -6,9 +6,9 @@ let documentBody: RenderResult;
 
 describe("<Layout />", () => {
     beforeEach(() => {
-        documentBody = render(<Layout><h1>child</h1></Layout>);
+        documentBody = render(<Layout><h1>test child</h1></Layout>);
     })
     test("renders", () => {
-        expect(documentBody.getByText("child")).toBeInTheDocument();
+        expect(documentBody.getByText("test child")).toBeInTheDocument();
     });
 });

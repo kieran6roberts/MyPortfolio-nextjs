@@ -35,9 +35,9 @@ export default function Project({
         <div className="relative px-4 md:px-8 md:mx-4 lg:px-40 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <SubHeader title={title}/>
             <Link href={`projects/${title}`}>
-                <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer">
+                <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer transform transition duration-300 ease-in-out hover:scale-105">
                     <div className="absolute top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70 z-10 transition duration-300 ease-in group-hover:bg-opacity-0"/>
-                    <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light animate-pulse" />
+                    <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent" />
                     <Image src={`/images/${image}`}
                     alt={captions}
                     width={775}

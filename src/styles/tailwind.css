@@ -7,9 +7,9 @@
   --color-light: rgba(255, 255, 255);
   --color-off-light: rgb(244, 235, 235);
   --color-dark: rgb(0, 15, 44);
-  --color-pri:  rgb(6, 224, 140);
+  --color-pri: rgb(6, 224, 140);
   --color-sec: rgb(255, 15, 235);
-  --color-acc:  rgb(4, 154, 200);
+  --color-acc: rgb(4, 154, 200);
 
   --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
   --text-2xs: clamp(0.8rem, 1vw, 1.8rem);

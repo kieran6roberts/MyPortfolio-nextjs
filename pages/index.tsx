@@ -18,13 +18,16 @@ export type Projects = {
         description: string,
         siteLink?: string,
         githubLink?: string,
-        captions: string,
+        captions: string[],
         images: {fileName: string}[],
         stackImages: {
           __typename: string,
           fileName: string}[],
         __typename?: string,
-        stackNames: string[]
+        stackNames: string[],
+        overview?: string | string[],
+        stackDecision?: string | string[],
+        outcome?: string | string[]
     }[]
 };
 
@@ -50,12 +53,12 @@ export default function Home({ projects }: Projects): React.ReactElement {
             </div>
             <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-8">
               Hi there, my name is 
-              <span className="text-pri">
+              <span className="text-pri mx-2">
                 Kieran 
                 </span>
                 and I develop performant and scalable websites. 
             </h2>
-            <p className="text-sm text-gray-400 text-center w-2/4 m-auto">
+            <p className="text-sm text-gray-400 text-center w-3/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
             <HiOutlineDesktopComputer className="text-xxl text-pri m-auto my-16"/>
@@ -68,7 +71,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
               header="currently learning:" />
             </div>
             <IoIosCodeWorking className="text-xxl text-pri m-auto mt-8"/>
-            <p className="text-md text-dark uppercase py-8 text-center py-8">
+            <p className="text-md text-dark uppercase py-16 text-center">
               Check out my work below
             </p>
           </div>

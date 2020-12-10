@@ -33,7 +33,7 @@ export default function Hero(): React.ReactElement {
                             width={32}/>
                         </li>
                     </ul>
-                    <h1 className="text-xl text-dark uppercase py-1">
+                    <h1 className="text-lg text-dark uppercase py-1">
                         front-end developer
                     </h1>
                     <p className="text-sm py-2 uppercase">
