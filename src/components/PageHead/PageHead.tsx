@@ -6,7 +6,7 @@ export default function PageHead({ title, description }: PageHeadProps): React.R
     return(
         <Head>
             <title key="title">{title}</title>
-            <meta charset="UTF-8" key="charset" />
+            <meta charSet="UTF-8" key="charset" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
             <meta name="description" content={description} key="description" />
             <meta property="og:type" content="website" />

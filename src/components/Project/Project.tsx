@@ -32,8 +32,8 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="relative px-4 mb-32 md:px-8 md:mx-4 bg-light border-l-2 border-r-2 border-gray-200 overflow-hidden">
-            <div className="hidden md:block absolute h-96 z-0 bottom-0 md:bottom-96 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-acc transform -rotate-12" />
+        <div className="relative mb-32 md:px-8 md:mx-4 bg-light md:border-l-2 md:border-r-2 md:border-gray-200 overflow-hidden">
+            <div className="hidden md:block absolute h-96 z-0 bottom-0 md:bottom-96 2xl:top-96 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-acc transform -rotate-12" />
             <div className="relative z-10 bg-light px-6">
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`}>
@@ -50,9 +50,9 @@ export default function Project({
                 <p className="text-xs italic text-gray-400 text-center mb-8">
                     {captions}
                 </p>
-                <div className="flex">
+                <div className="flex flex-col md:flex-row py-8">
                     <Button link={siteLink}
-                    color="bg-light text-dark mr-4">
+                    color="bg-light text-dark mb-2 md:mb-0 md:mr-4">
                         visit website
                     </Button>
                     <Button link={githubLink}
@@ -60,17 +60,17 @@ export default function Project({
                         github repo
                     </Button>
                 </div>
-                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 pl-4">
+                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 xxl:my-24 pl-4">
                     project description
                 </h4>
                 <p className="text-xs text-gray-500 py-2">
                     {description}
                 </p>
-                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 pl-4">
+                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 xxl:my-24 pl-4">
                     tech stack
                 </h4>
                 <List images={stackImages} names={stackNames} />
-                <div className="my-8">
+                <div className="my-8 py-8">
                     <Link href={`/projects/${title}`}>
                         <a className={`group bg-pri w-max flex align-items whitespace-nowrap text-xxs font-bold uppercase py-2 px-3 mr-8 border-2 border-pri cursor-pointer transition duration-50 ease-in hover:bg-green-400`}>
                             <span className="block pr-4">
@@ -86,7 +86,6 @@ export default function Project({
                             width={450}
                             height={225}/>
                 </div>
-
             </div>
         </div>
     )

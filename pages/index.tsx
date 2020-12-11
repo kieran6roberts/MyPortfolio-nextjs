@@ -5,7 +5,7 @@ import { IoIosCodeWorking } from "react-icons/io";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { request } from "graphql-request";
 
-import { GET_HOME_PROJECTS } from "./queries/queries";
+import { GET_HOME_PROJECTS } from "../src/queries/queries";
 import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
 import Project from "../src/components/Project/Project";
@@ -25,9 +25,9 @@ export type Projects = {
           fileName: string}[],
         __typename?: string,
         stackNames: string[],
-        overview?: string | string[],
-        stackDecision?: string | string[],
-        outcome?: string | string[]
+        overview?: string[],
+        stackDecision?: string[],
+        outcome?: string[]
     }[]
 };
 
@@ -45,8 +45,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
     <Layout>
         <Hero />
         <section className="relative z-10">
-        <div className="hidden md:block absolute h-screen z-0 bottom-1/4 md:top-72 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-acc transform -rotate-12" />
-          <div className="relative bg-light px-4 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+          <div className="relative bg-light px-2 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
             <div className="flex justify-center">
               <Image src="/images/tech.svg"
               alt="mobile phone and laptop illustration"
@@ -78,7 +77,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
             </p>
           </div>
         </section>
-        <section className="mx-4 px-3 md:px-8 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+        <section className="md:px-8 border-l-2 border-r-2 border-gray-100 overflow-hidden">
           <ul className="list-none">
             {projects && projects.map(project => 
             <li key={`${project.__typename}${project.title}`} >

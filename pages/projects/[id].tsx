@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { request } from "graphql-request";
 import Image from "next/image";
 
-import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../queries/queries";
+import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../../src/queries/queries";
 import Layout from "../../src/components/Layout/Layout";
 import { Projects } from "../index";
 import Button, { ButtonProps }from "../../src/components/Button/Button";
@@ -25,12 +25,12 @@ export default function Project({ projects: project }: Projects) {
                     className="mr-4 py-2">
                       <Image src={`/images/icons/${image.fileName}`}
                       alt={`${image.fileName}`}
-                      height={24}
-                      width={24} />
+                      height={30}
+                      width={30} />
                     </li>
                     )}
                 </ul>
-                <div className="relative z-10 flex justify-center mb-8">
+                <div className="relative z-10 flex justify-center mb-8 2xl:my-16">
                     <Button link={project[0].siteLink}
                     color="bg-light text-dark mr-2">
                         visit website
@@ -40,8 +40,8 @@ export default function Project({ projects: project }: Projects) {
                         github repo
                     </Button>
                   </div>
-              <div className="absolute top-40 md:top-24 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-pri transform -rotate-12" />
-              <div className="absolute bottom-1/4 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-sec transform -rotate-12" />
+              <div className="absolute top-40 md:top-36 left-0 h-1/5 w-offScreen transform -translate-x-96 bg-pri transform -rotate-12" />
+              <div className="absolute bottom-1/4 left-0 h-1/5 w-offScreen transform -translate-x-96 bg-sec transform -rotate-12" />
               
               <div className="relative bg-light p-2 md:p-8 w-full h-auto m-auto">
                 <div className="border-2"> 
@@ -57,37 +57,37 @@ export default function Project({ projects: project }: Projects) {
               </div>
 
               <div className="relative bg-light mx-3 md:mx-16 px-3 py-16 my-8 md:px-16 border-l-2 border-r-2 border-gray-200 overflow-hidden">
-                <h2 className="text-lg text-center text-dark capitalize my-8">
+                <h2 className="text-lg text-center text-dark capitalize my-8 xl:my-16">
                   project overview
                 </h2>
-                <div className="flex justify-center">
+                <div className="flex justify-center xxl:my-16">
                   <Image src={`/images/plan.svg`}
                     alt="stack image"
                     height={250}
                     width={250} />
                 </div>
-                  {project[0].overview.map((paragraph: string): React.ReactChild => 
+                  {project[0].overview && project[0].overview.map((paragraph: string): React.ReactChild => 
                   <p  key={generateKey(paragraph)}
-                  className="text-sm text-gray-500 p-4">
+                  className="text-sm text-gray-500 p-4 xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
                 <h2 className="text-lg text-dark text-center capitalize my-8">
                   stack choice
                 </h2>
-                <div className="flex justify-center">
+                <div className="flex justify-center xxl:my-16">
                   <Image src={`/images/${project[0].images[3].fileName}`}
                     alt="stack image"
                     height={250}
                     width={250} />
                 </div>
-                {project[0].stackDecision.map((paragraph: string) => 
+                {project[0].stackDecision && project[0].stackDecision.map((paragraph: string) => 
                   <p key={generateKey(paragraph)}
-                  className="text-sm text-gray-500 p-4">
+                  className="text-sm text-gray-500 p-4 xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
-                <div className="flex justify-center">
+                <div className="flex justify-center xxl:my-16">
                   <Image src={"/images/outcome.svg"}
                     alt="computer devices illustration"
                     height={250}
@@ -96,9 +96,9 @@ export default function Project({ projects: project }: Projects) {
                 <h2 className="text-lg text-center text-dark capitalize my-8">
                   outcome
                 </h2>
-                {project[0].outcome.map((paragraph: string) => 
+                {project[0].outcome && project[0].outcome.map((paragraph: string) => 
                   <p key={generateKey(paragraph)}
-                  className="text-sm text-gray-500 p-4">
+                  className="text-sm text-gray-500 p-4 xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
@@ -116,7 +116,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     GET_ALL_PROJECT_TITLES
   );
 
-  const paths = projects.map((project: Projects) => ({
+  const paths = projects.map((project: { title: string }) => ({
     params: { id: encodeURIComponent(project.title)}
   }));
 
@@ -126,7 +126,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   };
 
-  export const getStaticProps: GetStaticProps = async ({ params }) => {
+  export const getStaticProps: GetStaticProps = async ({ params }: any) => {
       const VARIABLE = {
         title: `${params.id}`
       };

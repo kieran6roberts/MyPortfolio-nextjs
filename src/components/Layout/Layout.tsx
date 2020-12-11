@@ -5,7 +5,7 @@ import { AiOutlinePhone, AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 export type LayoutProps = {
-    children: React.ReactElement;
+    children: JSX.Element | JSX.Element[]
 }
 
 export default function Layout({ children }: LayoutProps): React.ReactElement {
@@ -30,7 +30,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <span className="hidden sm:inline-block text-xs text-pri font-bold">
                             Kieran Roberts
                         </span>
-                        <ul className="flex ml-auto font-bold uppercase">
+                        <ul className="flex ml-auto font-bold capitalize">
                             <li className="flex-auto bg-light">
                                 <Link href="/#projects" passHref>
                                     <a className="group block relative text-xxs text-sec py-2 px-4 md:py-3 md:px-6 border-2 border-pri overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-pri hover:text-light">

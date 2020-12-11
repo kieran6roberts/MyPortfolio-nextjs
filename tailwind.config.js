@@ -1,5 +1,16 @@
 module.exports = {
-    purge: [],
+    future: {
+      removeDeprecatedGapUtilities: true,
+      purgeLayersByDefault: true
+    },
+    purge: {
+      enabled: true,
+      content: [
+        "./src/components/**/*.tsx",
+        "./src/containers/**/*.tsx",
+        "./pages/**/*.tsx"
+      ]
+    },
     theme: {
       fontSize:{
         xxxs: "var(--text-3xs)",
@@ -36,7 +47,8 @@ module.exports = {
           offScreen: "var(--off-screen)"
         },
         height: {
-          450: "450px"
+          450: "450px",
+          halfScreen: "50vh"
         },
       },
     },
