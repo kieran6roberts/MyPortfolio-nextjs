@@ -3,14 +3,6 @@ module.exports = {
       removeDeprecatedGapUtilities: true,
       purgeLayersByDefault: true
     },
-    purge: {
-      enabled: true,
-      content: [
-        "./src/components/**/*.tsx",
-        "./src/containers/**/*.tsx",
-        "./pages/**/*.tsx"
-      ]
-    },
     theme: {
       fontSize:{
         xxxs: "var(--text-3xs)",
