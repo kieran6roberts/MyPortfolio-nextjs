@@ -33,7 +33,7 @@ export default function List({ names, images }: ListProps): React.ReactElement {
         };
         
     return (
-        <ul className="list-disc">
+        <ul className="list-disc px-3">
             {mapStackToList(images, names)}
         </ul>
     )

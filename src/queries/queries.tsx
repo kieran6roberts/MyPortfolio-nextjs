@@ -25,6 +25,7 @@ export const GET_SINGLE_PROJECT = gql`
       overview
       stackDecision
       outcome
+      publishDate
     }
   }
   `;
@@ -44,6 +45,7 @@ export const GET_SINGLE_PROJECT = gql`
         fileName
       }
       stackNames
+      publishDate
     }
   }
 `;

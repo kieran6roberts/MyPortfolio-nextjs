@@ -25,7 +25,8 @@ export type Projects = {
         stackNames: string[],
         overview?: string[],
         stackDecision?: string[],
-        outcome?: string[]
+        outcome?: string[],
+        publishDate: string
     }[]
 };
 
@@ -49,9 +50,6 @@ export default function Home({ projects }: Projects): React.ReactElement {
                 </span>
                 and I develop performant and scalable websites. 
             </h2>
-            <div className="flex justify-center">
-         
-            </div>
             <p className="text-sm text-gray-500 text-center w-3/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
@@ -71,7 +69,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
           </div>
         </section>
         <section className="">
-          <ul className="list-none">
+          <ul className="">
             {projects && projects.map(project => 
             <li key={`${project.__typename}${project.title}`} >
               <Project

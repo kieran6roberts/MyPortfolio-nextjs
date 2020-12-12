@@ -13,8 +13,8 @@
         --text-xs: clamp(1rem, 1.2vw, 4rem);
         --text-sm: clamp(1.1rem, 1.3vw, 7rem);
         --text-md: clamp(1.4rem, 2vw, 3rem);
-        --text-lg: clamp(1.7rem, 3vw, 3.8rem);
-        --text-xl: clamp(3rem, 4vw, 5.5rem);
+        --text-lg: clamp(2rem, 3.4vw, 3.8rem);
+        --text-xl: clamp(2.8rem, 3.5vw, 5.5rem);
         --text-2xl: clamp(4rem, 4.6vw, 10rem);
         --text-3xl: clamp(7rem, 11vw, 24rem);
       
@@ -23,7 +23,7 @@
       }
       
         html {
-          line-height: 1.8;
+          line-height: 1.6;
           scroll-behavior: smooth;
         }
         
