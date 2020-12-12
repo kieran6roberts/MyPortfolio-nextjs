@@ -1,19 +1,58 @@
+import * as React from "react"
 import Image from "next/image";
 import Link from "next/link";
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePhone, AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { motion as m, useViewportScroll, useTransform, useSpring } from "framer-motion";
 
 export type LayoutProps = {
     children: JSX.Element | JSX.Element[]
 }
-
+    
 export default function Layout({ children }: LayoutProps): React.ReactElement {
+    const { scrollY } = useViewportScroll();
+    const [ isComplete, setIsComplete ] = React.useState(false);
+    const yRange = useTransform(scrollY, [0, 0.9], [0, 1]);
+    const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+    
+    React.useEffect(() => {
+        yRange.onChange(v => setIsComplete(v >= 1));
+        console.log(scrollY);
+    }, [yRange]);
     return (
         <div className="flex flex-col justify-between font-mono">
             <section className="relative z-10">
+            <svg className="fixed bottom-4 right-4 h-8 w-8" 
+            viewBox="0 0 60 60">
+                <m.path
+                fill="none"
+                strokeWidth="5"
+                stroke="purple"
+                strokeDasharray="0 1"
+                d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+                style={{
+                    pathLength: scrollY,
+                    rotate: 90,
+                    translateX: 5,
+                    translateY: 5,
+                    scaleX: -1 // Reverse direction of line animation
+                }}
+                />
+                <m.path
+                fill="none"
+                strokeWidth="5"
+                stroke="black"
+                d="M14,26 L 22,33 L 35,16"
+                initial={false}
+                strokeDasharray="0 1"
+                animate={{ pathLength: isComplete ? 1 : 0 }}
+                />
+            </svg>
                 <nav className="">
-                    <div className="h-1 w-full bg-gradient-to-r from-purple-400 via-yellow-400 to-blue-800"
+                    <m.div layout 
+                    initial={{}}
+                    className="h-1 w-full bg-gradient-to-r from-purple-400 via-yellow-400 to-blue-800"
                     id="style-bar"/>
                         <div className="flex items-center py-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">

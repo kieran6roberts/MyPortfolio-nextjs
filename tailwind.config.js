@@ -49,7 +49,9 @@ module.exports = {
         },
       },
     },
-    variants: {},
+    variants: {
+      animation: ["motion-safe", "motion-reduce"]
+    },
     plugins: [],
   }
   

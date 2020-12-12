@@ -54,6 +54,7 @@ export default function Form(): React.ReactElement {
 
     function submitHandler(event: React.FormEvent): void {
         event.preventDefault();
+        setSubmitting(true);
     };
 
     function checkForEmptyObject(obj: any): boolean {
@@ -70,10 +71,17 @@ export default function Form(): React.ReactElement {
     }, [ inputValues ]);
 
     return (
+        <>
+        {submitting &&
+        <p className="bg-pri text-sm text-light text-center my-4 animate-bounce motion-reduce:animate-none">
+            Form submit successful! I'll get back to you as soon as possible.
+        </p>
+        }
         <form
         method="POST"
+        onSubmit={submitHandler}
         action="https://formspree.io/f/mzbkjarl"
-        className="flex flex-col w-full max-w-xl mx-auto mb-24 capitalize"
+        className="flex flex-col w-full max-w-xl mx-auto capitalize p-1"
         data-testid="form"
         >   
             <label
@@ -110,6 +118,7 @@ export default function Form(): React.ReactElement {
             id="message"
             value={inputValues.message}
             onChange={inputChangeHandler}
+            rows="3"
             placeholder="..."
             className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
             <input
@@ -120,5 +129,6 @@ export default function Form(): React.ReactElement {
             disabled={submitDisabled}
             className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} m-auto w-2/4 py-1 px-2 font-bold uppercase`} />
         </form>
+        </>
     )
 };

@@ -18,7 +18,7 @@ export default function Project({ projects: project }: Projects) {
       <>
       <PageHead title={`kierandev | ${project[0].title}`}
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
-            <section className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden shadow">
+            <section className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden">
                 <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
                     {project[0].title}
                 </h1>

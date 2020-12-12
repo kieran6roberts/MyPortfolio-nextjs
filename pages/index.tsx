@@ -36,7 +36,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
     <>
     <PageHead title="Kierandev | Home" 
     description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"/>
-    <div>
+    <div className="">
         <Hero />
         <section className="relative z-10">
             <h2 className="text-md font-bold uppercase text-dark text-center pb-28">
