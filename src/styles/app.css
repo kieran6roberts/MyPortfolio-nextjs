@@ -550,16 +550,16 @@ video {
   --color-light: rgba(255, 255, 255);
   --color-off-light: rgb(244, 235, 235);
   --color-dark: rgb(0, 15, 44);
-  --color-pri: rgb(6, 224, 140);
-  --color-sec: rgb(255, 15, 235);
-  --color-acc: rgb(4, 154, 200);
+  --color-pri: #956af8;
+  --color-sec: #2a50ca;
+  --color-acc: #f5b536;
   --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
   --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
   --text-xs: clamp(1rem, 1.2vw, 4rem);
   --text-sm: clamp(1.1rem, 1.3vw, 7rem);
   --text-md: clamp(1.4rem, 2vw, 3rem);
-  --text-lg: clamp(1.7rem, 3vw, 3.8rem);
-  --text-xl: clamp(3rem, 4vw, 5.5rem);
+  --text-lg: clamp(2rem, 3.4vw, 3.8rem);
+  --text-xl: clamp(2.8rem, 3.5vw, 5.5rem);
   --text-2xl: clamp(4rem, 4.6vw, 10rem);
   --text-3xl: clamp(7rem, 11vw, 24rem);
   --off-screen: 250vw;
@@ -567,7 +567,7 @@ video {
 }
 
 html {
-  line-height: 1.8;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
@@ -4383,6 +4383,18 @@ a {
 
 .bg-gradient-to-tl {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
+.bg-pri {
+  background-image: var(--color-pri);
+}
+
+.bg-sec {
+  background-image: var(--color-sec);
+}
+
+.bg-acc {
+  background-image: var(--color-acc);
 }
 
 .from-transparent {
@@ -11669,6 +11681,10 @@ a {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-hero {
+  height: 500px;
 }
 
 .text-xxxs {
@@ -35258,6 +35274,18 @@ a {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .sm\:bg-pri {
+    background-image: var(--color-pri);
+  }
+
+  .sm\:bg-sec {
+    background-image: var(--color-sec);
+  }
+
+  .sm\:bg-acc {
+    background-image: var(--color-acc);
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -42542,6 +42570,10 @@ a {
 
   .sm\:h-screen {
     height: 100vh;
+  }
+
+  .sm\:h-hero {
+    height: 500px;
   }
 
   .sm\:text-xxxs {
@@ -66053,6 +66085,18 @@ a {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .md\:bg-pri {
+    background-image: var(--color-pri);
+  }
+
+  .md\:bg-sec {
+    background-image: var(--color-sec);
+  }
+
+  .md\:bg-acc {
+    background-image: var(--color-acc);
+  }
+
   .md\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -73337,6 +73381,10 @@ a {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-hero {
+    height: 500px;
   }
 
   .md\:text-xxxs {
@@ -96848,6 +96896,18 @@ a {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-pri {
+    background-image: var(--color-pri);
+  }
+
+  .lg\:bg-sec {
+    background-image: var(--color-sec);
+  }
+
+  .lg\:bg-acc {
+    background-image: var(--color-acc);
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -104132,6 +104192,10 @@ a {
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:h-hero {
+    height: 500px;
   }
 
   .lg\:text-xxxs {
@@ -127643,6 +127707,18 @@ a {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-pri {
+    background-image: var(--color-pri);
+  }
+
+  .xl\:bg-sec {
+    background-image: var(--color-sec);
+  }
+
+  .xl\:bg-acc {
+    background-image: var(--color-acc);
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -134927,6 +135003,10 @@ a {
 
   .xl\:h-screen {
     height: 100vh;
+  }
+
+  .xl\:h-hero {
+    height: 500px;
   }
 
   .xl\:text-xxxs {
@@ -158438,6 +158518,18 @@ a {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .\32xl\:bg-pri {
+    background-image: var(--color-pri);
+  }
+
+  .\32xl\:bg-sec {
+    background-image: var(--color-sec);
+  }
+
+  .\32xl\:bg-acc {
+    background-image: var(--color-acc);
+  }
+
   .\32xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -165722,6 +165814,10 @@ a {
 
   .\32xl\:h-screen {
     height: 100vh;
+  }
+
+  .\32xl\:h-hero {
+    height: 500px;
   }
 
   .\32xl\:text-xxxs {

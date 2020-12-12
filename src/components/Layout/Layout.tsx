@@ -13,10 +13,10 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
         <div className="flex flex-col justify-between font-mono">
             <section className="relative z-10">
                 <nav className="">
-                    <div className="h-1 w-full bg-gradient-to-r from-green-400 via-blue-400 to-pink-400"
+                    <div className="h-1 w-full bg-gradient-to-r from-purple-400 via-yellow-400 to-blue-800"
                     id="style-bar"/>
                         <div className="flex items-center py-8 px-6 md:px-16">
-                            <div className="flex p-2 bg-pri mr-4 cursor-pointer">
+                            <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
                                     <a className="flex align-center">
                                         <Image
@@ -31,23 +31,23 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             Kieran Roberts
                         </span>
                         <a href="https://github.com/kieran6roberts"  
-                        className="inline-block text-md text-dark ml-3 transform transition duration-100 ease hover:scale-105">
+                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125">
                             <AiFillGithub />
                         </a>
                         <ul className="flex ml-auto font-bold capitalize">
-                            <li className="flex-auto bg-light">
+                            <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="group block relative text-xxs text-sec py-2 px-4 md:py-3 md:px-6 border-2 border-pri overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-pri hover:text-light">
+                                    <a className="group bg-pri block relative text-xxs text-light text-bold py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri">
                                         projects
-                                        <RiComputerLine className="absolute top-0 left-0 text-lg text-gray-400 text-opacity-30 transition duration-150 ease-in group-hover:text-white group-hover:text-opacity-20" />
+                                        <RiComputerLine className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
-                            <li className="flex-auto bg-light ml-4 ml:mx-8">
+                            <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="group block relative text-xxs text-sec py-2 px-4 md:py-3 md:px-6 border-2 border-pri overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-pri hover:text-light">
+                                    <a className="group bg-pri block relative text-xxs text-light py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri">
                                         contact me
-                                        <AiOutlinePhone className="absolute top-0 left-0 text-lg text-gray-400 text-opacity-30 transition duration-150 ease-in  group-hover:text-white group-hover:text-opacity-20" />
+                                        <AiOutlinePhone className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
@@ -63,17 +63,17 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     <li className="mb-4">
                         <a href="https://github.com/kieran6roberts"  
                         className="text-md">
-                            <AiFillGithub />
+                            <AiFillGithub className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="mb-4">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
                         className="text-md">
-                            <FaLinkedinIn />
+                            <FaLinkedinIn className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                 </ul>
-                <p className="capitalize text-sm text-pri">
+                <p className="uppercase text-sm text-acc">
                     created and designed by Kieran Roberts.
                 </p>
                 <span className="text-xxs text-gray-400">

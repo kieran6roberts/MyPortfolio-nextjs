@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { VscSymbolNamespace } from "react-icons/vsc";
 
 export default function Hero(): React.ReactElement {
     return(
@@ -21,10 +22,11 @@ export default function Hero(): React.ReactElement {
             </div>
             <div className="relative h-4/6 flex flex-col justify-start items-start sm:justify-end sm:items-end  text-center pt-4">
                 <h1 className="bg-white bg-opacity-80 text-lg text-dark font-bold uppercase px-2 rounded">
+                    <VscSymbolNamespace className="relative inline-block align-middle bottom-0.5 mr-4"/>
                     front-end developer
                 </h1>
                 <p className="bg-white bg-opacity-80 text-sm uppercase px-2">
-                    <span className="text-sec mr-1">
+                    <span className="text-acc mr-1">
                         solving
                     </span>
                     your web related needs

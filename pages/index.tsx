@@ -45,7 +45,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
           <div className="relative bg-light overflow-hidden">
             <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-16">
               My name is 
-              <span className="text-sec mx-3">
+              <span className="text-acc mx-3">
                 Kieran 
                 </span>
                 and I develop performant and scalable websites. 
@@ -53,7 +53,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
             <p className="text-sm text-gray-500 text-center w-3/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
-            <VscVmActive className="text-xxl text-acc m-auto my-16"/>
+            <VscVmActive className="text-xxl text-pri m-auto my-16"/>
             <div className="lg:flex">
               <Card items={["JavaScript", "reactjs", "css", "html"]}
               header="My primary skills:" />

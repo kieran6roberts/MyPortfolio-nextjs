@@ -20,12 +20,15 @@ export default function List({ names, images }: ListProps): React.ReactElement {
         const combinedArr = arr1.map((item: {fileName: string}, index: any) => [item, arr2[index]]);
 
         return combinedArr.map((item: any): React.ReactElement => 
-                <li key={`${generateKey(item[1])}`}>
-                    <Image src={`/images/icons/${item[0].fileName}`}
-                    alt={`${item[0]} logo`}
-                    height={16}
-                    width={16} />
-                    <span className="inline-block ml-2 text-xs text-gray-500">
+                <li key={`${generateKey(item[1])}`}
+                className="flex my-4">
+                    <div className="mr-4">
+                        <Image src={`/images/icons/${item[0].fileName}`}
+                        alt={`${item[0]} logo`}
+                        height={16}
+                        width={16} />
+                    </div>
+                    <span className="inline-block ml-2 text-xs text-dark">
                         {item[1]}
                     </span>
                 </li>
@@ -33,7 +36,7 @@ export default function List({ names, images }: ListProps): React.ReactElement {
         };
         
     return (
-        <ul className="list-disc px-3">
+        <ul className="py-2">
             {mapStackToList(images, names)}
         </ul>
     )

@@ -46,7 +46,7 @@ module.exports = {
         },
         listStyleType: {
           circle: "var(--list-style)"
-        }
+        },
       },
     },
     variants: {},

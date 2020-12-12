@@ -1,6 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { request } from "graphql-request";
 import Image from "next/image";
+import { VscCalendar, 
+  VscFiles, 
+  VscLibrary, 
+  VscVmActive } from "react-icons/vsc";
 
 import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../../src/queries/queries";
 import { Projects } from "../index";
@@ -18,8 +22,8 @@ export default function Project({ projects: project }: Projects) {
                 <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
                     {project[0].title}
                 </h1>
-                <p className="text-xxs text-dark text-center mb-2">
-                  Kieran Roberts posted: {(project[0].publishDate).substring(0, 10)}
+                <p className="text-xxs text-sec text-center mb-2">
+                  Kieran Roberts posted: <VscCalendar className="inline-block mr-2"/>{(project[0].publishDate).substring(0, 10)}
                 </p>
                 <ul className="text-center">
                   {project[0].stackNames && project[0].stackNames.map(name =>
@@ -41,19 +45,21 @@ export default function Project({ projects: project }: Projects) {
                   </div>
 
               <div className="relative bg-light px-3 py-16 my-8 overflow-hidden">
-                <div className="bg-gradient-to-tr pl-1 from-blue-400 via-yellow-400 to green-400">
-                  <h2 className="bg-white text-md text-dark capitalize pl-4">
+                <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
+                  <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
+                    <VscFiles className="inline-block text-md text-sec mr-4"/>
                     project overview
                   </h2>
                 </div>
                   {project[0].overview && project[0].overview.map((paragraph: string): React.ReactChild => 
                   <p  key={generateKey(paragraph)}
-                  className="text-sm text-gray-500 p-4 xl:p-8 2xl:px-32">
+                  className="text-sm text-dark p-4 xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
-                  <div className="bg-gradient-to-tr pl-1 from-blue-400 via-yellow-400 to green-400">
-                    <h2 className="bg-white text-md text-dark capitalize pl-4">
+                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
+                    <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
+                      <VscLibrary className="inline-block text-md text-sec mr-4" />
                       stack choice
                     </h2>
                   </div>
@@ -63,8 +69,9 @@ export default function Project({ projects: project }: Projects) {
                     {paragraph}
                   </p>
                     )}
-                  <div className="bg-gradient-to-tr pl-1 from-blue-400 via-yellow-400 to green-400">
-                    <h2 className="bg-white text-md text-dark capitalize pl-4">
+                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
+                    <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
+                      <VscVmActive className="inline-block text-md text-sec mr-4" />
                       outcome
                     </h2>
                   </div>
