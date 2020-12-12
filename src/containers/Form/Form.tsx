@@ -66,7 +66,7 @@ export default function Form(): React.ReactElement {
         if (checkForEmptyObject(errors)) submitDisabled = false;
         else submitDisabled = true;
         console.log(errors);
-        console.log(submitDisabled);
+        console.log(submitDisabled)
     }, [ inputValues ]);
 
     return (
@@ -79,35 +79,38 @@ export default function Form(): React.ReactElement {
             <label
             htmlFor="name"
             className="mb-1">
-                name *
+                name <span className="text-pri">*</span>
             </label>
             <input id="name"
             type="text"
             name="name"
             value={inputValues.name}
             onChange={inputChangeHandler}
+            placeholder="kieran"
             className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
             <label
             htmlFor="email"
             className="mb-1">
-                email *
+                email <span className="text-pri">*</span>
             </label>
             <input id="email"
             type="email"
             name="email"
             value={inputValues.email}
             onChange={inputChangeHandler}
+            placeholder="kieran6roberts@gmail.com"
             className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
             <label
             htmlFor="message"
             className="mb-1">
-                message
+                message <span className="text-pri">*</span>
             </label>
             <textarea 
             name="message" 
             id="message"
             value={inputValues.message}
             onChange={inputChangeHandler}
+            placeholder="..."
             className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
             <input
             id="submit"
@@ -115,7 +118,7 @@ export default function Form(): React.ReactElement {
             name="submit"
             value="send"
             disabled={submitDisabled}
-            className={`${submitDisabled ? "bg-pri cursor-not-allowed" : "bg-pri cursor-pointer"} m-auto w-2/4 py-1 px-2 font-bold uppercase`} />
+            className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} m-auto w-2/4 py-1 px-2 font-bold uppercase`} />
         </form>
     )
 };
