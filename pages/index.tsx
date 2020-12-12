@@ -1,12 +1,10 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
-import Image from "next/image";
-import { IoIosCodeWorking } from "react-icons/io";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { request } from "graphql-request";
+import { motion } from "framer-motion";
+import { VscVmActive, VscChevronDown } from "react-icons/vsc";
 
 import { GET_HOME_PROJECTS } from "../src/queries/queries";
-import Layout from "../src/components/Layout/Layout";
 import Hero from "../src/components/Hero/Hero";
 import Project from "../src/components/Project/Project";
 import PageHead from "../src/components/PageHead/PageHead";
@@ -33,36 +31,31 @@ export type Projects = {
 
 export default function Home({ projects }: Projects): React.ReactElement {
 
-  React.useEffect((): void => {
-    const hero: Element | null = document.querySelector("#hero");
-    hero?.classList.add("opacity-100");
-  }, []);
-
   return (
     <>
     <PageHead title="Kierandev | Home" 
     description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"/>
-    <Layout>
+    <div>
         <Hero />
         <section className="relative z-10">
-          <div className="relative bg-light px-2 md:px-8 md:mx-4 lg:px-36 border-l-2 border-r-2 border-gray-200 overflow-hidden">
-            <div className="flex justify-center">
-              <Image src="/images/tech.svg"
-              alt="mobile phone and laptop illustration"
-              height={350}
-              width={350} />
-            </div>
+            <h2 className="text-md font-bold uppercase text-dark text-center pb-28">
+              Welcome to my personal portfolio.
+            </h2>
+          <div className="relative bg-light overflow-hidden">
             <h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-16">
-              Hi there, my name is 
-              <span className="text-sec mx-2">
+              My name is 
+              <span className="text-sec mx-3">
                 Kieran 
                 </span>
                 and I develop performant and scalable websites. 
             </h2>
+            <div className="flex justify-center">
+         
+            </div>
             <p className="text-sm text-gray-500 text-center w-3/4 m-auto">
               I enjoy solving problems, seeing the results instantly in the browser.
             </p>
-            <HiOutlineDesktopComputer className="text-xxl text-acc m-auto my-16"/>
+            <VscVmActive className="text-xxl text-acc m-auto my-16"/>
             <div className="lg:flex">
               <Card items={["JavaScript", "reactjs", "css", "html"]}
               header="My primary skills:" />
@@ -71,13 +64,13 @@ export default function Home({ projects }: Projects): React.ReactElement {
               <Card items={["TypeScript", "redux", "graphql"]}
               header="currently learning:" />
             </div>
-            <IoIosCodeWorking className="text-xxl text-dark m-auto my-16"/>
+            <VscChevronDown className="text-xxl text-dark m-auto my-16 animate-bounce"/>
             <p className="text-md text-dark uppercase mb-16 text-center">
               Check out my work below
             </p>
           </div>
         </section>
-        <section className="md:px-8 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+        <section className="">
           <ul className="list-none">
             {projects && projects.map(project => 
             <li key={`${project.__typename}${project.title}`} >
@@ -94,7 +87,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
             )}
           </ul>
       </section>
-    </Layout>
+    </div>
     </>
   )
 };

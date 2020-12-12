@@ -1,48 +1,34 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero(): React.ReactElement {
     return(
-        <section className="h-screen z-0">
-            <div className="absolute top-0 left-0 h-screen w-full z-0">
-                <div id="hero"
-                className="transition-all duration-1000 ease-in-out opacity-0">
+        <section className="h-screen">
+            <div className="absolute top-32 md:top-20 left-3 md:left-16 right-3 bottom-3">
+                <motion.div id="hero"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                  className="hero"
+                  layoutId="hero">
                     <Image src="/images/hero.png"
                     alt="stylized selfie"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="contain"
+                    objectPosition="left bottom"
                     priority />
-                </div>
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-200 to-transparent bg-opacity-70 text-center">
-                    <ul className="flex items-end w-full justify-evenly py-4">
-                        <li className="">
-                            <Image src="/images/icons/react.svg" 
-                            alt="stack logo"
-                            height={32}
-                            width={32}/>
-                        </li>
-                        <li className="animate-bounce">
-                            <Image src="/images/icons/javascript.svg" 
-                                alt="stack logo"
-                                height={48}
-                                width={48}/>
-                        </li>
-                        <li className="">
-                            <Image src="/images/icons/css-3.svg" 
-                            alt="stack logo"
-                            height={32}
-                            width={32}/>
-                        </li>
-                    </ul>
-                    <h1 className="text-lg text-dark uppercase py-1">
-                        front-end developer
-                    </h1>
-                    <p className="text-sm py-2 uppercase">
-                        <span className="text-sec mr-1">
-                            solving
-                        </span>
-                        your web related needs
-                    </p>
-                </div>
+                </motion.div>
+            </div>
+            <div className="relative h-4/6 flex flex-col justify-start items-start sm:justify-end sm:items-end  text-center pt-4">
+                <h1 className="bg-white bg-opacity-80 text-lg text-dark font-bold uppercase px-2 rounded">
+                    front-end developer
+                </h1>
+                <p className="bg-white bg-opacity-80 text-sm uppercase px-2">
+                    <span className="text-sec mr-1">
+                        solving
+                    </span>
+                    your web related needs
+                </p>
             </div>
         </section>
     )

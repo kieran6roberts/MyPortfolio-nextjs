@@ -3,7 +3,6 @@ import { request } from "graphql-request";
 import Image from "next/image";
 
 import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../../src/queries/queries";
-import Layout from "../../src/components/Layout/Layout";
 import { Projects } from "../index";
 import Button, { ButtonProps }from "../../src/components/Button/Button";
 import { generateKey } from "../../src/components/Card/Card";
@@ -14,7 +13,6 @@ export default function Project({ projects: project }: Projects) {
       <>
       <PageHead title={`kierandev | ${project[0].title}`}
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
-        <Layout>
             <section className="relative px-4 md:px-12 mx-4 border-l-2 border-r-2 border-gray-200 overflow-hidden">
                 <h1 className="text-lg text-center font-bold text-dark capitalize">
                     {project[0].title}
@@ -40,8 +38,6 @@ export default function Project({ projects: project }: Projects) {
                         github repo
                     </Button>
                   </div>
-              <div className="absolute top-40 md:top-36 left-0 h-1/5 w-offScreen transform -translate-x-96 bg-pri transform -rotate-12" />
-              <div className="absolute bottom-1/4 left-0 h-1/5 w-offScreen transform -translate-x-96 bg-sec transform -rotate-12" />
               
               <div className="relative bg-light p-2 md:p-8 w-full h-auto m-auto">
                 <div className="border-2"> 
@@ -56,7 +52,7 @@ export default function Project({ projects: project }: Projects) {
                 <div className="flex flex-col justify-end items-center relative z-10 bg-gradient-to-t from-black via-transparent to-transparent bg-opacity-30 h-full w-full" />
               </div>
 
-              <div className="relative bg-light mx-3 md:mx-16 px-3 py-16 my-8 md:px-16 border-l-2 border-r-2 border-gray-200 overflow-hidden">
+              <div className="relative bg-light px-3 py-16 my-8 md:px-12 border-l-2 border-r-2 border-gray-200 overflow-hidden">
                 <h2 className="text-lg text-center text-dark capitalize my-8 xl:my-16">
                   project overview
                 </h2>
@@ -104,7 +100,6 @@ export default function Project({ projects: project }: Projects) {
                     )}
               </div>
             </section>
-        </Layout>
         </>
     )
 };

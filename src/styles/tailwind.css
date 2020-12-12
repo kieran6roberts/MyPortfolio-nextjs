@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @layer base {
     :root {
-        --font: Tahoma, sans-serif;
         --color-light: rgba(255, 255, 255);
         --color-off-light: rgb(244, 235, 235);
         --color-dark: rgb(0, 15, 44);
@@ -20,13 +19,12 @@
         --text-3xl: clamp(7rem, 11vw, 24rem);
       
         --off-screen: 250vw;
+        --list-style: circle;
       }
       
         html {
-          font-family: var(--font);
           line-height: 1.8;
           scroll-behavior: smooth;
-          
         }
         
         body {

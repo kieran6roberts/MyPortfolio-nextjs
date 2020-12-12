@@ -547,7 +547,6 @@ video {
 }
 
 :root {
-  --font: Tahoma, sans-serif;
   --color-light: rgba(255, 255, 255);
   --color-off-light: rgb(244, 235, 235);
   --color-dark: rgb(0, 15, 44);
@@ -564,11 +563,10 @@ video {
   --text-2xl: clamp(4rem, 4.6vw, 10rem);
   --text-3xl: clamp(7rem, 11vw, 24rem);
   --off-screen: 250vw;
+  --list-style: circle;
 }
 
 html {
-  font-family: Tahoma, sans-serif;
-  font-family: var(--font);
   line-height: 1.8;
   scroll-behavior: smooth;
 }
@@ -11464,6 +11462,10 @@ a {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-pri {
+  font-family: var(--font-pri);
+}
+
 .font-thin {
   font-weight: 100;
 }
@@ -11620,10 +11622,6 @@ a {
   height: 24rem;
 }
 
-.h-450 {
-  height: 450px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -11714,10 +11712,6 @@ a {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-halfScreen {
-  height: 50vh;
 }
 
 .text-xxxs {
@@ -11839,6 +11833,11 @@ a {
 
 .list-decimal {
   list-style-type: decimal;
+}
+
+.list-circle {
+  list-style-type: circle;
+  list-style-type: var(--list-style);
 }
 
 .m-0 {
@@ -42580,6 +42579,10 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-pri {
+    font-family: var(--font-pri);
+  }
+
   .sm\:font-thin {
     font-weight: 100;
   }
@@ -42736,10 +42739,6 @@ a {
     height: 24rem;
   }
 
-  .sm\:h-450 {
-    height: 450px;
-  }
-
   .sm\:h-auto {
     height: auto;
   }
@@ -42830,10 +42829,6 @@ a {
 
   .sm\:h-screen {
     height: 100vh;
-  }
-
-  .sm\:h-halfScreen {
-    height: 50vh;
   }
 
   .sm\:text-xxxs {
@@ -42955,6 +42950,11 @@ a {
 
   .sm\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .sm\:list-circle {
+    list-style-type: circle;
+    list-style-type: var(--list-style);
   }
 
   .sm\:m-0 {
@@ -73618,6 +73618,10 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-pri {
+    font-family: var(--font-pri);
+  }
+
   .md\:font-thin {
     font-weight: 100;
   }
@@ -73774,10 +73778,6 @@ a {
     height: 24rem;
   }
 
-  .md\:h-450 {
-    height: 450px;
-  }
-
   .md\:h-auto {
     height: auto;
   }
@@ -73868,10 +73868,6 @@ a {
 
   .md\:h-screen {
     height: 100vh;
-  }
-
-  .md\:h-halfScreen {
-    height: 50vh;
   }
 
   .md\:text-xxxs {
@@ -73993,6 +73989,11 @@ a {
 
   .md\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .md\:list-circle {
+    list-style-type: circle;
+    list-style-type: var(--list-style);
   }
 
   .md\:m-0 {
@@ -104656,6 +104657,10 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-pri {
+    font-family: var(--font-pri);
+  }
+
   .lg\:font-thin {
     font-weight: 100;
   }
@@ -104812,10 +104817,6 @@ a {
     height: 24rem;
   }
 
-  .lg\:h-450 {
-    height: 450px;
-  }
-
   .lg\:h-auto {
     height: auto;
   }
@@ -104906,10 +104907,6 @@ a {
 
   .lg\:h-screen {
     height: 100vh;
-  }
-
-  .lg\:h-halfScreen {
-    height: 50vh;
   }
 
   .lg\:text-xxxs {
@@ -105031,6 +105028,11 @@ a {
 
   .lg\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .lg\:list-circle {
+    list-style-type: circle;
+    list-style-type: var(--list-style);
   }
 
   .lg\:m-0 {
@@ -135694,6 +135696,10 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-pri {
+    font-family: var(--font-pri);
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -135850,10 +135856,6 @@ a {
     height: 24rem;
   }
 
-  .xl\:h-450 {
-    height: 450px;
-  }
-
   .xl\:h-auto {
     height: auto;
   }
@@ -135944,10 +135946,6 @@ a {
 
   .xl\:h-screen {
     height: 100vh;
-  }
-
-  .xl\:h-halfScreen {
-    height: 50vh;
   }
 
   .xl\:text-xxxs {
@@ -136069,6 +136067,11 @@ a {
 
   .xl\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .xl\:list-circle {
+    list-style-type: circle;
+    list-style-type: var(--list-style);
   }
 
   .xl\:m-0 {
@@ -166732,6 +166735,10 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .\32xl\:font-pri {
+    font-family: var(--font-pri);
+  }
+
   .\32xl\:font-thin {
     font-weight: 100;
   }
@@ -166888,10 +166895,6 @@ a {
     height: 24rem;
   }
 
-  .\32xl\:h-450 {
-    height: 450px;
-  }
-
   .\32xl\:h-auto {
     height: auto;
   }
@@ -166982,10 +166985,6 @@ a {
 
   .\32xl\:h-screen {
     height: 100vh;
-  }
-
-  .\32xl\:h-halfScreen {
-    height: 50vh;
   }
 
   .\32xl\:text-xxxs {
@@ -167107,6 +167106,11 @@ a {
 
   .\32xl\:list-decimal {
     list-style-type: decimal;
+  }
+
+  .\32xl\:list-circle {
+    list-style-type: circle;
+    list-style-type: var(--list-style);
   }
 
   .\32xl\:m-0 {

@@ -32,9 +32,8 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="relative mb-32 md:px-8 md:mx-4 bg-light md:border-l-2 md:border-r-2 md:border-gray-200 overflow-hidden">
-            <div className="hidden md:block absolute h-96 z-0 bottom-0 md:bottom-96 2xl:top-96 left-0 h-1/6 w-offScreen transform -translate-x-96 bg-acc transform -rotate-12" />
-            <div className="relative z-10 bg-light px-6">
+        <div className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden shadow">
+            <div className="bg-light px-4">
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`}>
                     <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer transform transition duration-300 ease-in-out hover:scale-105">
@@ -60,15 +59,19 @@ export default function Project({
                         github repo
                     </Button>
                 </div>
-                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 xxl:my-24 pl-4">
-                    project description
-                </h4>
+                <div className="bg-gradient-to-b pl-1 from-blue-400 via-yellow-400 to green-400">
+                    <h4 className="bg-light text-md text-acc uppercase my-8 xxl:my-24 pl-4">
+                        project description
+                    </h4>
+                </div>
                 <p className="text-xs text-gray-500 py-2">
                     {description}
                 </p>
-                <h4 className="text-md text-acc uppercase border-l-2 border-acc my-8 xxl:my-24 pl-4">
-                    tech stack
-                </h4>
+                <div className="bg-gradient-to-b pl-1 from-blue-400 via-yellow-400 to green-400">
+                    <h4 className="bg-light text-md text-acc uppercase my-8 xxl:my-24 pl-4">
+                        tech stack
+                    </h4>
+                </div>
                 <List images={stackImages} names={stackNames} />
                 <div className="my-8 py-8">
                     <Link href={`/projects/${title}`}>
@@ -79,12 +82,6 @@ export default function Project({
                             <BsArrowUpRight className="text-xs transition duration-50 ease-in opacity-0 group-hover:opacity-100"/>
                         </a>
                     </Link>
-                </div>
-                <div className="hidden lg:flex bg-white items-end justify-end absolute bottom-0 right-0 transform translate-x-24">
-                    <Image src={`/images/lg-screen.svg`}
-                            alt="man thinking next to laptop"
-                            width={450}
-                            height={225}/>
                 </div>
             </div>
         </div>

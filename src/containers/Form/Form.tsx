@@ -72,7 +72,7 @@ export default function Form(): React.ReactElement {
     return (
         <form
         method="POST"
-        action=""
+        action="https://formspree.io/f/mzbkjarl"
         className="flex flex-col w-full max-w-xl mx-auto mb-24 capitalize"
         data-testid="form"
         >   

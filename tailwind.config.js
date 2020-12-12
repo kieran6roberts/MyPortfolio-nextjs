@@ -4,7 +4,7 @@ module.exports = {
       purgeLayersByDefault: true
     },
     theme: {
-      fontSize:{
+      fontSize: {
         xxxs: "var(--text-3xs)",
         xxs: "var(--text-2xs)",
         xs: "var(--text-xs)",
@@ -16,6 +16,9 @@ module.exports = {
         xxxl: "var(--text-3xl)",
       },
       extend: {
+        fontFamily: {
+          pri: "var(--font-pri)",
+        },
         textColor: {
           pri: "var(--color-pri)",
           sec: "var(--color-sec)",
@@ -39,9 +42,11 @@ module.exports = {
           offScreen: "var(--off-screen)"
         },
         height: {
-          450: "450px",
-          halfScreen: "50vh"
+          hero: "500px"
         },
+        listStyleType: {
+          circle: "var(--list-style)"
+        }
       },
     },
     variants: {},
