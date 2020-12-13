@@ -15,7 +15,7 @@ export default function Contact(): React.ReactElement {
                 initial={{ scale: 0.5}}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5}}>
-                <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
+                <h1 className="text-lg text-center font-bold text-dark capitalize pb-3">
                     Get in touch with me.
                 </h1>
                 </m.div>

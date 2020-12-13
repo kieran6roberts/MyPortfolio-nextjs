@@ -9,7 +9,7 @@ export default function Hero(): React.ReactElement {
                 <m.div layout id="hero"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 1.2 }}
                   className="hero"
                   layoutId="hero">
                     <Image src="/images/hero.png"
@@ -21,7 +21,7 @@ export default function Hero(): React.ReactElement {
                 </m.div>
             </div>
             <div className="relative h-4/6 flex flex-col justify-start items-center sm:justify-end sm:items-end text-center pt-4">
-                <h1 className="bg-white bg-opacity-80 text-lg text-dark font-bold uppercase px-2 rounded">
+                <h1 className="bg-white bg-opacity-80 text-lg text-dark font-bold uppercase pl-2 rounded">
                     <VscSymbolNamespace className="relative inline-block align-middle bottom-0.5 mr-4"/>
                     front-end developer
                 </h1>

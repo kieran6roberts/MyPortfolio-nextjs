@@ -23,12 +23,12 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
     return (
         <div className="flex flex-col justify-between font-mono">
             <section className="relative z-50">
-            <svg className="block fixed bottom-8 right-4 h-12 w-12" 
+            <svg className="block fixed bottom-8 md:bottom-16 right-0 md:right-12 h-12 w-12" 
             viewBox="0 0 60 60">
                 <m.path
                 fill="none"
                 strokeWidth="4"
-                stroke="purple"
+                stroke="black"
                 strokeDasharray="0 1"
                 d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
                 style={{
@@ -42,7 +42,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 <m.path
                 fill="none"
                 strokeWidth="5"
-                stroke="purple"
+                stroke="white"
                 d="M14,26 L 22,33 L 35,16"
                 initial={false}
                 strokeDasharray="0 1"
@@ -59,7 +59,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <div className="flex items-center py-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
-                                    <a className="flex align-center">
+                                    <a className="flex align-center focus:ring-3 focus:ring-orange-300">
                                         <Image
                                         src="/images/k.svg"
                                         alt="logo of the letter k"

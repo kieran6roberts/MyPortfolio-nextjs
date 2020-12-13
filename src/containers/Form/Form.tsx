@@ -1,9 +1,10 @@
 import * as React from "react";
+import { VscCheck } from "react-icons/vsc";
 
 interface INPUT_VALUES {
     name: string,
     email: string,
-    message: string
+    message: string,
 }
 
 export default function Form(): React.ReactElement {
@@ -17,7 +18,8 @@ export default function Form(): React.ReactElement {
 
     const [ inputValues, setInputValues ] = React.useState(INIT_FORM_VALUES);
     const [ submitting, setSubmitting ] = React.useState(false);
-    const [ errors, setErrors ] = React.useState({});
+    const [ disabled, setDisabled ] = React.useState(submitDisabled);
+    const [ errors, setErrors ] = React.useState(INIT_FORM_VALUES);
 
     function validateUserInput(values: INPUT_VALUES) {
         let errors: any = {};
@@ -52,9 +54,28 @@ export default function Form(): React.ReactElement {
         });
     };
 
-    function submitHandler(event: React.FormEvent): void {
+    async function submitHandler(event: React.FormEvent) {
+        let error: string;
         event.preventDefault();
-        setSubmitting(true);
+        setSubmitting(submitDisabled);
+        if (!disabled) {
+            try {
+                const response = await fetch("https://formspree.io/f/mzbkjarl", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json',
+                      },
+                    mode: "cors",
+                    body: JSON.stringify(inputValues)
+                });
+                const data = response.json();
+            }
+                catch(error) {
+                    error = "Something went wrong!";
+                    console.log(error);
+                }
+            } 
+        setInputValues(INIT_FORM_VALUES);
     };
 
     function checkForEmptyObject(obj: any): boolean {
@@ -63,11 +84,9 @@ export default function Form(): React.ReactElement {
 
     React.useEffect(() => {
         setErrors(validateUserInput(inputValues));
-
         if (checkForEmptyObject(errors)) submitDisabled = false;
         else submitDisabled = true;
-        console.log(errors);
-        console.log(submitDisabled)
+        setDisabled(submitDisabled);
     }, [ inputValues ]);
 
     return (
@@ -78,40 +97,62 @@ export default function Form(): React.ReactElement {
         </p>
         }
         <form
-        method="POST"
         onSubmit={submitHandler}
-        action="https://formspree.io/f/mzbkjarl"
-        className="flex flex-col w-full max-w-xl mx-auto capitalize p-1"
+        className="w-full max-w-xxl mx-auto p-1"
         data-testid="form"
         >   
-            <label
-            htmlFor="name"
-            className="mb-1">
-                name <span className="text-pri">*</span>
-            </label>
-            <input id="name"
-            type="text"
-            name="name"
-            value={inputValues.name}
-            onChange={inputChangeHandler}
-            placeholder="kieran"
-            className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
-            <label
-            htmlFor="email"
-            className="mb-1">
-                email <span className="text-pri">*</span>
-            </label>
-            <input id="email"
-            type="email"
-            name="email"
-            value={inputValues.email}
-            onChange={inputChangeHandler}
-            placeholder="kieran6roberts@gmail.com"
-            className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
+            <div className="lg:flex lg:justify-between lg:items-center">
+                <div className="lg:flex-auto lg:mr-2">
+                <label
+                htmlFor="name"
+                className="">
+                    Name
+                    {!submitting && !errors.name && 
+                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    }
+                    <p className={`${!submitting && errors.name ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
+                        Name is required
+                    </p>
+                </label>
+                <input id="name"
+                type="text"
+                name="name"
+                value={inputValues.name}
+                onChange={inputChangeHandler}
+                placeholder="kieran"
+                className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                </div>
+                <div className="lg:flex-auto lg:ml-2">
+                <label
+                htmlFor="email"
+                className="mb-1">
+                    Email
+                    {!submitting && !errors.email && 
+                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    }
+                    <p className={`${!submitting && errors.email ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
+                        Valid email is required
+                    </p>
+                </label>
+                <input id="email"
+                type="email"
+                name="email"
+                value={inputValues.email}
+                onChange={inputChangeHandler}
+                placeholder="kieran6roberts@gmail.com"
+                className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                </div>
+            </div>
             <label
             htmlFor="message"
             className="mb-1">
-                message <span className="text-pri">*</span>
+                Message
+                {!submitting && !errors.message && 
+                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    }
+                <p className={`${!submitting && errors.message ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
+                    Message must be at least 20 characters
+                </p>
             </label>
             <textarea 
             name="message" 
@@ -120,14 +161,14 @@ export default function Form(): React.ReactElement {
             onChange={inputChangeHandler}
             rows="3"
             placeholder="..."
-            className="py-1 px-2 mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-pri" />
+            className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
             <input
             id="submit"
             type="submit"
             name="submit"
             value="send"
-            disabled={submitDisabled}
-            className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} m-auto w-2/4 py-1 px-2 font-bold uppercase`} />
+            disabled={disabled}
+            className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} block m-auto w-2/4 max-w-xl py-1 px-2 font-bold uppercase focus:outline-none focus:ring-3 focus:ring-yellow-400`} />
         </form>
         </>
     )
