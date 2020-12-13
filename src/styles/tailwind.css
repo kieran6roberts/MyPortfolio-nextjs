@@ -6,7 +6,7 @@
         --color-dark: rgb(0, 15, 44);
         --color-pri: #956af8;
         --color-sec: #2a50ca;
-        --color-acc: #f5b536;
+        --color-acc: #06bcc9;
       
         --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
         --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
@@ -19,7 +19,6 @@
         --text-3xl: clamp(7rem, 11vw, 24rem);
       
         --off-screen: 250vw;
-        --list-style: circle;
       }
       
         html {

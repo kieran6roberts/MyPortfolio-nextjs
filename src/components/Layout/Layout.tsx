@@ -11,28 +11,28 @@ export type LayoutProps = {
 }
     
 export default function Layout({ children }: LayoutProps): React.ReactElement {
-    const { scrollY } = useViewportScroll();
+    const { scrollYProgress } = useViewportScroll();
     const [ isComplete, setIsComplete ] = React.useState(false);
-    const yRange = useTransform(scrollY, [0, 0.9], [0, 1]);
+    const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
     const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
     
     React.useEffect(() => {
         yRange.onChange(v => setIsComplete(v >= 1));
-        console.log(scrollY);
-    }, [yRange]);
+    }, [yRange, scrollYProgress]);
+
     return (
         <div className="flex flex-col justify-between font-mono">
-            <section className="relative z-10">
-            <svg className="fixed bottom-4 right-4 h-8 w-8" 
+            <section className="relative z-50">
+            <svg className="block fixed bottom-8 right-4 h-12 w-12" 
             viewBox="0 0 60 60">
                 <m.path
                 fill="none"
-                strokeWidth="5"
+                strokeWidth="4"
                 stroke="purple"
                 strokeDasharray="0 1"
                 d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
                 style={{
-                    pathLength: scrollY,
+                    pathLength,
                     rotate: 90,
                     translateX: 5,
                     translateY: 5,
@@ -42,7 +42,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 <m.path
                 fill="none"
                 strokeWidth="5"
-                stroke="black"
+                stroke="purple"
                 d="M14,26 L 22,33 L 35,16"
                 initial={false}
                 strokeDasharray="0 1"
@@ -51,7 +51,9 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
             </svg>
                 <nav className="">
                     <m.div layout 
-                    initial={{}}
+                    initial={{ translateY: -5}}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1}}
                     className="h-1 w-full bg-gradient-to-r from-purple-400 via-yellow-400 to-blue-800"
                     id="style-bar"/>
                         <div className="flex items-center py-8 px-6 md:px-16">
