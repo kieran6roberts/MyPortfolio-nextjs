@@ -39,9 +39,9 @@ export default function Project({
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`}>
                     <m.div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer"
-                        whileHover={{ scale: 1.05, rotate: 2 }}
+                        whileHover={{ scale: 1.02, rotate: 1 }}
                         whileTap={{ rotate: 45, translateY: -200 }}
-                        transition={{ duration: 0.5 }}>
+                        transition={{ duration: 0.9 }}>
                         <div className="absolute top-0 right-0 left-0 bottom-0 bg-purple-400 bg-opacity-90 z-10 transition duration-300 ease-in group-hover:bg-opacity-20"/>
                         <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent animate-pulse" />
                         <Image src={`/images/${image}`}
