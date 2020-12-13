@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
 import { BiMouse } from "react-icons/bi";
 import { VscChevronRight } from "react-icons/vsc";
-import Button, { ButtonProps }from "../Button/Button";
+import { motion as m } from "framer-motion";
+
+import Button from "../Button/Button";
 import SubHeader from "../SubHeader/SubHeader";
 import List from "../List/List";
 
@@ -37,15 +38,18 @@ export default function Project({
             <div className="bg-light px-4">
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`}>
-                    <div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer transform transition duration-300 ease-in-out hover:scale-105">
-                        <div className="absolute top-0 right-0 left-0 bottom-0 bg-purple-400 bg-opacity-90 z-10 transition duration-300 ease-in group-hover:bg-opacity-0"/>
+                    <m.div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer"
+                        whileHover={{ scale: 1.05, rotate: 2 }}
+                        whileTap={{ rotate: 45, translateY: -200 }}
+                        transition={{ duration: 0.5 }}>
+                        <div className="absolute top-0 right-0 left-0 bottom-0 bg-purple-400 bg-opacity-90 z-10 transition duration-300 ease-in group-hover:bg-opacity-20"/>
                         <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent animate-pulse" />
                         <Image src={`/images/${image}`}
                         alt={captions}
                         width={775}
                         height={350}
                         objectFit="cover"/>
-                    </div>
+                    </m.div>
                 </Link>
                 <p className="text-xs italic text-dark text-center mb-8">
                     {captions}

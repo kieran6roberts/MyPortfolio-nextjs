@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { VscSymbolNamespace } from "react-icons/vsc";
 
 export default function Hero(): React.ReactElement {
     return(
         <section className="h-screen">
             <div className="absolute top-32 md:top-20 left-3 md:left-16 right-3 bottom-3">
-                <motion.div layout id="hero"
+                <m.div layout id="hero"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2 }}
@@ -18,7 +18,7 @@ export default function Hero(): React.ReactElement {
                     objectFit="contain"
                     objectPosition="left bottom"
                     priority />
-                </motion.div>
+                </m.div>
             </div>
             <div className="relative h-4/6 flex flex-col justify-start items-center sm:justify-end sm:items-end text-center pt-4">
                 <h1 className="bg-white bg-opacity-80 text-lg text-dark font-bold uppercase px-2 rounded">

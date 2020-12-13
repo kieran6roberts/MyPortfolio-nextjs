@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { request } from "graphql-request";
 import Image from "next/image";
+import { motion as m } from "framer-motion";
 import { VscCalendar, 
   VscFiles, 
   VscLibrary, 
@@ -8,7 +9,7 @@ import { VscCalendar,
 
 import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../../src/queries/queries";
 import { Projects } from "../index";
-import Button, { ButtonProps }from "../../src/components/Button/Button";
+import Button from "../../src/components/Button/Button";
 import { generateKey } from "../../src/components/Card/Card";
 import PageHead from "src/components/PageHead/PageHead";
 
@@ -19,6 +20,10 @@ export default function Project({ projects: project }: Projects) {
       <PageHead title={`kierandev | ${project[0].title}`}
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
             <section className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden">
+              <m.div layout
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }} >
                 <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
                     {project[0].title}
                 </h1>
@@ -33,6 +38,8 @@ export default function Project({ projects: project }: Projects) {
                     </li>
                     )}
                 </ul>
+
+              </m.div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 2xl:my-16">
                     <Button link={project[0].siteLink}
                     color="bg-light text-dark mb-4 md:mb-0 md:mr-2">

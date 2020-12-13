@@ -54,8 +54,8 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     initial={{ translateY: -5}}
                     animate={{ translateY: 0 }}
                     transition={{ duration: 1}}
-                    className="h-1 w-full bg-gradient-to-r from-purple-400 via-yellow-400 to-blue-800"
-                    id="style-bar"/>
+                    className="h-2 w-full bg-gradient-to-r from-purple-400 to-blue-800"
+                    layoutId="style-bar"/>
                         <div className="flex items-center py-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
