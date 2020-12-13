@@ -27,7 +27,8 @@ export type Projects = {
         overview?: string[],
         stackDecision?: string[],
         outcome?: string[],
-        publishDate: string
+        publishDate: string,
+        fullPageImage: string
     }[]
 };
 

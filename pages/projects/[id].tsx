@@ -50,7 +50,6 @@ export default function Project({ projects: project }: Projects) {
                         github repo
                     </Button>
                   </div>
-
               <div className="relative bg-light px-3 py-16 my-8 overflow-hidden">
                 <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
                   <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
@@ -60,11 +59,11 @@ export default function Project({ projects: project }: Projects) {
                 </div>
                   {project[0].overview && project[0].overview.map((paragraph: string): React.ReactChild => 
                   <p  key={generateKey(paragraph)}
-                  className="text-sm text-dark p-4 xl:p-8 2xl:px-32">
+                  className="text-sm text-dark py-3 px-4 2xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
-                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
+                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 mt-8 pb-0.5">
                     <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
                       <VscLibrary className="inline-block text-md text-sec mr-4" />
                       stack choice
@@ -72,11 +71,11 @@ export default function Project({ projects: project }: Projects) {
                   </div>
                 {project[0].stackDecision && project[0].stackDecision.map((paragraph: string) => 
                   <p key={generateKey(paragraph)}
-                  className="text-sm text-dark p-4 xl:p-8 2xl:px-32">
+                  className="text-sm text-dark py-3 px-4 2xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
-                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
+                  <div className="bg-gradient-to-r from-purple-400 to-purple-600 mt-8 pb-0.5">
                     <h2 className="bg-white text-md text-dark uppercase font-bold pl-4">
                       <VscVmActive className="inline-block text-md text-sec mr-4" />
                       outcome
@@ -84,10 +83,16 @@ export default function Project({ projects: project }: Projects) {
                   </div>
                 {project[0].outcome && project[0].outcome.map((paragraph: string) => 
                   <p key={generateKey(paragraph)}
-                  className="text-sm text-dark p-4 xl:p-8 2xl:px-32">
+                  className="text-sm text-dark py-3 px-4 2xl:p-8 2xl:px-32">
                     {paragraph}
                   </p>
                     )}
+              </div>
+              <div className="w-max h-max m-auto border-2 border-pri mt-8 p-1">
+                <Image src={`/images/${project[0].fullPageImage.fileName}`}
+                alt="full screenshot of saved recipes page"
+                height={1400}
+                width={600} />
               </div>
             </section>
         </>
