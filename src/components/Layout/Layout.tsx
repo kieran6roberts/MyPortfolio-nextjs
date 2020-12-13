@@ -50,12 +50,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 />
             </svg>
                 <nav className="">
-                    <m.div layout 
-                    initial={{ translateY: -5}}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.3}}
-                    className="h-1 w-full bg-gradient-to-r from-purple-400 to-blue-800"
-                    layoutId="style-bar"/>
+                    <div className="h-1 w-full bg-gradient-to-r from-purple-400 to-blue-800"/>
                         <div className="flex items-center py-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
@@ -74,6 +69,10 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <a href="https://github.com/kieran6roberts"  
                         className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125">
                             <AiFillGithub />
+                        </a>
+                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125">
+                            <FaLinkedinIn />
                         </a>
                         <ul className="flex ml-auto font-bold capitalize">
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
