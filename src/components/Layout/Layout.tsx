@@ -54,7 +54,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <div className="flex items-center py-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
-                                    <a className="flex align-center focus:ring-3 focus:ring-orange-300">
+                                    <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         <Image
                                         src="/images/k.svg"
                                         alt="logo of the letter k"
@@ -67,17 +67,17 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             Kieran Roberts
                         </span>
                         <a href="https://github.com/kieran6roberts"  
-                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125">
+                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
-                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125">
+                        className="inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
                         </a>
                         <ul className="flex ml-auto font-bold capitalize">
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="group bg-pri block relative text-xxs text-light text-bold py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri">
+                                    <a className="group bg-pri block relative text-xxs text-light text-bold py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects
                                         <RiComputerLine className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
@@ -85,7 +85,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             </li>
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="group bg-pri block relative text-xxs text-light py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri">
+                                    <a className="group bg-pri block relative text-xxs text-light py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         contact me
                                         <AiOutlinePhone className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
@@ -102,13 +102,13 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 <ul className="flex flex-col items-center">
                     <li className="mb-4">
                         <a href="https://github.com/kieran6roberts"  
-                        className="text-md">
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="mb-4">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
-                        className="text-md">
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>

@@ -18,7 +18,7 @@ export type Projects = {
         siteLink?: string,
         githubLink?: string,
         captions: string[],
-        images: {fileName: string}[],
+        images: { fileName: string }[],
         stackImages: {
           __typename: string,
           fileName: string}[],
@@ -28,7 +28,8 @@ export type Projects = {
         stackDecision?: string[],
         outcome?: string[],
         publishDate: string,
-        fullPageImage: string
+        fullPageImage: { fileName: string }
+        fullPageImageSize: [ string, string ]
     }[]
 };
 
@@ -155,5 +156,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       projects
     },
+    revalidate: 1
   }
 };

@@ -29,6 +29,7 @@ export const GET_SINGLE_PROJECT = gql`
       fullPageImage {
         fileName
       }
+      fullPageImageSize
     }
   }
   `;

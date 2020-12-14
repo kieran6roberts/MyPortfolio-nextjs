@@ -37,19 +37,19 @@ export default function Project({
         <div className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden shadow">
             <div className="bg-light px-4">
                 <SubHeader title={title}/>
-                <Link href={`projects/${title}`}>
-                    <m.div className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer"
+                <Link href={`projects/${title}`} passHref>
+                    <m.a className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-400"
                         whileHover={{ scale: 1.02, rotate: 1 }}
                         whileTap={{ translateY: -300, rotate: 45 }}
                         transition={{ duration: 0.6 }}>
-                        <div className="absolute top-0 right-0 left-0 bottom-0 bg-purple-400 bg-opacity-90 z-10 transition duration-300 ease-in group-hover:bg-opacity-20"/>
-                        <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent animate-pulse" />
-                        <Image src={`/images/${image}`}
-                        alt={captions}
-                        width={775}
-                        height={350}
-                        objectFit="cover"/>
-                    </m.div>
+                            <div className="absolute top-0 right-0 left-0 bottom-0 bg-purple-400 bg-opacity-90 z-10 transition duration-300 ease-in group-hover:bg-opacity-20"/>
+                            <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent animate-pulse" />
+                            <Image src={`/images/${image}`}
+                            alt={captions}
+                            width={775}
+                            height={350}
+                            objectFit="cover"/>
+                    </m.a>
                 </Link>
                 <p className="text-xs italic text-dark text-center mb-8">
                     {captions}
@@ -80,7 +80,7 @@ export default function Project({
                 <List images={stackImages} names={stackNames} />
                 <div className="w-max h-max my-16 bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                     <Link href={`/projects/${title}`}>
-                        <a className={`group flex items-center bg-pri w-max flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-3 cursor-pointer transition duration-100 ease-in hover:bg-light hover:text-dark`}>
+                        <a className={`group flex items-center bg-pri w-max flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-3 cursor-pointer transition duration-100 ease-in hover:bg-light hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
                             <span className="block pr-4">
                                 case-study
                             </span>
