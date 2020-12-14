@@ -38,7 +38,7 @@ export default function Project({ projects: project }: Projects) {
       <m.div layout
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }} >
+      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }} >
           <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
               {project[0].title}
           </h1>

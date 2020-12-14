@@ -57,7 +57,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
                                     <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                                        <div className="sm:hidden">
+                                        <div className="relative top-1 sm:hidden">
                                             <Image
                                             src="/images/k.svg"
                                             alt="logo of the letter k"
@@ -81,17 +81,17 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <ul className="flex ml-auto font-bold capitalize">
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="group bg-pri block relative text-xxs text-light text-bold py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light text-bold py-1 px-2 sm:py-2 sm:px-4 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects
-                                        <RiComputerLine className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <RiComputerLine className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="group bg-pri block relative text-xxs text-light py-2 px-4 md:py-3 md:px-6 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light py-1 px-2 sm:py-2 sm:px-4 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         contact me
-                                        <AiOutlinePhone className="absolute top-0 left-0 text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <AiOutlinePhone className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>

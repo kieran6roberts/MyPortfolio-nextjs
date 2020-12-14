@@ -1,8 +1,10 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { request } from "graphql-request";
 import { motion as m, useAnimation } from "framer-motion";
-import { VscVmActive, VscChevronDown } from "react-icons/vsc";
+import { VscVmActive, VscChevronDown, VscFoldUp  } from "react-icons/vsc";
 import { useInView } from "react-intersection-observer";
 
 import { GET_HOME_PROJECTS } from "../src/queries/queries";
@@ -37,6 +39,8 @@ export default function Home({ projects }: Projects): React.ReactElement {
   const { ref, inView, entry } = useInView({ threshold: 0.1, triggerOnce: true });
   const animation = useAnimation();
 
+  const router = useRouter();
+
   const regVariant = {
     visible: {
       opacity: 1,
@@ -62,6 +66,22 @@ export default function Home({ projects }: Projects): React.ReactElement {
       opacity: 0,
     }
   };
+
+  function mapProjectsToElements(projects: any) {
+    return projects.map((project: any) => 
+      <li key={`${project.__typename}${project.title}`} >
+        <Project
+        title={project.title} 
+        image={project.images[0].fileName}
+        captions={project.captions[0]}
+        description={project.description}
+        siteLink={project.siteLink}
+        githubLink={project.githubLink}
+        stackImages={project.stackImages}
+        stackNames={project.stackNames} />
+      </li>
+      )
+    };
 
   React.useEffect(() => {
     if (inView) animation.start("visible");
@@ -120,22 +140,18 @@ export default function Home({ projects }: Projects): React.ReactElement {
               </m.p>
           </m.div>
         </section>
-        <section className="">
-          <ul className="">
-            {projects && projects.map(project => 
-            <li key={`${project.__typename}${project.title}`} >
-              <Project
-              title={project.title} 
-              image={project.images[0].fileName}
-              captions={project.captions[0]}
-              description={project.description}
-              siteLink={project.siteLink}
-              githubLink={project.githubLink}
-              stackImages={project.stackImages}
-              stackNames={project.stackNames} />
-            </li>
-            )}
+        <section>
+          <ul>
+            {projects && mapProjectsToElements(projects)}
           </ul>
+          <Link href={router.pathname} passHref>
+              <m.a className="block my-16 2xl:my-32 m-auto w-max"
+              whileHover={{ scale: 1.02, translateY: -5 }}
+              whileTap={{ translateY: -30 }}
+              transition={{ duration: 0.5 }}>
+                  <VscFoldUp className="text-lg text-pri animate-pulse" />
+              </m.a>
+          </Link>
       </section>
     </div>
     </>

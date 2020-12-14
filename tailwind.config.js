@@ -3,6 +3,13 @@ module.exports = {
       removeDeprecatedGapUtilities: true,
       purgeLayersByDefault: true
     },
+    purge: {
+      enabled: true,
+      content: [
+      "./src/components/**/*.tsx", 
+      "./src/containers/**/*.tsx", 
+      "./pages/**/*.tsx"],
+    },
     theme: {
       fontSize: {
         xxxs: "var(--text-3xs)",
@@ -20,7 +27,7 @@ module.exports = {
           pri: "var(--font-pri)",
         },
         screens: {
-          ipad: {"raw": "(max-height: 800px),(min-width:800px)"}
+          tall: {"raw": "(min-height: 1000px),(max-width:700)"}
         },
         textColor: {
           pri: "var(--color-pri)",

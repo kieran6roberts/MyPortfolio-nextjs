@@ -38,7 +38,7 @@ export default function Project({
             <div className="bg-light px-4">
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`} passHref>
-                    <m.a className="group relative flex justify-center w-max-40 xl:w-max m-auto p-1 mb-8 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-400"
+                    <m.a className="group relative flex justify-center max-w-screen-2xl 2xl:w-max m-auto p-1 mb-8 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-400"
                         whileHover={{ scale: 1.02, rotate: 1 }}
                         whileTap={{ translateY: -300, rotate: 45 }}
                         transition={{ duration: 0.6 }}>
@@ -46,15 +46,14 @@ export default function Project({
                             <BiMouse className="absolute z-20 h-12 w-12 top-2/4 -mt-6 text-md text-light transition duration-150 ease-in group-hover:text-transparent animate-pulse" />
                             <Image src={`/images/${image}`}
                             alt={captions}
-                            width={775}
-                            height={350}
-                            objectFit="cover"/>
+                            height={450}
+                            width={900}/>
                     </m.a>
                 </Link>
                 <p className="text-xs italic text-dark text-center mb-8">
                     {captions}
                 </p>
-                <div className="flex flex-col md:flex-row py-8 2xl:py-32">
+                <div className="flex flex-col 2xl:justify-center md:flex-row py-8 2xl:py-32">
                     <Button link={siteLink}
                     color="bg-light text-dark mb-2 md:mb-0 md:mr-4">
                         visit website
