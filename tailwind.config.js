@@ -19,6 +19,9 @@ module.exports = {
         fontFamily: {
           pri: "var(--font-pri)",
         },
+        screens: {
+          ipad: {"raw": "(max-height: 800px),(min-width:800px)"}
+        },
         textColor: {
           pri: "var(--color-pri)",
           sec: "var(--color-sec)",

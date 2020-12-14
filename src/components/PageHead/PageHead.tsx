@@ -1,25 +1,40 @@
 import Head from "next/head";
 
-export type PageHeadProps = { title: string, description: string };
+export type PageHeadProps = { 
+    title: string, 
+    description: string,
+    currentURL: string 
+};
 
-export default function PageHead({ title, description }: PageHeadProps): React.ReactElement {
+export default function PageHead({ 
+    title, 
+    description, 
+    currentURL }: PageHeadProps): React.ReactElement {
     return(
         <Head>
             <title key="title">{title}</title>
             <meta charSet="UTF-8" key="charset" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
             <meta name="description" content={description} key="description" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:site_name" content={title} />
-            <link rel="apple-touch-icon" sizes="180x180" href="/public/head/apple-touch-icon.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/public/head/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/public/head/favicon-16x16.png" />
-            <link rel="mask-icon" href="/public/head/safari-pinned-tab.svg" color="#000000" />
-            <link rel="shortcut icon" href="/favicon.ico" />
+
+            <meta name="twitter:card" content="summary" key="twcard" />
+            <meta name="twitter:creator" content="@Kieran6dev" key="twhandle" />
+
+            <meta property="og:title" content={title} key="ogtitle"/>
+            <meta property="og:description" content={description} key="ogdescription" />
+            <meta property="og:type" content="website" key="ogtype" />
+            <meta property="og:url" content={currentURL} key="ogurl" />
+            <meta property="og:image" content="./images/home-screenshot.jpg" key="ogimage" />
+            <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
+            
+            <link rel="apple-touch-icon" sizes="180x180" href="./images/head/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="./images/head/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="./images/head/favicon-16x16.png" />
+            <link rel="mask-icon" href="./images/head/safari-pinned-tab.svg" color="#000000" />
+            <link rel="shortcut icon" href="./images/head/favicon.ico" />
+
             <meta name="msapplication-TileColor" content="#ffffff" />
-            <meta name="msapplication-config" content="/public/head/browserconfig.xml" />
+            <meta name="msapplication-config" content="./images/head/browserconfig.xml" />
             <meta name="theme-color" content="#ffffff" />
         </Head>
     )

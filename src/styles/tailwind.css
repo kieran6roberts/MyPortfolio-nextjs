@@ -6,12 +6,12 @@
         --color-dark: rgb(0, 15, 44);
         --color-pri: #956af8;
         --color-sec: #2a50ca;
-        --color-acc: #06bcc9;
+        --color-acc: #ffb84d;
       
         --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
         --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
-        --text-xs: clamp(1rem, 1.2vw, 4rem);
-        --text-sm: clamp(1.1rem, 1.3vw, 7rem);
+        --text-xs: clamp(1rem, 1.2vw, 2.9rem);
+        --text-sm: clamp(1.3rem, 1.6vw, 3rem);
         --text-md: clamp(1.4rem, 2vw, 3rem);
         --text-lg: clamp(2rem, 3.4vw, 3.8rem);
         --text-xl: clamp(2.8rem, 3.5vw, 5.5rem);

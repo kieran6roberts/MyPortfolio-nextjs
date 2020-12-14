@@ -12,7 +12,8 @@ export default function Hero(): React.ReactElement {
                   transition={{ duration: 0.5 , delay: 0.5 }}
                   className="hero"
                   layoutId="hero">
-                    <Image src="/images/hero.png"
+                    <Image 
+                    src="/images/hero.webp"
                     alt="stylized selfie"
                     layout="fill"
                     objectFit="contain"
@@ -20,7 +21,7 @@ export default function Hero(): React.ReactElement {
                     priority />
                 </m.div>
             </div>
-            <m.div className="relative h-4/6 flex flex-col justify-start items-center sm:justify-end sm:items-end text-center pt-4"
+            <m.div className="relative h-4/6 flex flex-col justify-start items-center md:justify-end md:items-end text-center pt-4"
             layout
             initial={{ opacity: 0, rotate: 30, scale: 0.8 }}
             animate={{ opacity: 1, rotate: 0, scale: 1 }}

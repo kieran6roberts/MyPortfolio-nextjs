@@ -71,7 +71,9 @@ export default function Home({ projects }: Projects): React.ReactElement {
   return (
     <>
     <PageHead title="Kierandev | Home" 
-    description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"/>
+    description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"
+    currentURL="https://kieranroberts.dev"
+    />
     <div className="">
         <Hero />
         <section className="relative z-10">

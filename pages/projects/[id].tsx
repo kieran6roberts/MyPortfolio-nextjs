@@ -25,14 +25,16 @@ export default function Project({ projects: project }: Projects) {
         </p>
       )
     };
+    
     const router = useRouter();
 
     return (
       <>
       <PageHead title={`kierandev | ${project[0].title}`}
-      description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."/>
+      description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."
+      currentURL={`https://kieranroberts.dev${router.asPath}`}/>
       <section id="case-study"
-      className="mb-20 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden">
+      className="mb-20 md:px-4 lg:px-16 md:mx-6 2xl:mt-20 bg-light overflow-hidden">
       <m.div layout
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
@@ -52,7 +54,7 @@ export default function Project({ projects: project }: Projects) {
               )}
           </ul>
       </m.div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 2xl:my-16">
+        <div className="flex flex-col md:flex-row justify-center items-center my-16 2xl:my-16">
             <Button link={project[0].siteLink}
             color="bg-light text-dark mb-4 md:mb-0 md:mr-2">
                 visit website
@@ -62,7 +64,7 @@ export default function Project({ projects: project }: Projects) {
                 github repo
             </Button>
         </div>
-        <div className="flex flex-col justify-items items-center w-full h-max m-auto border-2 border-pri mt-8 p-1">
+        <div className="flex flex-col justify-items items-center w-full lg:w-max h-max m-auto border-2 border-pri p-1">
             <Image src={`/images/${project[0].fullPageImage.fileName}`}
             alt="full screenshot of project"
             height={`${project[0].fullPageImageSize[1]}`}

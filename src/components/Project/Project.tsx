@@ -34,7 +34,7 @@ export default function Project({
     stackNames }: ProjectProps): React.ReactElement {
 
     return (
-        <div className="mb-32 md:px-20 lg:px-32 md:mx-12 bg-light overflow-hidden shadow">
+        <div className="mb-32 md:px-4 lg:px-12 md:mx-6 bg-light overflow-hidden shadow">
             <div className="bg-light px-4">
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`} passHref>
@@ -54,7 +54,7 @@ export default function Project({
                 <p className="text-xs italic text-dark text-center mb-8">
                     {captions}
                 </p>
-                <div className="flex flex-col md:flex-row py-8">
+                <div className="flex flex-col md:flex-row py-8 2xl:py-32">
                     <Button link={siteLink}
                     color="bg-light text-dark mb-2 md:mb-0 md:mr-4">
                         visit website
@@ -64,23 +64,23 @@ export default function Project({
                         github repo
                     </Button>
                 </div>
-                <div className="bg-gradient-to-b pl-1 from-purple-400 via-purple-600 to-yellow-400">
-                    <h4 className="bg-light text-md text-sec uppercase my-8 xxl:my-24 pl-4">
+                <div className="bg-gradient-to-b pl-1 from-purple-400 via-purple-600 to-blue-800">
+                    <h4 className="bg-light text-md text-sec uppercase my-8 2xl:my-24 pl-4">
                         project description
                     </h4>
                 </div>
                 <p className="text-xs text-dark py-2">
                     {description}
                 </p>
-                <div className="bg-gradient-to-b pl-1 from-purple-400 via-purple-600 to-yellow-400">
-                    <h4 className="bg-light text-md text-sec uppercase my-8 xxl:my-24 pl-4">
+                <div className="bg-gradient-to-b pl-1 from-purple-400 via-purple-600 to-blue-800">
+                    <h4 className="bg-light text-md text-sec uppercase my-8 2xl:my-24 pl-4">
                         tech stack
                     </h4>
                 </div>
                 <List images={stackImages} names={stackNames} />
                 <div className="w-max h-max my-16 bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                     <Link href={`/projects/${title}`}>
-                        <a className={`group flex items-center bg-pri w-max flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-3 cursor-pointer transition duration-100 ease-in hover:bg-light hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
+                        <a className={`group flex items-center bg-pri w-max flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-3 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-light hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
                             <span className="block pr-4">
                                 case-study
                             </span>

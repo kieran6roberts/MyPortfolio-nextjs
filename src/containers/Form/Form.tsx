@@ -5,7 +5,9 @@ interface INPUT_VALUES {
     name: string,
     email: string,
     message: string,
-}
+};
+
+type INPUT_TYPES = HTMLInputElement | HTMLTextAreaElement;
 
 export default function Form(): React.ReactElement {
     const INIT_FORM_VALUES = {
@@ -46,7 +48,7 @@ export default function Form(): React.ReactElement {
             return errors;
         };
 
-    function inputChangeHandler(event: React.ChangeEvent<HTMLInputElement>): void {
+    function inputChangeHandler(event: React.ChangeEvent<INPUT_TYPES>): void {
         const { name, value } = event.target;
         setInputValues({
             ...inputValues,
@@ -98,14 +100,14 @@ export default function Form(): React.ReactElement {
         }
         <form
         onSubmit={submitHandler}
-        className="w-full max-w-xxl mx-auto p-1"
+        className="w-full mx-auto p-1 2xl:mt-20"
         data-testid="form"
         >   
             <div className="lg:flex lg:justify-between lg:items-center">
                 <div className="lg:flex-auto lg:mr-2">
                 <label
                 htmlFor="name"
-                className="">
+                className="text-sm text-dark">
                     Name
                     {!submitting && !errors.name && 
                     <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
@@ -120,12 +122,12 @@ export default function Form(): React.ReactElement {
                 value={inputValues.name}
                 onChange={inputChangeHandler}
                 placeholder="kieran"
-                className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
                 </div>
                 <div className="lg:flex-auto lg:ml-2">
                 <label
                 htmlFor="email"
-                className="mb-1">
+                className="mb-1 text-sm text-dark">
                     Email
                     {!submitting && !errors.email && 
                     <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
@@ -140,12 +142,12 @@ export default function Form(): React.ReactElement {
                 value={inputValues.email}
                 onChange={inputChangeHandler}
                 placeholder="kieran6roberts@gmail.com"
-                className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
                 </div>
             </div>
             <label
             htmlFor="message"
-            className="mb-1">
+            className="mb-1 text-dark text-sm">
                 Message
                 {!submitting && !errors.message && 
                     <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
@@ -159,16 +161,16 @@ export default function Form(): React.ReactElement {
             id="message"
             value={inputValues.message}
             onChange={inputChangeHandler}
-            rows="3"
+            rows={3}
             placeholder="..."
-            className="py-1 px-2 w-full mb-8 text-black ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+            className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
             <input
             id="submit"
             type="submit"
             name="submit"
             value="send"
             disabled={disabled}
-            className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} block m-auto w-2/4 max-w-xl py-1 px-2 font-bold uppercase focus:outline-none focus:ring-3 focus:ring-yellow-400`} />
+            className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} block text-sm m-auto w-2/4 max-w-xl py-1 px-2 font-bold uppercase focus:outline-none focus:ring-3 focus:ring-yellow-400`} />
         </form>
         </>
     )
