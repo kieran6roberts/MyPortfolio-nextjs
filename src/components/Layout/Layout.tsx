@@ -71,10 +71,12 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                                 </Link>
                             </div>
                         <a href="https://github.com/kieran6roberts"  
+                        aria-label="my github page"
                         className="hidden sm:inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
-                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
+                        aria-label="my linked-in page"  
                         className="hidden sm:inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
                         </a>

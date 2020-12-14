@@ -39,6 +39,7 @@ export default function Project({
                 <SubHeader title={title}/>
                 <Link href={`projects/${title}`} passHref>
                     <m.a className="group relative flex justify-center max-w-screen-2xl 2xl:w-max m-auto p-1 mb-8 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-400"
+                    aria-label="project case-study"
                         whileHover={{ scale: 1.02, rotate: 1 }}
                         whileTap={{ translateY: -300, rotate: 45 }}
                         transition={{ duration: 0.6 }}>
@@ -83,7 +84,8 @@ export default function Project({
                             <span className="block pr-4">
                                 case-study
                             </span>
-                            <VscChevronRight className="text-xs transition duration-50 ease-in opacity-0 group-hover:opacity-100"/>
+                            <VscChevronRight className="text-xs transition duration-50 ease-in opacity-0 group-hover:opacity-100"
+                            aria-label="top of the page"/>
                         </a>
                     </Link>
                 </div>

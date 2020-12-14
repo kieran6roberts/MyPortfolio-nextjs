@@ -21,13 +21,15 @@ export default function Contact(): React.ReactElement {
                 </h1>
                 <ul className="flex sm:hidden items-center justify-center">
                     <li className="">
-                        <a href="https://github.com/kieran6roberts"  
+                        <a href="https://github.com/kieran6roberts"
+                        aria-label="my github page"  
                         className="block text-md mx-4 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-pri transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
-                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
+                        aria-label="my linked-in page"  
                         className="block text-md mx-4 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-pri transform transition duration-150 ease hover:scale-125"/>
                         </a>

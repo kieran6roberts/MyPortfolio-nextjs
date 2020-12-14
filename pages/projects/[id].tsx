@@ -105,11 +105,12 @@ export default function Project({ projects: project }: Projects) {
             {project[0].outcome && mapItemsToElements(project[0].outcome)}
         </div>
         <Link href={router.asPath} passHref>
-            <m.a className="block mt-16 m-auto w-max"
+            <m.a className="block mt-16 m-auto w-max focus:outline-none focus:ring-4 focus:ring-yellow-400"
             whileHover={{ scale: 1.02, translateY: -5 }}
             whileTap={{ translateY: -30 }}
             transition={{ duration: 0.5 }}>
-                <VscFoldUp className="text-lg text-pri animate-pulse" />
+                <VscFoldUp className="text-lg text-pri animate-pulse"
+                aria-label="top of the page" />
             </m.a>
         </Link>
       </section>

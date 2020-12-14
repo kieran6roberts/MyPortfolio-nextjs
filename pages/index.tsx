@@ -145,7 +145,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
             {projects && mapProjectsToElements(projects)}
           </ul>
           <Link href={router.pathname} passHref>
-              <m.a className="block my-16 2xl:my-32 m-auto w-max"
+              <m.a className="block my-16 2xl:my-32 m-auto w-max focus:outline-none focus:ring-4 focus:ring-yellow-400"
               whileHover={{ scale: 1.02, translateY: -5 }}
               whileTap={{ translateY: -30 }}
               transition={{ duration: 0.5 }}>
