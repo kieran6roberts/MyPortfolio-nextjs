@@ -28,7 +28,7 @@ export type Projects = {
         stackDecision?: string[],
         outcome?: string[],
         publishDate: string,
-        fullPageImage: { fileName: string }
+        fullPageImage: { fileName: string }[]
         fullPageImageSize: [ string, string ]
     }[]
 };

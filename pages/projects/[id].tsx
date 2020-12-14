@@ -34,7 +34,7 @@ export default function Project({ projects: project }: Projects) {
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."
       currentURL={`https://kieranroberts.dev${router.asPath}`}/>
       <section id="case-study"
-      className="mb-20 md:px-4 lg:px-16 md:mx-6 2xl:mt-20 bg-light overflow-hidden">
+      className="mb-20 md:px-4 lg:px-8 2xl:px-16 md:mx-6 2xl:mt-20 bg-light overflow-hidden">
       <m.div layout
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
@@ -64,11 +64,19 @@ export default function Project({ projects: project }: Projects) {
                 github repo
             </Button>
         </div>
-        <div className="flex flex-col justify-items items-center w-full lg:w-max h-max m-auto border-2 border-pri p-1">
-            <Image src={`/images/${project[0].fullPageImage.fileName}`}
-            alt="full screenshot of project"
+        <div className="flex justify-center items-top w-full 2xl:w-max h-max m-auto border-2 border-pri p-1">
+          <div className="">
+          <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
+            alt="full screenshots of project"
             height={`${project[0].fullPageImageSize[1]}`}
             width={`${project[0].fullPageImageSize[0]}`} />
+          </div>
+          <div className="hidden 2xl:block">
+          <Image src={`/images/${project[0].fullPageImage[1].fileName}`}
+            alt="full screenshots of project"
+            height={`${project[0].fullPageImageSize[1]}`}
+            width={`${project[0].fullPageImageSize[0]}`} />
+          </div>
         </div>
         <p className="text-xs text-gray-500 italic text-center mt-4">
             full page screenshot of the site
