@@ -64,7 +64,11 @@ export default function Project({ projects: project }: Projects) {
                 github repo
             </Button>
         </div>
-        <div className="flex justify-center items-top w-full 2xl:w-max h-max m-auto border-2 border-pri p-1">
+        <m.div layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeIn", delay: 1 }} 
+         className="flex justify-center items-top w-full 2xl:w-max h-max m-auto border-2 border-pri p-1">
           <div className="">
           <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
             alt="full screenshots of project"
@@ -77,7 +81,7 @@ export default function Project({ projects: project }: Projects) {
             height={`${project[0].fullPageImageSize[1]}`}
             width={`${project[0].fullPageImageSize[0]}`} />
           </div>
-        </div>
+        </m.div>
         <p className="text-xs text-gray-500 italic text-center mt-4">
             full page screenshot of the site
         </p>

@@ -18,7 +18,8 @@ export default function Hero(): React.ReactElement {
                     layout="fill"
                     objectFit="contain"
                     objectPosition="left bottom"
-                    priority />
+                    priority={true}
+                    loading="eager" />
                 </m.div>
             </div>
             <m.div className="relative h-4/6 flex flex-col justify-start items-center xl:justify-end xl:items-end text-center pt-4"
@@ -32,7 +33,7 @@ export default function Hero(): React.ReactElement {
                             alt="laptop illustartion"
                             height={350}
                             width={350}
-                            priority />
+                            loading="eager" />
                 </div>
                 <h1 className="relative z-20 bg-white bg-opacity-80 text-lg 2xl:text-xl text-dark font-bold uppercase pl-2 rounded">
                     <m.div className="relative inline-block align-middle bottom-0.5 mr-4"
