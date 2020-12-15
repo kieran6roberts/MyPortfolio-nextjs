@@ -27,7 +27,7 @@ module.exports = {
           pri: "var(--font-pri)",
         },
         screens: {
-          tall: {"raw": "(min-height: 1000px),(max-width:700)"}
+          tall: {"raw": "(min-height: 650px),(max-width:700)"}
         },
         textColor: {
           pri: "var(--color-pri)",

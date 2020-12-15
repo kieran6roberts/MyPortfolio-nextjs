@@ -33,7 +33,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 </div>
                 <nav className="">
                     <div className="h-1 w-full bg-gradient-to-r from-purple-400 to-blue-800"/>
-                        <div className="flex items-center py-8 px-6 md:px-16">
+                        <div className="flex items-center p-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
                                     <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
@@ -63,7 +63,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <ul className="flex ml-auto font-bold capitalize">
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light text-bold py-1 px-2 sm:py-2 sm:px-4 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light text-bold py-2 px-3 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects
                                         <RiComputerLine className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
@@ -71,7 +71,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             </li>
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light py-1 px-2 sm:py-2 sm:px-4 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light py-2 px-3 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         contact me
                                         <AiOutlinePhone className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
@@ -99,7 +99,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         </a>
                     </li>
                 </ul>
-                <p className="uppercase text-sm text-acc">
+                <p className="uppercase text-xs text-acc">
                     created and designed by Kieran Roberts.
                 </p>
                 <span className="text-xxs text-gray-400">

@@ -114,7 +114,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
                   </m.span>
                   and I develop performant and scalable websites. 
               </m.h2>
-              <m.p className="text-sm text-gray-500 text-center w-3/4 m-auto"
+              <m.p className="text-xs text-gray-500 text-center w-3/4 m-auto"
               variants={regVariant}>
                 I enjoy solving problems, seeing the results instantly in the browser.
               </m.p>
