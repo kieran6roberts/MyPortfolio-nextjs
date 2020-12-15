@@ -533,7 +533,6 @@ video {
 
 html {
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -613,10 +612,6 @@ a {
 
 .to-purple-600 {
   --tw-gradient-to: #7c3aed;
-}
-
-.bg-opacity-30 {
-  --tw-bg-opacity: 0.3;
 }
 
 .bg-opacity-80 {
@@ -1595,10 +1590,6 @@ a {
 }
 
 @media (min-width: 1280px) {
-  .xl\:block {
-    display: block;
-  }
-
   .xl\:items-end {
     align-items: flex-end;
   }

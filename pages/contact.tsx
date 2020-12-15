@@ -15,7 +15,7 @@ export default function Contact(): React.ReactElement {
                 <m.div layout
                 initial={{ scale: 0.5}}
                 animate={{ scale: 1 }}
-                transition={{ duration: 0.5}}>
+                transition={{ duration: 0.5, ease: "easeInOut"}}>
                 <h1 className="text-lg text-center font-bold text-dark capitalize pb-3">
                     Get in touch with me.
                 </h1>

@@ -5,8 +5,8 @@ import List from "./List";
 let documentBody: RenderResult;
 
 describe("<Hero />", () => {
-    const NAMES = ["html stack caption", "css stack caption"];
-    const IMAGES = [
+    const names = ["html stack caption", "css stack caption"];
+    const images = [
         {
         __typename: "type",
         fileName: "html.svg"
@@ -17,7 +17,7 @@ describe("<Hero />", () => {
      }
     ];
     beforeEach(() => {
-        documentBody = render(<List images={IMAGES} names={NAMES} />);
+        documentBody = render(<List images={images} names={names} />);
     })
     test("renders", () => {
         expect(documentBody.getByText("html stack caption")).toBeInTheDocument();

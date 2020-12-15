@@ -20,7 +20,7 @@ export default function Project({ projects: project }: Projects) {
     function mapItemsToElements(items: string[]) {
       return items.map((item: string) => 
         <p key={generateKey(item)}
-        className="text-sm text-dark py-3 px-4 2xl:p-8 2xl:px-32">
+        className="text-xs text-dark py-3 px-4 2xl:p-8 2xl:px-32">
           {item}
         </p>
       )
@@ -38,7 +38,7 @@ export default function Project({ projects: project }: Projects) {
       <m.div layout
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }} >
+      transition={{ duration: 0.5, ease: "easeInOut" }} >
           <h1 className="text-lg text-center font-bold text-dark capitalize px-1">
               {project[0].title}
           </h1>
@@ -67,7 +67,7 @@ export default function Project({ projects: project }: Projects) {
         <m.div layout
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeIn", delay: 1 }} 
+        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }} 
          className="flex justify-center items-top w-full 2xl:w-max h-max m-auto border-2 border-pri p-1">
           <div className="">
           <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
@@ -113,7 +113,7 @@ export default function Project({ projects: project }: Projects) {
             whileHover={{ scale: 1.02, translateY: -5 }}
             whileTap={{ translateY: -30 }}
             transition={{ duration: 0.5 }}>
-                <VscFoldUp className="text-lg text-pri animate-pulse"
+                <VscFoldUp className="text-md text-pri animate-pulse"
                 aria-label="top of the page" />
             </m.a>
         </Link>

@@ -149,7 +149,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
               whileHover={{ scale: 1.02, translateY: -5 }}
               whileTap={{ translateY: -30 }}
               transition={{ duration: 0.5 }}>
-                  <VscFoldUp className="text-lg text-pri animate-pulse" />
+                  <VscFoldUp className="text-md text-pri animate-pulse" />
               </m.a>
           </Link>
       </section>

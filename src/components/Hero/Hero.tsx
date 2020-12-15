@@ -24,17 +24,9 @@ export default function Hero(): React.ReactElement {
             </div>
             <m.div className="relative h-4/6 flex flex-col justify-start items-center xl:justify-end xl:items-end text-center pt-4"
             layout
-            initial={{ opacity: 0, rotate: 30, scale: 0.8 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1 }}
-            transition={{ duration: 0.5, delay: 1 }}>
-                <div className="hidden xl:block absolute bottom-0 right-0">
-                    <div className="absolute top-0 bottom-0 left-0 right-0 bg-white bg-opacity-30 z-10" />
-                    <Image src="/images/hero-laptop.svg"
-                            alt="laptop illustartion"
-                            height={350}
-                            width={350}
-                            loading="eager" />
-                </div>
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 1 }}>
                 <h1 className="relative z-20 bg-white bg-opacity-80 text-lg 2xl:text-xl text-dark font-bold uppercase pl-2 rounded">
                     <m.div className="relative inline-block align-middle bottom-0.5 mr-4"
                     whileTap={{ translateX: 10, scale: 1.05 }}>

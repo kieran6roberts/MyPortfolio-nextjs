@@ -169,6 +169,7 @@ export default function Form(): React.ReactElement {
             type="submit"
             name="submit"
             value="send"
+            data-testid="submit"
             disabled={disabled}
             className={`${!checkForEmptyObject(errors) ? "bg-purple-200 text-purple-400 cursor-not-allowed" : "bg-pri text-light cursor-pointer"} block text-sm m-auto w-2/4 max-w-xl py-1 px-2 font-bold uppercase focus:outline-none focus:ring-3 focus:ring-yellow-400`} />
         </form>
