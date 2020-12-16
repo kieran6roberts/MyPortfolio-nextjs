@@ -68,12 +68,12 @@ export default function Project({ projects: project }: Projects) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }} 
-         className="flex justify-center items-top w-full 2xl:w-max h-max m-auto border-2 border-pri p-1">
+         className="flex justify-center items-top w-full 2xl:w-max h-max m-auto p-1">
           <div className="">
           <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
             alt="full screenshots of project"
             height={`${project[0].fullPageImageSize[1]}`}
-            width={`${project[0].fullPageImageSize[0]}`} />
+            width={`${project[0].fullPageImageSize[0]}`}/>
           </div>
           <div className="hidden 2xl:block">
           <Image src={`/images/${project[0].fullPageImage[1].fileName}`}
