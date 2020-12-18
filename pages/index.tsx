@@ -97,7 +97,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
     <div className="">
         <Hero />
         <section className="relative z-10">
-            <h2 className="text-md font-bold uppercase text-dark text-center pb-28">
+            <h2 className="text-md font-bold uppercase text-dark text-center pb-28 2xl:pb-40">
               Welcome to my personal portfolio.
             </h2>
           <m.div className="relative bg-light overflow-hidden"
@@ -105,7 +105,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
             initial="hidden"
             animate={animation}
             variants={staggerVariant}>
-              <m.h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-16"
+              <m.h2 className="text-md font-bold uppercase text-dark text-center pt-4 pb-16 2xl:pb-36"
               variants={staggerVariant}>
                 My name is 
                 <m.span className="text-acc mx-3"

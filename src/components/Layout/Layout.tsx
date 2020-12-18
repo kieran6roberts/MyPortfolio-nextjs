@@ -4,8 +4,7 @@ import Link from "next/link";
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePhone, AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { motion as m, 
-    useViewportScroll, 
+import { useViewportScroll, 
     useTransform, 
     useSpring } from "framer-motion";
 
@@ -29,7 +28,8 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
         <div className="flex flex-col min-h-screen justify-between font-mono">
             <section className="relative z-50">
                 <div>
-                   <ScrollIcon pathLength={pathLength} complete={isComplete} />
+                   <ScrollIcon pathLength={pathLength} 
+                   complete={isComplete} />
                 </div>
                 <nav className="">
                     <div className="h-1 w-full bg-gradient-to-r from-purple-400 to-blue-800"/>
@@ -60,8 +60,8 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         className="hidden sm:inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
                         </a>
-                        <ul className="flex ml-auto font-bold capitalize">
-                            <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
+                        <ul className="flex ml-auto font-bold uppercase">
+                            <li className="flex-auto bg-pri p-0.5">
                                 <Link href="/#projects" passHref>
                                     <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light text-bold py-2 px-3 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects

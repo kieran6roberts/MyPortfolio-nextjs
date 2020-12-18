@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { motion as m } from "framer-motion";
 import { VscSymbolNamespace } from "react-icons/vsc";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Hero(): React.ReactElement {
     return(
@@ -27,6 +29,20 @@ export default function Hero(): React.ReactElement {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 1 }}>
+                <ul className="flex items-center sm:hidden">
+                    <li className="mb-2 mx-2">
+                        <a href="https://github.com/kieran6roberts"  
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiFillGithub className="text-md text-pri transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                    <li className="mb-2 mx-2">
+                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <FaLinkedinIn className="text-md text-pri transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                </ul>
                 <h1 className="relative z-20 bg-white bg-opacity-90 text-md sm:text-lg 2xl:text-xl text-dark font-bold uppercase pl-2 rounded">
                     <m.div className="hidden relative sm:inline-block align-middle bottom-0.5 sm:mr-4"
                     whileTap={{ translateX: 10, scale: 1.05 }}>

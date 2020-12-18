@@ -1636,6 +1636,14 @@ a {
     padding-right: 8rem;
   }
 
+  .\32xl\:pb-36 {
+    padding-bottom: 9rem;
+  }
+
+  .\32xl\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
   .\32xl\:w-72 {
     width: 18rem;
   }
@@ -1647,7 +1655,7 @@ a {
   }
 }
 
-@media (min-height: 650px),(max-width:700) {
+@media (min-height: 650px) {
   .tall\:justify-center {
     justify-content: center;
   }
