@@ -32,6 +32,7 @@ export default function Hero(): React.ReactElement {
                 <ul className="flex items-center sm:hidden">
                     <li className="mb-2 mx-2">
                         <a href="https://github.com/kieran6roberts" 
+                        target="_blank"
                         aria-label="to my github page" 
                         className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-md text-pri transform transition duration-150 ease hover:scale-125"/>
@@ -39,6 +40,7 @@ export default function Hero(): React.ReactElement {
                     </li>
                     <li className="mb-2 mx-2">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        target="_blank"
                         aria-label="to my linked in page"
                         className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-md text-acc transform transition duration-150 ease hover:scale-125"/>
@@ -54,6 +56,7 @@ export default function Hero(): React.ReactElement {
                     </li>
                     <li className="mb-2 mx-2">
                         <a href="https://twitter.com/Kieran6dev"
+                        target="_blank"
                         aria-label="to my twitter profile"
                         className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter className="text-md text-acc transform transition duration-150 ease hover:scale-125"/>

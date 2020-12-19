@@ -55,11 +55,13 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                                 </Link>
                             </div>
                         <a href="https://github.com/kieran6roberts"  
+                        target="_blank"
                         aria-label="my github page"
                         className="hidden sm:inline-block text-sm text-acc ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
+                        target="_blank"
                         aria-label="my linked-in page"  
                         className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
@@ -71,6 +73,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             <SiGmail />
                         </a>
                         <a href="https://twitter.com/Kieran6dev"
+                        target="_blank"
                         aria-label="to my twitter profile"
                         className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter />
@@ -103,12 +106,14 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 <ul className="flex items-center justify-evenly w-2/5 m-auto mb-4 2xl:mb-8">
                     <li className="">
                         <a href="https://github.com/kieran6roberts"  
+                        target="_blank"
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
-                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
+                        <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" 
+                        target="_blank" 
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
@@ -123,6 +128,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     </li>
                     <li className="">
                         <a href="https://twitter.com/Kieran6dev"
+                        target="_blank"
                         aria-label="to my twitter profile"
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter className="text-md text-light transform transition duration-150 ease hover:scale-125"/>

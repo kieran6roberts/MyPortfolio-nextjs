@@ -23,6 +23,7 @@ export default function Contact(): React.ReactElement {
                 <ul className="flex sm:hidden items-center justify-center">
                     <li className="">
                         <a href="https://github.com/kieran6roberts"
+                        target="_blank"
                         aria-label="my github page"  
                         className="block text-md mx-4 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-pri transform transition duration-150 ease hover:scale-125"/>
@@ -30,6 +31,7 @@ export default function Contact(): React.ReactElement {
                     </li>
                     <li className="">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
+                        target="_blank"
                         aria-label="my linked-in page"  
                         className="block text-md mx-4 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-pri transform transition duration-150 ease hover:scale-125"/>
@@ -45,6 +47,7 @@ export default function Contact(): React.ReactElement {
                     </li>
                     <li className="mb-2 mx-2">
                         <a href="https://twitter.com/Kieran6dev"
+                        target="_blank"
                         aria-label="to my twitter profile"
                         className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter className="text-md text-acc transform transition duration-150 ease hover:scale-125"/>
