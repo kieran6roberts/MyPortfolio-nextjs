@@ -2,7 +2,10 @@ import * as React from "react"
 import Image from "next/image";
 import Link from "next/link";
 import { RiComputerLine } from "react-icons/ri";
-import { AiOutlinePhone, AiFillGithub } from "react-icons/ai";
+import { AiOutlinePhone,
+     AiFillGithub, 
+     AiOutlineTwitter } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useViewportScroll, 
     useTransform, 
@@ -36,7 +39,8 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <div className="flex items-center p-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
-                                    <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400"
+                                    aria-label="home page">
                                         <div className="relative top-1 sm:hidden">
                                             <Image
                                             src="/images/k.svg"
@@ -52,13 +56,24 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             </div>
                         <a href="https://github.com/kieran6roberts"  
                         aria-label="my github page"
-                        className="hidden sm:inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden sm:inline-block text-sm text-acc ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
                         aria-label="my linked-in page"  
-                        className="hidden sm:inline-block text-md text-dark ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
+                        </a>
+                        <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
+                        target="_blank"  
+                        aria-label="send me an email"
+                        className="hidden sm:inline-block text-sm text-acc ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <SiGmail />
+                        </a>
+                        <a href="https://twitter.com/Kieran6dev"
+                        aria-label="to my twitter profile"
+                        className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiOutlineTwitter />
                         </a>
                         <ul className="flex ml-auto font-bold uppercase">
                             <li className="flex-auto bg-pri p-0.5">
@@ -85,17 +100,32 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
             {children}
             </main>
             <footer className="text-center bg-dark text-light py-8 px-4">
-                <ul className="flex flex-col items-center">
-                    <li className="mb-4 2xl:mb-8">
+                <ul className="flex items-center justify-evenly w-2/5 m-auto mb-4 2xl:mb-8">
+                    <li className="">
                         <a href="https://github.com/kieran6roberts"  
-                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
-                    <li className="mb-4 2xl:mb-8">
+                    <li className="">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"  
-                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                    <li className="">
+                        <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
+                        target="_blank"  
+                        aria-label="send me an email"
+                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <SiGmail className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                    <li className="">
+                        <a href="https://twitter.com/Kieran6dev"
+                        aria-label="to my twitter profile"
+                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiOutlineTwitter className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                 </ul>

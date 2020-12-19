@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import Form from "src/containers/Form/Form";
@@ -32,6 +33,21 @@ export default function Contact(): React.ReactElement {
                         aria-label="my linked-in page"  
                         className="block text-md mx-4 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn className="text-pri transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                    <li className="mb-2 mx-2">
+                        <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
+                        target="_blank"  
+                        aria-label="send me an email"
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <SiGmail className="text-md text-pri transform transition duration-150 ease hover:scale-125"/>
+                        </a>
+                    </li>
+                    <li className="mb-2 mx-2">
+                        <a href="https://twitter.com/Kieran6dev"
+                        aria-label="to my twitter profile"
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiOutlineTwitter className="text-md text-acc transform transition duration-150 ease hover:scale-125"/>
                         </a>
                     </li>
                 </ul>

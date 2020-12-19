@@ -27,7 +27,8 @@ module.exports = {
           pri: "var(--font-pri)",
         },
         screens: {
-          tall: {"raw": "(min-height: 650px)"},
+          tall: {"raw": "(min-height: 650px) and (max-width: 1024px)"},
+          smWide: {"raw": "(max-height: 700px) and (min-width: 768px)"}
         },
         textColor: {
           pri: "var(--color-pri)",

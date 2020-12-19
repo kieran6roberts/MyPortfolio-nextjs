@@ -67,7 +67,7 @@ export default function Project({ projects: project }: Projects) {
         <m.div layout
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }} 
+        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }} 
          className="flex justify-center items-top w-full 2xl:w-max h-max m-auto p-1">
           <div className="">
           <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
