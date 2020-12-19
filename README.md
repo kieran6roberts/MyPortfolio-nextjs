@@ -22,4 +22,4 @@ The primary objective of this project was to create a performant and responsive 
 
 
 
-![Portfolio home full page](/public/images/full-page-home1.webp?raw=true "Portfolio desktop full page screenshot")
+![Portfolio home full page](/public/images/home-screenshot.webp?raw=true "Portfolio desktop landing page screenshot")
