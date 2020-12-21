@@ -28,14 +28,14 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
     }, [yRange, scrollYProgress]);
 
     return (
-        <div className="flex flex-col min-h-screen justify-between font-mono">
+        <div className="flex flex-col justify-between min-h-screen font-mono">
             <section className="relative z-50">
                 <div>
                    <ScrollIcon pathLength={pathLength} 
                    complete={isComplete} />
                 </div>
                 <nav className="">
-                    <div className="h-1 w-full bg-gradient-to-r from-purple-400 to-blue-800"/>
+                    <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"/>
                         <div className="flex items-center p-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">
                                 <Link href="/" passHref>
@@ -48,7 +48,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                                             height={24}
                                             width={24} />
                                         </div>
-                                        <span className="hidden sm:inline-block text-xs text-pri font-bold">
+                                        <span className="hidden text-xs font-bold sm:inline-block text-pri">
                                             Kieran Roberts
                                         </span>
                                     </a>
@@ -57,41 +57,41 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <a href="https://github.com/kieran6roberts"  
                         target="_blank"
                         aria-label="my github page"
-                        className="hidden sm:inline-block text-sm text-acc ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
                         target="_blank"
                         aria-label="my linked-in page"  
-                        className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
                         </a>
                         <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
                         target="_blank"  
                         aria-label="send me an email"
-                        className="hidden sm:inline-block text-sm text-acc ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <SiGmail />
                         </a>
                         <a href="https://twitter.com/Kieran6dev"
                         target="_blank"
                         aria-label="to my twitter profile"
-                        className="hidden sm:inline-block text-sm text-pri ml-3 transform transition duration-150 ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter />
                         </a>
                         <ul className="flex ml-auto font-bold uppercase">
                             <li className="flex-auto bg-pri p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light text-bold py-2 px-3 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group bg-pri text-xxxs sm:text-xxs text-light text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects
-                                        <RiComputerLine className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <RiComputerLine className="absolute top-0 left-0 text-gray-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
                             <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="group bg-pri block relative text-xxxs sm:text-xxs text-light py-2 px-3 lg:py-4 lg:px-8 overflow-hidden cursor-pointer transition duration-150 ease-in hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group bg-pri text-xxxs sm:text-xxs text-light lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         contact me
-                                        <AiOutlinePhone className="absolute top-0 left-0 text-md sm:text-lg text-gray-200 text-opacity-30 transition duration-150 ease-in  group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <AiOutlinePhone className="absolute top-0 left-0 text-gray-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
@@ -99,23 +99,23 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                     </div>
                 </nav>
             </section>
-            <main className="mx-3 px-4 md:px-16 border-l-2 border-r-2 border-gray-100 overflow-hidden">
+            <main className="px-4 mx-3 overflow-hidden border-l-2 border-r-2 border-gray-100 md:px-16">
             {children}
             </main>
-            <footer className="text-center bg-dark text-light py-8 px-4">
-                <ul className="flex items-center justify-evenly w-2/5 m-auto mb-4 2xl:mb-8">
+            <footer className="px-4 py-8 text-center bg-dark text-light">
+                <ul className="flex items-center w-2/5 m-auto mb-4 justify-evenly 2xl:mb-8">
                     <li className="">
                         <a href="https://github.com/kieran6roberts"  
                         target="_blank"
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <AiFillGithub className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                            <AiFillGithub className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" 
                         target="_blank" 
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <FaLinkedinIn className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                            <FaLinkedinIn className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
@@ -123,7 +123,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         target="_blank"  
                         aria-label="send me an email"
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <SiGmail className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                            <SiGmail className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
@@ -131,14 +131,22 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         target="_blank"
                         aria-label="to my twitter profile"
                         className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <AiOutlineTwitter className="text-md text-light transform transition duration-150 ease hover:scale-125"/>
+                            <AiOutlineTwitter className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
                         </a>
                     </li>
                 </ul>
-                <p className="uppercase text-xs text-acc">
+                <p className="text-xs uppercase text-acc">
                     created and designed by Kieran Roberts.
                 </p>
-                <span className="text-xxs text-gray-400">
+                <a href="https://graphcms.com/?referrer=kieranroberts.dev"
+                className="block mx-auto mt-4"
+                target="_blank">
+                    <Image src="/images/icons/Landscape_White.svg"
+                    alt="graphcms logo"
+                    height={20}
+                    width={120} />
+                </a>
+                <span className="text-gray-400 text-xxs">
                     kieran6roberts@gmail.com
                 </span>
             </footer>
