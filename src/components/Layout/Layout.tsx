@@ -57,25 +57,25 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                         <a href="https://github.com/kieran6roberts"  
                         target="_blank"
                         aria-label="my github page"
-                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform 2xl:ml-6 sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiFillGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
                         target="_blank"
                         aria-label="my linked-in page"  
-                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform 2xl:ml-6 sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <FaLinkedinIn />
                         </a>
                         <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
                         target="_blank"  
                         aria-label="send me an email"
-                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform 2xl:ml-6 sm:inline-block text-acc ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <SiGmail />
                         </a>
                         <a href="https://twitter.com/Kieran6dev"
                         target="_blank"
                         aria-label="to my twitter profile"
-                        className="hidden ml-3 text-sm transition duration-150 transform sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                        className="hidden ml-3 text-sm transition duration-150 transform 2xl:ml-6 sm:inline-block text-pri ease hover:scale-125 focus:outline-none focus:ring-4 focus:ring-yellow-400">
                             <AiOutlineTwitter />
                         </a>
                         <ul className="flex ml-auto font-bold uppercase">
@@ -102,36 +102,36 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
             <main className="px-4 mx-3 overflow-hidden border-l-2 border-r-2 border-gray-100 md:px-16">
             {children}
             </main>
-            <footer className="px-4 py-8 text-center bg-dark text-light">
+            <footer className="px-4 py-8 text-center 2xl:py-16 2xl:px-8 bg-dark text-light">
                 <ul className="flex items-center w-2/5 m-auto mb-4 justify-evenly 2xl:mb-8">
                     <li className="">
                         <a href="https://github.com/kieran6roberts"  
                         target="_blank"
-                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <AiFillGithub className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiFillGithub className="transition duration-150 transform ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
                         <a href="https://www.linkedin.com/in/kieran-roberts-00517b178/" 
                         target="_blank" 
-                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <FaLinkedinIn className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <FaLinkedinIn className="transition duration-150 transform ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
                         <a href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
                         target="_blank"  
                         aria-label="send me an email"
-                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <SiGmail className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <SiGmail className="transition duration-150 transform ease hover:scale-125"/>
                         </a>
                     </li>
                     <li className="">
                         <a href="https://twitter.com/Kieran6dev"
                         target="_blank"
                         aria-label="to my twitter profile"
-                        className="text-sm focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                            <AiOutlineTwitter className="transition duration-150 transform text-md text-light ease hover:scale-125"/>
+                        className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                            <AiOutlineTwitter className="transition duration-150 transform ease hover:scale-125"/>
                         </a>
                     </li>
                 </ul>
@@ -143,7 +143,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                 target="_blank">
                     <Image src="/images/icons/Landscape_White.svg"
                     alt="graphcms logo"
-                    height={20}
+                    height={40}
                     width={120} />
                 </a>
                 <span className="text-gray-400 text-xxs">

@@ -53,7 +53,8 @@ module.exports = {
           offScreen: "var(--off-screen)"
         },
         height: {
-          hero: "500px"
+          hero: "500px",
+          lgContain: "900px"
         },
         listStyleType: {
           circle: "var(--list-style)"

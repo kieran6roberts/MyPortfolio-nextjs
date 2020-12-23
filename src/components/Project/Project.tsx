@@ -14,7 +14,9 @@ export type ProjectProps = {
     siteLink?: string,
     githubLink?: string,
     captions?: string
-    image: string,
+    images: {
+        fileName: string
+    }[],
     stackImages: {
         __typename: string,
         fileName: string
@@ -28,42 +30,49 @@ export default function Project({
     githubLink, 
     description, 
     title, 
-    image, 
+    images, 
     captions, 
     stackImages, 
     stackNames }: ProjectProps): React.ReactElement {
-    
-        console.log(image)
-        console.log(stackImages)
 
     return (
         <div className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
             <div className="px-4 bg-light">
                 <SubHeader title={title}/>
-                <Link href={`projects/${title}`} passHref>
-                    <m.a className="relative flex justify-center p-1 m-auto mb-8 cursor-pointer group max-w-screen-2xl 2xl:w-max focus:outline-none focus:ring-4 focus:ring-yellow-400"
-                    aria-label="project case-study"
-                        whileHover={{ scale: 1.02, rotate: 1 }}
-                        whileTap={{ translateY: -300, rotate: 45 }}
-                        transition={{ duration: 0.6 }}>
-                            <div className="absolute top-0 bottom-0 left-0 right-0 z-10 transition duration-300 ease-in bg-purple-400 bg-opacity-90 group-hover:bg-opacity-20"/>
-                            <BiMouse className="absolute z-20 w-12 h-12 -mt-6 transition duration-150 ease-in top-2/4 text-md text-light group-hover:text-transparent animate-pulse" />
-                            <Image src={`/images/${image}`}
-                            alt={captions}
-                            height={450}
-                            width={900}/>
-                    </m.a>
-                </Link>
-                <p className="mb-8 text-xs italic text-center text-dark">
-                    {captions}
-                </p>
-                <div className="flex flex-col py-8 2xl:justify-center md:flex-row 2xl:py-32">
+                <div className="relative w-full max-w-md mx-auto mb-24 2xl:mb-56 md:max-w-7xl h-96 md:h-hero 2xl:h-lgContain">
+                    <div className="absolute right-0 z-10 w-2/4 md:-right-20 2xl:-right-56 -bottom-12 2xl:h-full h-4/5">
+                        <div className="h-full">
+                            <Image src={`/images/${images[2].fileName}`}
+                                alt={captions}
+                                className="relative block border-2 border-black"
+                                layout="fill"
+                                objectFit="contain"/>
+                        </div>
+                    </div>
+                    <div className="absolute left-0 w-5/6 md:left-24 bottom-1/2 h-3/6">
+                        <div className="w-full h-full">
+                            <Image src={`/images/${images[0].fileName}`}
+                                alt={captions}
+                                layout="fill"
+                                objectFit="contain"/>
+                        </div>
+                    </div>
+                    <div className="absolute left-0 w-5/6 2xl:-left-56 -bottom-4 h-3/6">
+                        <div className="w-full h-full">
+                            <Image src={`/images/${images[1].fileName}`}
+                                alt={captions}
+                                layout="fill"
+                                objectFit="contain"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col pb-8 2xl:justify-center sm:flex-row 2xl:pb-32">
                     <Button link={siteLink}
-                    color="bg-light text-dark mb-2 md:mb-0 md:mr-4">
+                    color="bg-light text-dark mb-2 2xl:mx-8 sm:mb-0 sm:mr-4">
                         visit website
                     </Button>
                     <Button link={githubLink}
-                    color="bg-offLight text-dark">
+                    color="bg-offLight text-dark 2xl:mx-8">
                         github repo
                     </Button>
                 </div>
