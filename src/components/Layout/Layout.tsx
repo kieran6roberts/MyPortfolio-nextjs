@@ -103,7 +103,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
             {children}
             </main>
             <footer className="px-4 py-8 text-center 2xl:py-16 2xl:px-8 bg-dark text-light">
-                <ul className="flex items-center w-2/5 m-auto mb-4 justify-evenly 2xl:mb-8">
+                <ul className="flex items-center w-2/5 m-auto mb-6 justify-evenly 2xl:mb-8">
                     <li className="">
                         <a href="https://github.com/kieran6roberts"  
                         target="_blank"

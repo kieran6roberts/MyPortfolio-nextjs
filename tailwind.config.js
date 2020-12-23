@@ -49,8 +49,14 @@ module.exports = {
           pri: "var(--color-pri)",
           acc: "var(--color-acc)"
         },
+        objectPosition: {
+          offTop: "50% 4px"
+        },
         width: {
           offScreen: "var(--off-screen)"
+        },
+        maxHeight: {
+          mobileH: "400px",
         },
         height: {
           hero: "500px",
