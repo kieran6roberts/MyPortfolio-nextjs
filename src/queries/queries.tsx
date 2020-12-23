@@ -15,7 +15,6 @@ export const GET_SINGLE_PROJECT = gql`
       images {
         fileName
       }
-      captions,
       siteLink,
       githubLink
       stackImages {
@@ -42,7 +41,6 @@ export const GET_SINGLE_PROJECT = gql`
       images {
         fileName
       }
-      captions,
       siteLink,
       githubLink
       stackImages {

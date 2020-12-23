@@ -18,7 +18,6 @@ export type Projects = {
         description: string,
         siteLink?: string,
         githubLink?: string,
-        captions: string[],
         images: { fileName: string }[],
         stackImages: {
           __typename: string,
@@ -67,12 +66,18 @@ export default function Home({ projects }: Projects): React.ReactElement {
   };
 
   function mapProjectsToElements(projects: any) {
-    return projects.map((project: any) => 
+    let mapArray = projects;
+    
+    if (projects[0].title !== "upRoar Music App") {
+      const reorderElement = projects.splice(-1, 1);
+      projects.splice(0, 0, reorderElement[0]);
+      mapArray = projects;
+    }
+    return mapArray.map((project: any) => 
         <li key={`${project.__typename}${project.title}`} >
           <Project
           title={project.title} 
           images={project.images}
-          captions={project.captions[0]}
           description={project.description}
           siteLink={project.siteLink}
           githubLink={project.githubLink}
