@@ -33,8 +33,6 @@ export default function Project({
     stackImages, 
     stackNames }: ProjectProps): React.ReactElement {
 
-        console.log(captions)
-
     return (
         <div className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
             <div className="px-4 bg-light">

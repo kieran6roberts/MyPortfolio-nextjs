@@ -20,7 +20,7 @@ export default function Contact(): React.ReactElement {
                 <h1 className="pb-3 text-lg font-bold text-center capitalize text-dark">
                     Get in touch with me.
                 </h1>
-                <ul className="flex items-center justify-center sm:hidden">
+                <ul className="flex items-center justify-center mb-8 sm:hidden">
                     <li>
                         <a href="https://github.com/kieran6roberts"
                         target="_blank"

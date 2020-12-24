@@ -27,14 +27,14 @@ export default function PageHead({
             <meta property="og:image" content="./images/home-screenshot.jpg" key="ogimage" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
             
-            <link rel="apple-touch-icon" sizes="180x180" href="./images/head/apple-touch-icon.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="./images/head/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="./images/head/favicon-16x16.png" />
-            <link rel="mask-icon" href="./images/head/safari-pinned-tab.svg" color="#000000" />
-            <link rel="shortcut icon" href="./images/head/favicon.ico" />
+            <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+            <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
+            <link rel="shortcut icon" href="./favicon.ico" />
 
             <meta name="msapplication-TileColor" content="#ffffff" />
-            <meta name="msapplication-config" content="./images/head/browserconfig.xml" />
+            <meta name="msapplication-config" content="./browserconfig.xml" />
             <meta name="theme-color" content="#ffffff" />
         </Head>
     )
