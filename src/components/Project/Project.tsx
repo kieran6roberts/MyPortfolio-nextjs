@@ -11,7 +11,7 @@ export type ProjectProps = {
     description: string,
     siteLink?: string,
     githubLink?: string,
-    captions?: string
+    captions: string[],
     images: {
         fileName: string
     }[],
@@ -33,6 +33,8 @@ export default function Project({
     stackImages, 
     stackNames }: ProjectProps): React.ReactElement {
 
+        console.log(captions)
+
     return (
         <div className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
             <div className="px-4 bg-light">
@@ -41,7 +43,7 @@ export default function Project({
                     <div className="absolute z-10 w-2/4 h-full right-6 sm:-right-16 lg:-right-32 2xl:-right-56 -bottom-12 2xl:h-full">
                         <div className="bg-black border-4 border-black shadow-2xl max-h-mobileH h-5/6 rounded-xl w-max">
                             <Image src={`/images/${images[2].fileName}`}
-                                alt={captions}
+                                alt={captions[2]}
                                 height={400}
                                 width={200}
                                 objectFit="contain"
@@ -51,7 +53,7 @@ export default function Project({
                     <div className="absolute left-0 w-full shadow-md md:w-4/6 md:left-24 2xl:w-full 2xl:-left-56 bottom-1/2 h-3/6">
                         <div className="w-full h-full">
                             <Image src={`/images/${images[0].fileName}`}
-                                alt={captions}
+                                alt={captions[0]}
                                 layout="fill"
                                 objectFit="cover"
                                 objectPosition="left top"/>
@@ -60,14 +62,14 @@ export default function Project({
                     <div className="absolute left-0 w-5/6 shadow-md md:left-24 md:w-4/6 2xl:-right-1/2 2xl:w-full -bottom-4 h-1/2">
                         <div className="w-full h-full">
                             <Image src={`/images/${images[1].fileName}`}
-                                alt={captions}
+                                alt={captions[1]}
                                 layout="fill"
                                 objectFit="cover"
                                 objectPosition="left top"/>
                         </div>
                         <div className="absolute invisible hidden overflow-hidden bg-black border-4 border-black shadow-2xl bottom-4 2xl:block 2xl:visible max-h-mobileH h-5/6 rounded-xl w-max">
                             <Image src={`/images/${images[3].fileName}`}
-                                alt={captions}
+                                alt={captions[3]}
                                 height={380}
                                 width={200}
                                 objectFit="contain"

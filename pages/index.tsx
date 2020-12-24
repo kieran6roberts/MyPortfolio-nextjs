@@ -18,6 +18,7 @@ export type Projects = {
         description: string,
         siteLink?: string,
         githubLink?: string,
+        captions: string[],
         images: { fileName: string }[],
         stackImages: {
           __typename: string,
@@ -78,6 +79,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
           <Project
           title={project.title} 
           images={project.images}
+          captions={project.captions}
           description={project.description}
           siteLink={project.siteLink}
           githubLink={project.githubLink}
