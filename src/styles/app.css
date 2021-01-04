@@ -1215,6 +1215,11 @@ a {
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
+.text-purple-200 {
+  --tw-text-opacity: 1;
+  color: rgba(221, 214, 254, var(--tw-text-opacity));
+}
+
 .text-purple-400 {
   --tw-text-opacity: 1;
   color: rgba(167, 139, 250, var(--tw-text-opacity));
@@ -1259,6 +1264,10 @@ a {
 
 .text-opacity-30 {
   --tw-text-opacity: 0.3;
+}
+
+.text-opacity-40 {
+  --tw-text-opacity: 0.4;
 }
 
 .group:hover .group-hover\:text-opacity-30 {
@@ -1481,10 +1490,6 @@ a {
     flex-direction: row;
   }
 
-  .sm\:text-xxs {
-    font-size: var(--text-2xs);
-  }
-
   .sm\:text-sm {
     font-size: var(--text-sm);
   }
@@ -1624,6 +1629,10 @@ a {
 
   .lg\:flex-auto {
     flex: 1 1 auto;
+  }
+
+  .lg\:text-xs {
+    font-size: var(--text-xs);
   }
 
   .lg\:my-0 {

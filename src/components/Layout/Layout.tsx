@@ -10,7 +10,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { useViewportScroll, 
     useTransform, 
     useSpring } from "framer-motion";
-
 import ScrollIcon from "../ScrollIcon/ScrollIcon";
 
 export type LayoutProps = {
@@ -79,19 +78,19 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                             <AiOutlineTwitter />
                         </a>
                         <ul className="flex ml-auto font-bold uppercase">
-                            <li className="flex-auto bg-pri p-0.5">
+                            <li className="flex-auto p-0.5">
                                 <Link href="/#projects" passHref>
-                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group bg-pri text-xxxs sm:text-xxs text-light text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxxs lg:text-xs text-pri text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         projects
-                                        <RiComputerLine className="absolute top-0 left-0 text-gray-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <RiComputerLine className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-opacity-40 text-md sm:text-lg group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>
-                            <li className="flex-auto bg-gradient-to-r from-purple-400 to-purple-600 p-0.5 ml-2 md:ml-4">
+                            <li className="flex-auto p-0.5 ml-2 md:ml-4">
                                 <Link href="/contact" passHref>
-                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group bg-pri text-xxxs sm:text-xxs text-light lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxxs lg:text-xs text-pri lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                         contact me
-                                        <AiOutlinePhone className="absolute top-0 left-0 text-gray-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                        <AiOutlinePhone className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                     </a>
                                 </Link>
                             </li>

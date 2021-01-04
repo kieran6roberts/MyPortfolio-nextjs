@@ -126,7 +126,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
               </m.p>
               <VscVmActive className="m-auto my-16 text-xxl text-pri"/>
               <m.div className="lg:flex">
-                <Card items={["JavaScript", "reactjs", "css", "html"]}
+                <Card items={["javaScript", "reactjs", "css", "html"]}
                 header="My primary skills:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant} />
@@ -134,7 +134,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
                 header="as well as:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant}  />
-                <Card items={["TypeScript", "redux", "graphql"]}
+                <Card items={["typeScript", "redux", "graphql"]}
                 header="currently learning:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant}  />
