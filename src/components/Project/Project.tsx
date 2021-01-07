@@ -99,13 +99,13 @@ export default function Project({
                     </h4>
                 </div>
                 <List images={stackImages} names={stackNames} />
-                <div className="w-max h-max my-16 2xl:my-32 bg-gradient-to-r from-purple-400 to-purple-600 p-0.5">
+                <div className="my-16 2xl:my-32 py-0.5 px-2">
                     <Link href={`/projects/${title}`}>
-                        <a className={`group flex items-center bg-pri w-max flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-3 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-light hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
+                        <a className={`group w-56 flex items-center justify-center bg-pri border-pri border-2 flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-4 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-white hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
                             <span className="block pr-4">
                                 case-study
                             </span>
-                            <VscChevronRight className="text-xs transition ease-in opacity-0 duration-50 group-hover:opacity-100"
+                            <VscChevronRight className="text-xs transition ease-in transform translate-x-0 text-light duration-50 group-hover:translate-x-8 group-hover:text-sec "
                             aria-label="top of the page"/>
                         </a>
                     </Link>

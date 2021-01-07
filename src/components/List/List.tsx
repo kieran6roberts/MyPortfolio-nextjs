@@ -26,7 +26,7 @@ export default function List({ names, images }: ListProps): React.ReactElement {
                         <Image src={`/images/icons/${item[0].fileName}`}
                         alt={`${item[0]} logo`}
                         height={40}
-                        width={40} />
+                        width={80} />
                     </div>
                     <span className="block ml-2 text-xs font-bold lg:ml-0 whitespace-nowrap text-dark">
                         {item[1]}

@@ -14,7 +14,7 @@ export default function Button({ link, children, color }: ButtonProps): React.Re
             <span className="block pr-4 group-hover:text-light ">
                 {children}
             </span>
-            <BsBoxArrowUpRight className="text-xs transition ease-in opacity-0 text-light duration-50 group-hover:opacity-100"/>
+            <BsBoxArrowUpRight className="text-xs transition ease-in text-pri duration-50 group-hover:text-white"/>
         </a>
     )
 };

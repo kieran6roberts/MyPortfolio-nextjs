@@ -1,6 +1,5 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
-import { useRouter } from "next/router";
 import { request } from "graphql-request";
 import { motion as m, useAnimation } from "framer-motion";
 import { VscVmActive, VscChevronDown } from "react-icons/vsc";
@@ -31,14 +30,13 @@ export type Projects = {
         publishDate: string,
         fullPageImage: { fileName: string }[]
         fullPageImageSize: [ string, string ]
+        deploy: { fileName: string }
     }[]
 };
 
 export default function Home({ projects }: Projects): React.ReactElement {
   const { ref, inView, entry } = useInView({ threshold: 0.1, triggerOnce: true });
   const animation = useAnimation();
-
-  const router = useRouter();
 
   const regVariant = {
     visible: {
@@ -126,15 +124,15 @@ export default function Home({ projects }: Projects): React.ReactElement {
               </m.p>
               <VscVmActive className="m-auto my-16 text-xxl text-pri"/>
               <m.div className="lg:flex">
-                <Card items={["javaScript", "reactjs", "css", "html"]}
+                <Card items={["html", "css", "javaScript", "react"]}
                 header="My primary skills:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant} />
-                <Card items={["nextjs", "tailwindcss", "sass", "webpack", "github"]}
+                <Card items={["tailwindcss", "sass", "next.js", "webpack", "jest", "testing-library"]}
                 header="as well as:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant}  />
-                <Card items={["typeScript", "redux", "graphql"]}
+                <Card items={["typeScript", "redux", "apollo/graphql"]}
                 header="currently learning:"
                 parentVariant={staggerVariant}
                 childVariant={regVariant}  />

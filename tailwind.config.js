@@ -68,7 +68,10 @@ module.exports = {
       },
     },
     variants: {
-      animation: ["motion-safe", "motion-reduce"]
+      animation: ["motion-safe", "motion-reduce"],
+      extend: {
+        translate: ["group-hover"]
+      }
     },
     plugins: [],
   }

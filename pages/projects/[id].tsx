@@ -42,21 +42,30 @@ export default function Project({ projects: project }: Projects) {
           <h1 className="px-1 text-lg font-bold text-center capitalize text-dark">
               {project[0].title}
           </h1>
-          <p className="mb-2 text-center text-xxs text-sec">
+          <p className="mb-4 text-center text-xxs text-sec">
               Kieran Roberts posted: <VscCalendar className="inline-block mr-2"/>{(project[0].publishDate).substring(0, 10)}
           </p>
           <ul className="text-center">
               {project[0].stackNames && project[0].stackNames.map(name =>
               <li key={generateKey(name)}
                   className="inline-block mr-4 text-sm font-bold">
-                  {name}
+                  - {name} - 
               </li>
               )}
           </ul>
       </m.div>
-        <div className="flex flex-col items-center justify-center my-16 md:flex-row 2xl:my-16">
+      <div className="flex items-center justify-center">
+          <p className="inline-block mr-4 text-sec">
+            Deployed to
+          </p>
+          <Image src={`/images/icons/${project[0].deploy.fileName}`}
+              alt="hosting site logo"
+              height={70}
+              width={100}/>
+        </div>
+        <div className="flex flex-col items-center justify-center mt-8 mb-16 sm:flex-row">
             <Button link={project[0].siteLink}
-            color="bg-light text-dark mb-4 md:mb-0 md:mr-2">
+            color="bg-light text-dark mb-4 sm:mb-0 sm:mr-2">
                 visit website
             </Button>
             <Button link={project[0].githubLink}

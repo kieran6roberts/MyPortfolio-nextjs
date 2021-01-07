@@ -33,7 +33,7 @@ export default function Layout({ children }: LayoutProps): React.ReactElement {
                    <ScrollIcon pathLength={pathLength} 
                    complete={isComplete} />
                 </div>
-                <nav className="">
+                <nav>
                     <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"/>
                         <div className="flex items-center p-8 px-6 md:px-16">
                             <div className="flex p-2 mr-4 cursor-pointer">

@@ -21,13 +21,13 @@ export function generateKey(item: string): string {
 export default function Card({ items, header, parentVariant, childVariant }: CardProps): React.ReactElement {
     
     return (
-        <m.div className="flex flex-col lg:flex-1 mx-2"
+        <m.div className="flex flex-col pb-4 mx-2 shadow-lg lg:flex-1"
         variants={parentVariant}>
-            <m.p className="text-md uppercase font-bold text-sec text-center pt-12 pb-8"
+            <m.p className="pt-12 pb-4 font-bold text-center uppercase text-md text-sec"
             variants={childVariant}>
                 {header}
             </m.p>
-            <m.ul className="flex bg-light flex-col justify-start h-full items-center text-xs text-gray-600 pt-4"
+            <m.ul className="flex flex-col items-center justify-start h-full pt-4 text-xs text-gray-600 bg-light"
             variants={parentVariant}>
                 {items && items.map(item =>
                     <m.li key={generateKey(item)}

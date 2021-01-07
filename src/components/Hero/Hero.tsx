@@ -1,3 +1,4 @@
+import * as React from "react";
 import Image from "next/image";
 import { motion as m } from "framer-motion";
 import { VscSymbolArray } from "react-icons/vsc";
@@ -63,12 +64,12 @@ export default function Hero(): React.ReactElement {
                         </a>
                     </li>
                 </ul>
-                <h1 className="relative z-20 pl-2 font-bold uppercase bg-white rounded bg-opacity-90 text-md sm:text-lg 2xl:text-xl text-dark">
+                <h1 className="relative z-20 pl-2 pr-2 mb-4 font-bold uppercase bg-white rounded shadow-md bg-opacity-90 text-md sm:text-lg 2xl:text-xl">
                     <m.div className="hidden relative sm:inline-block align-middle bottom-0.5 sm:mr-4"
                     whileTap={{ translateX: 10, scale: 1.05 }}>
                         <VscSymbolArray/>
                     </m.div>
-                    front-end developer
+                    <span className="text-sec">front-end </span>developer
                 </h1>
                 <p className="px-2 text-xs uppercase bg-white bg-opacity-90 sm:text-sm 2xl:text-md">
                     <span className="mr-2 text-acc">

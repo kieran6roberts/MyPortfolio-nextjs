@@ -12,6 +12,9 @@ export const GET_SINGLE_PROJECT = gql`
   query GetProjects($title: String!) {
     projects(where: {title: $title}) {
       title
+      deploy {
+        fileName
+      }
       images {
         fileName
       }
@@ -38,6 +41,9 @@ export const GET_SINGLE_PROJECT = gql`
   query GetProjects {
     projects {
       title
+      deploy {
+        fileName
+      }
       description
       captions
       images {
