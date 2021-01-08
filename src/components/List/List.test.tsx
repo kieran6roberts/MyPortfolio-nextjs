@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, RenderResult } from "@testing-library/react";
-import List from "./List";
+
+import List from "@/components/List/List";
 
 let documentBody: RenderResult;
 

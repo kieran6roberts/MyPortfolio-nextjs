@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, RenderResult } from "@testing-library/react";
-import Project from "./Project";
+
+import Project from "@/components/Project/Project";
 
 let documentBody: RenderResult;
 
@@ -10,10 +11,11 @@ describe("<Hero />", () => {
             description: "description of turncoat",
             siteLink: "turncoat.com",
             githubLink: "github-turncoat.com",
-            captions: "turncoat caption",
+            captions: ["turncoat caption"],
             image: "turncoat-image.webp",
             stackImages: [{ __typename: "turnocat typename", fileName: "stack.png" }],
-            stackNames: ["html"]
+            stackNames: ["html"],
+            images: [{ fileName: "img1" } , { fileName: "img2" }, { fileName: "img3" }, { fileName: "img4" }]
     };
 
     beforeEach(() => {

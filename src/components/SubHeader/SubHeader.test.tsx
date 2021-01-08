@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, RenderResult } from "@testing-library/react";
-import SubHeader from "./SubHeader";
+
+import SubHeader from "@/components/SubHeader/SubHeader";
 
 let documentBody: RenderResult;
 

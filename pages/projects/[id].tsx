@@ -1,36 +1,50 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import Link from "next/link";
-import { request } from "graphql-request";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Link from "next/link";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { request } from "graphql-request";
 import { motion as m } from "framer-motion";
+import { useRouter } from "next/router";
 import { VscCalendar, 
   VscFiles, 
   VscLibrary, 
   VscVmActive,
   VscFoldUp } from "react-icons/vsc";
 
-import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "../../src/queries/queries";
-import { Projects } from "../index";
-import Button from "../../src/components/Button/Button";
-import { generateKey } from "../../src/components/Card/Card";
-import PageHead from "src/components/PageHead/PageHead";
+import Button from "@/components/ExternalLink/ExternalLink";
+import PageHead from "@/components/PageHead/PageHead";
+import { GET_ALL_PROJECT_TITLES, GET_SINGLE_PROJECT } from "@/queries/projects";
+import { generateKey } from "@/components/Card/Card";
+import { ASSETS, PROJECT } from "../index";
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
 
-export default function Project({ projects: project }: Projects) {
-    function mapItemsToElements(items: string[]) {
-      return items.map((item: string) => 
-        <p key={generateKey(item)}
-        className="px-4 py-3 text-xs text-dark 2xl:p-8 2xl:px-32">
-          {item}
-        </p>
-      )
-    };
-    
-    const router = useRouter();
+interface PROJECT_STUDY extends PROJECT {
+  deploy: ASSETS;
+  fullPageImage: ASSETS[];
+  fullPageImageSize: string[];
+  outcome: string[];
+  overview: string[];
+  publishDate: string;
+  stackDecision: string[];
+};
 
-    return (
-      <>
-      <PageHead title={`kierandev | ${project[0].title}`}
+type SINGLE_PROJECT = { projects: PROJECT_STUDY[] };
+
+export default function Project({ projects: project }: SINGLE_PROJECT) {
+  const router = useRouter();
+  const [ data ] = project;
+
+  function mapItemsToElements(items: string[]) {
+    return items.map((item: string) => 
+      <p key={generateKey(item)}
+      className="px-4 py-3 text-xs text-dark 2xl:p-8 2xl:px-32">
+        {item}
+      </p>
+    )
+  };
+
+  return (
+    <>
+      <PageHead title={`kierandev | ${data.title}`}
       description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."
       currentURL={`https://kieranroberts.dev${router.asPath}`}/>
       <section id="case-study"
@@ -40,60 +54,66 @@ export default function Project({ projects: project }: Projects) {
       animate={{ scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }} >
           <h1 className="px-1 text-lg font-bold text-center capitalize text-dark">
-              {project[0].title}
+              {data.title ?? "Unable to get title"}
           </h1>
           <p className="mb-4 text-center text-xxs text-sec">
-              Kieran Roberts posted: <VscCalendar className="inline-block mr-2"/>{(project[0].publishDate).substring(0, 10)}
+              Kieran Roberts posted: 
+              <VscCalendar className="inline-block mr-2"/>
+              {(data.publishDate).substring(0, 10) ?? "Unable to get date"}
           </p>
           <ul className="text-center">
-              {project[0].stackNames && project[0].stackNames.map(name =>
+              {data.stackNames ? data.stackNames.map(name =>
               <li key={generateKey(name)}
                   className="inline-block mr-4 text-sm font-bold">
                   - {name} - 
               </li>
-              )}
+              ) : null}
           </ul>
       </m.div>
       <div className="flex items-center justify-center">
           <p className="inline-block mr-4 text-sec">
             Deployed to
           </p>
-          <Image src={`/images/icons/${project[0].deploy.fileName}`}
+          <Image src={`/images/icons/${data?.deploy.fileName}`}
               alt="hosting site logo"
               height={70}
               width={100}/>
         </div>
         <div className="flex flex-col items-center justify-center mt-8 mb-16 sm:flex-row">
-            <Button link={project[0].siteLink}
-            color="bg-light text-dark mb-4 sm:mb-0 sm:mr-2">
-                visit website
-            </Button>
-            <Button link={project[0].githubLink}
-            color="bg-offLight text-dark">
-                github repo
-            </Button>
+          {data.siteLink ? 
+          <ExternalLink link={data.siteLink}
+          styling="bg-light text-dark mb-4 sm:mb-0 sm:mr-2">
+            visit website
+          </ExternalLink> : <p className="text-sm">Unable to find site link</p>}
+          {data.githubLink ? 
+          <Button link={data.githubLink}
+          styling="bg-offLight text-dark">
+            github repo
+          </Button> : <p className="text-sm">Unable to find github link</p>}
         </div>
         <m.div layout
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }} 
          className="flex justify-center w-full p-1 m-auto items-top 2xl:w-max h-max">
-          <div className="shadow-md">
-            <Image src={`/images/${project[0].fullPageImage[0].fileName}`}
-              alt="full screenshots of project"
-              height={`${project[0].fullPageImageSize[1]}`}
-              width={`${project[0].fullPageImageSize[0]}`}/>
-          </div>
-          <div className="hidden shadow-md 2xl:block">
-            <Image src={`/images/${project[0].fullPageImage[1].fileName}`}
-              alt="full screenshots of project"
-              height={`${project[0].fullPageImageSize[1]}`}
-              width={`${project[0].fullPageImageSize[0]}`} />
-          </div>
+           <figure>
+              <div className="shadow-md">
+                <Image src={`/images/${data?.fullPageImage[0]?.fileName}`}
+                  alt="full screenshots of project"
+                  height={`${data?.fullPageImageSize[1]}`}
+                  width={`${data?.fullPageImageSize[0]}`}/>
+              </div>
+              <div className="hidden shadow-md 2xl:block">
+                <Image src={`/images/${data?.fullPageImage[1]?.fileName}`}
+                  alt="full screenshots of project"
+                  height={`${data?.fullPageImageSize[1]}`}
+                  width={`${data?.fullPageImageSize[0]}`} />
+              </div>
+              <figcaption className="mt-4 text-xs italic text-center text-gray-500">
+                  full page screenshot of the site
+              </figcaption>
+           </figure>
         </m.div>
-        <p className="mt-4 text-xs italic text-center text-gray-500">
-            full page screenshot of the site
-        </p>
         <div className="relative px-3 py-16 my-8 overflow-hidden bg-light">
             <div className="bg-gradient-to-r from-purple-400 to-purple-600 pb-0.5">
                 <h2 className="pl-4 font-bold uppercase bg-white text-md text-dark">
@@ -101,21 +121,24 @@ export default function Project({ projects: project }: Projects) {
                     project overview
                 </h2>
             </div>
-            {project[0].overview && mapItemsToElements(project[0].overview)}
+            {data.overview ? mapItemsToElements(data.overview) 
+            : <p className="text-md">Unable to get project overview</p>}
             <div className="bg-gradient-to-r from-purple-400 to-purple-600 mt-8 pb-0.5">
                 <h2 className="pl-4 font-bold uppercase bg-white text-md text-dark">
                     <VscLibrary className="inline-block mr-4 text-md text-sec" />
                       stack choice
                 </h2>
             </div>
-            {project[0].stackDecision && mapItemsToElements(project[0].stackDecision)}
+            {data.stackDecision ? mapItemsToElements(data.stackDecision)
+            : <p className="text-md">Unable to get project stack decision</p>}
             <div className="bg-gradient-to-r from-purple-400 to-purple-600 mt-8 pb-0.5">
                 <h2 className="pl-4 font-bold uppercase bg-white text-md text-dark">
                     <VscVmActive className="inline-block mr-4 text-md text-sec" />
                     outcome
                 </h2>
             </div>
-            {project[0].outcome && mapItemsToElements(project[0].outcome)}
+            {data.outcome ? mapItemsToElements(project[0].outcome)
+            : <p className="text-md">Unable to get project outcome</p>}
         </div>
         <Link href={router.asPath} passHref>
             <m.a className="block m-auto mt-16 w-max focus:outline-none focus:ring-4 focus:ring-yellow-400"
@@ -127,8 +150,8 @@ export default function Project({ projects: project }: Projects) {
             </m.a>
         </Link>
       </section>
-      </>
-    )
+    </>
+  )
 };
 
 
@@ -148,21 +171,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   };
 
-  export const getStaticProps: GetStaticProps = async ({ params }: any) => {
-      const VARIABLE = {
-        title: `${params.id}`
-      };
+  export const getStaticProps: GetStaticProps = async ({ params }) => {
+      const VARIABLE = { title: `${params?.id}`};
 
-      const { projects } = await request(
+      const { projects }: SINGLE_PROJECT = await request(
         process.env.CMS_API,
         GET_SINGLE_PROJECT,
         VARIABLE
       );
 
       return {
-          props: {
-            projects
-          },
+          props: { projects },
           revalidate: 1
       }
   };

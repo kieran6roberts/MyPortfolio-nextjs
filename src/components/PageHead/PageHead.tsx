@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export type PageHeadProps = { 
+interface PAGE_HEAD { 
     title: string, 
     description: string,
     currentURL: string 
@@ -9,7 +9,7 @@ export type PageHeadProps = {
 export default function PageHead({ 
     title, 
     description, 
-    currentURL }: PageHeadProps): React.ReactElement {
+    currentURL }: PAGE_HEAD): React.ReactElement {
     return(
         <Head>
             <title key="title">{title}</title>

@@ -710,10 +710,6 @@ a {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -760,10 +756,6 @@ a {
 
 .h-hero {
   height: 500px;
-}
-
-.text-xxxs {
-  font-size: var(--text-3xs);
 }
 
 .text-xxs {
@@ -818,11 +810,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -854,10 +841,6 @@ a {
   margin-left: 0.5rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -868,10 +851,6 @@ a {
 
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .mt-8 {
@@ -1219,6 +1198,11 @@ a {
   text-align: center;
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgba(229, 231, 235, var(--tw-text-opacity));
@@ -1359,10 +1343,6 @@ a {
   width: 75%;
 }
 
-.w-2\/5 {
-  width: 40%;
-}
-
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -1387,10 +1367,6 @@ a {
 
 .z-10 {
   z-index: 10;
-}
-
-.z-20 {
-  z-index: 20;
 }
 
 .z-50 {
@@ -1767,14 +1743,6 @@ a {
   .\32xl\:my-32 {
     margin-top: 8rem;
     margin-bottom: 8rem;
-  }
-
-  .\32xl\:ml-6 {
-    margin-left: 1.5rem;
-  }
-
-  .\32xl\:mb-8 {
-    margin-bottom: 2rem;
   }
 
   .\32xl\:mt-20 {

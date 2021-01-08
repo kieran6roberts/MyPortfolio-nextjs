@@ -2,39 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { VscChevronRight } from "react-icons/vsc";
 
-import Button from "../Button/Button";
-import SubHeader from "../SubHeader/SubHeader";
-import List from "../List/List";
-
-export type ProjectProps = {
-    title: string,
-    description: string,
-    siteLink?: string,
-    githubLink?: string,
-    captions: string[],
-    images: {
-        fileName: string
-    }[],
-    stackImages: {
-        __typename: string,
-        fileName: string
-    }[],
-    __typename?: string,
-    stackNames: string[]
-};
+import ExternalLink from "@/components/ExternalLink/ExternalLink";
+import SubHeader from "@/components/SubHeader/SubHeader";
+import List from "@/components/List/List";
+import { PROJECT } from "../../../pages/index";
 
 export default function Project({ 
-    siteLink, 
-    githubLink, 
-    description, 
-    title, 
-    images, 
     captions, 
+    description, 
+    githubLink, 
+    images, 
+    siteLink, 
     stackImages, 
-    stackNames }: ProjectProps): React.ReactElement {
+    stackNames,
+    title }: PROJECT): React.ReactElement {
 
     return (
-        <div className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
+        <article className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
             <div className="px-4 bg-light">
                 <SubHeader title={title}/>
                 <div className="relative w-full max-w-md mx-auto mb-24 2xl:mb-56 md:max-w-7xl h-hero 2xl:h-lgContain">
@@ -76,14 +60,14 @@ export default function Project({
                     </div>
                 </div>
                 <div className="flex flex-col pb-8 2xl:justify-center sm:flex-row 2xl:pb-32">
-                    <Button link={siteLink}
-                    color="bg-light text-dark mb-2 2xl:mx-8 sm:mb-0 sm:mr-4">
+                    <ExternalLink link={siteLink}
+                    styling="bg-light mb-2 2xl:mx-8 sm:mb-0 sm:mr-4">
                         visit website
-                    </Button>
-                    <Button link={githubLink}
-                    color="bg-offLight text-dark 2xl:mx-8">
+                    </ExternalLink>
+                    <ExternalLink link={githubLink}
+                    styling="bg-offLight 2xl:mx-8">
                         github repo
-                    </Button>
+                    </ExternalLink>
                 </div>
                 <div className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800">
                     <h4 className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
@@ -111,6 +95,6 @@ export default function Project({
                     </Link>
                 </div>
             </div>
-        </div>
+        </article>
     )
 };

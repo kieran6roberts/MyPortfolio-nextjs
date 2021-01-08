@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, RenderResult } from "@testing-library/react";
-import Button, { ButtonProps } from "./Button";
+
+import Button from "@/components/ExternalLink/ExternalLink";
 
 let documentBody: RenderResult;
 

@@ -1,13 +1,13 @@
 import { motion as m } from "framer-motion";
 
-type ScrollProps = {
-    pathLength: any,
+interface SCROLL_ICON {
     complete: boolean,
-}
+    pathLength: any
+};
 
-export default function ScrollIcon({ pathLength, complete }: ScrollProps): React.ReactElement {
+export default function ScrollIcon({ pathLength, complete }: SCROLL_ICON): React.ReactElement {
     return (
-        <svg className="block fixed bottom-8 md:bottom-16 right-0 md:right-12 h-12 w-12" 
+        <svg className="fixed right-0 block w-12 h-12 bottom-8 md:bottom-16 md:right-12" 
         viewBox="0 0 60 60">
             <m.path
             fill="none"

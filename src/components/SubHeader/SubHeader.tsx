@@ -1,10 +1,10 @@
-export type SubHeaderProps = {
+interface SUB_HEADER {
     title: string
 };
 
-export default function SubHeader({ title }: SubHeaderProps): React.ReactElement {
+export default function SubHeader({ title }: SUB_HEADER): React.ReactElement {
     return (
-        <div className="relative w-screen text-left">
+        <header className="relative w-screen text-left">
             <h2 className="text-gray-200 text-xxxl w-offScreen whitespace-nowrap">
                 {title}
             </h2>
@@ -12,6 +12,6 @@ export default function SubHeader({ title }: SubHeaderProps): React.ReactElement
             id="projects">
                 {title}
             </h3>
-        </div>
+        </header>
     )
 };

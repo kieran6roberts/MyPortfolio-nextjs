@@ -1,13 +1,15 @@
 import * as React from "react";
 import { VscCheck } from "react-icons/vsc";
 
+type INPUT_TYPES = HTMLInputElement | HTMLTextAreaElement;
+
 interface INPUT_VALUES {
     name: string,
     email: string,
     message: string,
+    submit?: string
 };
 
-type INPUT_TYPES = HTMLInputElement | HTMLTextAreaElement;
 
 export default function Form(): React.ReactElement {
     const INIT_FORM_VALUES = {
@@ -57,9 +59,9 @@ export default function Form(): React.ReactElement {
     };
 
     async function submitHandler(event: React.FormEvent) {
-        let error: string;
         event.preventDefault();
         setSubmitting(submitDisabled);
+
         if (!disabled) {
             try {
                 const response = await fetch("https://formspree.io/f/mzbkjarl", {
@@ -71,10 +73,9 @@ export default function Form(): React.ReactElement {
                     body: JSON.stringify(inputValues)
                 });
                 const data = response.json();
-            }
-                catch(error) {
-                    error = "Something went wrong!";
-                    console.log(error);
+                
+            } catch(error) {
+                    console.error(error);
                 }
             } 
         setInputValues(INIT_FORM_VALUES);
@@ -86,6 +87,7 @@ export default function Form(): React.ReactElement {
 
     React.useEffect(() => {
         setErrors(validateUserInput(inputValues));
+
         if (checkForEmptyObject(errors)) submitDisabled = false;
         else submitDisabled = true;
         setDisabled(submitDisabled);
@@ -93,14 +95,13 @@ export default function Form(): React.ReactElement {
 
     return (
         <>
-        {submitting &&
-        <p className="bg-pri text-sm text-light text-center my-4 animate-bounce motion-reduce:animate-none">
+        {submitting ?
+        <p className="my-4 text-sm text-center bg-pri text-light animate-bounce motion-reduce:animate-none">
             Form submit successful! I'll get back to you as soon as possible.
-        </p>
-        }
+        </p> : null}
         <form
         onSubmit={submitHandler}
-        className="w-full mx-auto p-1 2xl:mt-20"
+        className="w-full p-1 mx-auto 2xl:mt-20"
         data-testid="form"
         >   
             <div className="lg:flex lg:justify-between lg:items-center">
@@ -110,7 +111,7 @@ export default function Form(): React.ReactElement {
                 className="text-sm text-dark">
                     Name
                     {!submitting && !errors.name && 
-                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    <VscCheck className="inline-block ml-2 text-sm align-top text-pri"/>
                     }
                     <p className={`${!submitting && errors.name ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
                         Name is required
@@ -122,7 +123,7 @@ export default function Form(): React.ReactElement {
                 value={inputValues.name}
                 onChange={inputChangeHandler}
                 placeholder="kieran"
-                className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                className="w-full px-2 py-1 mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
                 </div>
                 <div className="lg:flex-auto lg:ml-2">
                 <label
@@ -130,7 +131,7 @@ export default function Form(): React.ReactElement {
                 className="mb-1 text-sm text-dark">
                     Email
                     {!submitting && !errors.email && 
-                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    <VscCheck className="inline-block ml-2 text-sm align-top text-pri"/>
                     }
                     <p className={`${!submitting && errors.email ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
                         Valid email is required
@@ -142,15 +143,15 @@ export default function Form(): React.ReactElement {
                 value={inputValues.email}
                 onChange={inputChangeHandler}
                 placeholder="kieran6roberts@gmail.com"
-                className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+                className="w-full px-2 py-1 mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
                 </div>
             </div>
             <label
             htmlFor="message"
-            className="mb-1 text-dark text-sm">
+            className="mb-1 text-sm text-dark">
                 Message
                 {!submitting && !errors.message && 
-                    <VscCheck className="inline-block text-sm text-pri ml-2 align-top"/>
+                    <VscCheck className="inline-block ml-2 text-sm align-top text-pri"/>
                     }
                 <p className={`${!submitting && errors.message ? "visible" : "invisible"} text-xxs text-pri mb-1`}>
                     Message must be at least 20 characters
@@ -163,7 +164,7 @@ export default function Form(): React.ReactElement {
             onChange={inputChangeHandler}
             rows={3}
             placeholder="..."
-            className="py-1 px-2 w-full mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
+            className="w-full px-2 py-1 mb-8 text-xs text-dark ring-2 ring-gray-500 ring-opacity-50 focus:outline-none focus:ring-3 focus:ring-purple-500" />
             <input
             id="submit"
             type="submit"

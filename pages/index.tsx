@@ -1,88 +1,51 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
-import { request } from "graphql-request";
 import { motion as m, useAnimation } from "framer-motion";
-import { VscVmActive, VscChevronDown } from "react-icons/vsc";
+import { request } from "graphql-request";
 import { useInView } from "react-intersection-observer";
+import { VscVmActive, VscChevronDown } from "react-icons/vsc";
 
-import { GET_HOME_PROJECTS } from "../src/queries/queries";
-import Hero from "../src/components/Hero/Hero";
-import Project from "../src/components/Project/Project";
-import PageHead from "../src/components/PageHead/PageHead";
-import Card from "../src/components/Card/Card";
+import Card from "@/components/Card/Card";
+import Hero from "@/components/Hero/Hero";
+import PageHead from "@/components/PageHead/PageHead";
+import Project from "@/components/Project/Project";
+import { GET_HOME_PROJECTS } from "@/queries/projects";
+import { regVariant, staggerVariant } from "../src/animations/home";
 
-export type Projects = {
-      projects: {     
-        title: string,
-        description: string,
-        siteLink?: string,
-        githubLink?: string,
-        captions: string[],
-        images: { fileName: string }[],
-        stackImages: {
-          __typename: string,
-          fileName: string}[],
-        __typename?: string,
-        stackNames: string[],
-        overview?: string[],
-        stackDecision?: string[],
-        outcome?: string[],
-        publishDate: string,
-        fullPageImage: { fileName: string }[]
-        fullPageImageSize: [ string, string ]
-        deploy: { fileName: string }
-    }[]
+export type ASSETS = { fileName: string, __typename: string };
+
+export interface PROJECT {
+  captions: string[];
+  description: string;
+  githubLink: string;
+  images: ASSETS[];
+  siteLink: string,
+  stackImages: ASSETS[],
+  stackNames: string[],
+  title: string;
+  __typename: string;
 };
 
-export default function Home({ projects }: Projects): React.ReactElement {
-  const { ref, inView, entry } = useInView({ threshold: 0.1, triggerOnce: true });
+export type PROJECTS = { projects: PROJECT[] };
+
+export default function Home({ projects }: PROJECTS): React.ReactElement {
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const animation = useAnimation();
 
-  const regVariant = {
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1
-      }
-    },
-    hidden: {
-      opacity: 0
-    }
-  };
-
-  const staggerVariant = {
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        delayChildren: 0.2,
-        staggerChildren: 0.2
-      }
-    },
-    hidden: {
-      opacity: 0,
-    }
-  };
-
-  function mapProjectsToElements(projects: any) {
-    let mapArray = projects;
+  function mapProjectsToElements(projects: PROJECT[]): JSX.Element[] {
+    const [ firstProject ] = projects;
+    const CHOSEN_FIRST_PROJECT = "upRoar Music App";
+    let mapProjects = projects;
     
-    if (projects[0].title !== "upRoar Music App") {
+    if (firstProject.title !== CHOSEN_FIRST_PROJECT) {
       const reorderElement = projects.splice(-1, 1);
       projects.splice(0, 0, reorderElement[0]);
-      mapArray = projects;
+      mapProjects = projects;
     }
-    return mapArray.map((project: any) => 
+
+    return mapProjects.map((project) => 
         <li key={`${project.__typename}${project.title}`} >
-          <Project
-          title={project.title} 
-          images={project.images}
-          captions={project.captions}
-          description={project.description}
-          siteLink={project.siteLink}
-          githubLink={project.githubLink}
-          stackImages={project.stackImages}
-          stackNames={project.stackNames} />
+          <Project {...project} />
         </li>
       )
     };
@@ -146,7 +109,7 @@ export default function Home({ projects }: Projects): React.ReactElement {
         </section>
         <section>
           <ul>
-            {projects && mapProjectsToElements(projects)}
+            {projects.length ? mapProjectsToElements(projects) : null}
           </ul>
         </section>
     </div>
@@ -155,21 +118,17 @@ export default function Home({ projects }: Projects): React.ReactElement {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { projects }: Projects = await request(
+  const { projects }: PROJECTS = await request(
     process.env.CMS_API, 
     GET_HOME_PROJECTS
     );
 
   if (!projects) {
-    return {
-      notFound: true
-    }
+    return { notFound: true }
   }
 
   return {
-    props: {
-      projects
-    },
+    props: { projects },
     revalidate: 1
   }
 };

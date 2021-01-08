@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, RenderResult } from "@testing-library/react";
-import Layout from "./Layout";
+
+import Layout from "@/components/Layout/Layout";
 
 let documentBody: RenderResult;
 

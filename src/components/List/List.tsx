@@ -1,29 +1,19 @@
 import Image from "next/image";
-import { generateKey } from "../Card/Card";
 
-interface ImagesProps {
-    images: {
-        fileName: string,
-    }[],
- 
-}
+import { generateKey } from "@/components/Card/Card";
 
-interface NamesProps {
-    names: string[]
-}
+type LIST_IMAGES = { fileName: string }[];
+type LIST_NAMES = string[];
 
-type ListProps = ImagesProps & NamesProps;
+export default function List({ names, images }: { names: LIST_NAMES, images: LIST_IMAGES }): React.ReactElement {
+    function mapStackToList(arr1: LIST_IMAGES, arr2: LIST_NAMES) {
+        const combinedArr = arr1.map((item, index) => [item, arr2[index]]);
 
-
-export default function List({ names, images }: ListProps): React.ReactElement {
-    function mapStackToList(arr1: { fileName: string}[], arr2: string[]) {
-        const combinedArr = arr1.map((item: {fileName: string}, index: any) => [item, arr2[index]]);
-
-        return combinedArr.map((item: any): React.ReactElement => 
-                <li key={`${generateKey(item[1])}`}
+        return combinedArr.map((item): React.ReactElement => 
+                <li key={`${typeof item[1] === "string" && generateKey(item[1])}`}
                 className="flex items-center justify-start my-4 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center">
                     <div className="block mr-4 lg:mr-0">
-                        <Image src={`/images/icons/${item[0].fileName}`}
+                        <Image src={`/images/icons/${typeof item[0] !== "string" && item[0].fileName}`}
                         alt={`${item[0]} logo`}
                         height={40}
                         width={80} />

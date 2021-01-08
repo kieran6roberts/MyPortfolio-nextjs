@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@/animations/*": ["src/animations/*"],
+      "@/components/*": ["src/components/*"],
+      "@/containers/*": ["src/containers/*"],
+      "@/queries/*": ["src/queries/*"],
+      "@/pages/*": ["pages/*"],
+    },
     "target": "es5",
     "lib": [
       "dom",

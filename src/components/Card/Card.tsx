@@ -1,25 +1,27 @@
 import * as React from "react";
 import { motion as m } from "framer-motion";
 
-interface CardProps {
+type COMBINABLE = number | string;
+type ANIMATION_VARIANTS = {
+    hidden: { [key: string]: COMBINABLE },
+    visible: { 
+        transition: { [key: string]: COMBINABLE },
+        [key: string]: any
+    },
+};
+
+interface CARDS {
     items: string[],
     header: string,
-    parentVariant: {
-        visible: {},
-        hidden: {}
-    },
-    childVariant: {
-        visible: {},
-        hidden: {}
-    }
+    parentVariant: ANIMATION_VARIANTS,
+    childVariant: ANIMATION_VARIANTS
 };
 
 export function generateKey(item: string): string {
     return `${item}_${ new Date().getTime() }`;
 };
     
-export default function Card({ items, header, parentVariant, childVariant }: CardProps): React.ReactElement {
-    
+export default function Card({ items, header, parentVariant, childVariant }: CARDS): React.ReactElement {
     return (
         <m.div className="flex flex-col pb-4 mx-2 shadow-lg lg:flex-1"
         variants={parentVariant}>

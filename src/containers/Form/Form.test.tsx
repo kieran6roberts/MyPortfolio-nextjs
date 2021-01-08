@@ -1,7 +1,8 @@
 import * as React from "react";
-import { act, fireEvent, render, RenderResult } from "@testing-library/react";
-import Form from "./Form";
 import userEvent from "@testing-library/user-event";
+import { act, fireEvent, render, RenderResult } from "@testing-library/react";
+
+import Form from "@/containers/Form/Form";
 
 let documentBody: RenderResult;
 
