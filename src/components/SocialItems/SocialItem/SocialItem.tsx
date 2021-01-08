@@ -10,6 +10,7 @@ export default function SocialItem({ path, label, children}: SOCIAL_ITEM): React
             <a aria-label={label}
             className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
             href={path}
+            rel="noopener"
             target="_blank">
                 {children}
             </a>

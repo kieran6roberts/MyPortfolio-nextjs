@@ -39,7 +39,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                                     height={24}
                                     width={24} />
                                 </div>
-                                <span className="hidden text-xs font-bold sm:inline-block text-pri">
+                                <span className="hidden text-xs font-bold sm:inline-block text-pri hover:text-sec">
                                     Kieran Roberts
                                 </span>
                             </a>
@@ -48,7 +48,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                     <ul className="flex ml-auto font-bold uppercase">
                         <li className="flex-auto p-0.5">
                             <Link href="/#projects" passHref>
-                                <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-pri text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                     projects
                                     <RiComputerLine className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-opacity-40 text-md sm:text-lg group-hover:text-purple-400 group-hover:text-opacity-30" />
                                 </a>
@@ -56,7 +56,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
                             <Link href="/contact" passHref>
-                                <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-pri lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                <a className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                     contact me
                                     <AiOutlinePhone className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                 </a>
@@ -74,7 +74,8 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                     created and designed by Kieran Roberts.
                 </p>
                 <a href="https://graphcms.com/?referrer=kieranroberts.dev"
-                className="block mx-auto mt-4"
+                className="block mx-auto mt-4 w-max"
+                rel="noopener"
                 target="_blank">
                     <Image src="/images/icons/Landscape_White.svg"
                     alt="graphcms logo"

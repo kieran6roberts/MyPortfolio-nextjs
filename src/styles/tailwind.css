@@ -14,7 +14,7 @@
         --text-sm: clamp(1.3rem, 1.6vw, 3rem);
         --text-md: clamp(1.4rem, 2.5vw, 5rem);
         --text-lg: clamp(2rem, 4vw, 7rem);
-        --text-xl: clamp(2.5rem, 4.5vw, 9rem);
+        --text-xl: clamp(3rem, 4.5vw, 9rem);
         --text-2xl: clamp(4rem, 4.6vw, 10rem);
         --text-3xl: clamp(7rem, 11vw, 24rem);
       
