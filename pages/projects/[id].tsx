@@ -140,15 +140,12 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
             {data.outcome ? mapItemsToElements(project[0].outcome)
             : <p className="text-md">Unable to get project outcome</p>}
         </div>
-        <Link href={router.asPath} passHref>
-            <m.a className="block m-auto mt-16 w-max focus:outline-none focus:ring-4 focus:ring-yellow-400"
-            whileHover={{ scale: 1.02, translateY: -5 }}
-            whileTap={{ translateY: -30 }}
-            transition={{ duration: 0.5 }}>
-                <VscFoldUp className="text-md text-pri animate-pulse"
-                aria-label="top of the page" />
-            </m.a>
-        </Link>
+        <Link aria-label="top of the page"
+        href="/" passHref>
+        <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+          Back to the top
+        </a>
+      </Link>
       </section>
     </>
   )

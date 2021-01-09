@@ -751,10 +751,6 @@ a {
   height: 0.25rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-0\.5 {
   height: 0.125rem;
 }
@@ -895,10 +891,6 @@ a {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .mb-16 {
@@ -1090,10 +1082,6 @@ a {
   padding-bottom: 0.125rem;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -1104,10 +1092,6 @@ a {
 
 .top-0 {
   top: 0px;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .bottom-0 {
@@ -1140,10 +1124,6 @@ a {
 
 .right-6 {
   right: 1.5rem;
-}
-
-.bottom-8 {
-  bottom: 2rem;
 }
 
 .top-32 {
@@ -1273,6 +1253,11 @@ a {
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgba(96, 165, 250, var(--tw-text-opacity));
+}
+
 .text-purple-200 {
   --tw-text-opacity: 1;
   color: rgba(221, 214, 254, var(--tw-text-opacity));
@@ -1385,10 +1370,6 @@ a {
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .w-44 {
@@ -1572,11 +1553,6 @@ a {
   }
 }
 
-.animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
   animation: bounce 1s infinite;
@@ -1668,16 +1644,8 @@ a {
     padding-right: 5rem;
   }
 
-  .md\:right-12 {
-    right: 3rem;
-  }
-
   .md\:right-16 {
     right: 4rem;
-  }
-
-  .md\:bottom-16 {
-    bottom: 4rem;
   }
 
   .md\:left-16 {

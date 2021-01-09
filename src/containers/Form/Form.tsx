@@ -90,6 +90,7 @@ export default function Form(): React.ReactElement {
 
         if (checkForEmptyObject(errors)) submitDisabled = false;
         else submitDisabled = true;
+        
         setDisabled(submitDisabled);
     }, [ inputValues ]);
 

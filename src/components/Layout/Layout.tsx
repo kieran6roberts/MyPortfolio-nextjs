@@ -3,28 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
 import { RiComputerLine } from "react-icons/ri";
-import { useViewportScroll, 
-    useTransform, 
-    useSpring } from "framer-motion";
 
-import ScrollIcon from "@/components/ScrollIcon/ScrollIcon";
 import SocialItems from "@/components/SocialItems/SocialItems";
 
 type LAYOUT = { children: JSX.Element | JSX.Element[] };
     
 export default function Layout({ children }: LAYOUT): React.ReactElement {
-    const { scrollYProgress } = useViewportScroll();
-    const [ isComplete, setIsComplete ] = React.useState(false);
-    const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
-    const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
-    
-    React.useEffect(() => {
-        yRange.onChange(v => setIsComplete(v >= 1));
-    }, [yRange, scrollYProgress]);
-
     return (
         <div className="flex flex-col justify-between min-h-screen font-mono">
-            <ScrollIcon pathLength={pathLength} complete={isComplete} />
             <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"/>
             <nav className="relative z-50">
                 <div className="flex items-center p-8 px-6 md:px-16">

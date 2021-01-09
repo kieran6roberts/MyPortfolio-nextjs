@@ -1,29 +1,33 @@
 import * as React from "react";
+import TestRenderer from "react-test-renderer";
 import { render, RenderResult } from "@testing-library/react";
 
 import Card from "@/components/Card/Card";
+import { regVariant, staggerVariant } from "@/animations/home";
 
 let documentBody: RenderResult;
 
 describe("<Button />", () => {
-    const cardProps = {
-        items: ["javascript", "css"],
-        header: "test header",
-        childVariant: {
-            hidden: {},
-            visible: {}
-        },
-        parentVariant: {
-            hidden: {},
-            visible: {}
-        }
+    const props = {
+        items: [ "javascript", "css" ],
+        header: "my skills",
+        childVariant: regVariant,
+        parentVariant: staggerVariant
     };
-    beforeEach(() => {
-        documentBody = render(<Card {...cardProps} />);
-    })
+
     test("renders", () => {
-        expect(documentBody.getByText("test header")).toBeInTheDocument();
-        expect(documentBody.getByText("javascript")).toBeInTheDocument();
-        expect(documentBody.getByText("css")).toBeInTheDocument();
+        documentBody = render(<Card {...props} />);
+        
+        expect(documentBody.getByRole("heading", { name: "my skills" })).toBeInTheDocument();
+        expect(documentBody.getByRole("list")).toContainElement(documentBody.getAllByRole("listitem")[0]);
+        expect(documentBody.getByRole("list")).toContainElement(documentBody.getAllByRole("listitem")[1]);
+    });
+
+    test("render snapshot", () => {
+        const tree = TestRenderer
+        .create(<Card {...props} />)
+        .toJSON();
+
+        expect(tree).toMatchSnapshot();
     });
 });

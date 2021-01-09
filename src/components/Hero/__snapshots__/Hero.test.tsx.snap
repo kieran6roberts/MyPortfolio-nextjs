@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> render snapshot 1`] = `
+<section
+  className="h-screen"
+>
+  <div
+    className="absolute top-32 left-3 right-3 bottom-3 md:top-24 lg:top-8 md:left-16 md:right-16"
+  >
+    <div
+      id="hero"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "left": 0,
+            "margin": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <img
+          alt="stylized selfie"
+          decoding="async"
+          sizes="(max-width: 640px) 640px, (max-width: 750px) 750px, (max-width: 828px) 828px, (max-width: 1080px) 1080px, (max-width: 1200px) 1200px, (max-width: 1920px) 1920px, (max-width: 2048px) 2048px, 3840px"
+          src="/_next/image?url=%2Fimages%2Fhero-edit1.webp&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhero-edit1.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhero-edit1.webp&w=3840&q=75 3840w"
+          style={
+            Object {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "contain",
+              "objectPosition": "left bottom",
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "visibility": "visible",
+              "width": 0,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="relative flex flex-col items-center justify-start pt-4 text-center h-3/5 tall:justify-center lg:justify-end lg:items-end"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "scale(0.9) translateZ(0)",
+      }
+    }
+  >
+    <ul
+      className="items-center flex bg-white bg-opacity-90 pt-2 shadow"
+    >
+      <li
+        className="mx-2 mb-2"
+      >
+        <a
+          aria-label="to my github page"
+          className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          href="https://github.com/kieran6roberts"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            className="text-acc transition duration-150 transform text-md ease hover:scale-125"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 1024 1024"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="mx-2 mb-2"
+      >
+        <a
+          aria-label="to my linkedin page"
+          className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          href="https://www.linkedin.com/in/kieran-roberts-00517b178/"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            className="text-acc transition duration-150 transform text-md ease hover:scale-125"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="mx-2 mb-2"
+      >
+        <a
+          aria-label="send me an email"
+          className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          href="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            className="text-acc transition duration-150 transform text-md ease hover:scale-125"
+            fill="currentColor"
+            height="1em"
+            role="img"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <path
+              d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="mx-2 mb-2"
+      >
+        <a
+          aria-label="to my twitter profile"
+          className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          href="https://twitter.com/Kieran6dev"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            className="text-acc transition duration-150 transform text-md ease hover:scale-125"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 1024 1024"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <h1
+      className="pl-2 pr-2 mb-4 font-bold uppercase bg-white rounded shadow-md bg-opacity-90 text-md sm:text-lg 2xl:text-xl"
+    >
+      <div
+        className="hidden relative sm:inline-block align-middle bottom-0.5 sm:mr-4"
+        style={Object {}}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M1.5 2l-.5.5v11l.5.5H4v-1H2V3h2V2H1.5zm13 12l.5-.5v-11l-.5-.5H12v1h2v10h-2v1h2.5z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+      <span
+        className="text-sec"
+      >
+        front-end
+      </span>
+       web developer
+    </h1>
+    <p
+      className="px-2 text-xs uppercase bg-white bg-opacity-90 sm:text-sm 2xl:text-md"
+    >
+      <span
+        className="mr-2 text-acc"
+      >
+        solving
+      </span>
+      your web related needs
+    </p>
+  </div>
+</section>
+`;

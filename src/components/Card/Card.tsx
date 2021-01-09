@@ -23,12 +23,12 @@ export function generateKey(item: string): string {
     
 export default function Card({ items, header, parentVariant, childVariant }: CARDS): React.ReactElement {
     return (
-        <m.div className="flex flex-col pb-4 mx-2 shadow-lg lg:flex-1"
+        <m.article className="flex flex-col pb-4 mx-2 shadow-lg lg:flex-1"
         variants={parentVariant}>
-            <m.p className="pt-12 pb-4 font-bold text-center uppercase text-md text-sec"
+            <m.h3 className="pt-12 pb-4 font-bold text-center uppercase text-md text-sec"
             variants={childVariant}>
                 {header}
-            </m.p>
+            </m.h3>
             <m.ul className="flex flex-col items-center justify-start h-full pt-4 text-xs text-gray-600 bg-light"
             variants={parentVariant}>
                 {items && items.map(item =>
@@ -39,6 +39,6 @@ export default function Card({ items, header, parentVariant, childVariant }: CAR
                     </m.li>                    
                 )}
             </m.ul>
-        </m.div>
+        </m.article>
     )
 };

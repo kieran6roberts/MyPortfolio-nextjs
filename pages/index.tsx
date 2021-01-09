@@ -5,8 +5,7 @@ import { FaGlobeAsia, FaPeopleCarry } from "react-icons/fa";
 import { motion as m, useAnimation } from "framer-motion";
 import { request } from "graphql-request";
 import { useInView } from "react-intersection-observer";
-import { VscAccount, 
-  VscVmActive, 
+import { VscVmActive, 
   VscChevronDown,
   VscCode } from "react-icons/vsc";
 
@@ -112,10 +111,12 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.div>
             <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing <abbr className="text-acc" title="javaScript">js</abbr> and 
-              seeing it bring a website to life. Whether it's using react, vanilla js or 
-              <abbr className="ml-2 text-pri" title="typeScript">ts</abbr>, every tool has its place
-              in which it is important to pick the best tool for the job.
+              I love writing <span className="text-acc">javaScript</span> and 
+              seeing it bring a website to life. Whether it's using 
+              <span className="ml-2 text-blue-400">react</span>, 
+              <span className="ml-2 mr-2 text-acc">vanilla js</span>or 
+              <span className="ml-2 text-pri">typeScript</span>, every tool has its place
+              and it is important to pick the best tool for the job.
             </m.p>
             <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>
             <m.p className="mb-16 text-center uppercase text-md text-dark"
@@ -182,7 +183,8 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
           </article>
         </section>
       </article>
-      <Link href="/" passHref>
+      <Link aria-label="top of the page"
+       href="/" passHref>
         <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
           Back to the top
         </a>
