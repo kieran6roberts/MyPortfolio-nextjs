@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> renders snapshot 1`] = `
+<article
+  className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light"
+>
+  <div
+    className="px-4 bg-light"
+  >
+    <header
+      className="relative w-screen text-left"
+    >
+      <h2
+        className="text-gray-200 text-xxxl w-offScreen whitespace-nowrap"
+      >
+        turncoat brewery
+      </h2>
+      <h3
+        className="absolute px-4 font-bold bg-white border-l-4 shadow-md bg-opacity-30 top-1/4 text-md md:text-lg border-pri"
+        id="projects"
+      >
+        turncoat brewery
+      </h3>
+    </header>
+    <div
+      className="relative w-full max-w-md mx-auto mb-24 2xl:mb-56 md:max-w-7xl h-hero 2xl:h-lgContain"
+    >
+      <div
+        className="absolute z-10 w-2/4 h-full right-6 sm:-right-16 lg:-right-32 2xl:-right-56 -bottom-12 2xl:h-full"
+      >
+        <div
+          className="bg-black border-4 border-black shadow-2xl max-h-mobileH h-5/6 rounded-xl w-max"
+        >
+          <div
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "display": "inline-block",
+                "margin": 0,
+                "maxWidth": "100%",
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "maxWidth": "100%",
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden={true}
+                role="presentation"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>
+            <img
+              alt="cap3"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "contain",
+                  "objectPosition": "offTop",
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="absolute left-0 w-full shadow-md md:w-4/6 md:left-24 2xl:w-full 2xl:-left-56 bottom-1/2 h-3/6"
+      >
+        <div
+          className="w-full h-full"
+        >
+          <div
+            style={
+              Object {
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "left": 0,
+                "margin": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <img
+              alt="cap1"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": "left top",
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="absolute left-0 w-5/6 shadow-md md:left-24 md:w-4/6 2xl:-right-1/2 2xl:w-full -bottom-4 h-1/2"
+      >
+        <div
+          className="w-full h-full"
+        >
+          <div
+            style={
+              Object {
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "left": 0,
+                "margin": 0,
+                "overflow": "hidden",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <img
+              alt="cap2"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": "left top",
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="absolute invisible hidden overflow-hidden bg-black border-4 border-black shadow-2xl bottom-4 2xl:block 2xl:visible max-h-mobileH h-5/6 rounded-xl w-max"
+        >
+          <div
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "display": "inline-block",
+                "margin": 0,
+                "maxWidth": "100%",
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "maxWidth": "100%",
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden={true}
+                role="presentation"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjM4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>
+            <img
+              alt="cap4"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "contain",
+                  "objectPosition": "offTop",
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="flex flex-col pb-8 2xl:justify-center sm:flex-row 2xl:pb-32"
+    >
+      <a
+        className="group bg-light mb-2 2xl:mx-8 sm:mb-0 sm:mr-4 w-44 2xl:w-80 flex align-items whitespace-nowrap text-xxs text-dark font-bold uppercase py-2 px-3 2xl:py-6 2xl:px-6 border-2 border-pri cursor-pointer transition duration-50 ease-in hover:bg-pri focus:outline-none focus:ring-4 focus:ring-yellow-400 active:bg-sec"
+        href="turncoat.com"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          className="block pr-4 group-hover:text-light "
+        >
+          visit website
+        </span>
+        <svg
+          className="text-xs transition ease-in text-pri duration-50 group-hover:text-white"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z"
+            fillRule="evenodd"
+          />
+          <path
+            clipRule="evenodd"
+            d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </a>
+      <a
+        className="group bg-offLight 2xl:mx-8 w-44 2xl:w-80 flex align-items whitespace-nowrap text-xxs text-dark font-bold uppercase py-2 px-3 2xl:py-6 2xl:px-6 border-2 border-pri cursor-pointer transition duration-50 ease-in hover:bg-pri focus:outline-none focus:ring-4 focus:ring-yellow-400 active:bg-sec"
+        href="github-turncoat.com"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          className="block pr-4 group-hover:text-light "
+        >
+          github repo
+        </span>
+        <svg
+          className="text-xs transition ease-in text-pri duration-50 group-hover:text-white"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z"
+            fillRule="evenodd"
+          />
+          <path
+            clipRule="evenodd"
+            d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+    <div
+      className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800"
+    >
+      <h4
+        className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24"
+      >
+        project description
+      </h4>
+    </div>
+    <article
+      className="text-xs"
+    >
+      <p>
+        description of turncoat
+      </p>
+    </article>
+    <div
+      className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800"
+    >
+      <h4
+        className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24"
+      >
+        tech stack
+      </h4>
+    </div>
+    <ul
+      className="flex flex-col py-2 lg:flex-row"
+    >
+      <li
+        className="flex items-center justify-start my-4 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center"
+      >
+        <div
+          className="block mr-4 lg:mr-0"
+        >
+          <div
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "display": "inline-block",
+                "margin": 0,
+                "maxWidth": "100%",
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "maxWidth": "100%",
+                }
+              }
+            >
+              <img
+                alt=""
+                aria-hidden={true}
+                role="presentation"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                style={
+                  Object {
+                    "display": "block",
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>
+            <img
+              alt="[object Object] logo"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "visibility": "hidden",
+                  "width": 0,
+                }
+              }
+            />
+          </div>
+        </div>
+        <span
+          className="block ml-2 text-xs font-bold lg:ml-0 whitespace-nowrap text-dark"
+        >
+          html
+        </span>
+      </li>
+    </ul>
+    <div
+      className="my-16 2xl:my-32 py-0.5 px-2"
+    >
+      <a
+        className="group w-56 flex items-center justify-center bg-pri border-pri border-2 flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-4 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-white hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400"
+        href="/projects/turncoat%20brewery"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        <span
+          className="block pr-4"
+        >
+          case-study
+        </span>
+        <svg
+          aria-label="top of the page"
+          className="text-xs transition ease-in transform translate-x-0 text-light duration-50 group-hover:translate-x-8 group-hover:text-sec "
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>
+`;

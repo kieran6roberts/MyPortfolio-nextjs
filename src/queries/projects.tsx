@@ -15,7 +15,7 @@ export const GET_SINGLE_PROJECT = gql`
       deploy {
         fileName
       }
-      desc
+      description
       images {
         fileName
       }
@@ -42,7 +42,7 @@ export const GET_SINGLE_PROJECT = gql`
   query GetProjects {
     projects {
       title
-      desc
+      description
       deploy {
         fileName
       }

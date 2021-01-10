@@ -21,7 +21,7 @@ export type ASSETS = { fileName: string, __typename: string };
 
 export interface PROJECT {
   captions: string[];
-  description: string;
+  description: string[];
   githubLink: string;
   images: ASSETS[];
   siteLink: string,
@@ -111,12 +111,8 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.div>
             <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing <span className="text-acc">javaScript</span> and 
-              seeing it bring a website to life. Whether it's using 
-              <span className="ml-2 text-blue-400">react</span>, 
-              <span className="ml-2 mr-2 text-acc">vanilla js</span>or 
-              <span className="ml-2 text-pri">typeScript</span>, every tool has its place
-              and it is important to pick the best tool for the job.
+              I love writing javaScript and seeing it bring a website to life. Whether it's using react
+              vanilla <abbr className="text-acc" title="javaScript">js</abbr> or typeScript, every tool has its place and it is important to pick the best tool for the job.
             </m.p>
             <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>
             <m.p className="mb-16 text-center uppercase text-md text-dark"
@@ -173,7 +169,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
           </article>
           <article>
             <h5 className="text-sm font-bold">
-              Creative Contribution <FaPeopleCarry className="inline-block text-pri text-md" />
+              Creative contribution <FaPeopleCarry className="inline-block text-pri text-md" />
             </h5>
             <p className="p-2 text-xs">
               It's a special feeling when you are able to deploy a site to the web for anyone to see and use.

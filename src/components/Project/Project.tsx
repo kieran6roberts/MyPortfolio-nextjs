@@ -3,9 +3,10 @@ import Link from "next/link";
 import { VscChevronRight } from "react-icons/vsc";
 
 import ExternalLink from "@/components/ExternalLink/ExternalLink";
+import Markdown from "@/components/Markdown/Markdown";
 import SubHeader from "@/components/SubHeader/SubHeader";
 import List from "@/components/List/List";
-import { PROJECT } from "../../../pages/index";
+import { PROJECT } from "@/pages/index";
 
 export default function Project({ 
     captions, 
@@ -16,6 +17,8 @@ export default function Project({
     stackImages, 
     stackNames,
     title }: PROJECT): React.ReactElement {
+
+    const [ markdownString ] = description;
 
     return (
         <article className="mb-32 overflow-hidden shadow md:px-4 lg:px-12 md:mx-6 bg-light">
@@ -74,9 +77,7 @@ export default function Project({
                         project description
                     </h4>
                 </div>
-                <p className="py-2 text-xs text-dark">
-                    {description}
-                </p>
+                <Markdown string={markdownString} />
                 <div className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800">
                     <h4 className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
                         tech stack

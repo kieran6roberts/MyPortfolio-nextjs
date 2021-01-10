@@ -1253,11 +1253,6 @@ a {
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
-.text-blue-400 {
-  --tw-text-opacity: 1;
-  color: rgba(96, 165, 250, var(--tw-text-opacity));
-}
-
 .text-purple-200 {
   --tw-text-opacity: 1;
   color: rgba(221, 214, 254, var(--tw-text-opacity));
