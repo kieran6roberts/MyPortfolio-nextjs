@@ -4,9 +4,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/kieran6roberts/MyPortfolio-nextjs)
 ![Twitter Follow](https://img.shields.io/twitter/follow/kieran6dev?style=social)
 
-
-# My Personal Portfolio
-
 An updated personal front-end developer portfolio site for myself highlighting my skills and personal projects. It includes case studies of my primary projects, a skills section and contact information through my social links and contact form. This updated version was created using next.js and its static generation capabilities to pull my project information from graphcms using graphql-request. TypeScript is also used in order for me begin learning the language by using it in a real project for its ability to reduce the chance of bugs and errors entering my code.
 
 <br />
