@@ -36,11 +36,11 @@ export const GET_SINGLE_PROJECT = gql`
       fullPageImageSize
     }
   }
-  `;
+`;
 
-  export const GET_HOME_PROJECTS = gql`
+export const GET_HOME_PROJECTS = gql`
   query GetProjects {
-    projects {
+    projects(orderBy: stackNames_DESC) {
       title
       description
       deploy {

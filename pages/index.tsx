@@ -38,17 +38,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
   const animation = useAnimation();
 
   function mapProjectsToElements(projects: PROJECT[]): JSX.Element[] {
-    const [ firstProject ] = projects;
-    const CHOSEN_FIRST_PROJECT = "upRoar Music App";
-    let mapProjects = projects;
-    
-    if (firstProject.title !== CHOSEN_FIRST_PROJECT) {
-      const reorderElement = projects.splice(-1, 1);
-      projects.splice(0, 0, reorderElement[0]);
-      mapProjects = projects;
-    }
-
-    return mapProjects.map((project) => 
+    return projects.map((project) => 
         <li key={`${project.__typename}${project.title}`} >
           <Project {...project} />
         </li>

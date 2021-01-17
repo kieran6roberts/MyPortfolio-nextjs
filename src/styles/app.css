@@ -730,6 +730,10 @@ a {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -869,6 +873,11 @@ a {
   margin-bottom: 4rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -890,6 +899,10 @@ a {
   margin-left: 0.5rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -902,12 +915,20 @@ a {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-16 {
@@ -924,6 +945,10 @@ a {
 
 .mb-32 {
   margin-bottom: 8rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .max-h-mobileH {
@@ -1019,11 +1044,6 @@ a {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-16 {

@@ -7,8 +7,7 @@ import { useRouter } from "next/router";
 import { VscCalendar, 
   VscFiles, 
   VscLibrary, 
-  VscVmActive,
-  VscFoldUp } from "react-icons/vsc";
+  VscVmActive } from "react-icons/vsc";
 
 import Button from "@/components/ExternalLink/ExternalLink";
 import PageHead from "@/components/PageHead/PageHead";
