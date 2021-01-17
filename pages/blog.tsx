@@ -4,12 +4,16 @@ import { request } from "graphql-request";
 import { GET_ALL_BLOGS } from "@/queries/blogs";
 import BlogCard from "@/components/BlogCard/BlogCard";
 import BlogTag from "@/components/BlogTag/BlogTag";
+import { generateKey } from "@/components/Card/Card";
 
 export interface BLOG {
     author: string;
     description?: string;
     date: string;
-    imageSrc?: string
+    previewImage: {
+        fileName: string
+    };
+    id?: string;
     gridSpan?: string;
     imgHeight?: string;
     title: string;
@@ -28,6 +32,7 @@ export default function Blog({ blogs }: { blogs: BLOG[] }) {
                 author={blog.author}
                 date={blog.date}
                 gridSpan="col-span-2" 
+                id={generateKey(blog.title)}
                 imgHeight="h-3/5"
                 title={blog.title}
                 tags={blog.tags}
@@ -36,6 +41,8 @@ export default function Blog({ blogs }: { blogs: BLOG[] }) {
                 return <BlogCard 
                 author={blog.author}
                 date={blog.date}
+                id={generateKey(blog.title)}
+                previewImage={blog?.previewImage?.fileName}
                 title={blog.title}
                 tags={blog.tags}
                 />
@@ -55,16 +62,19 @@ export default function Blog({ blogs }: { blogs: BLOG[] }) {
             I would like to give back to the community that helped me when I was first beginning
             my coding journey by sharing some the things I have learned so far.
         </p>
-        <div className="flex flex-wrap justify-center mb-12">
-            {tags.map((tag: string) => <BlogTag tagName={tag} />)}
-        </div>
-        <section className="grid grid-cols-1 pt-4 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
-            {mapBlogToCard()}
-
+        <ul className="flex flex-wrap justify-center mb-12">
+            {tags.map((tag: string) => <BlogTag id={generateKey(tag)} tagName={tag} />)}
+        </ul>
+        <section>
+            <ul className="grid grid-cols-1 pt-4 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
+                {mapBlogToCard()}
+            </ul>
+            <footer>
+                <p className="my-24 text-center text-sec text-txt">
+                    End of content.
+                </p>
+            </footer>
         </section>
-        <p className="my-24 text-center text-sec text-txt">
-            End of content.
-        </p>
         </>
     );
 }

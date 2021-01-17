@@ -1649,6 +1649,10 @@ a {
     margin-right: 3rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:ml-4 {
     margin-left: 1rem;
   }

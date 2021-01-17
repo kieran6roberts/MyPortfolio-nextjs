@@ -14,6 +14,9 @@ export const GET_SINGLE_BLOG = gql`
     blogs(where: {title: $title}) {
       title
       subTitle
+      previewImage {
+        fileName
+      }
     }
 }`;
 
@@ -25,6 +28,9 @@ export const GET_ALL_BLOGS = gql`
             tags
             subTitle
             postDate
+            previewImage {
+              fileName
+            }
         }
     }
 `;
