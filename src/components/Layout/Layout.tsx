@@ -13,7 +13,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
     return (
         <div className="flex flex-col justify-between min-h-screen font-mono">
             <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"/>
-            <nav className="relative z-50 mb-4 md:mb-0">
+            <nav className="relative z-50 mb-4">
                 <div className="flex flex-col items-center px-6 py-2 md:py-6 md:flex-row md:px-16">
                     <div className="flex p-3 mr-4 border-b border-purple-200 cursor-pointer">
                         <Link href="/" passHref>

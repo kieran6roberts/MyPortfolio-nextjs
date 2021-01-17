@@ -15,7 +15,7 @@ export default function Contact(): React.ReactElement {
                 initial={{ scale: 0.5}}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut"}}>
-                <h1 className="pb-3 text-lg font-bold text-center capitalize text-dark">
+                <h1 className="pb-3 font-bold text-center capitalize text-md text-dark">
                     Get in touch with me.
                 </h1>
                 <SocialItems styling="flex justify-center mb-8" iconColor="text-acc" />
