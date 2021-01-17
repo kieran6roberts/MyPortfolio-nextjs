@@ -16,7 +16,7 @@ import Project from "@/components/Project/Project";
 import { GET_HOME_PROJECTS } from "@/queries/projects";
 import { regVariant, staggerVariant } from "../src/animations/home";
 import Link from "next/link";
-
+import { generateKey } from "@/components/Card/Card";
 export type ASSETS = { fileName: string, __typename: string };
 
 export interface PROJECT {
@@ -38,18 +38,8 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
   const animation = useAnimation();
 
   function mapProjectsToElements(projects: PROJECT[]): JSX.Element[] {
-    const [ firstProject ] = projects;
-    const CHOSEN_FIRST_PROJECT = "upRoar Music App";
-    let mapProjects = projects;
-    
-    if (firstProject.title !== CHOSEN_FIRST_PROJECT) {
-      const reorderElement = projects.splice(-1, 1);
-      projects.splice(0, 0, reorderElement[0]);
-      mapProjects = projects;
-    }
-
-    return mapProjects.map((project) => 
-        <li key={`${project.__typename}${project.title}`} >
+    return projects.map((project) => 
+        <li key={generateKey(project.title)} >
           <Project {...project} />
         </li>
       )
@@ -111,8 +101,9 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.div>
             <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing javaScript and seeing it bring a website to life. Whether it's using react
-              vanilla <abbr className="text-acc" title="javaScript">js</abbr> or typeScript, every tool has its place and it is important to pick the best tool for the job.
+              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css </abbr>
+              seeing it bring a website to life. Whether it's using react
+              vanilla <abbr className="text-acc" title="javaScript">js</abbr> typeScript or even no js at all, every tool has its place and it is important to pick the best tool for the job.
             </m.p>
             <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>
             <m.p className="mb-16 text-center uppercase text-md text-dark"

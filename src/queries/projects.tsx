@@ -39,28 +39,28 @@ export const GET_SINGLE_PROJECT = gql`
   `;
 
   export const GET_HOME_PROJECTS = gql`
-  query GetProjects {
-    projects {
-      title
-      description
-      deploy {
-        fileName
-      }
-      description
-      captions
-      images {
-        fileName
-      }
-      siteLink,
-      githubLink
-      stackImages {
-        fileName
-      }
-      stackNames
-      publishDate
-      fullPageImage {
-        fileName
+    query GetProjects {
+      projects(orderBy: stackNames_DESC) {
+        title
+        description
+        deploy {
+          fileName
+        }
+        description
+        captions
+        images {
+          fileName
+        }
+        siteLink,
+        githubLink
+        stackImages {
+          fileName
+        }
+        stackNames
+        publishDate
+        fullPageImage {
+          fileName
+        }
       }
     }
-  }
 `;
