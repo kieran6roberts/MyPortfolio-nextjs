@@ -12,11 +12,16 @@ export const GET_ALL_BLOG_TITLES = gql`
 export const GET_SINGLE_BLOG = gql`
   query GetBlog($title: String!) {
     blogs(where: {title: $title}) {
+      blogContent {
+        body
+      }
       title
       subTitle
       previewImage {
         fileName
       }
+      previewCaption
+      tags
     }
 }`;
 

@@ -8,6 +8,9 @@ import { generateKey } from "@/components/Card/Card";
 
 export interface BLOG {
     author: string;
+    blogContent: {
+        body: string
+    };
     description?: string;
     date: string;
     previewImage: {
@@ -16,6 +19,7 @@ export interface BLOG {
     id?: string;
     gridSpan?: string;
     imgHeight?: string;
+    previewCaption: string;
     title: string;
     tags?: string[];
     subTitle?: string;
@@ -34,6 +38,7 @@ export default function Blog({ blogs }: { blogs: BLOG[] }) {
                 gridSpan="col-span-2" 
                 id={generateKey(blog.title)}
                 imgHeight="h-3/5"
+                previewImage={blog?.previewImage?.fileName}
                 title={blog.title}
                 tags={blog.tags}
                 />

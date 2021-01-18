@@ -18,7 +18,7 @@ export default function BlogCard({
  }: BLOG) {
     
     return (
-        <article className={`${gridSpan} w-full mx-auto overflow-hidden text-center border border-gray-300 h-hero`}>
+        <article id={id} className={`${gridSpan} w-full mx-auto overflow-hidden text-center border border-gray-300 h-hero`}>
             <Link href={`/blog/${title.split(" ").join("-")}`} passHref>
                 <a className="w-full h-full">
                     <div className={`${imgHeight} relative w-full mb-8 border border-purple-300`}>
@@ -26,7 +26,7 @@ export default function BlogCard({
                         alt="blog preview"
                         layout="fill"
                         objectFit="cover"
-                        src={`/images/${previewImage ?? "img.png"}`}
+                        src={`/images/${previewImage}`}
                         />
                     </div>
                     <h3 className="px-3 mb-6 text-xs font-bold">

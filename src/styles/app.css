@@ -543,6 +543,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 2rem 0;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -1405,6 +1409,10 @@ a {
   width: 80%;
 }
 
+.w-4\/6 {
+  width: 66.666667%;
+}
+
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -1683,6 +1691,11 @@ a {
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .md\:pt-0 {
