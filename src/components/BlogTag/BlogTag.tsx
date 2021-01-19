@@ -1,6 +1,6 @@
 export default function BlogTag({ tagName }: { tagName: string }) {
     return (
-        <span className="px-3 py-1 mx-4 my-2 border border-purple-200 text-xxs">
+        <span className="block px-1 py-1 mx-1 my-1 font-bold text-white capitalize border border-purple-200 sm:px-3 sm:mx-4 bg-sec text-xxs">
             -{tagName ?? "Unable to retrieve tag name"}-
         </span>
     );

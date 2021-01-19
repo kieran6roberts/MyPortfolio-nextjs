@@ -5,12 +5,11 @@ import { GET_ALL_BLOGS } from "@/queries/blogs";
 import BlogCard from "@/components/BlogCard/BlogCard";
 import BlogTag from "@/components/BlogTag/BlogTag";
 import { generateKey } from "@/components/Card/Card";
-import { read } from "fs/promises";
 
 export interface BLOG_CARD {
     author: string;
     description?: string;
-    date: string;
+    postDate: string;
     previewImage: {
         fileName: string
     };
@@ -38,20 +37,22 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
             if (!index) {
                return <BlogCard 
                 author={blog.author}
-                date={blog.date}
+                postDate={blog.postDate}
+                description={blog.description}
                 gridSpan="col-span-2" 
                 id={generateKey(blog.title)}
-                imgHeight="h-3/5"
-                previewImage={blog?.previewImage?.fileName}
+                imgHeight="h-2/4"
+                previewImage={blog.previewImage}
                 title={blog.title}
                 tags={blog.tags}
                 />
             } else {
                 return <BlogCard 
                 author={blog.author}
-                date={blog.date}
+                postDate={blog.postDate}
+                description={blog.description}
                 id={generateKey(blog.title)}
-                previewImage={blog?.previewImage?.fileName}
+                previewImage={blog.previewImage}
                 title={blog.title}
                 tags={blog.tags}
                 />
@@ -62,16 +63,16 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
 
     return (
         <>
-        <h1 className="px-1 mb-8 font-bold text-center capitalize text-md text-dark">
+        <h1 className="px-1 mb-8 font-bold text-center capitalize 2xl:mb-16 text-md text-dark">
             Welcome to my personal web development blog!
         </h1>
-        <p className="mb-12 text-xs text-center">
+        <p className="mb-12 text-xs text-center 2xl:mb-24">
             You can expect to read articles related to the many different topics covered 
             in the broad spectrum of front-end web development. I am by no means an expert but 
             I would like to give back to the community that helped me when I was first beginning
             my coding journey by sharing some the things I have learned so far.
         </p>
-        <ul className="flex flex-wrap justify-center mb-12">
+        <ul className="flex flex-wrap justify-center mb-12 2xl:mb-24">
             {tags.map((tag: string) => <BlogTag id={generateKey(tag)} tagName={tag} />)}
         </ul>
         <section>
@@ -79,7 +80,7 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
                 {mapBlogToCard()}
             </ul>
             <footer>
-                <p className="my-24 text-center text-sec text-txt">
+                <p className="my-24 text-xs text-center text-sec">
                     End of content.
                 </p>
             </footer>

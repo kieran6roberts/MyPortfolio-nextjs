@@ -57,12 +57,12 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
             {children}
             </main>
             <footer className="px-4 py-8 text-center 2xl:py-16 2xl:px-8 bg-dark text-light">
-                <SocialItems styling="flex justify-center mb-4" iconColor="text-white" />
-                <p className="text-xs uppercase text-acc">
+                <SocialItems styling="flex justify-center mb-4 2xl:mb-8" iconColor="text-white" />
+                <p className="my-2 text-xs uppercase 2xl:my-6 text-acc">
                     created and designed by Kieran Roberts.
                 </p>
                 <a href="https://graphcms.com/?referrer=kieranroberts.dev"
-                className="block mx-auto mt-4 w-max"
+                className="block mx-auto mt-4 2xl:my-6 w-max"
                 rel="noopener"
                 target="_blank">
                     <Image src="/images/icons/Landscape_White.svg"

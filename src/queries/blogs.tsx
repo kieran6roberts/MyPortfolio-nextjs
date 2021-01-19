@@ -21,6 +21,7 @@ export const GET_SINGLE_BLOG = gql`
         fileName
       }
       previewCaption
+      postDate
       tags
     }
 }`;
@@ -29,6 +30,7 @@ export const GET_ALL_BLOGS = gql`
     query GetAllBlogs {
         blogs {
             author
+            description
             title
             tags
             subTitle
