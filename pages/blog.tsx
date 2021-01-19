@@ -5,32 +5,36 @@ import { GET_ALL_BLOGS } from "@/queries/blogs";
 import BlogCard from "@/components/BlogCard/BlogCard";
 import BlogTag from "@/components/BlogTag/BlogTag";
 import { generateKey } from "@/components/Card/Card";
+import { read } from "fs/promises";
 
-export interface BLOG {
+export interface BLOG_CARD {
     author: string;
-    blogContent: {
-        body: string
-    };
     description?: string;
     date: string;
     previewImage: {
         fileName: string
     };
-    id?: string;
+    readonly id: string;
     gridSpan?: string;
     imgHeight?: string;
-    previewCaption: string;
     title: string;
     tags?: string[];
     subTitle?: string;
 }
 
+export interface BLOG_MAIN extends BLOG_CARD {
+    blogContent: {
+        body: string
+    };
+    previewCaption: string;
+}
+
 const tags = ["beginner", "advanced", "tips", "projects", "html", "css", "javaScript/ react", "and more!"];
 
-export default function Blog({ blogs }: { blogs: BLOG[] }) {
+export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
 
     function mapBlogToCard() {
-        return blogs.map((blog: BLOG, index) => {
+        return blogs.map((blog: BLOG_CARD, index) => {
             if (!index) {
                return <BlogCard 
                 author={blog.author}
