@@ -70,10 +70,10 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
             You can expect to read articles related to the many different topics covered 
             in the broad spectrum of front-end web development. I am by no means an expert but 
             I would like to give back to the community that helped me when I was first beginning
-            my coding journey by sharing some the things I have learned so far.
+            my coding journey by sharing some of the things I have learned so far.
         </p>
         <ul className="flex flex-wrap justify-center mb-12 2xl:mb-24">
-            {tags.map((tag: string) => <BlogTag id={generateKey(tag)} tagName={tag} />)}
+            {tags.map((tag: string) => <BlogTag tagName={tag} />)}
         </ul>
         <section>
             <ul className="grid grid-cols-1 pt-4 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
@@ -90,7 +90,7 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const { blogs }: { blogs: BLOG} = await request(
+    const { blogs }: { blogs: BLOG_MAIN} = await request(
       process.env.CMS_API, 
       GET_ALL_BLOGS
       );

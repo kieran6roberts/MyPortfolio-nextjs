@@ -13,7 +13,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
     return (
         <div className="flex flex-col justify-between min-h-screen font-mono">
             <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"/>
-            <nav className="relative z-50 mb-4">
+            <nav className="relative z-50 mb-6 xl:mb-12 2xl:mb-32">
                 <div className="flex flex-col items-center px-6 py-2 md:py-6 md:flex-row md:px-16">
                     <div className="flex p-3 mr-4 border-b border-purple-200 cursor-pointer">
                         <Link href="/" passHref>
@@ -28,7 +28,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                     <ul className="flex justify-center pt-2 font-bold uppercase md:pt-0 md:ml-auto">
                         <li className="flex-auto p-0.5">
                             <Link href="/#projects" passHref>
-                                <a className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                <a className="relative block px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                     projects
                                     <RiComputerLine className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-opacity-40 text-md sm:text-lg group-hover:text-purple-400 group-hover:text-opacity-30" />
                                 </a>
@@ -36,7 +36,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
                             <Link href="/blog" passHref>
-                                <a className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                <a className="relative block px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                     blog
                                     <BiCodeBlock className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                 </a>
@@ -44,7 +44,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
                             <Link href="/contact" passHref>
-                                <a className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                <a className="relative block px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
                                     contact me
                                     <AiOutlinePhone className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
                                 </a>
