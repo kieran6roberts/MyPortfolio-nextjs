@@ -62,4 +62,5 @@ export const GET_HOME_PROJECTS = gql`
         fileName
       }
     }
+  }
 `;

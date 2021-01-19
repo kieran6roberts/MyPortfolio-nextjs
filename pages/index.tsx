@@ -17,6 +17,7 @@ import { GET_HOME_PROJECTS } from "@/queries/projects";
 import { regVariant, staggerVariant } from "../src/animations/home";
 import Link from "next/link";
 import { generateKey } from "@/components/Card/Card";
+
 export type ASSETS = { fileName: string, __typename: string };
 
 export interface PROJECT {
