@@ -5,10 +5,11 @@ import { GET_ALL_BLOGS } from "@/queries/blogs";
 import BlogCard from "@/components/BlogCard/BlogCard";
 import BlogTag from "@/components/BlogTag/BlogTag";
 import { generateKey } from "@/components/Card/Card";
+import PageHead from "@/components/PageHead/PageHead";
 
 export interface BLOG_CARD {
     author: string;
-    description?: string;
+    description: string;
     postDate: string;
     previewImage: {
         fileName: string
@@ -63,6 +64,9 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
 
     return (
         <>
+        <PageHead title="kierandev | blog"
+        description="My web development blog, a collection of posts aimed at helping other aspiring developers improve their skills"
+        currentURL="https://kieranroberts.dev/blog" />
         <h1 className="px-1 mb-8 font-bold text-center capitalize 2xl:mb-16 text-md text-dark">
             Welcome to my personal web development blog!
         </h1>

@@ -102,8 +102,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.div>
             <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css </abbr>
-              seeing it bring a website to life. Whether it's using react
+              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css</abbr> seeing it bring a website to life. Whether it's using react
               vanilla <abbr className="text-acc" title="javaScript">js</abbr> typeScript or even no js at all, every tool has its place and it is important to pick the best tool for the job.
             </m.p>
             <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>

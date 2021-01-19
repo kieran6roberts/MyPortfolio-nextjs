@@ -4,6 +4,7 @@ import { GET_ALL_BLOG_TITLES, GET_SINGLE_BLOG } from "@/queries/blogs";
 import { BLOG_MAIN } from "@/pages/blog";
 import Image from "next/image";
 import Markdown from "@/components/Markdown/Markdown";
+import PageHead from "@/components/PageHead/PageHead";
 
 interface SINGLE_BLOG extends BLOG_MAIN {
     blogs: BLOG_MAIN[]
@@ -14,6 +15,9 @@ export default function BlogPost({ blogs }: SINGLE_BLOG) {
 
     return (
       <section>
+        <PageHead title={`kierandev | ${blog.title}`}
+        description={blog.description}
+        currentURL={`https://kieranroberts.dev/blog/${blog.title}`} />
         <h1 className="px-1 mb-16 font-bold text-center text-md text-dark">
             {blog.title}
         </h1>

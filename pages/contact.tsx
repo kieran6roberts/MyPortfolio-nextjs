@@ -10,18 +10,18 @@ export default function Contact(): React.ReactElement {
         <PageHead title="kierandev | contact"
         description="Got any questions or queries. Want to enquire about working together. Whatever it is, let's get in touch!"
         currentURL="https://kieranroberts.dev/contact" />
-            <section className="mb-32 overflow-hidden md:px-20 lg:px-32 md:mx-12 bg-light">
-                <m.div layout
-                initial={{ scale: 0.5}}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeInOut"}}>
-                <h1 className="pb-3 font-bold text-center capitalize text-md text-dark">
-                    Get in touch with me.
-                </h1>
-                <SocialItems styling="flex justify-center mb-8" iconColor="text-acc" />
-                </m.div>
-                <Form />    
-            </section>
+        <section className="mb-32 overflow-hidden md:px-20 lg:px-32 md:mx-12 bg-light">
+            <m.div layout
+            initial={{ scale: 0.5}}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut"}}>
+            <h1 className="pb-3 font-bold text-center capitalize text-md text-dark">
+                Get in touch with me.
+            </h1>
+            <SocialItems styling="flex justify-center mb-8" iconColor="text-acc" />
+            </m.div>
+            <Form />    
+        </section>
         </>
     )
 };
