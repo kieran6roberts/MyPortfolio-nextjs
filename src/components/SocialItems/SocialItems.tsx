@@ -1,5 +1,5 @@
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaDev, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 import SocialItem from "@/components/SocialItems/SocialItem/SocialItem";
@@ -23,6 +23,10 @@ export default function SocialItems({ styling, iconColor }: SOCIAL_ITEM): React.
             <SocialItem label="send me an email" 
             path="mailto:kieran6roberts@gmail.com?subject=Mail%20from%20portfolio">
                 <SiGmail className={`${iconColor} transition duration-150 transform text-md ease hover:scale-125`} />
+            </SocialItem>
+            <SocialItem label="to my Dev community profile" 
+            path="https://dev.to/kieran6roberts">
+                <FaDev className={`${iconColor} transition duration-150 transform text-md ease hover:scale-125`} />
             </SocialItem>
             <SocialItem label="to my twitter profile" 
             path="https://twitter.com/Kieran6dev">

@@ -60,6 +60,7 @@ module.exports = {
         },
         height: {
           hero: "500px",
+          blogCard: "600px",
           lgContain: "900px"
         },
         listStyleType: {

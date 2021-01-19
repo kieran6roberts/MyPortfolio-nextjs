@@ -8,13 +8,13 @@ exports[`<Layout /> render snpashot 1`] = `
     className="w-full h-1 bg-gradient-to-r from-purple-400 to-blue-800"
   />
   <nav
-    className="relative z-50"
+    className="relative z-50 mb-4"
   >
     <div
-      className="flex items-center p-8 px-6 md:px-16"
+      className="flex flex-col items-center px-6 py-2 md:py-6 md:flex-row md:px-16"
     >
       <div
-        className="flex p-2 mr-4 cursor-pointer"
+        className="flex p-3 mr-4 border-b border-purple-200 cursor-pointer"
       >
         <a
           aria-label="home page"
@@ -23,88 +23,21 @@ exports[`<Layout /> render snpashot 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
-          <div
-            className="relative top-1 sm:hidden"
-          >
-            <div
-              style={
-                Object {
-                  "boxSizing": "border-box",
-                  "display": "inline-block",
-                  "margin": 0,
-                  "maxWidth": "100%",
-                  "overflow": "hidden",
-                  "position": "relative",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "boxSizing": "border-box",
-                    "display": "block",
-                    "maxWidth": "100%",
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  aria-hidden={true}
-                  role="presentation"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-                  style={
-                    Object {
-                      "display": "block",
-                      "maxWidth": "100%",
-                    }
-                  }
-                />
-              </div>
-              <img
-                alt="logo of the letter k"
-                decoding="async"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style={
-                  Object {
-                    "border": "none",
-                    "bottom": 0,
-                    "boxSizing": "border-box",
-                    "display": "block",
-                    "height": 0,
-                    "left": 0,
-                    "margin": "auto",
-                    "maxHeight": "100%",
-                    "maxWidth": "100%",
-                    "minHeight": "100%",
-                    "minWidth": "100%",
-                    "objectFit": undefined,
-                    "objectPosition": undefined,
-                    "padding": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "visibility": "hidden",
-                    "width": 0,
-                  }
-                }
-              />
-            </div>
-          </div>
           <span
-            className="hidden text-xs font-bold sm:inline-block text-pri hover:text-sec"
+            className="text-xs font-bold text-pri hover:text-sec"
           >
             Kieran Roberts
           </span>
         </a>
       </div>
       <ul
-        className="flex ml-auto font-bold uppercase"
+        className="flex justify-center pt-2 font-bold uppercase md:pt-0 md:ml-auto"
       >
         <li
           className="flex-auto p-0.5"
         >
           <a
-            className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec text-bold lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
             href="/#projects"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -141,7 +74,41 @@ exports[`<Layout /> render snpashot 1`] = `
           className="flex-auto p-0.5 ml-2 md:ml-4"
         >
           <a
-            className="relative block px-3 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            href="/blog"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            blog
+            <svg
+              className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z"
+              />
+              <path
+                d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          className="flex-auto p-0.5 ml-2 md:ml-4"
+        >
+          <a
+            className="relative block px-4 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
             href="/contact"
             onClick={[Function]}
             onMouseEnter={[Function]}

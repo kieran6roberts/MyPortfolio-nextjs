@@ -24,7 +24,7 @@ export default function PageHead({
             <meta property="og:description" content={description} key="ogdescription" />
             <meta property="og:type" content="website" key="ogtype" />
             <meta property="og:url" content={currentURL} key="ogurl" />
-            <meta property="og:image" content="./images/home-screenshot.jpg" key="ogimage" />
+            <meta property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
             
             <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />

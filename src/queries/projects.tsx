@@ -36,31 +36,30 @@ export const GET_SINGLE_PROJECT = gql`
       fullPageImageSize
     }
   }
-  `;
+`;
 
-  export const GET_HOME_PROJECTS = gql`
-    query GetProjects {
-      projects(orderBy: stackNames_DESC) {
-        title
-        description
-        deploy {
-          fileName
-        }
-        description
-        captions
-        images {
-          fileName
-        }
-        siteLink,
-        githubLink
-        stackImages {
-          fileName
-        }
-        stackNames
-        publishDate
-        fullPageImage {
-          fileName
-        }
+export const GET_HOME_PROJECTS = gql`
+  query GetProjects {
+    projects(orderBy: stackNames_DESC) {
+      title
+      description
+      deploy {
+        fileName
+      }
+      description
+      captions
+      images {
+        fileName
+      }
+      siteLink,
+      githubLink
+      stackImages {
+        fileName
+      }
+      stackNames
+      publishDate
+      fullPageImage {
+        fileName
       }
     }
 `;
