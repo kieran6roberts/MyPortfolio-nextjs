@@ -6,9 +6,9 @@ interface SOCIAL_ITEM {
 
 export default function SocialItem({ path, label, children}: SOCIAL_ITEM): React.ReactElement {
     return (
-        <li className="mx-2 mb-2">
+        <li className="mx-3 mb-2 2xl:mx-8">
             <a aria-label={label}
-            className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            className="text-md"
             href={path}
             rel="noopener"
             target="_blank">

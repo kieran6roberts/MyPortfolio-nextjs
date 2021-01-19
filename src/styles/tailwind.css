@@ -32,6 +32,10 @@
         a {
           text-decoration: none;
         }
+
+        p {
+          margin: 2rem 0;
+        }
 }
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
