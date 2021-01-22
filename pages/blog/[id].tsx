@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { request } from "graphql-request";
 import { GET_ALL_BLOG_TITLES, GET_SINGLE_BLOG } from "@/queries/blogs";
 import { BLOG_MAIN } from "@/pages/blog";
+import Link from "next/link";
 import Image from "next/image";
 import Markdown from "@/components/Markdown/Markdown";
 import PageHead from "@/components/PageHead/PageHead";
@@ -38,7 +39,14 @@ export default function BlogPost({ blogs }: SINGLE_BLOG) {
         <section className="px-1 mx-1 md:mx-3 md:px-24">
           <Markdown string={blog.blogContent.body} />
         </section>
+        <Link aria-label="top of the page"
+         href="/" passHref>
+        <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+          Back to the top
+        </a>
+      </Link>
       </section>
+      
     )
 };
 

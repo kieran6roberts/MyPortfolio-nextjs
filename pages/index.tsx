@@ -53,7 +53,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
 
   return (
     <>
-    <PageHead title="Kierandev | Home" 
+    <PageHead title="Kierandev | home" 
     description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"
     currentURL="https://kieranroberts.dev"
     />
