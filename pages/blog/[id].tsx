@@ -19,14 +19,22 @@ export default function BlogPost({ blogs }: SINGLE_BLOG) {
         <PageHead title={`kierandev | ${blog.title}`}
         description={blog.description}
         currentURL={`https://kieranroberts.dev/blog/${blog.title}`} />
-        <h1 className="px-1 mb-16 font-bold text-center text-md text-dark">
+        <h1 className="px-1 font-bold text-center text-md text-dark">
             {blog.title}
         </h1>
+        <div>
+          <p className="mr-1 font-bold text-center text-xxs">
+              Posted by {blog.author ?? "Kieran Roberts"} on
+              <span className="block ml-1 font-bold sm:inline-block text-xxs text-pri">
+                <time>{blog.postDate ?? "Unable to retrieve date"}</time>
+              </span>
+          </p>
+        </div>
         <figure className="relative w-full h-56 mx-auto mb-20 border border-purple-300 shadow-md 2xl:mb-32 lg:w-5/6 lg:h-hero">
           <Image
           alt="blog post preview"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           src={`/images/${blog.previewImage.fileName}`}
           />
           <figcaption className="absolute bottom-0 left-0 p-1 text-white bg-pri">

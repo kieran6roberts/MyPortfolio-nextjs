@@ -95,7 +95,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               header="as well as:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
-              <Card items={["typeScript", "redux", "apollo/graphql"]}
+              <Card items={["typeScript", "redux", "apollo/graphql", "data structures"]}
               header="currently learning:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
