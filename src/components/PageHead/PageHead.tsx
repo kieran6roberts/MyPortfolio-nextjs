@@ -16,15 +16,17 @@ export default function PageHead({
             <meta charSet="UTF-8" key="charset" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
             <meta name="description" content={description} key="description" />
+            <meta name="author" content="Kieran Roberts" key="author" />
 
             <meta name="twitter:card" content="summary" key="twcard" />
             <meta name="twitter:creator" content="@Kieran6dev" key="twhandle" />
 
+            <meta property="og:locale" content="en_GB" key="oglocale" />
             <meta property="og:title" content={title} key="ogtitle"/>
             <meta property="og:description" content={description} key="ogdescription" />
             <meta property="og:type" content="website" key="ogtype" />
             <meta property="og:url" content={currentURL} key="ogurl" />
-            <meta property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
+            <meta name="image" property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
             
             <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
