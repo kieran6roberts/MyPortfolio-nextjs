@@ -6,6 +6,9 @@ import BlogCard from "@/components/BlogCard/BlogCard";
 import BlogTag from "@/components/BlogTag/BlogTag";
 import { generateKey } from "@/components/Card/Card";
 import PageHead from "@/components/PageHead/PageHead";
+import SocialItem from "@/components/SocialItems/SocialItem/SocialItem";
+import { FaDev } from "react-icons/fa";
+import Link from "next/link";
 
 export interface BLOG_CARD {
     author: string;
@@ -70,6 +73,23 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
         <h1 className="px-1 mb-8 font-bold text-center capitalize 2xl:mb-16 text-md text-dark">
             Welcome to my personal web development blog!
         </h1>
+        <ul className="flex justify-center list-none">
+            <span>
+                Follow me @ 
+            </span>
+            <SocialItem label="to my Dev community profile" 
+                path="https://dev.to/kieran6roberts">
+                <FaDev className={`text-acc transition duration-150 transform text-md ease hover:scale-125`} />
+            </SocialItem>
+            <Link href="https://dev.to/kieran6roberts">
+                <a aria-label="to my dev.to blog profile"
+                className="hidden text-sec sm:inline-block"        
+                rel="noopener"
+                target="_blank">
+                    dev.to/kieran6roberts
+                </a>
+            </Link>
+        </ul>
         <p className="mb-12 text-xs text-center 2xl:mb-24">
             You can expect to read articles related to the many different topics covered 
             in the broad spectrum of front-end web development. I am by no means an expert but 
@@ -80,13 +100,18 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
             {tags.map((tag: string) => <BlogTag tagName={tag} />)}
         </ul>
         <section>
-            <ul className="grid grid-cols-1 pt-4 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
+            <ul className="grid grid-cols-1 pt-4 mb-20 2xl:mb-32 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
                 {mapBlogToCard()}
             </ul>
             <footer>
-                <p className="my-24 text-xs text-center text-sec">
-                    End of content.
-                </p>
+                <Link aria-label="top of the page"
+                href="/blog" 
+                passHref
+                >
+                    <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                    Back to the top
+                    </a>
+                </Link>
             </footer>
         </section>
         </>

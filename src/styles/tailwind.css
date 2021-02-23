@@ -1,41 +1,41 @@
 @import "tailwindcss/base";
 @layer base {
-    :root {
-        --color-light: rgba(255, 255, 255);
-        --color-off-light: rgb(244, 235, 235);
-        --color-dark: rgb(0, 15, 44);
-        --color-pri: #956af8;
-        --color-sec: #2a50ca;
-        --color-acc: #ffb84d;
-      
-        --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
-        --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
-        --text-xs: clamp(1rem, 1.2vw, 2.9rem);
-        --text-sm: clamp(1.3rem, 1.6vw, 3rem);
-        --text-md: clamp(1.4rem, 2.5vw, 5rem);
-        --text-lg: clamp(2rem, 4vw, 7rem);
-        --text-xl: clamp(3rem, 4.5vw, 9rem);
-        --text-2xl: clamp(4rem, 4.6vw, 10rem);
-        --text-3xl: clamp(7rem, 11vw, 24rem);
-      
-        --off-screen: 250vw;
-      }
-      
-        html {
-          line-height: 1.6;
-        }
-        
-        body {
-          background-color: var(--color-light);
-        }
-      
-        a {
-          text-decoration: none;
-        }
+  :root {
+    --color-light: rgba(255, 255, 255);
+    --color-off-light: rgb(244, 235, 235);
+    --color-dark: rgb(0, 15, 44);
+    --color-pri: #956af8;
+    --color-sec: #2a50ca;
+    --color-acc: #ffb84d;
 
-        p {
-          margin: 2rem 0;
-        }
+    --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
+    --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
+    --text-xs: clamp(1rem, 1.2vw, 2.9rem);
+    --text-sm: clamp(1.3rem, 1.6vw, 3rem);
+    --text-md: clamp(1.4rem, 2.5vw, 5rem);
+    --text-lg: clamp(2rem, 4vw, 7rem);
+    --text-xl: clamp(3rem, 4.5vw, 9rem);
+    --text-2xl: clamp(4rem, 4.6vw, 10rem);
+    --text-3xl: clamp(7rem, 11vw, 24rem);
+
+    --off-screen: 250vw;
+  }
+
+  html {
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: var(--color-light);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 2rem 0;
+  }
 }
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

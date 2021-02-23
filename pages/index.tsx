@@ -87,7 +87,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               that are interactive, responsive and accessible to all users.
             </m.p>
             <m.div className="lg:flex">
-              <Card items={["html", "css", "javaScript", "react"]}
+              <Card items={["html", "css", "javaScript", "typeScript", "react"]}
               header="My primary skills:"
               parentVariant={staggerVariant}
               childVariant={regVariant} />
@@ -95,16 +95,20 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               header="as well as:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
-              <Card items={["typeScript", "redux", "apollo/graphql", "data structures"]}
-              header="currently learning:"
+              <Card items={["next.js e-commerce project", "apollo/graphql", "data structures", "writing blog posts", "interview prep"]}
+              header="working on:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
             </m.div>
             <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css</abbr> seeing it bring a website to life. Whether it's using react
-              vanilla <abbr className="text-acc" title="javaScript">js</abbr> typeScript or even no js at all, every tool has its place and it is important to pick the best tool for the job.
+              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css</abbr> seeing it bring a website to life. Whether it's using react,
+              vanilla <abbr className="text-acc" title="javaScript">js</abbr>, typeScript or even no js at all, every tool has its place and it is important to pick the best tool for the job.
             </m.p>
+            <m.h2 className="pt-4 pb-8 text-sm font-bold text-center uppercase text-dark 2xl:pb-16"
+            variants={regVariant}>
+              Currently searching for junior front-end developer roles
+            </m.h2>
             <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>
             <m.p className="mb-16 text-center uppercase text-md text-dark"
             variants={regVariant}>

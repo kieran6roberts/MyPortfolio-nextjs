@@ -28,7 +28,7 @@ export const GET_SINGLE_BLOG = gql`
 
 export const GET_ALL_BLOGS = gql`
     query GetAllBlogs {
-        blogs {
+        blogs(orderBy: createdAt_DESC) {
             author
             description
             title
