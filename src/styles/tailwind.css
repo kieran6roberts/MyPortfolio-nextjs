@@ -8,7 +8,7 @@
     --color-sec: #2a50ca;
     --color-acc: #ffb84d;
 
-    --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
+    --text-3xs: clamp(0.6rem, 0.8vw, 1.3rem);
     --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
     --text-xs: clamp(1rem, 1.2vw, 2.9rem);
     --text-sm: clamp(1.3rem, 1.6vw, 3rem);

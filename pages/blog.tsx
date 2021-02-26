@@ -43,7 +43,7 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
                 author={blog.author}
                 postDate={blog.postDate}
                 description={blog.description}
-                gridSpan="col-span-2" 
+                gridSpan="col-span-1 md:col-span-2"
                 id={generateKey(blog.title)}
                 imgHeight="h-2/4"
                 previewImage={blog.previewImage}
@@ -97,7 +97,9 @@ export default function Blog({ blogs }: { blogs: BLOG_CARD[] }) {
             my coding journey by sharing some of the things I have learned so far.
         </p>
         <ul className="flex flex-wrap justify-center mb-12 2xl:mb-24">
-            {tags.map((tag: string) => <BlogTag tagName={tag} />)}
+            {tags.map((tag: string) => <li key={generateKey(tag)}>
+                <BlogTag tagName={tag} />
+            </li>)}
         </ul>
         <section>
             <ul className="grid grid-cols-1 pt-4 mb-20 2xl:mb-32 gap-x-2 gap-y-12 md:grid-cols-2 xl:grid-cols-3">

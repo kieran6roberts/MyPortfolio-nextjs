@@ -38,7 +38,7 @@ export default function BlogCard({
                         on <time>{postDate ?? "Unable to retrieve date"}</time>
                     </span>
                     <section className="px-4 py-2">
-                        <p className="hidden px-3 mt-2 mb-6 md:block lg:px-16 text-xxs">
+                        <p className="px-3 mt-2 mb-6 lg:px-16 text-xxxs">
                             {description ?? "Unable to retrieve blog description"}
                         </p>
                         <footer className="flex items-center justify-center mt-4 lg:mt-8">

@@ -519,7 +519,7 @@ video {
   --color-pri: #956af8;
   --color-sec: #2a50ca;
   --color-acc: #ffb84d;
-  --text-3xs: clamp(0.7rem, 1vw, 1.6rem);
+  --text-3xs: clamp(0.6rem, 0.8vw, 1.3rem);
   --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
   --text-xs: clamp(1rem, 1.2vw, 2.9rem);
   --text-sm: clamp(1.3rem, 1.6vw, 3rem);
@@ -828,6 +828,11 @@ p {
 
 .h-blogCard {
   height: 600px;
+}
+
+.text-xxxs {
+  font-size: clamp(0.6rem, 0.8vw, 1.3rem);
+  font-size: var(--text-3xs);
 }
 
 .text-xxs {
@@ -1529,10 +1534,6 @@ p {
   grid-column: span 1 / span 1;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .transform {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -1717,10 +1718,6 @@ p {
 }
 
 @media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1808,6 +1805,10 @@ p {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 }
 
