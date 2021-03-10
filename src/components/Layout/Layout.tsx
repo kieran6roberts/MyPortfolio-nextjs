@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
 import { RiComputerLine } from "react-icons/ri";
 import { BiCodeBlock } from "react-icons/bi"
+import { FiExternalLink } from "react-icons/fi";
 
 import SocialItems from "@/components/SocialItems/SocialItems";
 
@@ -35,12 +36,16 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                             </Link>
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
-                            <Link href="/blog" passHref>
-                                <a className="relative block px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                                    blog
-                                    <BiCodeBlock className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
-                                </a>
-                            </Link>
+                            <a className="relative flex items-center px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
+                            href="https://kieranroberts.hashnode.dev/"
+                            rel="noopener"
+                            target="_blank"
+                            >
+                                blog
+                                <BiCodeBlock className="absolute top-0 left-0 text-purple-200 transition duration-150 ease-in text-md sm:text-lg text-opacity-30 group-hover:text-purple-400 group-hover:text-opacity-30" />
+                                <FiExternalLink className="inline-block mb-1 ml-2" />
+                            </a>
+                            
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
                             <Link href="/contact" passHref>
