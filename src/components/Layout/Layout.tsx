@@ -37,7 +37,7 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                         </li>
                         <li className="flex-auto p-0.5 ml-2 md:ml-4">
                             <a className="relative flex items-center px-2 py-2 overflow-hidden transition duration-150 ease-in cursor-pointer md:px-4 group text-xxs lg:text-xs text-sec lg:py-4 lg:px-8 hover:bg-light hover:text-pri focus:outline-none focus:ring-4 focus:ring-yellow-400"
-                            href="https://kieranroberts.hashnode.dev/"
+                            href="https://blog.kieranroberts.dev"
                             rel="noopener"
                             target="_blank"
                             >
