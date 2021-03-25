@@ -19,8 +19,8 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                     <div className="flex p-3 mr-4 cursor-pointer">
                         <Link href="/" passHref>
                             <a className="flex align-center focus:outline-none focus:ring-4 focus:ring-yellow-400"
-                            aria-label="home page">
-                                <span className="text-xs font-bold text-pri hover:text-sec">
+                            aria-label="Home Kieran Roberts">
+                                <span className="text-sm font-bold text-pri hover:text-sec">
                                     Kieran Roberts
                                 </span>
                             </a>

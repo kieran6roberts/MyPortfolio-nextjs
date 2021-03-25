@@ -519,9 +519,9 @@ video {
   --color-pri: #956af8;
   --color-sec: #2a50ca;
   --color-acc: #ffb84d;
-  --text-3xs: clamp(0.6rem, 0.8vw, 1.3rem);
-  --text-2xs: clamp(0.8rem, 1vw, 1.8rem);
-  --text-xs: clamp(1rem, 1.2vw, 2.9rem);
+  --text-3xs: clamp(0.7rem, 0.9vw, 1.4rem);
+  --text-2xs: clamp(0.9rem, 1vw, 1.8rem);
+  --text-xs: clamp(1.2rem, 1.3vw, 2.9rem);
   --text-sm: clamp(1.3rem, 1.6vw, 3rem);
   --text-md: clamp(1.4rem, 2.5vw, 5rem);
   --text-lg: clamp(2rem, 4vw, 7rem);
@@ -788,12 +788,12 @@ p {
 }
 
 .text-xxs {
-  font-size: clamp(0.8rem, 1vw, 1.8rem);
+  font-size: clamp(0.9rem, 1vw, 1.8rem);
   font-size: var(--text-2xs);
 }
 
 .text-xs {
-  font-size: clamp(1rem, 1.2vw, 2.9rem);
+  font-size: clamp(1.2rem, 1.3vw, 2.9rem);
   font-size: var(--text-xs);
 }
 
@@ -1719,7 +1719,7 @@ p {
   }
 
   .lg\:text-xs {
-    font-size: clamp(1rem, 1.2vw, 2.9rem);
+    font-size: clamp(1.2rem, 1.3vw, 2.9rem);
     font-size: var(--text-xs);
   }
 
