@@ -11,7 +11,7 @@ export default function List({ names, images }: { names: LIST_NAMES, images: LIS
 
         return combinedArr.map((item): React.ReactElement => 
                 <li key={`${typeof item[1] === "string" && generateKey(item[1])}`}
-                className="flex items-center justify-start my-4 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center">
+                className="flex items-center justify-start my-4 lg:pb-12 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center">
                     <div className="block mr-4 lg:mr-0">
                         <Image src={`/images/icons/${typeof item[0] !== "string" && item[0].fileName}`}
                         alt={`${item[0]} logo`}
@@ -26,7 +26,7 @@ export default function List({ names, images }: { names: LIST_NAMES, images: LIS
         };
         
     return (
-        <ul className="flex flex-col py-2 lg:flex-row">
+        <ul className="flex flex-col flex-wrap py-2 lg:flex-row">
             {mapStackToList(images, names)}
         </ul>
     )

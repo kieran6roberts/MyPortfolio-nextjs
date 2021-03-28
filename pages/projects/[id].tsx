@@ -94,20 +94,22 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }} 
-         className="flex justify-center w-full p-1 m-auto items-top 2xl:w-max h-max">
+         className="flex justify-center w-full p-1 m-auto items-top xxxl:w-max h-max">
            <figure>
-              <div className="shadow-md">
+             <div className="flex w-full">
+              <div className="shadow-md xxxl:mr-12">
                 <Image src={`/images/${data?.fullPageImage[0]?.fileName}`}
                   alt="full screenshots of project"
                   height={`${data?.fullPageImageSize[1]}`}
                   width={`${data?.fullPageImageSize[0]}`}/>
               </div>
-              <div className="hidden shadow-md 2xl:block">
+              <div className="hidden shadow-md xxxl:block xxxl:ml-12">
                 <Image src={`/images/${data?.fullPageImage[1]?.fileName}`}
                   alt="full screenshots of project"
                   height={`${data?.fullPageImageSize[1]}`}
                   width={`${data?.fullPageImageSize[0]}`} />
               </div>
+             </div>
               <figcaption className="mt-4 text-xs italic text-center text-gray-500">
                   full page screenshot of the site
               </figcaption>
@@ -140,7 +142,7 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
             : <p className="text-md">Unable to get project outcome</p>}
         </div>
         <Link aria-label="top of the page"
-        href="/" passHref>
+        href={`/projects/${data.title.split(" ").join("%20")}`} passHref>
         <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
           Back to the top
         </a>

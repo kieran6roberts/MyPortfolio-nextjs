@@ -87,7 +87,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               that are interactive, responsive and accessible to all users.
             </m.p>
             <m.div className="lg:flex">
-              <Card items={["html", "css", "javaScript", "typeScript", "react"]}
+              <Card items={["html", "css", "javaScript", "typeScript", "react", "git"]}
               header="My primary skills:"
               parentVariant={staggerVariant}
               childVariant={regVariant} />
@@ -95,7 +95,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               header="as well as:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
-              <Card items={["next.js e-commerce project", "apollo/graphql", "data structures", "writing blog posts", "interview prep"]}
+              <Card items={["blogging", "interview prep", "apollo/graphql", "SEO", "Design & Figma"]}
               header="working on:"
               parentVariant={staggerVariant}
               childVariant={regVariant}  />

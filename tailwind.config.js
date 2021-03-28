@@ -28,7 +28,8 @@ module.exports = {
         },
         screens: {
           tall: {"raw": "(min-height: 650px) and (max-width: 1024px)"},
-          smWide: {"raw": "(max-height: 700px) and (min-width: 768px)"}
+          smWide: {"raw": "(max-height: 700px) and (min-width: 768px)"},
+          xxxl: {"raw": "(min-width: 1800px)"}
         },
         textColor: {
           pri: "var(--color-pri)",
