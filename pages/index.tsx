@@ -2,6 +2,7 @@ import * as React from "react";
 import { GetStaticProps } from "next";
 import { GiHand } from "react-icons/gi";
 import { FaGlobeAsia, FaPeopleCarry } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import { motion as m, useAnimation } from "framer-motion";
 import { request } from "graphql-request";
 import { useInView } from "react-intersection-observer";
@@ -100,16 +101,61 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
             </m.div>
-            <m.p className="w-3/4 m-auto my-16 text-xs text-center text-gray-500"
+            <m.p className="w-3/4 m-auto my-24 text-xs text-center text-gray-500"
             variants={regVariant}>
-              I love writing javaScript and <abbr className="text-acc" title="Cascading Style Sheets">css</abbr> seeing it bring a website to life. Whether it's using react,
-              vanilla <abbr className="text-acc" title="javaScript">js</abbr>, typeScript or even no js at all, every tool has its place and it is important to pick the best tool for the job.
+              I also love to give back by helping aspiring devlopers learn web-development which is why I 
+              post regular blog posts focused on various front-end related topics and learning/ writing
+              tips.
             </m.p>
-            <m.h2 className="pt-4 pb-8 text-sm font-bold text-center uppercase text-dark 2xl:pb-16"
+            <m.h2 className="pt-4 pb-16 font-bold text-center uppercase text-md text-dark 2xl:pb-36"
             variants={regVariant}>
-              Currently searching for junior front-end developer roles
+              Personal Achievements
             </m.h2>
-            <VscChevronDown className="m-auto my-16 text-xxl text-sec"/>
+            <m.ul className="text-xs text-center text-gray-700"
+            variants={regVariant}>
+              <m.li className="mb-8 2xl:mb-16"
+              variants={regVariant}>
+                Open source contributor to @DefinitelyTyped: 
+                <a className="ml-2 text-pri"
+                href="https://www.npmjs.com/package/@types/react-select-country-list"
+                rel="noopener"
+                target="_blank">
+                  @types/react-select-country-list <FiExternalLink style={{ display: "inline-block", marginBottom: "4px" }}/>
+                </a>
+              </m.li>
+              <m.li className="mb-8 2xl:mb-16"
+              variants={regVariant}>
+                2x Featured hashnode article    
+                <a className="ml-2 text-pri"
+                href="https://blog.kieranroberts.dev/"
+                rel="noopener"
+                target="_blank">
+                  blog.kieranroberts.dev: <FiExternalLink style={{ display: "inline-block", marginBottom: "4px" }}/>
+                </a>
+              </m.li>
+              <m.li className="mb-8 2xl:mb-16"
+              variants={regVariant}>
+                1x "Must Read" Featured hashnode weekly article
+                <a className="ml-2 text-pri"
+                href="https://blog.kieranroberts.dev/why-its-awesome-for-new-developers-to-blog-as-they-learn"
+                rel="noopener"
+                target="_blank">
+                  Why it's awesome for new developers to blog as they learn: <FiExternalLink style={{ display: "inline-block", marginBottom: "4px" }}/>
+                </a>
+              </m.li>
+              <m.li className="mb-8 2xl:mb-16"
+              variants={regVariant}>
+                Over 8000 total post views on Dev.to
+                <a className="ml-2 text-pri"
+                href="https://dev.to/kieran6roberts"
+                rel="noopener"
+                target="_blank">
+                  dev.to/kieran6roberts: <FiExternalLink style={{ display: "inline-block", marginBottom: "4px" }}/>
+                </a>
+              </m.li>
+            </m.ul>
+            <VscChevronDown aria-label="arrow down"
+            className="m-auto my-16 text-xxl text-sec"/>
             <m.p className="mb-16 text-center uppercase text-md text-dark"
             variants={regVariant}>
               Check out my work below

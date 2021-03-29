@@ -849,6 +849,11 @@ p {
   margin-bottom: 4rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1238,6 +1243,11 @@ p {
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
 .text-purple-200 {
@@ -1806,6 +1816,10 @@ p {
     margin-bottom: 2rem;
   }
 
+  .\32xl\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .\32xl\:mt-20 {
     margin-top: 5rem;
   }
@@ -1859,10 +1873,6 @@ p {
   .\32xl\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
-  }
-
-  .\32xl\:pb-16 {
-    padding-bottom: 4rem;
   }
 
   .\32xl\:pb-32 {

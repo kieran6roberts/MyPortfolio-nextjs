@@ -374,10 +374,10 @@ exports[`<Hero /> renders snapshot 1`] = `
       </h4>
     </div>
     <ul
-      className="flex flex-col py-2 lg:flex-row"
+      className="flex flex-col flex-wrap py-2 lg:flex-row"
     >
       <li
-        className="flex items-center justify-start my-4 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center"
+        className="flex items-center justify-start my-4 lg:pb-12 lg:my-0 lg:mr-12 lg:flex-col lg:justify-center"
       >
         <div
           className="block mr-4 lg:mr-0"

@@ -2,11 +2,11 @@
 
 exports[`<SocialItems {...props> /> render snapshot 1`] = `
 <li
-  className="mx-2 mb-2"
+  className="mx-3 mb-2 2xl:mx-8"
 >
   <a
     aria-label="to my social page"
-    className="text-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+    className="text-md"
     href="/social"
     rel="noopener"
     target="_blank"
