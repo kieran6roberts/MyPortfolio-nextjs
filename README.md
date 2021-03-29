@@ -17,12 +17,22 @@ An updated personal front-end developer portfolio site for myself highlighting m
 ## Table of contents
 
 - [Project Objectives](#project-objectives)
+- [Content](#content)
 - [Technologies](#technologies)
+- [Project Status](#project-status)
 - [Author](#author)
 
 ## Project Objectives
 
-The primary objective of this project was to create a performant and responsive site to show my work and skills to potential employers or clients using a simple and clean UI desing. The first part could be achieved through the static site generation offered by next.js which also ensures dry code by re-factoring similar elements into components. The styling would be handled using tailiwndcss to ensure time-efficient development without losing the ability to customize when required.
+The primary objective of this project was to create a performant and responsive site to show my work and skills to potential employers or clients using a simple and clean UI design. The first part could be achieved through the static site generation offered by next.js allowing each page to be generated at build time. The styling would be handled using tailiwndcss to ensure time-efficient development without losing the ability to customize and personalize the design when required.
+
+## Content
+
+- List of projects with images at different screen sizes
+- Case study for each product
+- Contact form
+- Link to my blog
+- Small about me section
 
 ## Technologies
 
@@ -34,6 +44,10 @@ The primary objective of this project was to create a performant and responsive 
 - jest 26.6.3
 - @testing-library/react 11.2.2
 
-# Author
+## Project Status
+
+The project is currently live with no clear future feature updates. The portfolio will be updated with any new projects or accomplishments acheived along the way.
+
+## Author
 
 - Kieran Roberts
