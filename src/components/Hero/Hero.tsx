@@ -16,7 +16,7 @@ export default function Hero(): React.ReactElement {
                   layoutId="hero">
                     <Image 
                     src="/images/hero-edit1.webp"
-                    alt="stylized selfie"
+                    alt="stylized selfie in black and white color scheme with a stylized landscape background"
                     layout="fill"
                     objectFit="contain"
                     objectPosition="left bottom"

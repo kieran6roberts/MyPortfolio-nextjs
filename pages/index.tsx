@@ -54,7 +54,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
 
   return (
     <>
-    <PageHead title="Kierandev | home" 
+    <PageHead title="kieranroberts.dev | home" 
     description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"
     currentURL="https://kieranroberts.dev"
     />
@@ -125,7 +125,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                2x Featured hashnode article    
+                3x Featured hashnode article    
                 <a className="ml-2 text-pri"
                 href="https://blog.kieranroberts.dev/"
                 rel="noopener"
@@ -135,7 +135,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                1x "Must Read" Featured hashnode weekly article
+                2x "Must Read" Featured hashnode weekly article
                 <a className="ml-2 text-pri"
                 href="https://blog.kieranroberts.dev/why-its-awesome-for-new-developers-to-blog-as-they-learn"
                 rel="noopener"
@@ -145,7 +145,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                Over 8000 total post views on Dev.to
+                Over 9000 total post views on Dev.to
                 <a className="ml-2 text-pri"
                 href="https://dev.to/kieran6roberts"
                 rel="noopener"

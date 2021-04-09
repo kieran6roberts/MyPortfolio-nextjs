@@ -73,15 +73,15 @@ export default function Project({
                     </ExternalLink>
                 </div>
                 <div className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800">
-                    <h4 className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
+                    <p className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
                         project description
-                    </h4>
+                    </p>
                 </div>
                 <Markdown string={markdownString} />
                 <div className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800">
-                    <h4 className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
+                    <p className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24">
                         tech stack
-                    </h4>
+                    </p>
                 </div>
                 <List images={stackImages} names={stackNames} />
                 <div className="my-16 2xl:my-32 py-0.5 px-2">
