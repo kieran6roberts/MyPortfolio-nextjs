@@ -9,11 +9,11 @@ import { useInView } from "react-intersection-observer";
 import { VscVmActive, 
   VscChevronDown,
   VscCode } from "react-icons/vsc";
+import dynamic from "next/dynamic";
 
 import Card from "@/components/Card/Card";
 import Hero from "@/components/Hero/Hero";
 import PageHead from "@/components/PageHead/PageHead";
-import Project from "@/components/Project/Project";
 import { GET_HOME_PROJECTS } from "@/queries/projects";
 import { regVariant, staggerVariant } from "../src/animations/home";
 import Link from "next/link";
@@ -37,12 +37,17 @@ export type PROJECTS = { projects: PROJECT[] };
 
 export default function Home({ projects }: PROJECTS): React.ReactElement {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
+  const { ref: projectRef, inView: projectInView } = useInView({ threshold: 0, rootMargin: "500px", triggerOnce: true });
   const animation = useAnimation();
 
   function mapProjectsToElements(projects: PROJECT[]): JSX.Element[] {
+    const DynamicProject = dynamic(() => import("@/components/Project/Project"), {
+      ssr: false
+    });
+
     return projects.map((project) => 
         <li key={generateKey(project.title)} >
-          <Project {...project} />
+          <DynamicProject {...project} />
         </li>
       )
     };
@@ -107,6 +112,12 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               post regular blog posts focused on various front-end related topics and learning/ writing
               tips.
             </m.p>
+            <Link aria-label="Contact page"
+            href="/contact" passHref>
+              <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 border-blue-700 2xl:mb-40 2xl:mt-20 w-max text-sec hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                Get in touch
+              </a>
+            </Link>
             <m.h2 className="pt-4 pb-16 font-bold text-center uppercase text-md text-dark 2xl:pb-36"
             variants={regVariant}>
               Personal Achievements
@@ -163,9 +174,10 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
         </m.div>
     </section>
     <section>
-      <ul>
-        {projects.length ? mapProjectsToElements(projects) : null}
-      </ul>
+      <m.ul animate={animation}
+      ref={projectRef}>
+        {projectInView && projects.length ? mapProjectsToElements(projects) : null}
+      </m.ul>
     </section>
     <section className="md:px-4 lg:px-12 md:mx-6 ">
       <article className="w-full">

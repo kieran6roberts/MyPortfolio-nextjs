@@ -30,6 +30,7 @@ export default function Project({
                             <Image src={`/images/${images[2].fileName}`}
                                 alt={captions[2]}
                                 height={400}
+                                loading="eager"
                                 width={200}
                                 objectFit="contain"
                                 objectPosition="offTop"/>
