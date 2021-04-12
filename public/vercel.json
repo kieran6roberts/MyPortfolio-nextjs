@@ -1,0 +1,10 @@
+{
+    "redirects": [
+        { "source": "www.kieranroberts.dev", "destination": "https://kieranroberts.dev"},
+        { "source": "https://www.kieranroberts.dev", "destination": "https://kieranroberts.dev"},
+        { "source": "http://www.kieranroberts.dev", "destination": "https://kieranroberts.dev"},
+        { "source": "https://www.kieranroberts.dev/contact", "destination": "https://kieranroberts.dev/contact"},
+        { "source": "http://www.kieranroberts.dev/contact", "destination": "https://kieranroberts.dev/contact"}
+
+    ]
+}
