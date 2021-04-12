@@ -76,13 +76,13 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.span>
                 and I develop performant and scalable websites. 
               </m.h2>
-            <m.p className="w-3/4 m-auto text-xs text-center text-gray-500"
+            <m.p className="w-full m-auto text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
               I have always been drawn to solving challenging problems which is key to building sites for the web. 
               Being able to write a solution and instantly see the results in the browser is highly rewarding.
             </m.p>
             <VscVmActive className="m-auto my-16 text-xxl text-pri"/>
-            <m.p className="w-3/4 m-auto mb-16 text-xs text-center text-gray-500"
+            <m.p className="w-full m-auto mb-16 text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
               My preference is to build simple and clean <abbr className="mr-2 text-sec" title="User Interfaces">UI</abbr>
               that are interactive, responsive and accessible to all users.
@@ -101,7 +101,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               parentVariant={staggerVariant}
               childVariant={regVariant}  />
             </m.div>
-            <m.p className="w-3/4 m-auto my-24 text-xs text-center text-gray-500"
+            <m.p className="w-full m-auto my-24 text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
               I also love to give back by helping aspiring devlopers learn web-development which is why I 
               post regular blog posts focused on various front-end related topics and learning/ writing
@@ -116,7 +116,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
                 Open source contributor to @DefinitelyTyped: 
-                <a className="ml-2 text-pri"
+                <a className="block text-sec"
                 href="https://www.npmjs.com/package/@types/react-select-country-list"
                 rel="noopener"
                 target="_blank">
@@ -126,7 +126,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
                 3x Featured hashnode article    
-                <a className="ml-2 text-pri"
+                <a className="block text-sec"
                 href="https://blog.kieranroberts.dev/"
                 rel="noopener"
                 target="_blank">
@@ -135,8 +135,8 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                2x "Must Read" Featured hashnode weekly article
-                <a className="ml-2 text-pri"
+                2x "Must Read" Featured hashnode weekly article:
+                <a className="block text-sec"
                 href="https://blog.kieranroberts.dev/why-its-awesome-for-new-developers-to-blog-as-they-learn"
                 rel="noopener"
                 target="_blank">
@@ -145,8 +145,8 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                Over 9000 total post views on Dev.to
-                <a className="ml-2 text-pri"
+                Over 9000 total post views on Dev.to:
+                <a className="block text-sec"
                 href="https://dev.to/kieran6roberts"
                 rel="noopener"
                 target="_blank">
@@ -222,7 +222,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
       </article>
       <Link aria-label="top of the page"
        href="/" passHref>
-        <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 2xl:mb-40 2xl:mt-20 w-max border-pri text-pri hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+        <a className="block px-4 py-1 m-auto mb-24 text-xs text-center uppercase transition-transform transform border-2 border-blue-700 2xl:mb-40 2xl:mt-20 w-max text-sec hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
           Back to the top
         </a>
       </Link>

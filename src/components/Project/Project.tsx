@@ -86,7 +86,7 @@ export default function Project({
                 <List images={stackImages} names={stackNames} />
                 <div className="my-16 2xl:my-32 py-0.5 px-2">
                     <Link href={`/projects/${title}`}>
-                        <a className={`group w-56 flex items-center justify-center bg-pri border-pri border-2 flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-4 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-white hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
+                        <a className={`group w-56 flex items-center justify-center bg-sec border-blue-700 border-2 flex align-items whitespace-nowrap text-xxs text-light font-bold uppercase py-2 px-4 2xl:py-4 2xl:px-6 cursor-pointer transition duration-100 ease-in hover:bg-white hover:text-dark focus:outline-none focus:ring-4 focus:ring-yellow-400`}>
                             <span className="block pr-4">
                                 case-study
                             </span>
