@@ -37,7 +37,7 @@ export default function Hero(): React.ReactElement {
                     </m.div>
                     <span className="text-sec">front-end</span> web developer
                 </h1>
-                <p className="px-2 m-0 text-xs uppercase bg-white bg-opacity-90 sm:text-sm 2xl:text-md">
+                <p className="hidden px-2 m-0 text-xs uppercase bg-white md:block bg-opacity-90 sm:text-sm 2xl:text-md">
                     <span className="mr-2 text-acc">
                         solving
                     </span>
