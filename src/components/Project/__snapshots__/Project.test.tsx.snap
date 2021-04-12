@@ -351,11 +351,11 @@ exports[`<Hero /> renders snapshot 1`] = `
     <div
       className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800"
     >
-      <h4
+      <p
         className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24"
       >
         project description
-      </h4>
+      </p>
     </div>
     <article
       className="text-xs"
@@ -367,11 +367,11 @@ exports[`<Hero /> renders snapshot 1`] = `
     <div
       className="pl-1 bg-gradient-to-b from-purple-400 via-purple-600 to-blue-800"
     >
-      <h4
+      <p
         className="pl-4 my-8 uppercase bg-light text-md text-sec 2xl:my-24"
       >
         tech stack
-      </h4>
+      </p>
     </div>
     <ul
       className="flex flex-col flex-wrap py-2 lg:flex-row"
@@ -417,7 +417,7 @@ exports[`<Hero /> renders snapshot 1`] = `
               />
             </div>
             <img
-              alt="[object Object] logo"
+              alt="html logo"
               decoding="async"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               style={

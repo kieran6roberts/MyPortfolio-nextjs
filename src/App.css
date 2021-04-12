@@ -946,6 +946,10 @@ p {
   min-height: 100vh;
 }
 
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1760,6 +1764,10 @@ p {
 
   .lg\:mr-12 {
     margin-right: 3rem;
+  }
+
+  .lg\:opacity-100 {
+    opacity: 1;
   }
 
   .lg\:py-4 {

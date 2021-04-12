@@ -345,6 +345,7 @@ exports[`<Layout /> render snpashot 1`] = `
       created and designed by Kieran Roberts.
     </p>
     <a
+      aria-label="To GraphCMS website"
       className="block mx-auto mt-4 2xl:my-6 w-max"
       href="https://graphcms.com/?referrer=kieranroberts.dev"
       rel="noopener"

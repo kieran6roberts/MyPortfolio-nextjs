@@ -66,12 +66,15 @@ export default function Layout({ children }: LAYOUT): React.ReactElement {
                 <p className="my-2 text-xs uppercase 2xl:my-6 text-acc">
                     created and designed by Kieran Roberts.
                 </p>
-                <a href="https://graphcms.com/?referrer=kieranroberts.dev"
+                <a 
+                aria-label="To GraphCMS website"
                 className="block mx-auto mt-4 2xl:my-6 w-max"
+                href="https://graphcms.com/?referrer=kieranroberts.dev"
                 rel="noopener"
                 target="_blank">
-                    <Image src="/images/icons/Landscape_White.svg"
+                    <Image 
                     alt="graphcms logo"
+                    src="/images/icons/Landscape_White.svg"
                     height={40}
                     width={120} />
                 </a>

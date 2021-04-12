@@ -24,11 +24,14 @@ export default function PageHead({
             <meta property="og:locale" content="en_GB" key="oglocale" />
             <meta property="og:title" content={title} key="ogtitle"/>
             <meta property="og:description" content={description} key="ogdescription" />
+            <meta property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
             <meta property="og:type" content="website" key="ogtype" />
             <meta property="og:url" content={currentURL} key="ogurl" />
-            <meta name="image" property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
+            <meta property="og:image:width" content="600" />
+            <meta property="og:image:height" content="400" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
             
+            <link rel="manifest" href="site.webmanifest" crossOrigin="use-credentials" />
             <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />

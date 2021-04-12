@@ -5,7 +5,7 @@ exports[`<Hero /> render snapshot 1`] = `
   className="h-screen"
 >
   <div
-    className="absolute top-32 left-3 right-3 bottom-3 md:top-24 lg:top-8 md:left-16 md:right-16"
+    className="absolute opacity-30 lg:opacity-100 top-32 left-3 right-3 bottom-3 md:top-24 lg:top-8 md:left-16 md:right-16"
   >
     <div
       id="hero"
@@ -31,7 +31,7 @@ exports[`<Hero /> render snapshot 1`] = `
         }
       >
         <img
-          alt="stylized selfie"
+          alt="stylized selfie in black and white color scheme with a stylized landscape background"
           decoding="async"
           sizes="(max-width: 640px) 640px, (max-width: 750px) 750px, (max-width: 828px) 828px, (max-width: 1080px) 1080px, (max-width: 1200px) 1200px, (max-width: 1920px) 1920px, (max-width: 2048px) 2048px, 3840px"
           src="/_next/image?url=%2Fimages%2Fhero-edit1.webp&w=3840&q=75"

@@ -8,7 +8,7 @@ import SocialItems from "@/components/SocialItems/SocialItems";
 export default function Hero(): React.ReactElement {
     return(
         <section className="h-screen">
-            <div className="absolute top-32 left-3 right-3 bottom-3 md:top-24 lg:top-8 md:left-16 md:right-16">
+            <div className="absolute opacity-30 lg:opacity-100 top-32 left-3 right-3 bottom-3 md:top-24 lg:top-8 md:left-16 md:right-16">
                 <m.div layout id="hero"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

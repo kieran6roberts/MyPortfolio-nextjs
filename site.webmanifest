@@ -1,6 +1,11 @@
 {
     "name": "kieranroberts",
     "short_name": "kieranroberts",
+    "start_url": "/",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "descriptions": "Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -59,8 +64,5 @@
             "src": "safari-pinned-tab.svg",
             "type": "image/svg"
         }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    ]
 }

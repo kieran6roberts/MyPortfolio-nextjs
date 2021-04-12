@@ -84,7 +84,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             <VscVmActive className="m-auto my-16 text-xxl text-pri"/>
             <m.p className="w-3/4 m-auto mb-16 text-xs text-center text-gray-500"
             variants={regVariant}>
-              My preference is to build simple and clean <abbr className="mr-2 text-acc" title="User Interfaces">UI</abbr>
+              My preference is to build simple and clean <abbr className="mr-2 text-sec" title="User Interfaces">UI</abbr>
               that are interactive, responsive and accessible to all users.
             </m.p>
             <m.div className="lg:flex">
@@ -173,7 +173,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
           <h3 className="mb-4 text-md text-txt">
             A little about myself
           </h3>
-          <h4 className="text-sm text-pri">
+          <h4 className="text-sm text-sec">
             For making it this far
           </h4>
         </header>
@@ -194,7 +194,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               My time away <FaGlobeAsia className="inline-block text-acc text-md" />
             </h5>
             <p className="p-2 mb-4 text-xs">
-              I was taking time out after graduating with my masters degree to travel, leaving the <abbr className="text-acc" title="United Kingdom">UK</abbr> to
+              I was taking time out after graduating with my masters degree to travel, leaving the <abbr className="text-sec" title="United Kingdom">UK</abbr> to
               live and work abroad in New Zealand for a year when I found my passion for web development.
             </p>
           </article>
@@ -203,7 +203,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               Finding web development <VscCode className="inline-block text-acc text-md" />
             </h5>
             <p className="p-2 mb-4 text-xs" >
-              After writing my first line of <abbr className="text-acc" title="HyperText Markup Language">html</abbr> I knew I was hooked and so set upon 
+              After writing my first line of <abbr className="text-sec" title="HyperText Markup Language">html</abbr> I knew I was hooked and so set upon 
               spending most of my free time reading, writing and learning all I could
               about code, specifically front-end web development.
             </p>
