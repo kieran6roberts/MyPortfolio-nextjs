@@ -40,7 +40,7 @@ export const GET_SINGLE_PROJECT = gql`
 
 export const GET_HOME_PROJECTS = gql`
   query GetProjects {
-    projects(orderBy: stackNames_DESC) {
+    projects(orderBy: githubLink_DESC) {
       title
       description
       deploy {
