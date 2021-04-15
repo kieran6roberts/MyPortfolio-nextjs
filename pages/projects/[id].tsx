@@ -111,7 +111,7 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
               </div>
              </div>
               <figcaption className="mt-4 text-xs italic text-center text-gray-500">
-                  full page screenshot of the site
+                  {router.asPath === "/projects/Kierans%20SaaS%20Landing%20Page" ? "full page live site on the left and full page Figma design on the right" :  "full page screenshot of the site" }
               </figcaption>
            </figure>
         </m.div>

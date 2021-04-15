@@ -10,21 +10,6 @@ export default function PageHead({
     currentURL }: IPageHead) {
     return(
         <Head>
-            <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-025L5TE3L5"
-            />
-            <script
-                dangerouslySetInnerHTML={{
-                __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag("js", new Date());
-                        gtag("config", "G-025L5TE3L5");
-                    `,
-                }}
-            />
-
             <title key="title">{title}</title>
             <meta charSet="UTF-8" key="charset" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
@@ -55,6 +40,21 @@ export default function PageHead({
             <meta name="msapplication-TileColor" content="#ffffff" />
             <meta name="msapplication-config" content="./browserconfig.xml" />
             <meta name="theme-color" content="#ffffff" />
+
+            <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-025L5TE3L5"
+            />
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag("js", new Date());
+                        gtag("config", "G-025L5TE3L5");
+                    `,
+                }}
+            />
         </Head>
     )
 };
