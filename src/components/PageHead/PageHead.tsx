@@ -1,17 +1,30 @@
 import Head from "next/head";
 
-interface PAGE_HEAD { 
-    title: string, 
-    description: string,
-    currentURL: string 
-};
+interface IPageHead {
+    [key: string]: string
+}
 
 export default function PageHead({ 
     title, 
     description, 
-    currentURL }: PAGE_HEAD): React.ReactElement {
+    currentURL }: IPageHead) {
     return(
         <Head>
+            <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-025L5TE3L5"
+            />
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag("js", new Date());
+                        gtag("config", "G-025L5TE3L5");
+                    `,
+                }}
+            />
+
             <title key="title">{title}</title>
             <meta charSet="UTF-8" key="charset" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
@@ -24,11 +37,12 @@ export default function PageHead({
             <meta property="og:locale" content="en_GB" key="oglocale" />
             <meta property="og:title" content={title} key="ogtitle"/>
             <meta property="og:description" content={description} key="ogdescription" />
-            <meta property="og:image" content="https://media.graphcms.com/B09QnYNRTey6VLqdRtkG" key="ogimage" />
+            <meta property="og:image:secure_url" content="https://kieranroberts.dev/home-og.jpg" key="ogimage" />
+            <meta property="og:image:type" content="image/jpg" />
+            <meta property="og:image:width" content="1146" />
+            <meta property="og:image:height" content="550" />
             <meta property="og:type" content="website" key="ogtype" />
             <meta property="og:url" content={currentURL} key="ogurl" />
-            <meta property="og:image:width" content="600" />
-            <meta property="og:image:height" content="400" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
             
             <link rel="manifest" href="./site.webmanifest" />

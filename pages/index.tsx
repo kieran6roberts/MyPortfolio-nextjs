@@ -55,7 +55,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
   return (
     <>
     <PageHead title="kieranroberts.dev | home" 
-    description="Kieran Roberts front-end web developer portfolio showcasing my personal projects. Let's work together!"
+    description="Kieran Roberts front-end web developer portfolio showcasing my personal projects and blog. Let's work together!"
     currentURL="https://kieranroberts.dev"
     />
     <Hero />
@@ -78,14 +78,14 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.h2>
             <m.p className="w-full m-auto text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
-              I have always been drawn to solving challenging problems which is key to building sites for the web. 
+              I have always been drawn to solving challenging problems. This is key skill to building sites for the web. 
               Being able to write a solution and instantly see the results in the browser is highly rewarding.
             </m.p>
             <VscVmActive className="m-auto my-16 text-xxl text-pri"/>
             <m.p className="w-full m-auto mb-16 text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
-              My preference is to build simple and clean <abbr className="mr-2 text-sec" title="User Interfaces">UI</abbr>
-              that are interactive, responsive and accessible to all users.
+              My preference is to build a simple and clean <abbr className="mr-2 text-sec" title="User Interface">UI</abbr>
+              that is interactive, responsive and accessible to all users.
             </m.p>
             <m.div className="lg:flex">
               <Card items={["html", "css", "javaScript", "typeScript", "react", "git"]}
@@ -103,7 +103,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
             </m.div>
             <m.p className="w-full m-auto my-24 text-xs text-center text-gray-500 md:w-3/4"
             variants={regVariant}>
-              I also love to give back by helping aspiring devlopers learn web-development which is why I 
+              I also love to give back by helping aspiring devlopers learn web-development. This is why I 
               post regular blog posts focused on various front-end related topics and learning/ writing
               tips.
             </m.p>
@@ -141,7 +141,7 @@ export default function Home({ projects }: PROJECTS): React.ReactElement {
               </m.li>
               <m.li className="mb-8 2xl:mb-16"
               variants={regVariant}>
-                2x "Must Read" Featured hashnode weekly article:
+                3x "Must Read" Featured hashnode weekly article:
                 <a className="block text-sec"
                 href="https://blog.kieranroberts.dev/why-its-awesome-for-new-developers-to-blog-as-they-learn"
                 rel="noopener"

@@ -44,7 +44,7 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
   return (
     <>
       <PageHead title={`kierandev | ${data.title}`}
-      description="Porfolio case study into personal font-end developer project showcasing project overview, stack decision reasoning and overall outcome."
+      description="Kieran Roberts front-end web-developer porfolio case study into a personal project showcasing project overview, stack decision reasoning and overall outcome."
       currentURL={`https://kieranroberts.dev${router.asPath}`}/>
       <section id="case-study"
       className="mb-20 overflow-hidden md:px-4 lg:px-8 2xl:px-16 md:mx-6 2xl:mt-20 bg-light">

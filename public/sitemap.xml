@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kieranroberts.dev/</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kieranroberts.dev/contact</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kieranroberts.dev/projects/Checkers%20Board%20Game</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kieranroberts.dev/projects/Turncoat%20Brewery</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kieranroberts.dev/projects/Kierans%20SaaS%20Landing%20Page</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kieranroberts.dev/projects/Kierans%20Coffee%20Collection</loc>
+  <lastmod>2021-04-15T10:41:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>

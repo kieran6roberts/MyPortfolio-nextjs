@@ -8,7 +8,7 @@ export default function Contact(): React.ReactElement {
     return(
         <>
         <PageHead title="kierandev | contact"
-        description="Got any questions or queries. Want to enquire about working together. Whatever it is, let's get in touch!"
+        description="Contact Kieran Roberts front-end web-developer with any questions or queries. Whatever it is, let's get in touch!"
         currentURL="https://kieranroberts.dev/contact" />
         <section className="mb-32 overflow-hidden md:px-20 lg:px-32 md:mx-12 bg-light">
             <m.div layout
