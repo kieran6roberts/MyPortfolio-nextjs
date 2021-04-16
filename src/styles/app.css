@@ -1790,6 +1790,11 @@ p {
 }
 
 @media (min-width: 1280px) {
+  .xl\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .xl\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -1955,21 +1960,4 @@ p {
 }
 
 @media (min-width: 1800px) {
-  .xxxl\:block {
-    display: block;
-  }
-
-  .xxxl\:mr-12 {
-    margin-right: 3rem;
-  }
-
-  .xxxl\:ml-12 {
-    margin-left: 3rem;
-  }
-
-  .xxxl\:w-max {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
 }

@@ -35,7 +35,7 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
   function mapItemsToElements(items: string[]) {
     return items.map((item: string) => 
       <p key={generateKey(item)}
-      className="px-4 py-3 text-xs text-dark 2xl:p-8 2xl:px-32">
+      className="py-3 text-xs md:px-4 text-dark 2xl:p-8 2xl:px-32">
         {item}
       </p>
     )
@@ -94,24 +94,19 @@ export default function Project({ projects: project }: SINGLE_PROJECT) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }} 
-         className="flex justify-center w-full p-1 m-auto items-top xxxl:w-max h-max">
+         className="p-1 ">
            <figure>
-             <div className="flex w-full">
-              <div className="shadow-md xxxl:mr-12">
+              <div className="w-full shadow-md xl:my-20">
                 <Image src={`/images/${data?.fullPageImage[0]?.fileName}`}
-                  alt="full screenshots of project"
-                  height={`${data?.fullPageImageSize[1]}`}
-                  width={`${data?.fullPageImageSize[0]}`}/>
+                  alt="Home page splash of the live site"
+                  height={700}
+                  width={1400}
+                  layout="responsive"
+                  objectFit="cover"
+                  />
               </div>
-              <div className="hidden shadow-md xxxl:block xxxl:ml-12">
-                <Image src={`/images/${data?.fullPageImage[1]?.fileName}`}
-                  alt="full screenshots of project"
-                  height={`${data?.fullPageImageSize[1]}`}
-                  width={`${data?.fullPageImageSize[0]}`} />
-              </div>
-             </div>
               <figcaption className="mt-4 text-xs italic text-center text-gray-500">
-                  {router.asPath === "/projects/Kierans%20SaaS%20Landing%20Page" ? "full page live site on the left and full page Figma design on the right" :  "full page screenshot of the site" }
+                  Live site desktop splash screen
               </figcaption>
            </figure>
         </m.div>
