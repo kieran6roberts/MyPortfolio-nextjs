@@ -16,16 +16,19 @@ export default function PageHead({
             <meta name="description" content={description} key="description" />
             <meta name="author" content="Kieran Roberts" key="author" />
 
-            <meta name="twitter:card" content="summary" key="twcard" />
-            <meta name="twitter:creator" content="@Kieran6dev" key="twhandle" />
+            <meta property="twitter:card" content="summary" key="twcard" />
+            <meta property="twitter:creator" content="@Kieran6dev" key="twhandle" />
+            <meta property="twitter:image" content="https://kieranroberts.dev/home-og.jpg" key="ogtwitterimage" />
+            <meta property="twitter:title" content={title} />
+            <meta property="twitter:description" content={description} />
 
             <meta property="og:locale" content="en_GB" key="oglocale" />
             <meta property="og:title" content={title} key="ogtitle"/>
             <meta property="og:description" content={description} key="ogdescription" />
-            <meta property="og:image:secure_url" content="https://kieranroberts.dev/home-og.jpg" key="ogimage" />
-            <meta property="og:image:type" content="image/jpg" />
-            <meta property="og:image:width" content="1146" />
-            <meta property="og:image:height" content="550" />
+            <meta property="og:image" content="https://kieranroberts.dev/home-og.jpg" key="ogimage" />
+            <meta property="og:image:type" content="image/jpg" key="ogimgtype" />
+            <meta property="og:image:width" content="1200" key="ogimgwidth" />
+            <meta property="og:image:height" content="630" key="ogimgheight" />
             <meta property="og:type" content="website" key="ogtype" />
             <meta property="og:url" content={currentURL} key="ogurl" />
             <meta property="og:site_name" content="https://kieranroberts.dev" key="ogsite" />
